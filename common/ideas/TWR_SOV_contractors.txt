@@ -1,0 +1,234 @@
+ideas = {
+    armoured_contractor = { 
+        designer = yes
+        GAZ = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea GAZ"}
+
+            picture = GAZ_new 
+
+            allowed = {
+                tag = SOV
+            }
+            available = { owns_state = 252 }
+
+            modifier = {
+                consumer_goods_factor = 0.04
+            }
+
+            traits = {
+                tank_manufacturer
+                motorized_equipment_manufacturer
+            }
+
+        }
+        UVF = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea UVF"}
+
+            picture = UAZ 
+
+            allowed = {
+                tag = SOV
+            }
+
+            modifier = {
+                consumer_goods_factor = 0.02
+            }
+
+            traits = {
+                medium_tank_manufacturer
+            }
+
+        }
+    }
+    naval_contractor = { 
+        designer = yes
+        Relocated_Shipyard = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea Relocated_Shipyard"}
+
+            picture = Shipyard_10 
+
+            allowed = {
+                tag = SOV
+            }
+
+            modifier = {
+                consumer_goods_factor = 0.02
+            }
+
+            traits = {
+                raiding_fleet_naval_manufacturer
+            }
+
+        }
+        New_Central_Shipyard = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea New_Central_Shipyard"}
+
+            picture = SOV_Navy 
+
+            allowed = {
+                tag = SOV
+            }
+
+            modifier = {
+                consumer_goods_factor = 0.03
+            }
+
+            traits = {
+                battlefleet_designer
+                shipping_specialists
+            }
+
+        }
+    }
+    air_contractor = { 
+        designer = yes
+        OKB = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea OKB"}
+
+            picture = Ural_Machine 
+
+            allowed = {
+                tag = SOV
+            }  
+            research_bonus = {
+                light_air = -0.05
+                medium_air = -0.05
+                heavy_air = -0.05
+            }
+
+            modifier = {
+                consumer_goods_factor = 0.02
+            }
+
+            traits = { design_supplier }
+
+        }
+        Central_Air_Production = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea Central_Air_Production"}
+
+            picture = Central_Air 
+
+            allowed = {
+                tag = SOV
+            }
+
+            modifier = { 
+                consumer_goods_factor = 0.02
+            }
+
+            traits = { fuel_efficient_aircraft_manufacturer }
+
+        }
+    }
+    military_contractor = { 
+        designer = yes
+        OTF = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea OTF"}
+
+            picture = Omck_Factory 
+
+            allowed = {
+                tag = SOV
+            }
+            available = { owns_state = 571 }
+
+            modifier = {
+                consumer_goods_factor = 0.02
+            }
+
+            traits = {
+                motorized_equipment_manufacturer
+            }
+
+        }
+        PCWM = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea PCWM"}
+
+            picture = Perm_Central 
+
+            allowed = {
+                tag = SOV
+            }
+
+            available = { owns_state = 398 }
+            research_bonus = {
+                infantry_weapons = 0.05
+            }
+            equipment_bonus = {
+                infantry_equipment = {
+                    build_cost_ic = -0.20 soft_attack = 0.05
+                }
+            }   
+
+            modifier = {
+                consumer_goods_factor = 0.03
+            }
+
+            traits = { infantry_equipment_manufacturer }
+
+        }
+        New_Soviet_Arms_Plant = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea New_Soviet_Arms_Plant"}
+
+            picture = NKVD_Plant 
+
+            allowed = {
+                tag = SOV
+            }
+
+            equipment_bonus = {
+                infantry_equipment = {
+                    build_cost_ic = -0.30
+                }
+            }   
+
+            modifier = {
+                consumer_goods_factor = 0.03
+            }
+
+            traits = { infantry_equipment_manufacturer }
+
+        }
+    }
+    industrial_contractor = { 
+        designer = yes
+        Ural_Heavy_Plant = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea Ural_Heavy_Plant"}
+
+            picture = Ural_Machine 
+
+            allowed = {
+                tag = SOV
+            }  
+
+            modifier = {
+                consumer_goods_factor = 0.03
+                production_factory_max_efficiency_factor = 0.1
+                production_speed_buildings_factor = 0.05
+            }
+
+            traits = { industrial_concern }
+
+        }
+        Perm_Plant = {    
+            on_add = {log = "[GetDateText]: [Root.GetName]: add idea Perm_Plant"}
+
+            picture = Perm_Plant 
+
+            allowed = {
+                tag = SOV
+            }  
+            available = { owns_state = 398 }
+
+            modifier = {
+                consumer_goods_factor = 0.03
+                production_oil_factor = 0.1
+                fuel_gain_factor = 0.15
+                local_resources_factor = 0.10
+            }
+
+            traits = { refinery_concern }
+
+        }
+    }
+}

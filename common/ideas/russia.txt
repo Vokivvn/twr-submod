@@ -1,0 +1,577 @@
+ideas = {
+	country = {
+
+		RUS_Anti_Communist_Front = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea HUN_against_romania"}
+			picture = anti_soviet_pact
+			targeted_modifier = { tag = SOV attack_bonus_against = 0.05 }
+			targeted_modifier = { tag = SOV defense_bonus_against = 0.05 }
+		}
+
+		RUS_Chinese_Advisors = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_general_staff"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = kmt_advisors
+			removal_cost = -1
+			modifier = {
+				non_core_manpower = 0.05
+				army_morale_factor = 0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		RUS_Russian_Populism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_general_staff"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = prc_low_popular_support3
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+
+		RUS_Republican_Militias = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_general_staff"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = russian_will2
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.1
+				training_time_army_factor = -0.1
+			}
+		}
+
+		RUS_Jewish_Communities = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_general_staff"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = GENERIC_jewish_book
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.1
+				MONTHLY_POPULATION = 0.1
+			}
+		}
+
+		RUS_Republican_Front = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_general_staff"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = russian_will2
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+
+		RUS_american_general_staff = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_general_staff"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = american_generals
+			removal_cost = -1
+			modifier = {
+				max_planning = 0.17
+				planning_speed = -0.17
+			}
+			research_bonus = { land_doctrine = -0.07 } 
+			research_bonus = { naval_doctrine = -0.07 } 
+			research_bonus = { air_doctrine = -0.07 } 
+			research_bonus = { naval_equipment = -0.07 } 
+			research_bonus = { air_equipment = -0.07 } 
+		}
+
+		RUS_siberian_war = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_siberian_war"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			picture = GEN_resistance
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				attrition = 0.1
+			}
+		}
+
+		RUS_unstability_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_unstability_idea"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = russia_divided
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.33
+				stability_factor = -0.2
+			}
+		}
+
+		RUS_rsb = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_rsb"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = nkvd_2
+			removal_cost = -1
+			modifier = {
+				encryption_factor = 0.2
+				decryption_factor = 0.2
+				resistance_target_on_our_occupied_states = 0.1
+				army_morale_factor = 0.05
+				attrition = 0.1
+			}
+		}
+
+		RUS_brain_drain = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_brain_drain"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = no_brains
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.15
+				research_speed_factor = -0.05
+			}
+		}
+
+		RUS_the_great_retreat = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_the_great_retreat"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = { #no fortress siberia
+				SOV = {
+					has_full_control_of_state = 655
+					has_full_control_of_state = 537
+				}
+			}
+			picture = russian_retreat
+			removal_cost = -1
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = -0.33
+				defense_bonus_against = 0.5
+			}
+			
+			modifier = {
+				army_speed_factor = 0.5
+				dig_in_speed_factor = 0.5
+				surrender_limit = 0.1
+				naval_retreat_speed = 1
+			}
+		}
+
+		russian_militarization_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea russian_militarization_1"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_infantry_bonus
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		russian_militarization_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea russian_militarization_2"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_infantry_bonus
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1 
+				conscription_factor = 0.15
+			}
+		}
+
+		russian_militarization_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea russian_militarization_3"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = russian_nazi_eagle
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1 
+				conscription_factor = 0.25
+				mobilization_speed = 0.1
+			}
+		}
+
+		russia_oktyabrsky_cash_money = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea russia_oktyabrsky_cash_money"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_Trade_Unions
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = RUS
+				extra_trade_to_target_factor = 1
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+
+		chinese_kmt_advisors = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea chinese_kmt_advisors"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = kmt_advisors
+			removal_cost = -1
+			
+			research_bonus = { land_doctrine = 0.1 }
+		}
+
+		RUS_free_republican_army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_free_republican_army"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = paternal_autocrat
+			}
+			picture = russian_eagle
+			removal_cost = -1
+			
+			modifier = {
+				army_attack_factor = 0.1 
+				conscription = 0.015
+			}
+		}
+
+		RUS_housing_subsidies_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_housing_subsidies_idea"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_central_management
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		RUS_stimulus_plan_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_stimulus_plan_idea"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_hyper_inflation4
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.5
+				consumer_goods_factor = 0.1 
+				production_speed_buildings_factor = 1
+			}
+		}
+
+		RUS_fishing_subsidies_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_fishing_subsidies_idea"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = fish_industry
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+				MONTHLY_POPULATION = 0.5
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		RUS_national_unions_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_national_unions_idea"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_Trade_Unions
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		RUS_russian_identity = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_russian_identity"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = russian_eagle
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		RUS_russian_will_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_russian_will_1"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = russian_will1
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		RUS_russian_will_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_russian_will_2"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = russian_will2
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		RUS_russian_will_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_russian_will_3"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = russian_will3
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.2
+				industrial_capacity_factory = 0.2
+			}
+		}
+
+		RUS_russian_will_4 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_russian_will_4"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = russian_will4
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.25
+				industrial_capacity_factory = 0.25
+			}
+		}
+
+		RUS_russian_will_5 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_russian_will_5"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = russian_will4
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.3
+				industrial_capacity_factory = 0.3
+			}
+		}
+
+		RUS_american_assistance_1 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_assistance_1"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = SOV_scientist_defect
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = RUS
+				mic_to_target_factor = 0.02
+			}
+		}
+
+		RUS_american_assistance_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_assistance_2"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = give_money
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = RUS
+				cic_to_target_factor = 0.01
+				mic_to_target_factor = 0.02
+			}
+		}
+
+		RUS_american_assistance_3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_american_assistance_3"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = give_money
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = RUS
+				cic_to_target_factor = 0.03
+				mic_to_target_factor = 0.02
+			}
+		}
+
+		RUS_local_assembly_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RUS_local_assembly_idea"}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = man_five_year_plan_tank
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+		
+		RUS_equipment_sale_receiver = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_equipment_sale_receiver" }
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = give_money
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+
+		RUS_equipment_sale_payer = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea RUS_equipment_sale_payer" }
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+			picture = give_money
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.02
+			}
+		}
+
+	}
+}

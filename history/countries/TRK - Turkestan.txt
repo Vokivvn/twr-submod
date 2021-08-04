@@ -1,0 +1,205 @@
+﻿capital = 993 #Almaty
+
+oob = "TRK_1952"
+
+set_research_slots = 2
+set_war_support = 0.1
+
+# Starting tech
+set_technology = {
+	infantry_weapons_1 = 1
+	tech_mountaineers = 1
+	tech_support = 1
+	tech_recon = 1
+}
+add_ideas = { 
+	TRK_infightings 
+	kleptocratic_regime
+}
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    national_socialist = 0
+    fascist = 12
+    paternal_autocrat = 28
+    conservative = 15
+    liberal = 20
+    social_democrat = 20
+    socialist = 0
+    bolshevik_leninist = 0
+    marxist_leninist = 5
+}
+
+add_ideas = {
+	authoritarian_system
+	TRK_HoG_veli_kajjum_khan
+	TRK_FM_Amin_Niyazov
+	TRK_MoS_Ismail_Yusupov
+	TRK_AM_Nuritdin_Mukhitdinov
+	TRK_CoStaff_Nuri_killigil
+	TRK_CoArmy_Nuri_killigil
+	TRK_CoNavy_Vacant
+	TRK_CoAir_Vacant
+	semi_industrialised_nation
+}
+
+
+create_country_leader = {
+	name = "Eshon Babakhan ibn Abdulmajidkhan"
+	desc = ""
+	picture = "Eshon_Babakhan_ibn_Abdulmajidkhan.dds"
+	expire = "1953.1.1"
+	ideology =  theocracy
+	traits = {
+		
+	}
+	id = 1953
+}
+
+create_country_leader = {
+	name = "Sharof Rashidov"
+	desc = ""
+	picture = "sharof_rashidov_leader.dds"
+	expire = "1969.3.1"
+	ideology =  national_communism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Veli Kajjum Khan"
+	desc = ""
+	picture = "veli_kajjum_khan_leader.dds"
+	expire = "1972.3.1"
+	ideology =  fascism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Mustafa Shokay"
+	desc = ""
+	picture = "mustafa_shokay_leader.dds"
+	expire = "1976.3.1"
+	ideology =  classical_Liberalism
+	traits = {
+		
+	}
+}
+
+
+##Commanders
+
+create_field_marshal = {
+	name = "Bauyrzhan Momyshuly"
+	picture = "bauyrzhan_momyshuly_leader.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 2
+    defense_skill = 2
+    planning_skill = 2
+    logistics_skill = 2
+    id = 151113
+}
+
+create_corps_commander = {
+	name = "Abdaliev Karakozy"
+	picture = "abdaliev_karakozy_leader.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 1503
+}
+
+create_corps_commander = {
+	name = "Mukatay Abeulov"
+	picture = "mukatay_abeulov_leader.dds"
+	traits = { hidden_sympathies war_hero }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 1513
+}
+
+create_field_marshal = {
+	name = "Tulebay Azhimov"
+	picture = "tulebay_azhimov_leader.dds"
+	traits = { hidden_sympathies }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+	id = 151114
+}
+
+create_corps_commander = {
+	name = "Alimbetov Abilay"
+	picture = "alimbetov_abilay_leader.dds"
+	traits = { hidden_sympathies }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 1517
+}
+
+
+
+
+###DDR###
+
+#create_country_leader = {
+	#name = "RKF Council"
+	#desc = ""
+	#picture = "RFK_Council.dds"
+	#expire = "1975.1.1"
+	#ideology = council_communism
+	#traits = {}
+	#}
+	
+#create_country_leader = {
+	#name = "Willi Stoph"
+	#desc = ""
+	#picture = "Willi_Stoph.dds"
+	#expire = "1975.1.1"
+	#ideology = stalinism
+	#traits = {
+	#	revolutionary_general
+	#	staunch_stalinist
+	#}
+	#}
+#create_country_leader = {
+	#name = "SED"
+	#desc = ""
+	#picture = "DDR_SED.dds"
+	#expire = "1975.1.1"
+	#ideology = council_communism
+	#traits = {}
+	#}
+
+#create_country_leader = {
+	#name = "FDJ Central Council"
+	#desc = ""
+	#picture = "FDJ.dds"
+	#expire = "1975.1.1"
+	#ideology = radical_socialism
+	#traits = {
+	#communist_revolutionary
+	#}
+	#}
+
+

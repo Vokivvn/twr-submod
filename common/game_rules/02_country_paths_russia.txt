@@ -1,0 +1,175 @@
+country_path_SOV = {
+	name = "COUNTRY_PATH_SOV"
+	#desc = "COUNTRY_PATH_SOV_DESC"
+	group = "COUNTRY_PATHS_RUSSIA"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "COUNTRY_PATH_SOV_DESC"
+	}
+	option = {
+		name = KONEV
+		text = "COUNTRY_PATH_SOV_KONEV"
+		desc = "COUNTRY_PATH_SOV_KONEV_DESC"
+	}
+	option = {
+		name = ZHUKOV
+		text = "COUNTRY_PATH_SOV_ZHUKOV"
+		desc = "COUNTRY_PATH_SOV_ZHUKOV_DESC"
+	}
+	#option = {
+	#	name = KRUGLOV
+	#	text = "COUNTRY_PATH_SOV_KRUGLOV"
+	#	desc = "COUNTRY_PATH_SOV_KRUGLOV_DESC"
+	#}
+	option = {
+		name = BULGANIN
+		text = "COUNTRY_PATH_SOV_BULGANIN"
+		desc = "COUNTRY_PATH_SOV_BULGANIN_DESC"
+	}
+	#option = {
+	#	name = MOLOTOV
+	#	text = "COUNTRY_PATH_SOV_MOLOTOV"
+	#	desc = "COUNTRY_PATH_SOV_MOLOTOV_DESC"
+	#}
+}
+country_path_RUS = {
+	name = "COUNTRY_PATH_RUS"
+	#desc = "COUNTRY_PATH_RUS_DESC"
+	group = "COUNTRY_PATHS_RUSSIA"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "COUNTRY_PATH_RUS_DESC"
+	}
+	option = {
+		name = ZHIGAREV
+		text = "COUNTRY_PATH_RUS_ZHIGAREV"
+		desc = "COUNTRY_PATH_RUS_ZHIGAREV_DESC"
+	}
+	option = {
+		name = VLASOV
+		text = "COUNTRY_PATH_RUS_VLASOV"
+		desc = "COUNTRY_PATH_RUS_VLASOV_DESC"
+	}
+}
+country_path_NOV = {
+	name = "COUNTRY_PATH_NOV"
+	#desc = "COUNTRY_PATH_NOV_DESC"
+	group = "COUNTRY_PATHS_RUSSIA"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "COUNTRY_PATH_NOV_DESC"
+	}
+	option = {
+		name = KRUSHCHEV
+		text = "COUNTRY_PATH_NOV_KRUSHCHEV"
+		desc = "COUNTRY_PATH_NOV_KRUSHCHEV_DESC"
+	}
+	option = {
+		name = LIGACHEV
+		text = "COUNTRY_PATH_NOV_LIGACHEV"
+		desc = "COUNTRY_PATH_NOV_LIGACHEV_DESC"
+	}
+	option = {
+		name = YEFIMOV
+		text = "COUNTRY_PATH_NOV_YEFIMOV"
+		desc = "COUNTRY_PATH_NOV_YEFIMOV_DESC"
+	}
+}
+country_path_KRA = {
+	name = "COUNTRY_PATH_KRA"
+	#desc = "COUNTRY_PATH_KRA_DESC"
+	group = "COUNTRY_PATHS_RUSSIA"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "COUNTRY_PATH_KRA_DESC"
+	}
+	option = {
+		name = ZHADNOV
+		text = "COUNTRY_PATH_KRA_ZHADNOV"
+		desc = "COUNTRY_PATH_KRA_ZHADNOV_DESC"
+	}
+	option = {
+		name = REDARMY
+		text = "COUNTRY_PATH_KRA_REDARMY"
+		desc = "COUNTRY_PATH_KRA_REDARMY_DESC"
+	}
+	option = {
+		name = BOG
+		text = "COUNTRY_PATH_KRA_BOG"
+		desc = "COUNTRY_PATH_KRA_BOG_DESC"
+	}
+}
+country_path_BRY = {
+	name = "COUNTRY_PATH_BRY"
+	#desc = "COUNTRY_PATH_BRY_DESC"
+	group = "COUNTRY_PATHS_RUSSIA"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "COUNTRY_PATH_BRY_DESC"
+	}
+	option = {
+		name = MURICA
+		text = "COUNTRY_PATH_BRY_MURICA"
+		desc = "COUNTRY_PATH_BRY_MURICA_DESC"
+	}
+	option = {
+		name = SOCDEM
+		text = "COUNTRY_PATH_BRY_SOCDEM"
+		desc = "COUNTRY_PATH_BRY_SOCDEM_DESC"
+	}
+	option = {
+		name = RUSSIA
+		text = "COUNTRY_PATH_BRY_RUSSIA"
+		desc = "COUNTRY_PATH_BRY_RUSSIA_DESC"
+	}
+	option = {
+		name = VNS
+		text = "COUNTRY_PATH_BRY_VNS"
+		desc = "COUNTRY_PATH_BRY_VNS_DESC"
+	}
+}
+country_path_NRI = {
+	name = "COUNTRY_PATH_NRI"
+	#desc = "COUNTRY_PATH_NRI_DESC"
+	group = "COUNTRY_PATHS_RUSSIA"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "COUNTRY_PATH_NRI_DESC"
+	}
+	option = {
+		name = SOCIALIST
+		text = "COUNTRY_PATH_NRI_SOCIALIST"
+		desc = "COUNTRY_PATH_NRI_SOCIALIST_DESC"
+	}
+	option = {
+		name = ANCAP
+		text = "COUNTRY_PATH_NRI_ANCAP"
+		desc = "COUNTRY_PATH_NRI_ANCAP_DESC"
+	}
+}
+country_path_ARM = {
+	name = "COUNTRY_PATH_ARM"
+	#desc = "COUNTRY_PATH_ARM_DESC"
+	group = "COUNTRY_PATHS_RUSSIA"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "COUNTRY_PATH_ARM_DESC"
+	}
+	option = {
+		name = DASHNAK
+		text = "COUNTRY_PATH_ARM_DASHNAK"
+		desc = "COUNTRY_PATH_ARM_DASHNAK_DESC"
+	}
+	option = {
+		name = TNM
+		text = "COUNTRY_PATH_ARM_TNM"
+		desc = "COUNTRY_PATH_ARM_TNM_DESC"
+	}
+}

@@ -1,0 +1,100 @@
+ideas={
+	hidden_ideas = {
+
+		      MAL_manpower = {
+			  on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_george_vi"}
+			  
+				allowed = {
+					original_tag = MAL
+				}
+
+				allowed_civil_war = { always = yes }
+					
+				removal_cost = -1
+								  
+		           modifier = {
+		                weekly_manpower = 1150
+		           }
+		      }
+			  
+			ENG_george_vi = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_george_vi"}
+
+				allowed = {
+					original_tag = ENG
+				}
+
+				allowed_civil_war = {
+					NOT ={
+						is_communist = yes
+					}
+					NOT = {
+						any_other_country = {
+							original_tag = ENG
+							is_democratic = yes
+							NOT = {
+								tag = ROOT
+							}
+						}
+					}
+				}
+					
+				removal_cost = -1
+					
+				modifier = {
+					stability_factor = 0.10
+				}
+			}
+			ENG_queen_elizabeth = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_queen_elizabeth"}
+
+				allowed = {
+					original_tag = ENG
+				}
+
+				allowed_civil_war = {
+					NOT ={
+						is_communist = yes
+					}
+					NOT = {
+						any_other_country = {
+							original_tag = ENG
+							is_democratic = yes
+							NOT = {
+								tag = ROOT
+							}
+						}
+					}
+				}
+					
+				removal_cost = -1
+					
+				modifier = {
+					stability_factor = 0.10
+				}
+			}
+			ROMHUNWARLIMIT = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea ROMHUNWARLIMIT"}
+
+				allowed = {
+					always = yes
+				}
+					
+				removal_cost = -1
+					
+				modifier = {					
+				surrender_limit = 0.9
+				}
+			}
+			TWR_nojoinwars = {
+				on_add = {log = "[GetDateText]: [Root.GetName]: add idea TWR_nojoinwars"}
+					
+				removal_cost = -1
+					
+				modifier = {
+					ai_call_ally_desire_factor = -25000
+					ai_join_ally_desire_factor = -25000
+				}
+			}
+		}
+	}

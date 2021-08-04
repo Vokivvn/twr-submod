@@ -1,0 +1,289 @@
+ideas = {
+	country = {
+		NRI_Unknown_Cannibalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IND_great_famine
+
+			modifier = {
+				political_power_factor = -0.2
+				war_support_factor = -0.2
+				stability_factor = -0.2
+			}
+		}
+		
+		NRI_Accepted_Cannibalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IND_great_famine
+
+			modifier = {
+				political_power_factor = -0.15
+				war_support_factor = -0.15
+				stability_factor = -0.25
+			}
+		}
+		
+		NRI_Forbidden_Cannibalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = IND_great_famine
+
+			modifier = {
+				political_power_factor = -0.25
+				war_support_factor = -0.25
+				stability_factor = -0.1
+			}
+		}
+		
+		NRI_Food_Raids = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = SPA_war
+
+			modifier = {
+				army_speed_factor = 0.1
+				war_support_factor = 0.05
+			}
+		}
+		
+		NRI_Formal_End_to_Cannibalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = raj_risk_of_famine
+
+			modifier = {
+				stability_factor = 0.1
+			}
+		}
+		
+		NRI_The_Right_to_Food = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = CHI_Food_Regulations
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		NRI_The_Right_to_Anonymity = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_blank_minister
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		
+		NRI_The_Right_to_Survival = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GENERIC_fire_people
+
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				}
+		}
+		
+		NRI_Bureau_of_Coordination = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				}
+		}
+		
+		NRI_Bureau_of_Distribution = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = USA_mobile_supply_lines
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				}
+		}
+		
+		NRI_Unregulated_Capitalist_GULAGS = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = NRI_gulag_economy
+
+			modifier = {
+				local_resources_factor = 0.3
+				industrial_capacity_factory = 0.1
+				stability_factor = -0.2
+				}
+		}
+		
+		NRI_Survival_for_the_Fittest = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = NRI_gulag_economy
+
+			modifier = {
+				MONTHLY_POPULATION = -0.1
+				consumer_goods_factor = -0.05
+				}
+		}
+		
+		NRI_Anarcho_Capitalism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = NRI_capitalism
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_cost = -0.4
+				production_speed_infrastructure_factor = -0.2
+				local_resources_factor = 0.05
+				}
+		}
+		
+		NRI_The_Dream_of_Ayn_Rand = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea IRE_dream_of_ireland"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = NRI_capitalism
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_cost = -0.4
+				production_speed_infrastructure_factor = -0.2
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.1
+				min_export = 0.2
+				}
+		}
+	}
+}

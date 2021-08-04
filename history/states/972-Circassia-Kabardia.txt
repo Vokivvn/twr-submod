@@ -1,0 +1,23 @@
+state={
+	id=972
+	name="STATE_972"
+	resources={
+		chromium=15.000
+	}
+	history={
+		owner = RKA
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = SOV
+		add_core_of = RKA
+
+	}
+	provinces={
+		714 6692 9649 11633 11664 13395 
+	}
+	manpower=441323
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,55 @@
+calculate_GDP = {
+	set_variable = { country_GDP = num_of_civilian_factories }
+	set_temp_variable = { temp = num_of_military_factories }
+	divide_temp_variable = { temp = 2 }
+	add_to_variable = { country_GDP = temp }
+	set_temp_variable = { temp = resource_produced@oil }
+	divide_temp_variable = { temp = 40 }
+	add_to_variable = { country_GDP = temp }
+	set_temp_variable = { temp = resource_produced@aluminium }
+	divide_temp_variable = { temp = 40 }
+	add_to_variable = { country_GDP = temp }
+	set_temp_variable = { temp = resource_produced@rubber }
+	divide_temp_variable = { temp = 40 }
+	add_to_variable = { country_GDP = temp }
+	set_temp_variable = { temp = resource_produced@tungsten }
+	divide_temp_variable = { temp = 40 }
+	add_to_variable = { country_GDP = temp }
+	set_temp_variable = { temp = resource_produced@steel }
+	divide_temp_variable = { temp = 40 }
+	add_to_variable = { country_GDP = temp }
+	set_temp_variable = { temp = resource_produced@chromium }
+	divide_temp_variable = { temp = 40 }
+	add_to_variable = { country_GDP = temp }
+
+	if = {
+		limit = {
+			all_country = {
+				is_in_array = { global.GDP_list_array = THIS }
+			}
+		}
+		update_position = yes
+	}
+}
+
+update_position = {
+	set_temp_variable = { position = 0 }
+	set_variable = { sort_var = 1 }
+	set_variable = { last_sort_var = 0 }
+	create_sorted_array = yes
+	clear_array = global.top_ten_GDP_array
+
+	for_each_scope_loop = {
+		array = global.GDP_list_array
+
+		add_to_temp_variable = { position = 1 }
+		set_variable = { THIS.GDP_position = position }
+
+		if = {
+			limit = {
+				check_variable = { THIS.GDP_position < 11 }
+			}
+			add_to_array = { global.top_ten_GDP_array = THIS }
+		}
+	}
+}

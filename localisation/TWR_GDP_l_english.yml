@@ -1,0 +1,6 @@
+﻿l_english:
+
+view_GDP_button_tt:0 "Open GDP Screen"
+top_ten_GDP_country_flag_icon_tt:0 "[THIS.GetName]"
+GDP_list_flag_button_tt:0 "[THIS.GetName]"
+GDP_selected_country_flag_icon_tt:0 "[THIS.GetName]"

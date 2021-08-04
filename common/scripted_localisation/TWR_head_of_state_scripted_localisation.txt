@@ -1,0 +1,1924 @@
+defined_text = {
+	name = get_hos_title
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = king_george
+				has_country_flag = queen_elizabeth
+				has_country_flag = konigin_juliana
+				has_country_flag = umberto_ii
+				has_country_flag = young_simeon
+				has_country_flag = young_simeon_belev
+				has_country_flag = hos_marie_i
+				has_country_flag = mon_Haakon_VII
+				has_country_flag = mon_Olav_V
+				has_country_flag = mon_Gustav_VI
+				has_country_flag = mon_Michael_I
+				has_country_flag = mon_Norodom_Sihanouk
+				has_country_flag = mon_Norodom_Suramarit
+				has_country_flag = mon_Rama_IX
+				has_country_flag = mon_Rama_IX
+				has_country_flag = emperor_takahito
+				has_country_flag = king_faisal
+				has_country_flag = king_tomislav
+				has_country_flag = king_frederick_IX
+				has_country_flag = mon_Frederick_I
+				has_country_flag = mon_Akihito
+				has_country_flag = mon_Hirohito
+				has_country_flag = mon_Peter_II
+				has_country_flag = mon_Filiberto_I
+				has_country_flag = mon_Otto_II
+				has_country_flag = mon_Paul_GRE
+				has_country_flag = mon_Paul_GRE_oofed
+				has_country_flag = mon_Nicholas_I
+			}
+		}
+		localization_key = "Monarch"
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = emperor_takahito
+				has_country_flag = prince_kiril
+				has_country_flag = regent_Vilmos_Apor
+			}
+		}
+		localization_key = "Regent"
+	}
+	text = {
+		trigger = {
+			has_country_flag = rk_josef_terboven
+		}
+		localization_key = RK
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = gg_Harold_Alexander
+				has_country_flag = gg_Vincent_Massey
+				has_country_flag = gg_Bernard_Freyberg
+				has_country_flag = gg_Willoughby_Norrie
+				has_country_flag = gg_Frederick_Sturrock
+				has_country_flag = gg_Ernest_George_Jansen
+				has_country_flag = gg_William_Slim
+				has_country_flag = gg_William_McKell
+			}
+		}
+		localization_key = GG
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = pres_Sveinn_Bjornsson
+				has_country_flag = pres_Asgeir_Asgeirsson
+				has_country_flag = pres_Sean_T_OKelly
+				has_country_flag = pres_Celal_Bayar
+				has_country_flag = pres_Francisco_Craveiro_Lopes
+				has_country_flag = pres_Chaim_Weizmann
+				has_country_flag = pres_Yitzhak_Ben-Zvi
+				has_country_flag = pres_Rajendra_Prasad
+				has_country_flag = pres_Jawaharlal_Nehru
+				has_country_flag = pres_Khawaja_Nazimuddin
+				has_country_flag = pres_Sao_Shwe_Thail
+				has_country_flag = pres_Wang_Shijie
+				has_country_flag = pres_Jiang_Menglin
+				has_country_flag = pres_Ante_Vokic
+				has_country_flag = pres_Giziks
+			}
+		}
+		localization_key = PRES
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Interim_Government
+		}
+		localization_key = REG_ICL
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yosef_Sprinzak
+		}
+		localization_key = REG_ISR
+	}
+	text = {
+		trigger = {
+			has_country_flag = governor_Carlo_Geloso
+		}
+		localization_key = "Plenipotentiary"
+	}
+	text = {
+		trigger = {
+		OR = {
+			has_country_flag = mon_Vacant
+			has_country_flag = mon_ENG_Vacant
+			has_country_flag = HUN_vacant_throne
+			has_country_flag = SER_vacant_throne
+		}
+		}
+		localization_key = "Vacant Throne"
+	}
+	text = {
+		trigger = {
+			has_country_flag = FRA_Wilhelm_Schepmann
+		}
+		localization_key = "Reichsvertreter"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Nihal_Atsiz
+			has_country_flag = gov_John_Alan_Francis_Harding
+		}
+		localization_key = "General Leader"
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = pres_Paul_von_Lettow_Vorbeck
+				has_country_flag = pres_Eberhard_von_Mackensen
+				has_country_flag = pres_Wilhelm_Canaris
+				has_country_flag = pres_empty_reich
+				has_country_flag = pres_Walther_von_Reichenau
+			}
+		}
+		localization_key = "Reichsprasident"
+	}
+	text = {
+		trigger = {
+			has_country_flag = duumvir_Novikov
+		}
+		localization_key = "Duumvir Secundus"
+	}
+}
+defined_text = {
+	name = get_hos_pic
+	text = {
+		trigger = {
+			has_country_flag = mon_Paul_GRE
+		}
+		localization_key = "GFX_Portrait_GRE_Paul_I"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Paul_GRE_oofed
+		}
+		localization_key = "GFX_Portrait_GRE_Paul_I_oofed"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Giziks
+		}
+		localization_key = "GFX_Portrait_Phaedon_Gizikis"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Filiberto_I
+		}
+		localization_key = "GFX_Portrait_Prince_Filiberto"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Otto_II
+		}
+		localization_key = "GFX_Portrait_Otto_von_Habsburg"
+	}
+	text = {
+		trigger = {
+			has_country_flag = regent_Vilmos_Apor
+		}
+		localization_key = "GFX_portrait_Vilmos_Apor"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Wang_Shijie
+		}
+		localization_key = "GFX_portrait_Wang_Shijie"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Jiang_Menglin
+		}
+		localization_key = "GFX_portrait_Jiang_MengLin"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Akihito
+		}
+		localization_key = "GFX_portrait_Akihito"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Hirohito
+		}
+		localization_key = "GFX_portrait_Emperor_Hirohito"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Frederick_I
+		}
+		localization_key = "GFX_portrait_Friedrich_Josias"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sao_Shwe_Thail
+		}
+		localization_key = "GFX_portrait_Sao_Shwe_Thail"
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_george
+		}
+		localization_key = "GFX_portrait_george_vi"
+	}
+	text = {
+		trigger = {
+			has_country_flag = queen_elizabeth
+		}
+		localization_key = "GFX_portrait_eliz_ii"
+	}
+	text = {
+		trigger = {
+			has_country_flag = prince_kiril
+		}
+		localization_key = "GFX_portrait_prince_kiril"
+	}
+	text = {
+		trigger = {
+			has_country_flag = konigin_juliana
+		}
+		localization_key = "GFX_portrait_juliana"
+	}
+	text = {
+		trigger = {
+			has_country_flag = umberto_ii
+		}
+		localization_key = "GFX_portrait_umberto_ii"
+	}
+	text = {
+		trigger = {
+			has_country_flag = young_simeon
+		}
+		localization_key = "GFX_portrait_simeon_young"
+	}
+	text = {
+		trigger = {
+			has_country_flag = young_simeon_belev
+		}
+		localization_key = "GFX_portrait_simeon_young"
+	}
+	text = {
+		trigger = {
+			has_country_flag = hos_marie_i
+		}
+		localization_key = "GFX_portrait_Maria_I"
+	}
+	text = {
+		trigger = {
+			has_country_flag = rk_josef_terboven
+		}
+		localization_key = "GFX_portrait_Josef_Terboven"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Harold_Alexander
+		}
+		localization_key = "GFX_portrait_Harold_Alexander"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Vincent_Massey
+		}
+		localization_key = "GFX_portrait_Vincent_Massey"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Bernard_Freyberg
+		}
+		localization_key = "GFX_portrait_Bernard_Freyberg"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Willoughby_Norrie
+		}
+		localization_key = "GFX_portrait_Willoughby_Norrie"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Frederick_Sturrock
+		}
+		localization_key = "GFX_portrait_Frederick_Sturrock"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Ernest_George_Jansen
+		}
+		localization_key = "GFX_portrait_Ernest_George_Jansen"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_William_Slim
+		}
+		localization_key = "GFX_portrait_William_Slim"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_William_McKell
+		}
+		localization_key = "GFX_portrait_William_McKell"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sveinn_Bjornsson
+		}
+		localization_key = "GFX_portrait_Sveinn_Bjornsson"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Interim_Government
+		}
+		localization_key = "GFX_portrait_Interim_Government"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Asgeir_Asgeirsson
+		}
+		localization_key = "GFX_portrait_Asgeir_Asgeirsson"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sean_T_OKelly
+		}
+		localization_key = "GFX_portrait_Sean_T_OKelly"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Celal_Bayar
+		}
+		localization_key = "GFX_portrait_Celal_Bayar"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Francisco_Craveiro_Lopes
+		}
+		localization_key = "GFX_portrait_Francisco_Craveiro_Lopes"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Chaim_Weizmann
+		}
+		localization_key = "GFX_portrait_Chaim_Weizmann"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yitzhak_Ben-Zvi
+		}
+		localization_key = "GFX_portrait_Yitzhak_Ben-Zvi"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yosef_Sprinzak
+		}
+		localization_key = "GFX_portrait_Yosef_Sprinzak"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Rajendra_Prasad
+		}
+		localization_key = "GFX_portrait_Rajendra_Prasad"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Jawaharlal_Nehru
+		}
+		localization_key = "GFX_portrait_Nehru"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Khawaja_Nazimuddin
+		}
+		localization_key = "GFX_portrait_Khawaja_Nazimuddin"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Haakon_VII
+		}
+		localization_key = "GFX_portrait_Haakon_VII"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Olav_V
+		}
+		localization_key = "GFX_portrait_Olav_V"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Gustav_VI
+		}
+		localization_key = "GFX_portrait_Gustav_VI"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Michael_I
+		}
+		localization_key = "GFX_portrait_Michael_I"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Norodom_Sihanouk
+		}
+		localization_key = "GFX_portrait_Norodom_Sihanouk"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Norodom_Suramarit
+		}
+		localization_key = "GFX_portrait_Norodom_Suramarit"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Rama_IX
+		}
+		localization_key = "GFX_portrait_Rama_IX"
+	}
+	text = {
+		trigger = {
+			has_country_flag = governor_Carlo_Geloso
+		}
+		localization_key = "GFX_portrait_Carlo_Geloso"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Vacant
+		}
+		localization_key = "GFX_portrait_SPA_Vacant_Crown"
+	}
+	text = {
+		trigger = {
+			has_country_flag = HUN_vacant_throne
+		}
+		localization_key = "GFX_portrait_Hungarian_Crown"
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_vacant_throne
+		}
+		localization_key = "GFX_Portrait_SER_Vacant_Throne"
+	}
+	text = {
+		trigger = {
+			has_country_flag = emperor_takahito
+		}
+		localization_key = "GFX_portrait_Takahito"
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_faisal
+		}
+		localization_key = "GFX_portrait_faisal_ii"
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_tomislav
+		}
+		localization_key = "GFX_portrait_tomislav_ii"
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_frederick_IX
+		}
+		localization_key = "GFX_portrait_Frederick_IX"
+	}
+	text = {
+		trigger = {
+			has_country_flag = FRA_Wilhelm_Schepmann
+		}
+		localization_key = "GFX_portrait_Wilhelm_Schepmann"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Nihal_Atsiz
+		}
+		localization_key = "GFX_portrait_Nihal_Atsiz"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Paul_von_Lettow_Vorbeck
+		}
+		localization_key = "GFX_portrait_Paul_von_Lettow_Vorbeck"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Eberhard_von_Mackensen
+		}
+		localization_key = "GFX_portrait_Eberhard_von_Mackensen"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Wilhelm_Canaris
+		}
+		localization_key = "GFX_portrait_Wilhelm_Canaris"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_empty_reich
+		}
+		localization_key = "GFX_portrait_Presidential_Seal"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Walther_von_Reichenau
+		}
+		localization_key = "GFX_portrait_Walther_von_Reichenau"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_ENG_Vacant
+		}
+		localization_key = "GFX_portrait_Unknown_None"
+	}
+	text = {
+		trigger = {
+			has_country_flag = duumvir_Novikov
+		}
+		localization_key = "GFX_portrait_Novikov"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Peter_II
+		}
+		localization_key = "GFX_portrait_Peter_II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gov_John_Alan_Francis_Harding
+		}
+		localization_key = "GFX_Portrait_John_Alan_Francis_Harding"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Ante_Vokic
+		}
+		localization_key = "GFX_Portrait_Ante_Vokic"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Nicholas_I
+		}
+		localization_key = "GFX_Portrait_Nicholas_I"
+	}
+}
+defined_text = {
+	name = get_hos_name
+	text = {
+		trigger = {
+			has_country_flag = mon_Nicholas_I
+		}
+		localization_key = "Nicholas I"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Paul_GRE
+		}
+		localization_key = "Paul"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Paul_GRE_oofed
+		}
+		localization_key = "Paul"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Giziks
+		}
+		localization_key = "Phaedon Gizikis"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Filiberto_I
+		}
+		localization_key = "Filiberto I"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Otto_II
+		}
+		localization_key = "Otto II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = regent_Vilmos_Apor
+		}
+		localization_key = "Vilmos Apor"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Wang_Shijie
+		}
+		localization_key = "Wang Shijie"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Jiang_Menglin
+		}
+		localization_key = "Jiang Menglin"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Akihito
+		}
+		localization_key = "Akihito"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Hirohito
+		}
+		localization_key = "Hirohito"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Frederick_I
+		}
+		localization_key = "Frederick I"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_ENG_Vacant
+		}
+		localization_key = "Vacant Crown"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sao_Shwe_Thail
+		}
+		localization_key = "Sao Shwe Thail"
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_george
+		}
+		localization_key = "George VI"
+	}
+	text = {
+		trigger = {
+			has_country_flag = queen_elizabeth
+		}
+		localization_key = "Elizabeth II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = konigin_juliana
+		}
+		localization_key = "Juliana"
+	}
+	text = {
+		trigger = {
+			has_country_flag = umberto_ii
+		}
+		localization_key = "Umberto II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = young_simeon
+		}
+		localization_key = "Simeon II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = young_simeon_belev
+		}
+		localization_key = "Simeon II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = hos_marie_i
+		}
+		localization_key = "Marie I"
+	}
+	text = {
+		trigger = {
+			has_country_flag = rk_josef_terboven
+		}
+		localization_key = terboven
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Harold_Alexander
+		}
+		localization_key = Harold_Alexander
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Vincent_Massey
+		}
+		localization_key = Vincent_Massey
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Bernard_Freyberg
+		}
+		localization_key = Bernard_Freyberg
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Willoughby_Norrie
+		}
+		localization_key = Willoughby_Norrie
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Frederick_Sturrock
+		}
+		localization_key = Frederick_Sturrock
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Ernest_George_Jansen
+		}
+		localization_key = Ernest_George_Jansen
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_William_Slim
+		}
+		localization_key = William_Slim
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_William_McKell
+		}
+		localization_key = William_McKell
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sveinn_Bjornsson
+		}
+		localization_key = Sveinn_Bjornsson
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Interim_Government
+		}
+		localization_key = Interim_Government
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Asgeir_Asgeirsson
+		}
+		localization_key = Asgeir_Asgeirsson
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sean_T_OKelly
+		}
+		localization_key = Sean_T_OKelly
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Celal_Bayar
+		}
+		localization_key = Celal_Bayar
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Francisco_Craveiro_Lopes
+		}
+		localization_key = Francisco_Craveiro_Lopes
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Chaim_Weizmann
+		}
+		localization_key = Chaim_Weizmann
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yitzhak_Ben-Zvi
+		}
+		localization_key = Yitzhak_Ben-Zvi
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yosef_Sprinzak
+		}
+		localization_key = Yosef_Sprinzak-Zvi
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Rajendra_Prasad
+		}
+		localization_key = "Rajendra Prasad"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Jawaharlal_Nehru
+		}
+		localization_key = "Jawaharlal Nehru"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Khawaja_Nazimuddin
+		}
+		localization_key = Khawaja_Nazimuddin
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Haakon_VII
+		}
+		localization_key = "Haakon VII"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Olav_V
+		}
+		localization_key = "Olav V"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Gustav_VI
+		}
+		localization_key = "Gustav VI"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Michael_I
+		}
+		localization_key = "Mihai I"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Norodom_Sihanouk
+		}
+		localization_key = Norodom_Sihanouk
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Norodom_Suramarit
+		}
+		localization_key = Norodom_Suramarit
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Rama_IX
+		}
+		localization_key = Rama_IX
+	}
+	text = {
+		trigger = {
+			has_country_flag = governor_Carlo_Geloso
+		}
+		localization_key = "Carlo Geloso"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Vacant
+		}
+		localization_key = Vacant_crown
+	}
+	text = {
+		trigger = {
+			has_country_flag = HUN_vacant_throne
+		}
+		localization_key = Vacant_crown
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_vacant_throne
+		}
+		localization_key = Vacant_crown
+	}
+	text = {
+		trigger = {
+			has_country_flag = emperor_takahito
+		}
+		localization_key = "Takahito"
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_faisal
+		}
+		localization_key = "Faisal II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_tomislav
+		}
+		localization_key = "Tomislav II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_frederick_IX
+		}
+		localization_key = "Frederick IX"
+	}
+	text = {
+		trigger = {
+			has_country_flag = FRA_Wilhelm_Schepmann
+		}
+		localization_key = "Wilhelm Schepmann"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Nihal_Atsiz
+		}
+		localization_key = "Nihal Atsiz"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Paul_von_Lettow_Vorbeck
+		}
+		localization_key = "Paul von Lettow-Vorbeck"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Eberhard_von_Mackensen
+		}
+		localization_key = "Eberhard von Mackensen"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Wilhelm_Canaris
+		}
+		localization_key = "Wilhelm Canaris"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_empty_reich
+		}
+		localization_key = "Vacant"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Walther_von_Reichenau
+		}
+		localization_key = "Walther von Reichenau"
+	}
+	text = {
+		trigger = {
+			has_country_flag = duumvir_Novikov
+		}
+		localization_key = "Alexander Novikov"
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Peter_II
+		}
+		localization_key = "Petar II"
+	}
+	text = {
+		trigger = {
+			has_country_flag = gov_John_Alan_Francis_Harding
+		}
+		localization_key = "John Alan Francis Harding"
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Ante_Vokic
+		}
+		localization_key = "Ante Vokic"
+	}
+}
+defined_text = {
+	name = get_hos_desc
+	text = {
+		trigger = {
+			has_country_flag = mon_Nicholas_I
+		}
+		localization_key = Nicholas_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Paul_GRE
+		}
+		localization_key = Paul_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Paul_GRE_oofed
+		}
+		localization_key = Paul_DESC_2
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Giziks
+		}
+		localization_key = Gizikis_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Filiberto_I
+		}
+		localization_key = Filiberto_I_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Otto_II
+		}
+		localization_key = Otto_II_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = regent_Vilmos_Apor
+		}
+		localization_key = regent_Vilmos_Apor_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Wang_Shijie
+		}
+		localization_key = Wang_Shijie_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Jiang_Menglin
+		}
+		localization_key = Jiang_Menglin_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Akihito
+		}
+		localization_key = Akihito_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Hirohito
+		}
+		localization_key = Hirohito_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Frederick_I
+		}
+		localization_key = POLITICS_EGL_Frederick_I_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_ENG_Vacant
+		}
+		localization_key = POLITICS_ENG_VACANT_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sao_Shwe_Thail
+		}
+		localization_key = POLITICS_THAIK_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_george
+		}
+		localization_key = ENG_george_vi_hos_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = queen_elizabeth
+		}
+		localization_key = ENG_liz_hos_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = prince_kiril
+		}
+		localization_key = prince_kiril_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = konigin_juliana
+		}
+		localization_key = HOL_juliana_hos_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = umberto_ii
+		}
+		localization_key = ITA_umberto_ii_hos_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = young_simeon
+		}
+		localization_key = Simeon_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = young_simeon_belev
+		}
+		localization_key = Simeon_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = hos_marie_i
+		}
+		localization_key = Marie_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = rk_josef_terboven
+		}
+		localization_key = Josef_Terboven_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Harold_Alexander
+		}
+		localization_key = Harold_Alexander_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Vincent_Massey
+		}
+		localization_key = Vincent_Massey_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Bernard_Freyberg
+		}
+		localization_key = Bernard_Freyberg_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Willoughby_Norrie
+		}
+		localization_key = Willoughby_Norrie_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Frederick_Sturrock
+		}
+		localization_key = Frederick_Sturrock_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Ernest_George_Jansen
+		}
+		localization_key = Ernest_George_Jansen_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_William_Slim
+		}
+		localization_key = William_Slim_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_William_McKell
+		}
+		localization_key = William_Slim_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sveinn_Bjornsson
+		}
+		localization_key = Sveinn_Bjornsson_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Interim_Government
+		}
+		localization_key = Interim_Government_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Asgeir_Asgeirsson
+		}
+		localization_key = Asgeir_Asgeirsson_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sean_T_OKelly
+		}
+		localization_key = Sean_T_OKelly_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Celal_Bayar
+		}
+		localization_key = Celal_Bayar_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Francisco_Craveiro_Lopes
+		}
+		localization_key = Francisco_Craveiro_Lopes_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Chaim_Weizmann
+		}
+		localization_key = Chaim_Weizmann_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yitzhak_Ben-Zvi
+		}
+		localization_key = Yitzhak_Ben-Zvi_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yosef_Sprinzak
+		}
+		localization_key = Yosef_Sprinzak_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Rajendra_Prasad
+		}
+		localization_key = Rajendra_Prasad_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Jawaharlal_Nehru
+		}
+		localization_key = Jawaharlal_Nehru_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Khawaja_Nazimuddin
+		}
+		localization_key = Khawaja_Nazimuddin_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Haakon_VII
+		}
+		localization_key = Haakon_VII_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Olav_V
+		}
+		localization_key = Olav_V_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Gustav_VI
+		}
+		localization_key = Gustav_VI_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Michael_I
+		}
+		localization_key = Michael_I_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Norodom_Sihanouk
+		}
+		localization_key = Sihanouk_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Norodom_Suramarit
+		}
+		localization_key = Suramarit_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Rama_IX
+		}
+		localization_key = Rama_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = governor_Carlo_Geloso
+		}
+		localization_key = Carlo_Geloso_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Vacant
+		}
+		localization_key = vacant_crown_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = HUN_vacant_throne
+		}
+		localization_key = HUN_vacant_crown_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_vacant_throne
+		}
+		localization_key = SER_vacant_crown_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = emperor_takahito
+		}
+		localization_key = Takahito_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_faisal
+		}
+		localization_key = faisal_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_tomislav
+		}
+		localization_key = tomislav_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_frederick_IX
+		}
+		localization_key = frederick_IX_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = FRA_Wilhelm_Schepmann
+		}
+		localization_key = Wilhelm_Schepmann_desc
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Nihal_Atsiz
+		}
+		localization_key = Nihal_Atsiz_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Paul_von_Lettow_Vorbeck
+		}
+		localization_key = Paul_von_Lettow_Vorbeck_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Eberhard_von_Mackensen
+		}
+		localization_key = Eberhard_von_Mackensen_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Wilhelm_Canaris
+		}
+		localization_key = Wilhelm_Canaris_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_empty_reich
+		}
+		localization_key = none
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Walther_von_Reichenau
+		}
+		localization_key = Walther_von_Reichenau_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = duumvir_Novikov
+		}
+		localization_key = Novikov_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Peter_II
+		}
+		localization_key = Peter_II_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = gov_John_Alan_Francis_Harding
+		}
+		localization_key = John_Alan_Francis_Harding_DESC
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Ante_Vokic
+		}
+		localization_key = Ante_Vokic_DESC
+	}
+}
+defined_text = {
+	name = get_hos_modifier
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = king_george
+				has_country_flag = queen_elizabeth
+				has_country_flag = gg_Bernard_Freyberg
+				has_country_flag = gg_Willoughby_Norrie
+				has_country_flag = pres_Sveinn_Bjornsson
+				has_country_flag = pres_Sean_T_OKelly
+				has_country_flag = pres_Celal_Bayar
+				has_country_flag = pres_Chaim_Weizmann
+				has_country_flag = pres_Yitzhak_Ben-Zvi
+				has_country_flag = pres_Rajendra_Prasad
+				has_country_flag = pres_Jawaharlal_Nehru
+				has_country_flag = pres_Khawaja_Nazimuddin
+				has_country_flag = mon_Haakon_VII
+				has_country_flag = mon_Olav_V
+				has_country_flag = mon_Gustav_VI
+				AND = {
+					has_country_flag = mon_Michael_I
+					original_tag = ROM
+				}
+				has_country_flag = regent_Vilmos_Apor
+				has_country_flag = mon_Rama_IX
+				has_country_flag = king_frederick_IX
+				has_country_flag = pres_Sao_Shwe_Thail
+				has_country_flag = pres_Paul_von_Lettow_Vorbeck
+				has_country_flag = mon_Akihito
+				has_country_flag = mon_Hirohito
+				has_country_flag = mon_Peter_II
+				has_country_flag = mon_Otto_II
+			}
+		}
+		localization_key = popular_modifier
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = konigin_juliana
+				has_country_flag = umberto_ii
+				has_country_flag = young_simeon
+				has_country_flag = prince_kiril
+				has_country_flag = hos_marie_i
+				has_country_flag = gg_Harold_Alexander
+				has_country_flag = gg_Vincent_Massey
+				has_country_flag = gg_Frederick_Sturrock
+				has_country_flag = gg_Ernest_George_Jansen
+				has_country_flag = gg_William_Slim
+				has_country_flag = gg_William_McKell
+				has_country_flag = pres_Interim_Government
+				has_country_flag = pres_Asgeir_Asgeirsson
+				has_country_flag = pres_Francisco_Craveiro_Lopes
+				has_country_flag = pres_Yosef_Sprinzak
+				has_country_flag = mon_Norodom_Sihanouk
+				has_country_flag = mon_Norodom_Suramarit
+				has_country_flag = emperor_takahito
+				has_country_flag = king_faisal
+				has_country_flag = king_tomislav
+				has_country_flag = pres_Eberhard_von_Mackensen
+				has_country_flag = pres_Wilhelm_Canaris
+				has_country_flag = pres_Walther_von_Reichenau
+				has_country_flag = duumvir_Novikov
+				has_country_flag = pres_Wang_Shijie
+				has_country_flag = pres_Jiang_Menglin
+				has_country_flag = mon_Filiberto_I
+				has_country_flag = pres_Ante_Vokic
+				has_country_flag = mon_Nicholas_I
+			}
+		}
+		localization_key = mediocre_modifier
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = rk_josef_terboven
+				has_country_flag = governor_Carlo_Geloso
+				AND = {
+					has_country_flag = mon_Michael_I
+					NOT = { original_tag = ROM }
+				}
+				has_country_flag = gov_John_Alan_Francis_Harding
+			}
+		}
+		localization_key = tyranical_modifier
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_country_flag = pres_empty_reich
+				has_country_flag = mon_ENG_Vacant
+				has_country_flag = mon_Frederick_I
+				has_country_flag = HUN_vacant_throne
+				has_country_flag = SER_vacant_throne
+				has_country_flag = mon_Vacant
+				has_country_flag = young_simeon_belev
+				has_country_flag = pres_Giziks
+				has_country_flag = mon_Paul_GRE
+				has_country_flag = mon_Paul_GRE_oofed
+			}
+		}
+		localization_key = none_modifier
+	}
+}
+defined_text = {
+	name = get_hos_desc_2
+	text = {
+		trigger = {
+			has_country_flag = mon_Nicholas_I
+		}
+		localization_key = ROM_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_vacant_throne
+		}
+		localization_key = SER_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Giziks
+		}
+		localization_key = GRE_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Paul_GRE
+		}
+		localization_key = GRE_III_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Paul_GRE_oofed
+		}
+		localization_key = GRE_IV_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = HUN_vacant_throne
+		}
+		localization_key = HUN_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = regent_Vilmos_Apor
+		}
+		localization_key = HUN_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Filiberto_I
+		}
+		localization_key = HUN_III_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Otto_II
+		}
+		localization_key = HUN_IV_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Wang_Shijie
+		}
+		localization_key = CHI_I_HOS_DESCRIPTION
+	}
+		text = {
+		trigger = {
+			has_country_flag = pres_Jiang_Menglin
+		}
+		localization_key = CHI_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Akihito
+		}
+		localization_key = JAP_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Hirohito
+		}
+		localization_key = JAP_III_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sao_Shwe_Thail
+		}
+		localization_key = BUR_HOS_I_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_ENG_Vacant
+		}
+		localization_key = EGL_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Frederick_I
+		}
+		localization_key = EGL_HOS_DESCRIPTION_I
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_george
+		}
+		localization_key = ENG_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = queen_elizabeth
+		}
+		localization_key = ENG_HOS_DESCRIPTION_ii
+	}
+	text = {
+		trigger = {
+			has_country_flag = konigin_juliana
+		}
+		localization_key = HOL_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = umberto_ii
+		}
+		localization_key = ITA_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = prince_kiril
+		}
+		localization_key = BUL_HOS_II_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = young_simeon
+		}
+		localization_key = BUL_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = young_simeon_belev
+		}
+		localization_key = BUL_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = hos_marie_i
+		}
+		localization_key = BUL_HOS_I_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = rk_josef_terboven
+		}
+		localization_key = NOR_RK_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Harold_Alexander
+		}
+		localization_key = CAN_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Vincent_Massey
+		}
+		localization_key = CAN_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Bernard_Freyberg
+		}
+		localization_key = NZL_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Willoughby_Norrie
+		}
+		localization_key = NZL_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Frederick_Sturrock
+		}
+		localization_key = SAF_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_Ernest_George_Jansen
+		}
+		localization_key = SAF_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_William_Slim
+		}
+		localization_key = AST_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gg_William_McKell
+		}
+		localization_key = AST_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sveinn_Bjornsson
+		}
+		localization_key = ICE_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Interim_Government
+		}
+		localization_key = ICE_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Asgeir_Asgeirsson
+		}
+		localization_key = ICE_III_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Sean_T_OKelly
+		}
+		localization_key = IRE_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Celal_Bayar
+		}
+		localization_key = TUR_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Francisco_Craveiro_Lopes
+		}
+		localization_key = POL_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Chaim_Weizmann
+		}
+		localization_key = ISR_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yitzhak_Ben-Zvi
+		}
+		localization_key = ISR_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Yosef_Sprinzak
+		}
+		localization_key = ISR_III_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Rajendra_Prasad
+		}
+		localization_key = RAJ_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Jawaharlal_Nehru
+		}
+		localization_key = RAJ_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Khawaja_Nazimuddin
+		}
+		localization_key = PAK_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Haakon_VII
+		}
+		localization_key = NOR_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Olav_V
+		}
+		localization_key = NOR_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Gustav_VI
+		}
+		localization_key = SWE_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Michael_I
+		}
+		localization_key = ROM_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Norodom_Sihanouk
+		}
+		localization_key = CAM_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Norodom_Suramarit
+		}
+		localization_key = CAM_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Rama_IX
+		}
+		localization_key = SIA_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = governor_Carlo_Geloso
+		}
+		localization_key = GRE_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Vacant
+		}
+		localization_key = SPA_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = HUN_vacant_throne
+		}
+		localization_key = SPA_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = SER_vacant_throne
+		}
+		localization_key = SPA_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = emperor_takahito
+		}
+		localization_key = JAP_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_faisal
+		}
+		localization_key = IRQ_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_tomislav
+		}
+		localization_key = CRO_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = king_frederick_IX
+		}
+		localization_key = DEN_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = FRA_Wilhelm_Schepmann
+		}
+		localization_key = FRA_REICH_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Nihal_Atsiz
+		}
+		localization_key = TUR_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Paul_von_Lettow_Vorbeck
+		}
+		localization_key = HGR_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Eberhard_von_Mackensen
+		}
+		localization_key = HGR_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Wilhelm_Canaris
+		}
+		localization_key = HGR_III_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_empty_reich
+		}
+		localization_key = HGR_IV_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = pres_Walther_von_Reichenau
+		}
+		localization_key = HGR_V_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = duumvir_Novikov
+		}
+		localization_key = SOV_I_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = mon_Peter_II
+		}
+		localization_key = SER_II_HOS_DESCRIPTION
+	}
+	text = {
+		trigger = {
+			has_country_flag = gov_John_Alan_Francis_Harding
+		}
+		localization_key = CPY_II_HOS_DESCRIPTION
+	}
+}

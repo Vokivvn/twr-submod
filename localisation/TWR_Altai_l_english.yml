@@ -1,0 +1,104 @@
+﻿l_english:
+
+#Description
+
+#TWR_Toka:0 "Born in the collapsing Qing Empire, Khertek Amyrbitovna Anchimaa-Toka was one of the many children of a peasant family in the region of Tuva. An eager student and revolutionary from an early age, she became a member Tuvan People's Revolutionary Party and began teaching the new Tuvan alphabet in her efforts to eradicate illiteracy. One of the view Tuvans to have received a university degree, she rose along the ranks of the TNRP, taking positions such as Tuvan Zhenotdel, and Chair of the Women's Section of the Central Committee of the TNRP. In 1940, she became the Chair of the Presidium of Little Khural of Tannu Tuva, becoming the first female head of state in the modern era not inherit the title. As the leader of Tannu Tuva, her achievements were great but unnoticed by the unfolding war in Europe and after the shattering of Soviet Siberia, she remained as the head of state of Altai in a region aimed to get rid of her and her people by all means needed in the name of conquest. The strongest female revolutionary of Siberia stands against the world of warlords."
+TWR_Toka:0 "Before the Soviet Collapse in Siberia, Toka was the General Secretary of the Central Committee of the Tuvan People's Revolutionary Party and was the supreme ruler of the Tuvan People's Republic since 1932. When Siberia fell into chaos, Toka ordered his Tuvan troops to enter the nearby Soviet regions, merging Altai and Tannu Tuva into one political entity. To this day, the Altai Federation is the only Central Russian government that resembles a legitimate nation state, ruled by an iron fist."
+#Research Groups
+
+
+
+
+#### TRAITS ####
+
+
+#WT
+
+
+#### Decisions ####
+
+
+#### Autonomy Strings ####
+
+
+#### Ideas ####
+altai_federation_cohesion_idea:0 "Cohesion of the Altai Federation"
+altai_federation_cohesion_idea_desc:0 "The Federation of Altai was formed out of a hope to continue the Soviet Union in a better, more hopeful direction... However, what the population feels is a different story."
+altai_local_regimental_system:0 "Altai Federal Militia"
+altai_local_regimental_system_desc:0 "The Altai Army exists merely in name; instead, its role is de-facto taken by the federal militia regiments, that are ready to be called up in an hours notice in case of war. This makes the military inflexible, disorganized and less than ideal for modern combat."
+altai_local_regimental_system_expanded:0 "Altai Federal Militia"
+altai_local_regimental_system_expanded_desc:0 "The Altai Army exists merely in name; instead, its role is de-facto taken by the federal militia regiments, that are ready to be called up in an hours notice in case of war."
+ALT_Enemies_Above_Allies_Below:0 "Mongolian Support"
+ALT_Enemies_Above_Allies_Below_desc:0 "The Mongols down South are great allies of the Altai Republic. They have been generously providing us with useful equipment and horses for our nation, creating an unbreakable bond between the Altai Republic and the Mongol Republic."
+ALT_Unforgiving_Motherland:0 "Ideological Schism"
+ALT_Unforgiving_Motherland_desc:0 "The political body of Altai remains torn between Independents and the Soviets, with two factions competing with each other over influence and control. The Independents are largely Communist veterans from Tuva and Altai, arguing that the Soviet Union has failed the Altai-Tuvan People. Meanwhile, the Soviet Faction is in favour of political union with the Union once again, wishing to put an end to this independent Soviet Republic from within."
+ALT_Agrilcultural_Collectivisation:0 "Agricultural Collectivisation"
+ALT_Agrilcultural_Collectivisation_desc:0 "Having completed the collectivisation of our pastoral agriculture, our food production has increased by three times! With a plate of food ensured for all men, women and children, our population doesnt need to worry about being able to feed themselves and thus feel more comfortable expanding their families. The revolution always needs more soldiers and who are we to stop them?"
+
+#### Focuses ####
+TAN_reform_the_militia:0 "Reform the Federal Militia"
+TAN_reform_the_militia_desc:0 "The Federal Militia has grown too big and bloated, and instead of functioning as a minor peacekeeping force, it has completely taken the role of a national army. We must reorganize these units into something actually cabable of taking on modern war."
+TAN_expand_the_militia:0 "Expand the Federal Militia"
+TAN_expand_the_militia_desc:0 "The Federal Militia is an useful asset in maintaining an large army of citizens, which is always ready for war. We should raise new units to bolster its strength."
+TAN_adopt_agressive_tactics:0 "Adopt Agressive Tactics"
+TAN_adopt_agressive_tactics_desc:0 "The legacy of the Tuvan-commandeered tank squadrons in the patriotic war lives on, and we have valuable assets ready for the development and advancement of modern mobile warfare."
+TAN_altai_red_army:0 "Altai Red Army"
+TAN_altai_red_army_desc:0 "The Altai militias should function similar to the Soviet Red Army, overwhelming the enemy with our superior doctrine."
+TAN_purchase_kalashnikovs_rifle:0 "Purchase Kalashnikov's Rifle"
+TAN_purchase_kalashnikovs_rifle_desc:0 "Mikhail Kalashnikov of the Soviet Union has devised a new submachine gun that fires rounds accurate enough for rifle combat. We should purchase prototypes of this to advance our own army."
+TAN_kuzbass_tank_production:0 "Kuzbass Tank Production"
+TAN_kuzbass_tank_production_desc:0 "The Kuzbass in Kemerovo had its industrial capacity greatly expanded during the war, producing thousands of tanks, and as part of the Altai federation it will serve as the site of our own industrial capacity."
+TAN_integrate_federal_police:0 "Integrate Federal Police"
+TAN_integrate_federal_police_desc:0 "The Federal Police is a disorganized mess. We should integrate it into our army units to help stabilize the federation."
+TAN_master_metal_sheet_manufacturing:0 "Master Metal Sheet Manufacturing"
+TAN_master_metal_sheet_manufacturing_desc:0 "Modern guns aren't carved out of wood, they are made with stamped sheet metal. To aid in getting a gun in the hand of every man, we shall master this technique."
+TAN_improve_militia_c_et_c:0 "Improve Militia Command & Control"
+TAN_improve_militia_c_et_c_desc:0 "The Militia units currently operate way too independently of the central command. We will cut red tape, and make them operate more efficiently in the case of war."
+TAN_modernizing_artillery:0 "Modernizing Artillery"
+TAN_modernizing_artillery_desc:0 "Our artillery is outdated soviet-era equipment. We should modernize it up to today's standards."
+TAN_domestic_designs:0 "Domestic Designs"
+TAN_domestic_designs_desc:0 "We cannot rely on the T-34 for ever. We shall develop our own domestic tank designs."
+TAN_doctrine_of_fast_victory:0 "Doctrine of Fast Victory"
+TAN_doctrine_of_fast_victory_desc:0 "We will never win in a war against a superior reactionary power like Russia. We will instead quickly strike their lines, and break through into victory."
+TAN_infantry_squad_r_et_d:0 "Infantry Squadron R&D"
+TAN_infantry_squad_r_et_d_desc:0 "Infantry squadrons serve as the backbone of our army. We will develop new equipment for them to use."
+TAN_doctrine_of_deterrence:0 "Doctrine of Deterrence"
+TAN_doctrine_of_deterrence_desc:0 "The best defense is one you never have to use."
+TAN_raise_the_tuvan_legion:0 "Raise the Tuvan Foreign Corps"
+TAN_raise_the_tuvan_legion_desc:0 "The French were once hugely succesfull with their 'French Foreign Legion', which allowed foreigners to serve. Of course they were a reactionary power, but we can borrow some ideas... The Tuvan Foreign Corps will be led by expert Tuvan officers, and we will encourage all communits of Asia to come serve; Chinese immigrants, Mongolians, Russians..."
+TAN_tuvan_drill:0 "Tuvan Drill"
+TAN_tuvan_drill_desc:0 "The Tuvans are a militarily genious people. Their hard drill and lead will let our Altia army see victory!"
+TAN_total_defense:0 "Total Defense"
+TAN_total_defense_desc:0 "Every sector of the Tuvan state will be committed to defending the revolution. Every man knows what to do."
+
+### Army ###
+
+
+
+### Air Force ###
+
+
+
+### Navy ###
+
+
+
+#### Politics ####
+
+
+#### FORIEGN POLICY ####
+
+
+
+#### Flags ####
+
+
+
+#### Tooltips ####
+
+
+
+#### Opinion Modifiers ####
+
+
+#### Events ####

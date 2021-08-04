@@ -1,0 +1,721 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			881 = { #Tokyo
+				add_province_modifier = {
+					static_modifiers = { terrain_tokyo }
+					province = { id = 1182 }
+				}
+			}
+			880 = { #Yokohama
+				add_province_modifier = { 
+					static_modifiers = { terrain_yokohama }
+					province = { id = 9998 }
+				}
+			}
+			855 = { #Germania
+				add_province_modifier = { 
+					static_modifiers = { terrain_germania }
+					province = { id = 6521 }
+				}
+			}
+			784 = { #Washington D.C.
+				add_province_modifier = { 
+					static_modifiers = { terrain_washingtondc }
+					province = { id = 3957 }
+				}
+			}
+			276 = { #Ottawa
+				add_province_modifier = { 
+					static_modifiers = { terrain_ottawa }
+					province = { id = 3778 }
+				}
+			}
+			276 = { #Toronto
+				add_province_modifier = { 
+					static_modifiers = { terrain_toronto }
+					province = { id = 3775 }
+				}
+			}
+			126 = { #London
+				add_province_modifier = { 
+					static_modifiers = { terrain_london }
+					province = { id = 6103 }
+				}
+			}
+			468 = { #Montreal
+				add_province_modifier = { 
+					static_modifiers = { terrain_montreal }
+					province = { id = 4345 }
+				}
+			}
+			608 = { #Beijing
+				add_province_modifier = {
+					static_modifiers = { terrain_beijing }
+					province = { id = 9843 }
+				}
+			}
+			525 = { #Busan
+				add_province_modifier = {
+					static_modifiers = { terrain_busan }
+					province = { id = 4056 }
+				}
+			}
+			605 = { #Chongqing
+				add_province_modifier = {
+					static_modifiers = { terrain_chongqing }
+					province = { id = 6999 }
+				}
+			}
+			326 = { #HK
+				add_province_modifier = {
+					static_modifiers = { terrain_HK }
+					province = { id = 10062 }
+				}
+			}
+			378 = { #LA and SF
+				add_province_modifier = {
+					static_modifiers = { terrain_LA }
+					province = { id = 9814 }
+				}
+				add_province_modifier = {
+					static_modifiers = { terrain_SF }
+					province = { id = 9671 }
+				}
+			}
+			41 = { #Madrid
+				add_province_modifier = {
+					static_modifiers = { terrain_madrid }
+					province = { id = 3938 }
+				}
+			}
+			613 = { #Nanjing
+				add_province_modifier = {
+					static_modifiers = { terrain_nanjing }
+					province = { id = 11913 }
+				}
+			}
+			16 = { #Paris
+				add_province_modifier = {
+					static_modifiers = { terrain_paris }
+					province = { id = 11506 }
+				}
+			}
+			527 = { #Pyeongyang
+				add_province_modifier = {
+					static_modifiers = { terrain_pyeongyang }
+					province = { id = 4052 }
+				}
+			}
+			2 = { #Rome
+				add_province_modifier = {
+					static_modifiers = { terrain_rome }
+					province = { id = 9904 }
+				}
+			}
+			816 = { #Seoul
+				add_province_modifier = {
+					static_modifiers = { terrain_seoul }
+					province = { id = 7125 }
+				}
+			}
+			109 = { #Zagreb
+				add_province_modifier = {
+					static_modifiers = { terrain_zagreb }
+					province = { id = 11581 }
+				}
+			}
+			
+		}
+	}
+
+	on_nuke_drop = {
+		effect = {
+			FROM = {
+				if = {
+					limit = {
+						NOT = { has_state_flag = state_nuked }
+					}
+					set_state_flag = state_nuked
+					if = {
+						limit = {
+							FROM = { state = 881 }
+						}
+						881 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_tokyo }
+								province = 1182
+							}
+							set_temp_variable = { temp_prov_id = 1182 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 880 }
+						}
+						880 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_yokohama }
+								province = 9998
+							}
+							set_temp_variable = { temp_prov_id = 9998 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 855 }
+						}
+						855 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_germania }
+								province = 6521
+							}
+							add_province_modifier = {
+								static_modifiers = { terrain_nuked_germania }
+								province = { id = 6521 }
+							}
+							owner = {
+								news_event = { id = twrnukes.1 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 784 }
+						}
+						784 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_washingtondc}
+								province = 3957
+							}
+							set_temp_variable = { temp_prov_id = 3957 }
+							add_nuke_pic_special = yes
+							owner = {
+								news_event = { id = twrnukes.13 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 276 }
+						}
+						276 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_ottawa }
+								province = 3778
+							}
+							remove_province_modifier = {
+								static_modifiers = { terrain_toronto }
+								province = 3775
+							}
+							set_temp_variable = { temp_prov_id = 3778 }
+							add_nuke_pic_special = yes
+							set_temp_variable = { temp_prov_id = 3775 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 126 }
+						}
+						126 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_london }
+								province = 6103
+							}
+							set_temp_variable = { temp_prov_id = 6103 }
+							add_nuke_pic_special = yes
+							owner = {
+								news_event = { id = twrnukes.30 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 468 }
+						}
+						468 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_montreal }
+								province = 4345
+							}
+							set_temp_variable = { temp_prov_id = 4345 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 608 }
+						}
+						608 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_beijing }
+								province = 9843 
+							}
+							set_temp_variable = { temp_prov_id = 9843 }
+							add_nuke_pic_special = yes
+							owner = {
+								news_event = { id = twrnukes.26 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 525 }
+						}
+						525 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_busan }
+								province = 4056  
+							}
+							set_temp_variable = { temp_prov_id = 4056 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 605 }
+						}
+						605 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_chongqing }
+								province = 6999   
+							}
+							set_temp_variable = { temp_prov_id = 6999 }
+							add_nuke_pic_special = yes
+							owner = {
+								news_event = { id = twrnukes.27 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 326 }
+						}
+						326 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_HK }
+								province = 10062    
+							}
+							set_temp_variable = { temp_prov_id = 10062 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 378 }
+						}
+						378 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_LA }
+								province = 9814     
+							}
+							remove_province_modifier = {
+								static_modifiers = { terrain_SF }
+								province = 9671    
+							}
+							set_temp_variable = { temp_prov_id = 9814 }
+							add_nuke_pic_special = yes
+							set_temp_variable = { temp_prov_id = 9671 }
+							add_nuke_pic_special = yes
+							owner = {
+								news_event = { id = twrnukes.19 days = 1 }
+								news_event = { id = twrnukes.20 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 41 }
+						}
+						41 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_madrid }
+								province = 3938    
+							}
+							set_temp_variable = { temp_prov_id = 3938 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 613 }
+						}
+						613 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_nanjing }
+								province = 11913     
+							}
+							set_temp_variable = { temp_prov_id = 11913 }
+							add_nuke_pic_special = yes
+							owner = {
+								news_event = { id = twrnukes.25 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 16 }
+						}
+						16 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_paris }
+								province = 11506     
+							}
+							set_temp_variable = { temp_prov_id = 11506 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 527 }
+						}
+						527 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_pyeongyang }
+								province = 4052     
+							}
+							set_temp_variable = { temp_prov_id = 4052 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 2 }
+						}
+						2 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_rome }
+								province = 9904     
+							}
+							set_temp_variable = { temp_prov_id = 9904 }
+							add_nuke_pic_special = yes
+							owner = {
+								news_event = { id = twrnukes.7 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 816 }
+						}
+						816 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_seoul }
+								province = 7125     
+							}
+							set_temp_variable = { temp_prov_id = 7125 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 109 }
+						}
+						109 = {
+							remove_province_modifier = {
+								static_modifiers = { terrain_zagreb }
+								province = 11581     
+							}
+							set_temp_variable = { temp_prov_id = 11581 }
+							add_nuke_pic_special = yes
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 58 }
+						}
+						58 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.2 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 65 }
+						}
+						65 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.3 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 808 }
+						}
+						808 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.4 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 52 }
+						}
+						52 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.5 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 64 }
+						}
+						64 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.6 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 117 }
+						}
+						117 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.8 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 158 }
+						}
+						158 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.9 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 115 }
+						}
+						115 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.10 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 162 }
+						}
+						162 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.11 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 160 }
+						}
+						160 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.12 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 358 }
+						}
+						358 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.14 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 357 }
+						}
+						357 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.15 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 366 }
+						}
+						366 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.16 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 393 }
+						}
+						393 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.17 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 395 }
+						}
+						395 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.18 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 398 }
+						}
+						398 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.21 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 252 }
+						}
+						252 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.22 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 653 }
+						}
+						653 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.23 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 219 }
+						}
+						219 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.24 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 603 }
+						}
+						603 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.28 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 620 }
+						}
+						620 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.29 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 128 }
+						}
+						128 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.31 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 132 }
+						}
+						132 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.32 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 127 }
+						}
+						127 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.33 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 130 }
+						}
+						130 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.34 days = 1 }
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = { state = 133 }
+						}
+						133 = {
+							add_nuke_pic = yes
+							owner = {
+								news_event = { id = twrnukes.35 days = 1 }
+							}
+						}
+					}
+					else = {
+						FROM = {
+							add_nuke_pic = yes
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,706 @@
+﻿add_namespace = twrcaucasus
+
+country_event = { #proposal of caucasian ussr by ryabyshev
+	id = twrcaucasus.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.1"}
+	title = twrcaucasus.1.t
+	desc = twrcaucasus.1.d
+	picture = GFX_report_event_caucasus_map
+
+	trigger = {
+		tag = CDA
+		CDA = { 
+			exists = yes
+			has_war = no
+		}
+		country_exists = RAC
+		country_exists = AZR
+	}
+
+	mean_time_to_happen = { days = 7 }
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.1.a
+		RAC = { 
+			country_event = {
+				id = twrcaucasus.2
+				days = 1
+			}
+		}
+		AZR = { 
+			country_event = {
+				id = twrcaucasus.3
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #the caucasian ussr? (volga-manych)
+	id = twrcaucasus.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.2"}
+	title = twrcaucasus.2.t
+	desc = twrcaucasus.2.d
+	picture = GFX_report_event_caucasus_map
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.2.a
+		CDA = { 
+			country_event = {
+				id = twrcaucasus.4
+				days = 1
+			}
+			change_tag_from = ROOT
+		}
+	}
+}
+
+country_event = { #the caucasian ussr? (azerbaijan)
+	id = twrcaucasus.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.3"}
+	title = twrcaucasus.3.t
+	desc = twrcaucasus.3.d
+	picture = GFX_report_event_caucasus_map
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.3.a
+		CDA = { 
+			country_event = {
+				id = twrcaucasus.5
+				days = 1
+			}
+			change_tag_from = ROOT
+		}
+	}
+}
+
+country_event = { #volga-manych join
+	id = twrcaucasus.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.4"}
+	title = twrcaucasus.4.t
+	desc = twrcaucasus.4.d
+	picture = GFX_report_event_caucasus_map
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.4.a
+		hidden_effect = {
+			set_country_flag = vmjoin
+		}
+		annex_country = {
+			target = RAC
+			transfer_troops = yes
+		}
+		238 = { add_core_of = CDA remove_core_of = RAC }
+	}
+}
+
+country_event = { #azerbaijan joins
+	id = twrcaucasus.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.5"}
+	title = twrcaucasus.5.t
+	desc = twrcaucasus.5.d
+	picture = GFX_report_event_caucasus_map
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.5.a
+		hidden_effect = {
+			set_country_flag = azerjoin
+			CDA = { 
+				country_event = {
+					id = twrcaucasus.6
+					days = 1
+				}
+				change_tag_from = ROOT
+			}
+		}
+		if = {
+			limit = {
+				ARM = {
+					is_subject_of = AZR
+				}
+			}
+			annex_country = {
+				target = ARM
+				transfer_troops = no
+			}
+		}
+		annex_country = {
+			target = AZR
+			transfer_troops = yes
+		}
+		229 = { add_core_of = CDA }
+		968 = { add_core_of = CDA }
+		969 = { add_core_of = CDA }
+		967 = { add_core_of = CDA }
+	}
+}
+
+country_event = { #the KSFSR is formed
+	id = twrcaucasus.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.6"}
+	title = twrcaucasus.6.t
+	desc = twrcaucasus.6.d
+	picture = GFX_report_event_caucasus_map
+	
+	mean_time_to_happen = { days = 1 }
+	
+	trigger = {
+		OR = {
+			AND = {
+				tag = CDA
+				has_country_flag = vmjoin
+				has_country_flag = azerjoin
+			}
+			AND = {
+				tag = CDA
+				has_country_flag = azerjoin
+				NOT = {
+					country_exists = RAC
+				}
+			}
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.6.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Caucasian Soviet Council"
+			desc = ""
+			picture = "gfx/leaders/CDA/Caucasian_Soviet_Council.tga"
+			expire = "2000.1.1"
+			ideology = marxism_leninism 
+			traits = { }
+		}
+		set_cosmetic_tag = CDA_CAUCASUS
+		add_ideas = CDA_debuff
+		hidden_effect = {
+			load_focus_tree = twr_caucasus_tree
+			set_party_name = { 
+    			ideology = national_socialist
+				name = CDA_csfsr_national_socialist_party 
+				long_name = CDA_csfsr_national_socialist_party_long 
+			}
+			set_party_name = { 
+    			ideology = fascist
+				name = CDA_csfsr_fascist_party 
+				long_name = CDA_csfsr_fascist_party_long 
+			}
+			set_party_name = { 
+    			ideology = paternal_autocrat
+				name = CDA_csfsr_paternal_autocrat_party 
+				long_name = CDA_csfsr_paternal_autocrat_party_long 
+			}
+			set_party_name = { 
+    			ideology = conservative
+				name = CDA_csfsr_conservative_party 
+				long_name = CDA_csfsr_conservative_party_long 
+			}
+			set_party_name = { 
+    			ideology = liberal
+				name = CDA_csfsr_liberal_party 
+				long_name = CDA_csfsr_liberal_party_long 
+			}
+			set_party_name = { 
+    			ideology = social_democrat
+				name = CDA_csfsr_social_democrat_party 
+				long_name = CDA_csfsr_social_democrat_party_long 
+			}
+			set_party_name = { 
+    			ideology = socialist 
+				name = CDA_csfsr_socialist_party
+				long_name = CDA_csfsr_socialist_party_long 
+			}
+			set_party_name = { 
+    			ideology = bolshevik_leninist
+				name = CDA_csfsr_bolshevik_leninist_party 
+				long_name = CDA_csfsr_bolshevik_leninist_party_long 
+			}
+			set_party_name = { 
+    			ideology = marxist_leninist 
+				name = CDA_csfsr_marxist_leninist_party
+				long_name = CDA_csfsr_marxist_leninist_party_long 
+			}
+			set_popularities = {
+				national_socialist = 3
+				fascist = 1
+				paternal_autocrat = 17
+				conservative = 5
+				liberal = 2
+				social_democrat = 4
+				socialist = 10
+				bolshevik_leninist = 10
+				marxist_leninist = 48
+			}
+		}
+	}
+}
+
+country_event = { #proposal of caucasian ussr by ryabyshev, if RAC is daed
+	id = twrcaucasus.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.7"}
+	title = twrcaucasus.7.t
+	desc = twrcaucasus.7.d
+	picture = GFX_report_event_caucasus_map
+
+	mean_time_to_happen = { days = 15 }
+
+	trigger = {
+		tag = CDA
+		CDA = { 
+			exists = yes
+			has_war = no
+		}
+		NOT = {
+			country_exists = RAC
+		}
+		country_exists = AZR
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.7.a
+		AZR = { 
+			country_event = {
+				id = twrcaucasus.3
+				days = 2
+			}
+		}
+		hidden_effect = {
+			238 = { add_core_of = CDA remove_core_of = RAC }
+		}
+	}
+}
+
+country_event = { #plans for our future
+	id = twrcaucasus.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.8"}
+	title = twrcaucasus.8.t
+	desc = twrcaucasus.8.d
+	picture = GFX_report_event_caucflag
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.8.a #We will take a course to join them
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				SOV = { has_government = paternal_autocrat }
+			}
+			modifier = {
+				factor = 2
+				SOV = { has_government = social_democrat }
+			}
+			modifier = {
+				factor = 8
+				SOV = { has_government = bolshevik_leninist }
+			}
+			modifier = {
+				factor = 10
+				SOV = { has_government = marxist_leninist }
+			}
+		}
+		custom_effect_tooltip = csfsr_option81
+		hidden_effect = {
+			set_country_flag = csfsr_option81_flag
+		}
+	}
+	
+	option = {
+		name = twrcaucasus.8.b #They're not the same union as us
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 10
+				SOV = { has_government = paternal_autocrat }
+			}
+			modifier = {
+				factor = 8
+				SOV = { has_government = social_democrat }
+			}
+			modifier = {
+				factor = 2
+				SOV = { has_government = bolshevik_leninist }
+			}
+			modifier = {
+				factor = 0
+				SOV = { has_government = marxist_leninist }
+			}
+		}
+		custom_effect_tooltip = csfsr_option82
+		hidden_effect = {
+			set_country_flag = csfsr_option82_flag
+		}
+	}
+}
+
+country_event = { #caucasian plan
+	id = twrcaucasus.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.9"}
+	title = twrcaucasus.9.t
+	desc = twrcaucasus.9.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.9.a
+	}
+}
+
+country_event = { #We will rise!
+	id = twrcaucasus.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.10"}
+	title = twrcaucasus.10.t
+	desc = twrcaucasus.10.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.10.a
+	}
+}
+
+country_event = { #A desperate state
+	id = twrcaucasus.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.11"}
+	title = twrcaucasus.11.t
+	desc = twrcaucasus.11.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.11.a
+	}
+}
+
+country_event = { #CSFSR requests help (Turkey)
+	id = twrcaucasus.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.12"}
+	title = twrcaucasus.12.t
+	desc = twrcaucasus.12.d
+	picture = GFX_report_event_caucflag
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.12.a
+		ai_chance = {
+			factor = 6
+		}
+		CDA = {
+			country_event = {
+				id = twrcaucasus.13
+				days = 1
+				random = 6
+			}
+		}
+		add_political_power = -25
+	}
+	
+	option = {
+		name = twrcaucasus.12.b
+		ai_chance = {
+			factor = 4
+		}
+		CDA = {
+			country_event = {
+				id = twrcaucasus.14
+				days = 1
+				random = 6
+			}
+		}
+	}
+}
+
+country_event = { #Turkey has decided to help us
+	id = twrcaucasus.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.13"}
+	title = twrcaucasus.13.t
+	desc = twrcaucasus.13.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.13.a
+		add_political_power = 25
+		add_opinion_modifier = {
+			target = TUR
+			modifier = CDA_helped
+		}
+	}
+}
+
+country_event = { #Turkey refused help
+	id = twrcaucasus.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.14"}
+	title = twrcaucasus.14.t
+	desc = twrcaucasus.14.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.14.a
+		add_opinion_modifier = {
+			target = TUR
+			modifier = CDA_did_not_help
+		}
+	}
+}
+
+country_event = { #CSFSR requests help (USSR)
+	id = twrcaucasus.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.15"}
+	title = twrcaucasus.15.t
+	desc = twrcaucasus.15.d
+	picture = GFX_report_event_caucflag
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.15.a
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 0
+				SOV = { has_government = paternal_autocrat }
+			}
+			modifier = {
+				factor = 2
+				SOV = { has_government = social_democrat }
+			}
+			modifier = {
+				factor = 8
+				SOV = { has_government = bolshevik_leninist }
+			}
+			modifier = {
+				factor = 10
+				SOV = { has_government = marxist_leninist }
+			}
+		}
+		CDA = {
+			country_event = {
+				id = twrcaucasus.16
+				days = 1
+				random = 6
+			}
+		}
+		add_political_power = -25
+	}
+	
+	option = {
+		name = twrcaucasus.15.b
+		ai_chance = { 
+			factor = 1
+			modifier = {
+				factor = 10
+				SOV = { has_government = paternal_autocrat }
+			}
+			modifier = {
+				factor = 8
+				SOV = { has_government = social_democrat }
+			}
+			modifier = {
+				factor = 2
+				SOV = { has_government = bolshevik_leninist }
+			}
+			modifier = {
+				factor = 0
+				SOV = { has_government = marxist_leninist }
+			}
+		}
+		CDA = {
+			country_event = {
+				id = twrcaucasus.17
+				days = 1
+				random = 6
+			}
+		}
+	}
+}
+
+country_event = { #The USSR has decided to help us
+	id = twrcaucasus.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.16"}
+	title = twrcaucasus.16.t
+	desc = twrcaucasus.16.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.16.a
+		add_political_power = 25
+		add_opinion_modifier = {
+			target = SOV
+			modifier = CDA_helped
+		}
+	}
+}
+
+country_event = { #The USSR refused help
+	id = twrcaucasus.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.17"}
+	title = twrcaucasus.17.t
+	desc = twrcaucasus.17.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.17.a
+		add_opinion_modifier = {
+			target = SOV
+			modifier = CDA_did_not_help
+		}
+	}
+}
+
+country_event = { #CSFSR requests help (Iran/Persia)
+	id = twrcaucasus.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.18"}
+	title = twrcaucasus.18.t
+	desc = twrcaucasus.18.d
+	picture = GFX_report_event_caucflag
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.18.a
+		ai_chance = {
+			factor = 6
+		}
+		CDA = {
+			country_event = {
+				id = twrcaucasus.19
+				days = 1
+				random = 6
+			}
+		}
+		add_political_power = -25
+	}
+	
+	option = {
+		name = twrcaucasus.18.b
+		ai_chance = {
+			factor = 4
+		}
+		CDA = {
+			country_event = {
+				id = twrcaucasus.20
+				days = 1
+				random = 6
+			}
+		}
+	}
+}
+
+country_event = { #Iran has decided to help us
+	id = twrcaucasus.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.19"}
+	title = twrcaucasus.19.t
+	desc = twrcaucasus.19.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.19.a
+		add_political_power = 25
+		add_opinion_modifier = {
+			target = PER
+			modifier = CDA_helped
+		}
+	}
+}
+
+country_event = { #Iran refused help
+	id = twrcaucasus.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.20"}
+	title = twrcaucasus.20.t
+	desc = twrcaucasus.20.d
+	picture = GFX_report_event_stavropol
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.20.a
+		add_opinion_modifier = {
+			target = PER
+			modifier = CDA_did_not_help
+		}
+	}
+}
+
+country_event = { #Reorganisation of leftover troops
+	id = twrcaucasus.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrcaucasus.21"}
+	title = twrcaucasus.21.t
+	desc = twrcaucasus.21.d
+	picture = GFX_report_event_generic_red_army_fight
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = {
+		name = twrcaucasus.21.a
+		hidden_effect = {
+			#load_oob = "CDA_BACKUP"
+		}
+		custom_effect_tooltip = csfsr_option21a
+	}
+}

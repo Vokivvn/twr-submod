@@ -1,0 +1,16 @@
+################
+##### VEN ######
+################
+
+KRA_foreign_policy = {
+	
+	icon = generic_crisis
+
+	allowed = {
+		original_tag = KRA
+	}
+
+	visible = {
+		has_country_flag = KRA_decisions_available
+	}
+}

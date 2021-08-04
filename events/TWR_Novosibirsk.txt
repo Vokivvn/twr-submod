@@ -1,0 +1,939 @@
+﻿add_namespace = twrNovosibirsk
+add_namespace = twrnovhidden
+
+country_event = {
+	id = twrNovosibirsk.1 #Rostov Conference
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.1"}
+	title = twrNovosibirsk.1.t
+	desc = twrNovosibirsk.1.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.1.a
+		add_political_power = 100
+		
+	}
+	
+}
+
+country_event = {
+	id = twrNovosibirsk.2 #Formation of the Non-Alligned Movement
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.2"}
+	title = twrNovosibirsk.2.t
+	desc = twrNovosibirsk.2.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.2.a
+		add_ideas = NOV_Member_of_the_Non_Alligned_Movement
+		SWE = {
+			add_ideas = NOV_Member_of_the_Non_Alligned_Movement
+		}
+		CHI = {
+			add_ideas = NOV_Member_of_the_Non_Alligned_Movement
+		}
+		RAJ = {
+			add_ideas = NOV_Member_of_the_Non_Alligned_Movement
+		}
+		TUR = {
+			add_ideas = NOV_Member_of_the_Non_Alligned_Movement
+		}
+	}
+	
+}
+
+country_event = {
+	id = twrNovosibirsk.3 #Death of Drozdov
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.2"}
+	title = twrNovosibirsk.3.t
+	desc = twrNovosibirsk.3.d
+	picture = GFX_report_event_gulag
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.3.a
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_NOV_LIGACHEV
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_NOV_YEFIMOV
+			}
+		}
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = social_democrat
+		}
+		add_popularity = {
+			ideology = social_democrat
+			popularity = 0.30
+		}
+		create_country_leader = {
+			name = "Alexander Yefimov"
+			desc = ""
+			picture = "Alexander_Yefimov.dds"
+			expire = "1975.1.1"
+			ideology = authoritarian_democracy
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Nikita Khrushchev"
+			desc = ""
+			picture = "Nikita_Khrushchev.dds"
+			expire = "1975.1.1"
+			ideology = social_patriotism
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yegor Ligachev"
+			desc = ""
+			picture = "Yegor_Ligachev.dds"
+			expire = "1975.1.1"
+			ideology = market_liberalism
+			traits = {}
+		}
+		KRA = {
+		white_peace_with_ROOT = yes
+		}
+	}
+	
+	option = {
+		name = twrNovosibirsk.3.b
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_NOV_LIGACHEV
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_NOV_KRUSHCHEV
+			}
+		}
+		kill_country_leader = yes
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.05
+		}
+		create_country_leader = {
+			name = "Alexander Yefimov"
+			desc = ""
+			picture = "Alexander_Yefimov.dds"
+			expire = "1975.1.1"
+			ideology = authoritarian_democracy
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Nikita Khrushchev"
+			desc = ""
+			picture = "Nikita_Khrushchev.dds"
+			expire = "1975.1.1"
+			ideology = social_patriotism
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yegor Ligachev"
+			desc = ""
+			picture = "Yegor_Ligachev.dds"
+			expire = "1975.1.1"
+			ideology = market_liberalism
+			traits = {}
+		}
+		KRA = {
+		white_peace_with_ROOT = yes
+		}
+	}
+	
+	option = {
+		name = twrNovosibirsk.3.c
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_NOV_KRUSHCHEV
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_NOV_YEFIMOV
+			}
+		}
+		kill_country_leader = yes
+		set_politics = {
+			ruling_party = liberal
+		}
+		add_popularity = {
+			ideology = liberal
+			popularity = 0.30
+		}
+		create_country_leader = {
+			name = "Alexander Yefimov"
+			desc = ""
+			picture = "Alexander_Yefimov.dds"
+			expire = "1975.1.1"
+			ideology = authoritarian_democracy
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Yegor Ligachev"
+			desc = ""
+			picture = "Yegor_Ligachev.dds"
+			expire = "1975.1.1"
+			ideology = market_liberalism
+			traits = {}
+		}
+		create_country_leader = {
+			name = "Nikita Khrushchev"
+			desc = ""
+			picture = "Nikita_Khrushchev.dds"
+			expire = "1975.1.1"
+			ideology = social_patriotism
+			traits = {}
+		}
+		KRA = {
+		white_peace_with_ROOT = yes
+		}
+	}
+	
+}
+
+country_event = {
+	id = twrNovosibirsk.4 # Preparations to attack Krasnoyarsk
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.4"}
+	title = twrNovosibirsk.4.t
+	desc = twrNovosibirsk.4.d
+	picture = GFX_report_event_gulag
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.4.a
+		add_political_power = 5
+	}
+	
+}
+
+country_event = {
+	id = twrNovosibirsk.5 # Khrushchev Intro 1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.5"}
+	title = twrNovosibirsk.5.t
+	desc = twrNovosibirsk.5.d
+	picture = GFX_report_event_khrushchev
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.5.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.6 # Khrushchev Intro 2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.6"}
+	title = twrNovosibirsk.6.t
+	desc = twrNovosibirsk.6.d
+	picture = GFX_report_event_khrushchev
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.6.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.7 # Transvolga - Invited to Troika
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.7"}
+	title = twrNovosibirsk.7.t
+	desc = twrNovosibirsk.7.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.7.a
+		trigger = { is_in_faction = no }
+		ai_chance = {
+			factor = 13
+		}
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.9 } }
+		NOV = { add_to_faction = TRV }
+	}
+	option = {
+		name = twrNovosibirsk.7.b
+		ai_chance = {
+			factor = 7
+		}
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.10 } }
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.8 # Idel Ural - Invited to Troika
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.8"}
+	title = twrNovosibirsk.8.t
+	desc = twrNovosibirsk.8.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.8.a
+		trigger = { is_in_faction = no }
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.11 } }
+		ai_chance = {
+			factor = 13
+		}
+		NOV = { add_to_faction = IDE }
+	}
+	option = {
+		name = twrNovosibirsk.8.b
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.12 } }
+		ai_chance = {
+			factor = 7
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.9 # Transvolga Accepts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.9"}
+	title = twrNovosibirsk.9.t
+	desc = twrNovosibirsk.9.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.9.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.10 # Transvolga Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.10"}
+	title = twrNovosibirsk.10.t
+	desc = twrNovosibirsk.10.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.10.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.11 # Idel Ural Accepts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.11"}
+	title = twrNovosibirsk.11.t
+	desc = twrNovosibirsk.11.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.11.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.12 # Idel Ural Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.12"}
+	title = twrNovosibirsk.12.t
+	desc = twrNovosibirsk.12.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.12.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.13 # Form Russian People's Republic
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.13"}
+	title = twrNovosibirsk.13.t
+	desc = twrNovosibirsk.13.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.13.a
+		set_country_flag = NOV_RUSSIA
+		set_cosmetic_tag = NOV_PEOPLES_REPUBLIC
+		news_event = { days = 1 id = twrnews.139 }
+		every_state = {
+			limit = {
+				is_core_of = SOV
+				NOT = {
+					is_core_of = TRK
+				}
+				NOT = {
+					is_core_of = UKR
+				}
+				NOT = {
+					is_core_of = LIT
+				}
+				NOT = {
+					is_core_of = LAT
+				}
+				NOT = {
+					is_core_of = EST
+				}
+				NOT = {
+					is_core_of = POL
+				}
+				NOT = {
+					is_core_of = FIN
+				}
+				NOT = {
+					is_core_of = GEO
+				}
+				NOT = {
+					is_core_of = ARM
+				}
+				NOT = {
+					is_core_of = AZR
+				}
+			}
+			add_core_of = NOV
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.14 # Invite Sweden to non-aligned movement
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.14"}
+	title = twrNovosibirsk.14.t
+	desc = twrNovosibirsk.14.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.14.a
+		trigger = { is_in_faction = no }
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.15 } }
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = non_aligned_movement_member
+	}
+	option = {
+		name = twrNovosibirsk.14.b
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.16 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.15 # Sweden Accepts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.15"}
+	title = twrNovosibirsk.15.t
+	desc = twrNovosibirsk.15.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.15.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.16 # Sweden Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.16"}
+	title = twrNovosibirsk.16.t
+	desc = twrNovosibirsk.16.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.16.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.17 # Invite China to non-aligned movement
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.17"}
+	title = twrNovosibirsk.17.t
+	desc = twrNovosibirsk.17.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.17.a
+		trigger = { is_in_faction = no }
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.18 } }
+		ai_chance = {
+			factor = 1
+		}
+		set_country_flag = non_aligned_movement_member
+	}
+	option = {
+		name = twrNovosibirsk.17.b
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.19 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.18 # China Accepts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.18"}
+	title = twrNovosibirsk.18.t
+	desc = twrNovosibirsk.18.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.18.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.19 # China Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.19"}
+	title = twrNovosibirsk.19.t
+	desc = twrNovosibirsk.19.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.19.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.20 # Invite Turkey to non-aligned movement
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.20"}
+	title = twrNovosibirsk.20.t
+	desc = twrNovosibirsk.20.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.20.a
+		trigger = { is_in_faction = no }
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.22 } }
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = non_aligned_movement_member
+	}
+	option = {
+		name = twrNovosibirsk.20.b
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.23 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.21 # Turkey Accepts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.21"}
+	title = twrNovosibirsk.21.t
+	desc = twrNovosibirsk.21.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.21.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.22 # Turkey Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.22"}
+	title = twrNovosibirsk.22.t
+	desc = twrNovosibirsk.22.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.22.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.23 # Invite India to non-aligned movement
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.23"}
+	title = twrNovosibirsk.23.t
+	desc = twrNovosibirsk.23.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.23.a
+		trigger = { is_in_faction = no }
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.25 } }
+		ai_chance = {
+			factor = 3
+		}
+		set_country_flag = non_aligned_movement_member
+	}
+	option = {
+		name = twrNovosibirsk.23.b
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.26 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.24 # India Accepts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.24"}
+	title = twrNovosibirsk.24.t
+	desc = twrNovosibirsk.24.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.24.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.25 # India Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.25"}
+	title = twrNovosibirsk.25.t
+	desc = twrNovosibirsk.25.d
+	picture = GFX_report_event_generic_handshake
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.25.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.26 # Offer Rail Cooperation from Novosibirsk
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.26"}
+	title = twrNovosibirsk.26.t
+	desc = twrNovosibirsk.26.d
+	picture = GFX_report_event_russian_train
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.26.a
+		trigger = { is_in_faction = no }
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.27 } }
+		ai_chance = {
+			factor = 3
+		}
+		add_ideas = NOV_siberian_railway_cooperation
+	}
+	option = {
+		name = twrNovosibirsk.26.b
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.28 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.27 # Buryatia Accepts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.27"}
+	title = twrNovosibirsk.27.t
+	desc = twrNovosibirsk.27.d
+	picture = GFX_report_event_russian_train
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.27.a
+		add_ideas = NOV_siberian_railway_cooperation_with_buryatia
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.28 # Buryatia Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.28"}
+	title = twrNovosibirsk.28.t
+	desc = twrNovosibirsk.28.d
+	picture = GFX_report_event_russian_train
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.28.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.29 # Offer Rail Cooperation from Novosibirsk
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.29"}
+	title = twrNovosibirsk.29.t
+	desc = twrNovosibirsk.29.d
+	picture = GFX_report_event_russian_train
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.29.a
+		trigger = { is_in_faction = no }
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.30 } }
+		ai_chance = {
+			factor = 3
+		}
+		add_ideas = NOV_siberian_railway_cooperation
+	}
+	option = {
+		name = twrNovosibirsk.29.b
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.31 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.30 # Russia Accepts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.30"}
+	title = twrNovosibirsk.30.t
+	desc = twrNovosibirsk.30.d
+	picture = GFX_report_event_russian_train
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.30.a
+		add_ideas = NOV_siberian_railway_cooperation_with_republic
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.31 # Russia Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.31"}
+	title = twrNovosibirsk.31.t
+	desc = twrNovosibirsk.31.d
+	picture = GFX_report_event_russian_train
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.31.a
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.32 # Khrushchev asks for integration - Transvolga
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.32"}
+	title = twrNovosibirsk.32.t
+	desc = twrNovosibirsk.32.d
+	picture = GFX_report_event_soviet_war
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.32.a
+		ai_chance = {
+			factor = 1
+		}
+		NOV = {
+			annex_country = {
+			    target = TRV
+			    transfer_troops = yes
+			}
+			create_field_marshal = {
+				name = "Ivan Bagramyan"
+				picture = "Ivan_Bagramyan_PA.tga"
+				traits = { old_guard trait_cautious defensive_doctrine }
+				id = 5001
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 3
+			}
+		}
+	}
+	option = {
+		name = twrNovosibirsk.32.b
+		ai_chance = {
+			factor = 0
+		}
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.33 } }
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.33 # Transvolga Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.33"}
+	title = twrNovosibirsk.33.t
+	desc = twrNovosibirsk.33.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.33.a
+		TRV = {
+			leave_faction = yes
+		}
+		create_wargoal = {
+    		type = annex_everything
+    		target = TRV
+		}
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.34 # Khrushchev asks for integration - idel ural
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.34"}
+	title = twrNovosibirsk.34.t
+	desc = twrNovosibirsk.34.d
+	picture = GFX_report_event_soviet_war
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.34.a
+		ai_chance = {
+			factor = 1
+		}
+		NOV = {
+			annex_country = {
+			    target = IDE
+			    transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = twrNovosibirsk.34.b
+		ai_chance = {
+			factor = 0
+		}
+		NOV = { country_event = { days = 1 id = twrNovosibirsk.35 } }
+	}
+}
+
+country_event = {
+	id = twrNovosibirsk.35 # Transvolga Refuses
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrNovosibirsk.35"}
+	title = twrNovosibirsk.35.t
+	desc = twrNovosibirsk.35.d
+	picture = GFX_report_event_soviet_war
+ 
+	fire_only_once = yes
+	  
+	is_triggered_only = yes
+	
+	option = {
+		name = twrNovosibirsk.35.a
+		IDE = {
+			leave_faction = yes
+		}
+		create_wargoal = {
+    		type = annex_everything
+    		target = IDE
+		}
+	}
+}
+
+
+### HIDDEN EVENTS ###
+
+country_event = {
+    id = twrnovhidden.1
+    picture = GFX_nothing
+     
+    hidden = yes
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    immediate = {
+        news_event = { days = 1 id = twrnews.161 }
+    }
+}

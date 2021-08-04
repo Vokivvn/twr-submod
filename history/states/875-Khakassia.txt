@@ -1,0 +1,23 @@
+state={
+	id=875
+	name="STATE_875" #KHAKASSIA
+	history={
+		owner = TAN
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SOV
+		add_core_of = TAN
+
+	victory_points = {
+	10649 1
+	}
+
+	}
+	provinces={
+		1702 1816 4690 4711 10580 10649 
+	}
+	manpower=244894
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,454 @@
+﻿add_namespace = twrtransvolga
+add_namespace = twrTransvolgaNew
+
+country_event = {
+	id = twrtransvolga.0
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtransvolga.0"}
+	title = twrtransvolga.0.t
+	desc = twrtransvolga.0.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrtransvolga.0.a
+		set_global_flag = TRV_republic
+		set_politics = {
+			ruling_party = conservative
+
+		}
+		add_popularity = {
+			ideology = conservative
+			popularity = 0.25
+
+		}
+	}
+	option = {
+		name = twrtransvolga.0.b
+		set_global_flag = TRV_autocracy
+	}
+
+}
+
+country_event = {
+	id = twrtransvolga.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtransvolga.1"}
+	title = twrtransvolga.1.t
+	desc = twrtransvolga.1.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrtransvolga.1.a
+		set_global_flag = NOV_accepted
+		ai_chance = {
+			factor = 10 
+		}
+
+	}
+	option = {
+		name = twrtransvolga.1.b
+		set_global_flag = NOV_declined
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = twrtransvolga.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtransvolga.2"}
+	title = twrtransvolga.2.t
+	desc = twrtransvolga.2.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrtransvolga.2.a
+
+
+		TRV = {
+			annex_country = {
+				target = IDE
+				transfer_troops = yes
+			}
+
+			add_state_core = 239
+			add_state_core = 251
+			add_state_core = 652
+			add_state_core = 249
+		}
+
+
+		TRV = { add_to_faction = "Union Of Russian Nations" }
+
+
+		TRV = { add_to_faction = "Union Of Russian Nations" }
+		ai_chance = {
+			factor = 10
+		}
+
+
+	}
+	option = {
+		name = twrtransvolga.2.b
+		TRV = {
+			add_state_core = 239
+			add_state_core = 251
+			add_state_core = 652
+			add_state_core = 249
+		}
+		ai_chance = {
+			factor = 2
+		}
+	}
+}
+
+country_event = {
+	id = twrtransvolga.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtransvolga.3"}
+	title = twrtransvolga.3.t
+	desc = twrtransvolga.3.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrtransvolga.3.a
+
+		trigger = {
+			FIN = { NOT = { has_government = national_socialist } }
+		}
+		add_to_faction = "Anti-German League"
+
+
+		ai_chance = {
+			factor = 15
+		}
+	}
+
+
+
+	option = {
+		name = twrtransvolga.3.b
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = twrTransvolgaNew.1001 #Arrival of Bulganin
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.1001"}
+	title = twrTransvolgaNew.1001.t
+	desc = twrTransvolgaNew.1001.d
+	picture = GFX_report_event_russian_soldier_generic
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.1001.a
+		complete_national_focus = TRV_bulganin_offer
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.0 #Integration for Idel Ural
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.0"}
+	title = twrTransvolgaNew.0.t
+	desc = twrTransvolgaNew.0.d
+	picture = GFX_report_event_russian_soldier_generic
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.0.a
+		TRV = {
+		country_event = { id = twrTransvolgaNew.1 }
+		}
+	}
+	
+	option = {
+		name = twrTransvolgaNew.0.a
+		TRV = {
+		country_event = { id = twrTransvolgaNew.2 }
+		}
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.1 #Integration for Idel Ural - Accepted
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.1"}
+	title = twrTransvolgaNew.1.t
+	desc = twrTransvolgaNew.1.d
+	picture = GFX_report_event_russian_soldier_generic
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.1.a
+		annex_country = {
+			target = IDE
+			transfer_troops = yes
+			}
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.2 #Integration for Idel Ural - Declined
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.2"}
+	title = twrTransvolgaNew.2.t
+	desc = twrTransvolgaNew.2.d
+	picture = GFX_report_event_russian_soldier_generic
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.2.a
+		declare_war_on = {
+			target = IDE
+			type = annex_everything
+			}
+	}
+	
+	option = {
+		name = twrTransvolgaNew.2.b
+		create_wargoal = {
+			type = annex_everything
+			target = IDE
+			}
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.3 #Red Army Mutinies
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.3"}
+	title = twrTransvolgaNew.3.t
+	desc = twrTransvolgaNew.3.d
+	picture = GFX_report_event_russian_soldier_generic
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.3.a
+		add_ideas = TRV_Mutiny_to_Transvolga
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.4 #Bring an end to the Admiral
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.4"}
+	title = twrTransvolgaNew.4.t
+	desc = twrTransvolgaNew.4.d
+	picture = GFX_report_event_russian_soldier_generic
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.4.a
+		declare_war_on = {
+			target = SOV
+			type = annex_everything
+			}
+	}
+	
+	option = {
+		name = twrTransvolgaNew.4.a
+		create_wargoal = {
+			type = annex_everything
+			target = SOV
+			}
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.5 #The Surrender of the Soviets
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.5"}
+	title = twrTransvolgaNew.5.t
+	desc = twrTransvolgaNew.5.d
+	picture = GFX_report_event_russian_soldier_generic
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.5.a
+		annex_country = {
+			target = SOV
+			transfer_troops = no
+		}
+		hidden_effect = {
+		set_country_flag = TRV_Union
+		}
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.6 #The Russian Union
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.6"}
+	title = twrTransvolgaNew.6.t
+	desc = twrTransvolgaNew.6.d
+	picture = GFX_report_event_russian_soldier_generic
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.6.a
+		set_cosmetic_tag = TRV_UNION
+		complete_national_focus = TRV_uniting_russia
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.7 #Russians Demand Karelia
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.6"}
+	title = twrTransvolgaNew.7.t
+	desc = twrTransvolgaNew.7.d
+	picture = GFX_report_event_greater_finland
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.7.a
+		TRV = {
+		set_state_owner = 722
+		set_state_owner = 216
+		set_state_owner = 215
+		set_state_owner = 213
+		country_event = { id = twrTransvolgaNew.8 }
+		}
+	}
+	
+	option = {
+		name = twrTransvolgaNew.7.b
+		TRV = {
+		country_event = { id = twrTransvolgaNew.9 }
+		}
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.8 #Karelia has been given
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.6"}
+	title = twrTransvolgaNew.8.t
+	desc = twrTransvolgaNew.8.d
+	picture = GFX_report_event_greater_finland
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.8.a
+		add_stability = 0.05
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.9 #Karelia has been given
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.6"}
+	title = twrTransvolgaNew.9.t
+	desc = twrTransvolgaNew.9.d
+	picture = GFX_report_event_greater_finland
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrTransvolgaNew.9.a
+		declare_war_on = {
+			target = FIN
+			type = take_claimed_state
+			}
+		add_state_claim = 722
+		add_state_claim = 216
+		add_state_claim = 215
+		add_state_claim = 213
+	}
+	
+	option = {
+		name = twrTransvolgaNew.9.b
+		create_wargoal = {
+			type = take_claimed_state
+			target = FIN
+			}
+		add_state_claim = 722
+		add_state_claim = 216
+		add_state_claim = 215
+		add_state_claim = 213
+	}
+
+}
+
+country_event = {
+	id = twrTransvolgaNew.10 #Death of Bagramyan
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrTransvolgaNew.6"}
+	title = twrTransvolgaNew.10.t
+	desc = twrTransvolgaNew.10.d
+	picture = GFX_report_event_greater_finland
+
+	fire_only_once = yes
+	is_triggered_only = no
+	
+	trigger = {
+	tag = TRV
+	date > 1957.7.13
+	}
+
+	option = {
+		name = twrTransvolgaNew.10.a
+		kill_country_leader = yes
+		create_country_leader = {
+		name = "Alexander Altunin"
+		desc = ""
+		picture = "Alexander_Altunin.dds"
+		expire = "1989.1.1"
+		ideology = warlordist_autocracy
+			traits = {}
+		}
+		hidden_effect = {
+		complete_national_focus = TRV_bagramyan_dead
+		complete_national_focus = TRV_altunin
+		remove_unit_leader = 5001
+		}
+	}
+
+}

@@ -1,0 +1,886 @@
+#########################################################################
+#  Diplomatic Actions
+#########################################################################
+political_actions = {
+    hybridist_takeover = {
+        allowed = { tag = SOV }
+        available = {
+            has_completed_focus = SOV_bulganin_nkvd_depoliticize_army
+        }
+        activation = {
+            has_country_leader = {
+				name = "Nikolai Bulganin"
+				ruling_only = yes
+			}
+        }
+        is_good = no
+        selectable_mission = no
+        days_mission_timeout = 750
+        timeout_effect = {
+		custom_effect_tooltip = THE_COUP_HAPPENS_SOV
+			create_country_leader = {
+				name = "Nikolai Kuznetsov"
+				desc = ""
+				picture = "Kuznetsov.dds"
+				expire = "1975.1.1"
+				ideology = hybridist
+				traits = {
+				}
+			}
+			set_politics = {
+			ruling_party = socialist
+			}
+			add_popularity = {
+    		ideology = socialist
+    		popularity = 0.3
+			}
+			add_stability = -0.3
+			hidden_effect = {
+				news_event = {
+					id = twrnews.154
+				}
+				load_focus_tree = sov_kuznetsov_union
+				clr_country_flag = has_symbolic_figurehead
+				clr_country_flag = duumvir_Novikov
+				remove_ideas = hos_mediocre
+				TRV = {
+					country_event = {
+						id = twrTransvolgaNew.1001
+						days = 20
+					}
+				}
+			}
+        }
+        complete_effect = {
+        add_stability = 0.01
+        }
+    }
+}
+russian_reconquest = {
+	SOV_restore_order = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = DON
+					tag = MTR
+					tag = UKR
+					tag = KAM
+					tag = NOG
+					tag = LZG
+					tag = KMY
+					tag = UIA
+					tag = UKW
+					#tag = WRM
+					tag = TMS 
+					tag = RMD 
+					tag = LAT 
+					tag = EST 
+					tag = LIT 
+					tag = RGO 
+					tag = RUK 
+					tag = ROS 
+					tag = RMO 
+					tag = RKA
+					tag = BKU 
+					tag = PET 
+					tag = STR 
+					tag = WSP 
+					tag = BGS
+					tag = GEO
+					tag = ARM
+				}
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+		}
+		visible = {
+			has_country_flag = WESTERN_RUSSIA_UNIFICATION
+			NOT = {
+				has_country_flag = BULGANIN_LEADER
+			}
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+	}
+	SOV_restore_order_MOS = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+				tag = WRM
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				#has_war = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+		}
+		visible = {
+			has_country_flag = WESTERN_RUSSIA_UNIFICATION
+			NOT = {
+				has_country_flag = BULGANIN_LEADER
+			}
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_order"
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+	}
+	SOV_restore_order_POLAND_zhukov = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+				tag = POL
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+			FROM = {
+				tag = POL
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		visible = {
+			has_country_flag = WESTERN_RUSSIA_UNIFICATION
+			has_country_leader = {
+				name = "Georgy Zhukov"
+				ruling_only = yes
+			}
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_order"
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+			add_war_support = -0.1
+			add_stability = -0.1
+			add_political_power = -50
+		}
+	}
+	SOV_restore_order_POLAND_konev = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+				tag = POL
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+			FROM = {
+				tag = POL
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		visible = {
+			has_country_flag = WESTERN_RUSSIA_UNIFICATION
+			has_country_leader = {
+				name = "Ivan Konev"
+				ruling_only = yes
+			}
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_order"
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+			add_war_support = -0.1
+			add_stability = -0.1
+			add_political_power = -50
+		}
+	}
+	SOV_restore_order_bulganin = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = DON
+					tag = MTR
+					#tag = UKR
+					tag = KAM
+					tag = NOG
+					tag = LZG
+					tag = KMY
+					#tag = UIA
+					#tag = UKW
+					tag = WRM
+					tag = TMS 
+					tag = RMD 
+					#tag = LAT 
+					#tag = EST 
+					#tag = LIT 
+					#tag = RGO 
+					#tag = RUK 
+					#tag = ROS 
+					tag = RMO 
+					tag = RKA
+					tag = BKU 
+					tag = PET 
+					tag = STR 
+					tag = WSP 
+					tag = BGS
+					#tag = GEO
+					#tag = ARM
+				}
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+			FROM = {
+				OR = {
+					tag = DON
+					tag = MTR
+					#tag = UKR
+					tag = KAM
+					tag = NOG
+					tag = LZG
+					tag = KMY
+					#tag = UIA
+					#tag = UKW
+					tag = WRM
+					tag = TMS 
+					tag = RMD 
+					#tag = LAT 
+					#tag = EST 
+					#tag = LIT 
+					#tag = RGO 
+					#tag = RUK 
+					#tag = ROS 
+					tag = RMO 
+					tag = RKA
+					tag = BKU 
+					tag = PET 
+					tag = STR 
+					tag = WSP 
+					tag = BGS
+					#tag = GEO
+					#tag = ARM
+				}
+			NOT = { is_subject_of = ROOT }
+			exists = yes
+			has_war = no
+			is_subject = no
+			is_neighbor_of = ROOT
+			}
+		}
+		visible = {
+			has_country_flag = WESTERN_RUSSIA_UNIFICATION
+			has_country_flag = BULGANIN_LEADER
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_order_bulganin"
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+	}
+	SOV_restore_central_russian_order = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = NRI 
+					tag = BRY 
+					tag = NOV 
+					tag = TAN 
+					tag = FAR 
+					tag = KRA
+				}
+				NOT = {
+					is_subject_of = ROOT
+					TAG = ROOT
+				}
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+		}
+		visible = {
+			has_country_flag = CENTRAL_RUSSIA_REUNIFICATION
+			FROM = {
+				NOT = {
+				is_subject_of = ROOT
+				has_idea = TRK_SOV_support
+				}
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_central_russian_order"
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+	}
+	SOV_restore_central_asian_order = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+				OR = {
+					tag = TRK
+					tag = TRA 
+					tag = UZB 
+					tag = KYR 
+					tag = TAJ 
+					tag = KAZ
+				}
+				NOT = {
+					is_subject_of = ROOT
+					TAG = ROOT
+					has_idea = TRK_SOV_support
+				}
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+		}
+		visible = {
+			has_country_flag = CENTRAL_ASIA_REUNIFICATION
+			FROM = {
+				NOT = {
+				is_subject_of = ROOT
+				has_idea = TRK_SOV_support
+				}
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_central_russian_order"
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+	}
+	SOV_communist_central_asia = {
+		icon = generic_nationalism
+
+		available = {
+			has_war = no
+			has_global_flag = TRK_COLLAPSED
+			has_war = no
+			is_communist = yes
+		}
+		visible = {
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_central_russian_order"
+			country_event = twrtrk.6
+		}
+	}
+	SOV_restore_order_com = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+			AND = {
+				OR = {
+					tag = AZR
+					tag = RAC
+					tag = SUK 
+					tag = SMO
+					tag = CDA
+					tag = BLR
+				}
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+				}
+			}
+		}
+		available = {
+			has_war = no
+		}
+		visible = {
+			is_communist = no
+			has_country_flag = WESTERN_RUSSIA_UNIFICATION
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_order"
+		}
+		remove_effect = {
+			create_wargoal = {
+				type = annex_everything
+				target = FROM
+			}
+		}
+	}
+	SOV_com_to_com_demands = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+			AND = {
+				OR = {
+					tag = AZR
+					tag = RAC
+					tag = SUK 
+					tag = SMO
+					tag = CDA
+					tag = BLR
+				}
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+				}
+			}
+		}
+		available = {
+			has_war = no
+		}
+		visible = {
+			is_communist = yes
+			OR = {
+				has_country_flag = WESTERN_RUSSIA_UNIFICATION
+				has_country_flag = WESTERN_RUSSIA_UNIFICATION_UNITE_ONLY
+			}
+			FROM = {
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT			
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 10
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_order"
+		}
+		remove_effect = {
+			FROM = {
+				country_event = { id = twrrusreconquest.1 days = 3 }
+			}
+		}
+	}
+	SOV_zhukov_attack_prison_germany = {
+		icon = generic_nationalism
+		available = {
+			has_war = no
+		}
+		visible = {
+			has_country_flag = WESTERN_RUSSIA_UNIFICATION
+			has_country_flag = ZHUKOV_ATTACK_PEOPLES_GERMANY
+			country_exists = PGR
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0 #keep it like this, AI will never do
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_zhukov_attack_prison_germany"
+		}
+		remove_effect = {
+			declare_war_on = {
+			    target = PGR
+			    type = annex_everything
+			}
+			custom_effect_tooltip = WAR_WITH_TA_TT
+		}
+	}
+	SOV_konev_strike_west = {
+		icon = generic_nationalism
+		available = {
+			has_war = no
+		}
+		visible = {
+			has_country_flag = WESTERN_RUSSIA_UNIFICATION
+			has_country_flag = KONEV_ATTACK_WEST
+			country_exists = PGR
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0 #keep it like this, AI will never do
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_konev_strike_west"
+		}
+		remove_effect = {
+			declare_war_on = {
+			    target = PGR
+			    type = annex_everything
+			}
+			declare_war_on = {
+			    target = USA
+			    type = annex_everything
+			}
+			custom_effect_tooltip = WAR_WITH_TA_TT
+		}
+	}
+	SOV_return_capital_to_moscow = {
+		icon = generic_nationalism
+		available = {
+			owns_state = 219
+		}
+
+		visible = {
+		OR = {
+		tag = RUS
+		tag = SOV
+		tag = TRV
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SOV_return_capital_to_moscow"
+			set_capital = 219
+			add_stability = 0.05
+		}
+	}
+	SOV_integrate_the_west = {
+		icon = generic_form_nation
+
+		visible = {
+			owns_state = FROM
+			FROM = {
+				NOT = { is_core_of = ROOT }
+			}
+		}
+
+		state_target = yes
+		targets = { 93 94 95 96 984 985 91 89 537 329 978 }
+		target_trigger = { owns_state = FROM }
+
+		cost = 30
+		days_remove = 90
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove SOV_integrate_the_west: [From.GetName]"
+			FROM = {
+				add_core_of = SOV
+			}
+		}
+	}
+}
+operations = {
+	SUK_ukrainian_civil_war = {
+	allowed = {
+	tag = SUK
+	}
+		icon = generic_nationalism
+		available = {
+			has_war = no
+			country_exists = UKR
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 5
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision SUK_ukrainian_civil_war"
+			declare_war_on = {
+    		target = UKR
+    		type = annex_everything
+			}
+			if = {
+			limit = { country_exists = UKW }
+			declare_war_on = {
+    		target = UKW
+    		type = annex_everything
+				}
+			}
+			news_event = germannews.506
+		}
+	}
+	UKR_ukrainian_civil_war = {
+	allowed = {
+	tag = UKR
+	}
+		icon = generic_nationalism
+		available = {
+			has_war = no
+			country_exists = SUK
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 5
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UKR_ukrainian_civil_war"
+			declare_war_on = {
+    		target = SUK
+    		type = annex_everything
+			}
+			if = {
+			limit = { country_exists = UKW }
+			SUK = {
+			declare_war_on = {
+    		target = UKW
+    		type = annex_everything
+    				}
+				}
+			}
+			news_event = germannews.506
+		}
+	}
+	UKR_WEST_UNITE = {
+	allowed = {
+	tag = UKR
+	}
+		icon = generic_nationalism
+		available = {
+		country_exists = UKW
+		NOT = {
+			country_exists = RUK
+			country_exists = BGS
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 5
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision UKR_WEST_UNITE"
+			UKW = {
+			country_event = twrukraineuprisings.13
+			}
+		}
+	}
+}

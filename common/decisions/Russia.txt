@@ -1,0 +1,1143 @@
+	#########################################################################
+	#  Russia
+	#########################################################################
+	occupation_decisions = {
+	# MON
+	occupation_MON_RUS = {
+		icon = generic_flags
+		allowed = {
+		tag = RUS
+		}
+		activation = {
+			330 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			is_subject = no
+			NOT = {
+				country_exists = MON
+			}
+		}
+		selectable_mission = yes
+		days_mission_timeout = 10
+		is_good = no
+		cost = freedec?0
+		fire_only_once = yes
+		cancel_trigger = {
+			NOT = {
+			330 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision occupation_MON_RUS"
+			country_event = twrsiberia.2
+		}
+		timeout_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision timeout occupation_MON_RUS"
+			country_event = twrsiberia.2
+		}
+		ai_will_do = {
+			factor = 1000
+		}
+	}
+	}
+
+	internal_control_decisions = {
+		
+	    
+		russia_march_in_amur = {
+			icon = infiltrate_state
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = { 
+				#has_completed_focus = RUS_march_in_amur
+				is_ai = no
+			}
+			available = { 
+				divisions_in_state = {
+					size > 6
+					state = 561
+				}
+			}
+			highlight_states = {
+				state = 561
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision russia_march_in_amur"
+				country_event = russia.200
+				hidden_effect = {
+					random_list = {
+						50 = {
+							country_event = { id = russia.4 days = 15 }
+						}
+						50 = {
+							add_manpower = -50
+						}
+					}
+				}
+			}
+		}
+		russia_march_in_yakutsk = {
+			icon = infiltrate_state
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = { 
+				has_completed_focus = RUS_march_in_yakutsk
+				is_ai = no
+			}
+			available = { 
+				divisions_in_state = {
+					size > 3
+					state = 574
+				}
+				divisions_in_state = {
+					size > 3
+					state = 644
+				}
+			}
+			highlight_states = {
+				state = 574
+			}
+			highlight_states = {
+				state = 644
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision russia_march_in_yakutsk"
+				country_event = russia.201
+			}
+		}
+		russia_march_in_chita = {
+			icon = infiltrate_state
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = { 
+				has_completed_focus = RUS_march_in_chita
+				is_ai = no
+			}
+			available = { 
+				divisions_in_state = {
+					size > 3
+					state = 563
+				}
+				divisions_in_state = {
+					size > 3
+					state = 564
+				}
+			}
+			highlight_states = {
+				state = 563
+			}
+			highlight_states = {
+				state = 564
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision russia_march_in_chita"
+				country_event = russia.202
+			}
+		}
+		russia_bry = {
+			icon = infiltrate_state
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			cost = 70
+			visible = { 
+			owns_state = 565
+			owns_state = 566
+			NOT = {
+			565 = {
+			is_core_of = RUS
+				}
+			566 = {
+			is_core_of = RUS
+					}
+				}
+			}
+			available = { 
+			has_completed_focus = RUS_Project_Russian_Glory
+			}
+			highlight_states = {
+				state = 565
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision russia_march_in_chita"
+				565 = {
+				add_core_of = RUS
+				}
+				566 = {
+				add_core_of = RUS
+				}
+			}
+		}
+		russia_kra = {
+			icon = infiltrate_state
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			cost = 70
+			visible = { 
+			owns_state = 567
+			owns_state = 568
+			NOT = {
+			567 = {
+			is_core_of = RUS
+				}
+			568 = {
+			is_core_of = RUS
+					}
+				}
+			}
+			available = { 
+			has_completed_focus = RUS_Project_Russian_Glory
+			}
+			highlight_states = {
+				state = 567
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision russia_kra"
+				567 = {
+				add_core_of = RUS
+				}
+				568 = {
+				add_core_of = RUS
+				}
+			}
+		}
+		russia_nri = {
+			icon = infiltrate_state
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			cost = 70
+			visible = { 
+			owns_state = 567
+			owns_state = 568
+			NOT = {
+			575 = {
+			is_core_of = RUS
+				}
+			576 = {
+			is_core_of = RUS
+					}
+			516 = {
+			is_core_of = RUS
+					}
+				}
+			}
+			available = { 
+			has_completed_focus = RUS_Project_Russian_Glory
+			}
+			highlight_states = {
+				state = 575
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision russia_nri"
+				575 = {
+				add_core_of = RUS
+				}
+				576 = {
+				add_core_of = RUS
+				}
+				516 = {
+				add_core_of = RUS
+				}
+			}
+		}
+		russia_alt = {
+			icon = infiltrate_state
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			cost = 100
+			visible = { 
+			owns_state = 978
+			owns_state = 654
+			owns_state = 875
+			owns_state = 569
+			NOT = {
+			978 = {
+			is_core_of = RUS
+				}
+			654 = {
+			is_core_of = RUS
+					}
+			875 = {
+			is_core_of = RUS
+					}
+			569 = {
+			is_core_of = RUS
+					}
+				}
+			}
+			available = { 
+			has_completed_focus = RUS_Project_Russian_Glory
+			}
+			highlight_states = {
+				state = 575
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision russia_alt"
+				978 = {
+				add_core_of = RUS
+				}
+				654 = {
+				add_core_of = RUS
+				}
+				875 = {
+				add_core_of = RUS
+				}
+				569 = {
+				add_core_of = RUS
+				}
+			}
+		}
+		russia_nov = {
+			icon = infiltrate_state
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			cost = 100
+			visible = { 
+			owns_state = 578
+			owns_state = 570
+			owns_state = 40
+			NOT = {
+			578 = {
+			is_core_of = RUS
+				}
+			570 = {
+			is_core_of = RUS
+					}
+			40 = {
+			is_core_of = RUS
+					}
+				}
+			}
+			available = { 
+			has_completed_focus = RUS_Project_Russian_Glory
+			}
+			highlight_states = {
+				state = 575
+			}
+			ai_will_do = {
+				factor = 10
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision russia_alt"
+				578 = {
+				add_core_of = RUS
+				}
+	570 = {
+				add_core_of = RUS
+				}
+	40 = {
+				add_core_of = RUS
+				}
+			}
+		}
+	}
+
+	retreat_to_sakhalin_decisions = {
+		
+		
+		rus_evacuate_industry = {
+			icon = generic_construction
+			days_re_enable = 0
+			allowed = { tag = RUS }
+			visible = {
+				has_idea = RUS_the_great_retreat
+				has_war = yes
+			}
+			available = { #what lets you do it
+				any_owned_state = {
+					NOT = {
+						OR = {
+							state = 655
+							state = 537
+						}
+					}
+					is_controlled_by = RUS
+					OR = {
+						arms_factory > 0
+						industrial_complex > 0
+					}
+				}
+				any_owned_state = {
+					OR = {
+						state = 655
+						state = 537
+					}
+					free_building_slots = {
+						building = arms_factory
+						size > 10
+						include_locked = yes
+					}
+				}
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 20
+			}
+			modifier = {
+				civilian_factory_use = 5 
+			}
+			days_remove = 14
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove rus_evacuate_industry"
+	            random_owned_controlled_state = {
+					limit = {
+						OR = {
+						arms_factory > 0
+						industrial_complex > 0
+						}
+						NOT = {
+							OR = {
+							state = 655
+							state = 537
+							}
+						}
+					}
+					if = {
+						limit = {
+							arms_factory > 0
+						}
+						remove_building = {
+							type = arms_factory
+							level = 1
+						}
+						655 = {
+							add_building_construction = {
+								type = arms_factory
+								level = 1
+								instant_build = yes
+							}
+						}
+					}
+					else = {
+						remove_building = {
+							type = industrial_complex
+							level = 1
+						}
+						537 = {
+							add_building_construction = {
+								type = industrial_complex
+								level = 1
+								instant_build = yes
+							}
+						}
+					}
+				}
+	        }
+		}
+		rus_evacuate_refugees = {
+			icon = generic_wheel
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = {
+				has_idea = RUS_the_great_retreat
+				has_war = yes
+			}
+			available = {
+				any_owned_state = {
+					NOT = {
+						OR = {
+							state = 655
+							state = 537
+						}
+					}
+					is_controlled_by = RUS
+				}
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 15
+			}
+			days_remove = 25
+			modifier = {
+				political_power_gain = -0.5
+	        }
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove rus_evacuate_refugees"
+	            every_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+							state = 655
+							state = 537
+							}
+						}
+						is_controlled_by = RUS
+					}
+					add_manpower = -75000
+					655 = {
+						add_manpower = 35000
+					}
+					537 = {
+						add_manpower = 30000
+					}
+				}
+	        }
+		}
+		rus_scorched_earth = {
+			icon = generic_scorched_earth
+			days_re_enable = 17
+			allowed = { tag = RUS }
+			visible = {
+				has_idea = RUS_the_great_retreat
+				has_war = yes
+			}
+			available = {
+				any_owned_state = {
+					NOT = {
+						OR = {
+							state = 655
+							state = 537
+						}
+					}
+					is_controlled_by = RUS
+					NOT = { is_fully_controlled_by = RUS }
+				}
+			}
+			cost = 20
+			ai_will_do = {
+				factor = 5
+			}
+			days_remove = 3
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove rus_scorched_earth"
+	            every_owned_state = {
+					limit = {
+					NOT = {
+						OR = {
+							state = 655
+							state = 537
+						}
+					}
+					is_controlled_by = RUS
+					NOT = { is_fully_controlled_by = RUS }
+					}
+					damage_building = {
+						type = infrastructure
+						damage = 3
+					}
+				}
+	        }
+		}
+		rus_surrender_the_mainland = {
+			icon = oppression
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = {
+				has_war = yes
+				has_completed_focus = RUS_fortress_sakhalin
+			}
+			available = {
+				controls_state = 655
+				controls_state = 537
+				
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					537 = {
+						industrial_complex < 2
+					}
+				}
+				modifier = {
+					factor = 0
+					655 = {
+						arms_factory < 2
+					}
+				}
+				modifier = {
+					factor = 0.1
+					537 = {
+						industrial_complex < 4
+					}
+				}
+				modifier = {
+					factor = 0.2
+					655 = {
+						arms_factory < 3
+					}
+				}
+				modifier = {
+					factor = 0.25
+					NOT = {
+					OR = {
+						divisions_in_state = {
+							size > 1
+							state = 655
+						}
+						divisions_in_state = {
+							size > 1
+							state = 537
+						}
+					}
+					}
+				}
+				modifier = {
+					add = 20
+					NOT = {
+						has_full_control_of_state = 657
+					}
+				}
+			}
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision rus_surrender_the_mainland"
+				remove_ideas = RUS_the_great_retreat
+			}
+			days_remove = 20
+			modifier = {
+				army_defence_factor = 1
+				army_morale_factor = -1
+				surrender_limit = 0.4
+	        }
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove rus_surrender_the_mainland"
+				set_capital = 537
+	            every_owned_state = {
+					limit = {
+						NOT = {
+							OR = {
+							state = 655
+							state = 537
+							}
+						}
+						is_core_of = SOV
+					}
+					SOV = {
+						set_state_owner = PREV
+					}
+				}
+				set_capital = 537
+				set_country_flag = on_sakhalin_1
+				add_stability = -0.1
+				load_focus_tree = generic
+				news_event = {
+					id = twrnews.11
+					hours = 6
+				}
+	        }
+		}
+		rus_defend_the_island = {
+			icon = russia_defend_sakhalin
+			allowed = { tag = RUS }
+			available = {
+				always = no
+			}
+			activation = {
+				has_country_flag = on_sakhalin_1
+			}
+			visible = {
+				has_completed_focus = RUS_fortress_sakhalin
+			}
+			highlight_states = {
+				state = 655
+				state = 537
+			}
+			cancel_trigger = {
+				OR = {
+				NOT = {
+					has_full_control_of_state = 655
+				}
+				NOT = {
+					has_full_control_of_state = 537
+				}
+				}
+			}
+			is_good = yes
+			days_mission_timeout = 70
+			timeout_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision timeout rus_defend_the_island"
+				clr_country_flag = on_sakhalin_1
+				set_country_flag = on_sakhalin_2
+				add_stability = 0.1
+				effect_tooltip = { activate_decision = rus_sakhalin_armstice }
+			}
+		}
+		rus_sakhalin_armstice = {
+			icon = generic_decision
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = { #what makes it visible
+				OR = {
+					has_country_flag = on_sakhalin_1
+					has_country_flag = on_sakhalin_2
+				}
+				has_war = yes
+			}
+			available = { 
+				has_country_flag = on_sakhalin_2
+			}
+			cost = 10
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					factor = 0
+					is_in_faction = yes
+				}
+			}
+			is_good = yes
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision rus_sakhalin_armstice"
+				every_country = {
+					limit = {
+						has_war_with = RUS
+					}
+					country_event = russia.215
+				}
+			}
+		}
+		
+	}
+	soviet_border_diplomacy_decisions = {
+		rus_negotiate_a_border = {
+			icon = border_war
+			days_re_enable = 100
+			allowed = { tag = RUS }
+			visible = {
+				NOT = { has_war_with = SOV }
+				is_neighbor_of = SOV
+				NOT = { has_country_flag = mutual_border_agreed_on }
+			}
+			available = {
+				has_country_flag = russia_friendly_stance_soviet_union
+			}
+			cost = 20
+			ai_will_do = {
+				factor = 10
+				modifier = {
+					factor = 0
+					check_variable = {
+						concessions_made > 0
+					}
+				}
+			}
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision rus_negotiate_a_border"
+				hidden_effect = {
+				RUS = {
+				set_variable = {
+					var = concessions_made
+					value = 0
+				}
+				}
+				}
+				SOV = {
+					country_event = russia.218
+				}
+			}
+		}
+		rus_sign_a_non_agression_pact = {
+			icon = generic_form_nation
+			days_re_enable = 200
+			allowed = { tag = RUS }
+			visible = {
+				NOT = { has_war_with = SOV }
+				is_neighbor_of = SOV
+			}
+			available = {
+				has_country_flag = russia_friendly_stance_soviet_union
+				has_country_flag = mutual_border_agreed_on
+				NOT = { OR = {
+				has_non_aggression_pact_with = SOV
+				is_in_faction_with = SOV
+				} }
+			}
+			cost = 20
+			ai_will_do = {
+				factor = 10
+			}
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision rus_sign_a_non_agression_pact"
+				SOV = {
+					country_event = { days = 3 id = russia.224 }
+				}
+			}
+		}
+		rus_russian_united_front = {
+			icon = russian_united_front
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = {
+				NOT = { has_war_with = SOV }
+				is_neighbor_of = SOV
+				NOT = { is_in_faction_with = SOV }
+			}
+			available = {
+				has_country_flag = russia_friendly_stance_soviet_union
+				has_country_flag = mutual_border_agreed_on
+				OR = {
+				has_non_aggression_pact_with = SOV
+				has_war_together_with = SOV
+				}
+				NOT = {
+				SOV = { is_in_faction = yes }
+				}
+			}
+			cost = 20
+			ai_will_do = {
+				factor = 5
+			}
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision rus_russian_united_front"
+				leave_faction = yes
+				create_faction = RUSSIAN_UNITED_FRONT
+				set_country_flag = RUS_UNITED_FRONT
+				SOV = {
+					country_event = { days = 3 id = russia.227 }
+				}
+			}
+		}
+		rus_propose_two_state_solution = {
+			icon = generic_political_discourse
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = {
+				NOT = { has_war_with = SOV }
+				is_neighbor_of = SOV
+			}
+			available = {
+				has_country_flag = russia_friendly_stance_soviet_union
+				has_country_flag = mutual_border_agreed_on
+				OR = {
+					has_non_aggression_pact_with = SOV
+					has_war_together_with = SOV
+					is_in_faction_with = SOV
+				}
+			}
+			cost = 20
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					add = 10
+					is_in_faction_with = SOV
+				}
+			}
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision rus_propose_two_state_solution"
+				SOV = {
+					country_event = { days = 3 id = russia.228 }
+				}
+				custom_effect_tooltip = will_ask_for_mutual_core_revoking_rus_tt
+			}
+		}
+		
+		rus_provoke_soviet = {
+			icon = generic_artillery
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = {
+				NOT = { has_war_with = SOV }
+				is_neighbor_of = SOV
+			}
+			available = {
+				has_country_flag = russia_hostile_stance_soviet_union
+				NOT = {
+					OR = {
+					has_non_aggression_pact_with = SOV
+					is_in_faction_with = SOV
+					}
+				}
+			}
+			cost = 20
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					add = 3
+					has_war = no
+					strength_ratio = {
+						tag = SOV
+						ratio > 0.5
+					}
+				}
+			}
+			days_remove = 1
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove rus_provoke_soviet"
+				random_state = {
+				limit = {
+					is_owned_and_controlled_by = SOV
+					num_owned_neighbour_states = {
+						owner = RUS
+						count > 0
+					}
+				}
+				save_global_event_target_as = rus_sov_skirmish_state
+				damage_building = {
+					type = infrastructure
+					damage = 0.3
+				}
+				}
+				SOV = {
+					country_event = russia.230
+				}
+				custom_effect_tooltip = this_might_lead_to_war_with_su_tt
+			}
+		}
+		rus_move_in = {
+			icon = generic_tank
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = {
+				NOT = { has_war_with = SOV }
+				is_neighbor_of = SOV
+			}
+			available = {
+				has_country_flag = russia_hostile_stance_soviet_union
+				NOT = {
+					OR = {
+					has_non_aggression_pact_with = SOV
+					is_in_faction_with = SOV
+					}
+				}
+				always = no
+			}
+			highlight_states = {
+				state = event_target:rus_sov_skirmish_state
+			}
+			cost = 10
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					add = 3
+				}
+			}
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision rus_move_in"
+				SOV = {
+					country_event = { hours = 26 id = russia.236 }
+				}
+			}
+			days_remove = 6
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove rus_move_in"
+				if = {
+					limit = {
+						NOT = {has_war_with = SOV}
+					}
+					SOV = { country_event = russia.237 }
+					set_state_controller = event_target:rus_sov_skirmish_state
+				}
+			}
+		}
+		rus_escalate_border_war = {
+			icon = generic_ignite_civil_war
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = {
+				always = no
+			}
+			available = {
+				has_border_war_with = SOV
+			}
+			highlight_states = {
+				state = event_target:rus_sov_skirmish_state
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 5
+			}
+			days_remove = 21
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove rus_escalate_border_war"
+				if = {
+					limit = {
+						has_border_war_with = SOV
+					}
+				set_border_war_data = {
+					attacker = event_target:skirmish_state_russians
+					defender = event_target:rus_sov_skirmish_state
+					attacker_modifier = 0.9
+					combat_width = 200
+				} 
+				SOV = {
+					country_event = russia.238
+				}
+				}
+			}
+		}
+		rus_into_war = {
+			icon = generic_ignite_civil_war
+			fire_only_once = yes
+			allowed = { tag = RUS }
+			visible = {
+				always = no
+			}
+			available = {
+				always = no
+			}
+			cost = 5
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					add = 5
+					date > 1955.1.1
+				}
+			}
+			days_remove = 21
+			remove_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove rus_into_war"
+				if = {
+					limit = {
+					has_border_war_with = SOV
+					}
+					cancel_border_war = {
+						dont_fire_events = yes
+						attacker = event_target:skirmish_state_russians
+						defender = event_target:rus_sov_skirmish_state
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = SOV
+				}
+				declare_war_on = {
+					target = SOV
+					type = annex_everything
+				}
+			}
+		}
+	}
+
+	form_central_siberia_category = {
+		unify_central_siberia = {
+			icon = generic_ignite_civil_war
+			fire_only_once = yes
+			allowed = {
+			OR = {
+			tag = NRI
+			tag = KRA
+			tag = BRY
+			tag = NOV
+			tag = TAN
+			}
+			}
+			visible = {
+			OR = {
+			tag = NRI
+			tag = KRA
+			tag = BRY
+			tag = NOV
+			tag = TAN
+			}
+			}
+			available = {
+			controls_central_siberia = yes
+			NOT = {
+			has_country_leader = {
+    		name = "Nikita Khrushchev"
+    		ruling_only = yes
+					}
+				}
+			}
+			cost = 50
+			ai_will_do = {
+				factor = 100
+			}
+			complete_effect = {
+				log = "[GetDateText]: [Root.GetName]: Decision remove unify_central_siberia"
+				578 = { add_core_of = ROOT }
+				570 = { add_core_of = ROOT }
+				40 = { add_core_of = ROOT }
+				575 = { add_core_of = ROOT }
+				576 = { add_core_of = ROOT }
+				516 = { add_core_of = ROOT }
+				329 = { add_core_of = ROOT }
+				978 = { add_core_of = ROOT }
+				875 = { add_core_of = ROOT }
+				654 = { add_core_of = ROOT }
+				569 = { add_core_of = ROOT }
+				567 = { add_core_of = ROOT }
+				568 = { add_core_of = ROOT }
+				566 = { add_core_of = ROOT }
+				565 = { add_core_of = ROOT }
+				if = {
+				limit = { has_idea = warlord_debuff }
+				remove_ideas = warlord_debuff
+				}
+				news_event = twrsiberia.1
+				if = {
+				limit = {
+				tag = KRA
+				KRA = {
+				has_government = paternal_autocrat
+				}
+				}
+				set_cosmetic_tag = SIB_KRA
+				}
+				if = {
+				limit = {
+				is_communist = yes
+				NOT = {
+				tag = NRI
+				has_cosmetic_tag = KRA_UNIFIED
+				}
+				}
+				set_cosmetic_tag = SIB_RED_NORM
+				}
+				if = {
+				limit = {
+				is_communist = yes
+				tag = NRI
+				}
+				set_cosmetic_tag = SIB_RED_NRI
+				}
+				if = {
+				limit = {
+				NOT = {
+				is_communist = yes
+				tag = NRI
+				tag = KRA
+				has_government = fascist
+				}
+				}
+				set_cosmetic_tag = SIB_NORM
+				}
+				if = {
+				limit = {
+				tag = NRI
+				NOT = {
+				is_communist = yes
+				}
+				}
+				set_cosmetic_tag = SIB_NRI
+				}
+				if = {
+				limit = {
+				tag = BRY
+				has_government = fascist
+				}
+				set_cosmetic_tag = SIB_BRY_FASH
+				}
+			}
+		}
+	}

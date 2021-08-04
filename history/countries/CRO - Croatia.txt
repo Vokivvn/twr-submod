@@ -1,0 +1,344 @@
+﻿#########################################################################
+# Croatia
+#########################################################################
+capital = 109
+
+set_research_slots = 2
+
+oob = "CRO_1936"
+
+set_convoys = 5
+set_stability = 0.35
+
+country_lock_all_division_template = yes
+
+add_ideas = {
+	CRO_german_funding_for_supression
+	CRO_dream_of_a_greater_croatia
+	CRO_italian_influence
+	CRO_Economic_Depression_idea
+	CRO_Divided_Home_Guard_idea
+
+	CRO_HoG_Mladen_Lorkovic
+	CRO_FM_Mehmed_Alajbegovic
+	CRO_MoS_Andrija_Artukovic
+	CRO_AM_Dragutin_Toth
+	CRO_CoStaff_Slavko_Kvaternik
+	CRO_CoArmy_Ante_Vokic
+	CRO_CoNavy_Edgar_Angeli
+	CRO_CoAir_Miroslav_Navratil
+
+	limited_conscription
+	limited_exports
+	fanatical_dictatorship
+	semi_industrialised_nation
+}
+
+#######################
+# Research
+#######################
+set_technology = {
+	infantry_weapons_1 = 1
+	tech_mountaineers = 1
+
+	basic_infantry_equipment = 1
+	infantry_at = 1
+
+	artillery4 = 1
+
+	electronic_mechanical_engineering = 1
+	radio = 1
+	motorised_infantry = 1
+
+	tech_engineers = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_signal_company = 1
+
+	early_fighter = 1
+	tac_bomber1 = 1
+	transport_air1 = 1
+	strategic_bomber1 = 1
+
+	fighter_1945 = 1
+	tac_air_1945 = 1
+	transport_air_1945 = 1
+	heavy_air_1945 = 1
+
+
+	CAS_1945 = 1
+	interceptor_1945 = 1
+
+	base_armor = 1
+	gw_artillery = 1
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+	advanced_light_tank = 1
+	APC_1950 = 1
+	IFV_1950 = 1
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		naval_stipulations = 1
+		ww2_destroyer = 1
+	}
+	set_naval_oob = "CRO_1952_naval_legacy"
+}
+if = {
+	limit = {
+		 has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		mtg_naval_stipulations = 1
+		early_ship_hull_very_light = 1
+		early_ship_hull_more_light = 1
+		early_ship_hull_light = 1
+		basic_depth_charges = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		coastal_defense_ships = 1
+	}
+	create_equipment_variant = {
+		name = "Torpiljarka"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			front_1_custom_slot = ship_anti_air_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_anti_air_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Naoružani Parobrod"				
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = empty
+		}
+	}
+	set_naval_oob = "CRO_1952_naval_MTG"
+}
+#######################
+# Politics
+#######################
+set_politics = {
+	ruling_party = national_socialist
+	last_election = "1935.6.9"
+	election_frequency = 12
+	elections_allowed = no
+}
+
+set_popularities = {
+    national_socialist = 73
+    fascist = 0
+    paternal_autocrat = 0
+    conservative = 16
+    liberal = 1
+    social_democrat = 0
+    socialist = 0
+    bolshevik_leninist = 0
+    marxist_leninist = 10
+}
+#######################
+# Leaders
+#######################
+
+create_country_leader = {
+	name = "Ante Pavelić"
+	desc = "ANTE_PAVELIC_DESC"
+	picture = "Ante_Pavelic.dds"
+	expire = "1965.1.1"
+	ideology = ultranationalism
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Interim Council"
+	desc = "Ustasha_Council_DESC"
+	picture = "Ustasha_Council.dds"
+	expire = "1965.1.1"
+	ideology = fascism
+	traits = { cabinet_crisis }
+}
+
+create_country_leader = {
+	name = "Mladen Lorković"
+	desc = "MLADEN_LORKOVIC_DESC"
+	picture = "Mladen_Lorkovic.dds"
+	expire = "1965.1.1"
+	ideology = transitional_regime
+	traits = {}
+}
+
+create_country_leader = {
+	name = "August Košutić"
+	desc = "AUGUST_KOSUTIC_DESC"
+	picture = "August_Kosutic.dds"
+	expire = "1965.1.1"
+	ideology = traditionalist_conservatism
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Vladimir Bakarić"
+	desc = "Vladimir_Bakaric_DESC"
+	picture = "Vladimir_Bakaric.dds"
+	expire = "1965.1.1"
+	ideology = marxism_leninism
+	traits = {}
+}
+
+
+create_country_leader = {
+	name = "Karlo Mrazović"
+	desc = "Karlo_Mrazovic_DESC"
+	picture = "Karlo_Mrazovic.dds"
+	expire = "1965.1.1"
+	ideology = agrarian_socialism
+	traits = {}
+}
+
+#GENERALS#
+create_field_marshal = {
+	name = "Ante Vokić"
+	picture = "Ante_Vokic.dds"
+	traits = { infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 801
+}
+
+create_corps_commander = {
+	name = "Jure Francetić"
+	picture = "Jure_Francetic.dds"
+	traits = { organizer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+	id = 802
+}
+
+create_corps_commander = {
+	name = "Viktor Pavičić"
+	picture = "Viktor_Pavicic.dds"
+	traits = { infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+	id = 803
+}
+
+create_corps_commander = {
+	name = "Ljubo Miloš"
+	picture = "Ljubo_Milos.dds"
+	traits = { trait_reckless harsh_leader }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 804
+}
+
+create_corps_commander = {
+	name = "Miroslav Navratil"
+	picture = "Miroslav_Navratil.dds"
+	traits = { commando }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	id = 805
+}
+
+create_corps_commander = {
+	name = "Vjekoslav Luburić"
+	picture = "Vjekoslav_Luburic.dds"
+	traits = { trickster harsh_leader trait_reckless }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+	id = 806
+}
+
+create_corps_commander = {
+	name = "Petar Brzica"
+	picture = "Petar_Brzica.dds"
+	traits = { commando trait_reckless harsh_leader }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 807
+}
+
+create_navy_leader = {
+	name = "Edgar Angeli"
+	picture = "Edgar_Angeli.dds"
+	traits = {  }
+	skill = 2
+
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Nikola Steinfel"
+	picture = "Nikola_Steinfel.dds"
+	traits = { spotter }
+	skill = 3
+
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Duro Jakcin"
+	picture = "Duro_Jakcin.dds"
+	traits = { bold }
+	skill = 3
+
+	attack_skill = 3
+	defense_skill = 3
+	maneuvering_skill = 3
+	coordination_skill = 3
+}

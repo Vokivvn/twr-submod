@@ -1,0 +1,365 @@
+ideas = {
+	country = {
+	NOV_Member_of_the_Non_Alligned_Movement = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Member_of_the_Non_Alligned_Movement"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = NOV_Non_Alligned_Movement
+
+			modifier = {
+				political_power_factor = 0.05
+				local_resources_factor = 0.05
+				trade_opinion_factor = 0.05
+			}
+		}
+		
+	NOV_Agrarian_Socialism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Member_of_the_Non_Alligned_Movement"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_agrarian_society
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.1
+				political_power_factor = 0.1
+			}
+		}
+		
+	NOV_New_Kolhozes = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Member_of_the_Non_Alligned_Movement"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_agrarian_reform
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				local_resources_factor = 0.1
+				
+			}
+		}
+		
+	NOV_Novosibirsk_Agricultural_Union = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Member_of_the_Non_Alligned_Movement"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_agrarian_reform
+
+			modifier = {
+				conscription_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				
+			}
+		}
+		
+	NOV_Democratic_Army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Member_of_the_Non_Alligned_Movement"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_old_army
+
+			modifier = {
+				army_morale_factor = 0.1
+				army_org_factor = 0.05
+				planning_speed = -0.05
+				
+			}
+		}
+		
+	NOV_Conscription = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Member_of_the_Non_Alligned_Movement"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_old_army
+
+			modifier = {
+				conscription_factor = 0.15
+				mobilization_speed = 0.1
+				
+			}
+		}
+		
+	NOV_Elected_Military_Officers = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Member_of_the_Non_Alligned_Movement"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+
+			modifier = {
+				training_time_army_factor = 0.1
+				experience_gain_army_factor = 0.1
+				land_reinforce_rate = 0.05
+			}
+		}
+	
+	NOV_The_Siberian_Trade_Hub = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Member_of_the_Non_Alligned_Movement"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_trade_secured
+
+			modifier = {
+				trade_opinion_factor = 0.2
+				local_resources_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+	NOV_Reconstruction_Effort = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Reconstruction_Effort"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = GER_Economic_Recovery_4
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industry_repair_factor = 0.1
+				consumer_goods_factor = 0.02
+			}
+		}
+	NOV_Integrating_Infrastructure = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Integrating_Infrastructure"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+		}
+	NOV_Refugee_Resettlement_Program = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Refugee_Resettlement_Program"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support3
+
+			modifier = {
+				MONTHLY_POPULATION = 0.1
+				consumer_goods_factor = 0.02
+			}
+		}
+	NOV_Russian_Oriented_Reconstruction = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Russian_Oriented_Reconstruction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				political_power_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	NOV_Evenly_Distributed_Recustruction = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Evenly_Distributed_Recustruction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				political_power_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	NOV_Siberian_Resource_Ventures = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Siberian_Resource_Ventures"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+
+			modifier = {
+				consumer_goods_factor = 0.01
+				local_resources_factor = 0.1
+			}
+		}
+	NOV_State_Railway_Corporation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_State_Railway_Corporation"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.05
+			}
+		}
+	NOV_Subsidize_Industry = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Subsidize_Industry"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				consumer_goods_factor = 0.01
+				production_factory_max_efficiency_factor = 0.03
+				production_speed_buildings_factor = 0.03
+			}
+		}
+	NOV_Subsidize_Soviet_Farms = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Subsidize_Soviet_Farms"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = ALT_farming_collective
+
+			modifier = {
+				MONTHLY_POPULATION = 0.05
+				consumer_goods_factor = 0.01
+			}
+		}
+	NOV_Siberian_Economic_Miracle = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea NOV_Siberian_Economic_Miracle"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		
+	}
+}

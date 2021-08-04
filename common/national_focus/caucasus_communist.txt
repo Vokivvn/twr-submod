@@ -1,0 +1,986 @@
+focus_tree = {
+		id = twr_caucasus_tree
+		country = {
+		factor = 0
+	}
+	default = no
+	continuous_focus_position = { x = 50 y = -1000 }
+	
+	focus = {
+	cancelable = no 
+		id = CDA_a_land_in_ruins
+		icon = GFX_focus_CDA_land_in_ruins
+		x = 2
+		y = 0
+		cost = 2
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_a_land_in_ruins"
+			country_event = {
+				id = twrcaucasus.10
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_state_of_diserpair
+		icon = GFX_focus_CDA_state_of_disrepair
+		prerequisite = { focus = CDA_a_land_in_ruins }
+		relative_position_id = CDA_a_land_in_ruins
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_state_of_diserpair"
+			add_political_power = 10
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_seek_foreign_help
+		icon = GFX_GENERIC_global_propaganda
+		prerequisite = { focus = CDA_state_of_diserpair }
+		relative_position_id = CDA_state_of_diserpair
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_seek_foreign_help"
+			country_event = {
+				id = twrcaucasus.11
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_the_turks
+		icon = GFX_focus_CDA_turkey
+		prerequisite = { focus = CDA_seek_foreign_help }
+		relative_position_id = CDA_seek_foreign_help
+		x = -2
+		y = 1
+		cost = 1
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_the_turks"
+			TUR = {
+				country_event = {
+					id = twrcaucasus.12
+					days = 1
+					random = 6
+				}
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_the_soviets
+		icon = GFX_focus_chi_mission_to_the_soviet_union
+		prerequisite = { focus = CDA_seek_foreign_help }
+		relative_position_id = CDA_seek_foreign_help
+		x = 0
+		y = 1
+		cost = 1
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_the_soviets"
+			SOV = {
+				country_event = {
+					id = twrcaucasus.15
+					days = 1
+					random = 6
+				}
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_iran_help
+		icon = GFX_focus_CDA_iran
+		prerequisite = { focus = CDA_seek_foreign_help }
+		relative_position_id = CDA_seek_foreign_help
+		x = 2
+		y = 1
+		cost = 1
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_iran_help"
+			PER = {
+				country_event = {
+					id = twrcaucasus.18
+					days = 1
+					random = 6
+				}
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_placating_cossacks
+		icon = GFX_focus_CDA_placating_cossacks
+		prerequisite = { focus = CDA_the_turks }
+		prerequisite = { focus = CDA_the_soviets }
+		prerequisite = { focus = CDA_iran_help }
+		relative_position_id = CDA_the_soviets
+		x = -1
+		y = 1
+		cost = 3
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_placating_cossacks"
+			add_political_power = -20
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_cossack_hosts
+		icon = GFX_focus_CDA_cossack_hosts
+		prerequisite = { focus = CDA_placating_cossacks }
+		relative_position_id = CDA_placating_cossacks
+		x = 0
+		y = 1
+		cost = 4
+		available_if_capitulated = no 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_cossack_hosts"
+			976 = { add_core_of = CDA }
+			218 = { add_core_of = CDA }
+			245 = { add_core_of = CDA }
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_placating_kalmyks
+		icon = GFX_focus_CDA_placating_kalmyks
+		prerequisite = { focus = CDA_the_turks }
+		prerequisite = { focus = CDA_the_soviets }
+		prerequisite = { focus = CDA_iran_help }
+		relative_position_id = CDA_the_soviets
+		x = 1
+		y = 1
+		cost = 3
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_placating_kalmyks"
+			add_political_power = -20
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_kalmyk_autonomy
+		icon = GFX_focus_CDA_kalmyk_autonomy
+		prerequisite = { focus = CDA_placating_kalmyks }
+		relative_position_id = CDA_placating_kalmyks
+		x = 0
+		y = 1
+		cost = 4
+		available_if_capitulated = no 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_kalmyk_autonomy"
+			237 = { add_core_of = CDA }
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_something_at_least
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = CDA_kalmyk_autonomy }
+		prerequisite = { focus = CDA_cossack_hosts }
+		relative_position_id = CDA_cossack_hosts
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_something_at_least"
+			remove_ideas = CDA_debuff
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_caucasian_plan
+		icon = GFX_focus_CDA_caucasian_plan
+		x = 12
+		y = 0
+		cost = 2
+		available_if_capitulated = yes 
+		available = {
+			has_completed_focus = CDA_something_at_least
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_caucasian_plan"
+			country_event = {
+				id = twrcaucasus.9
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_breakaways
+		icon = GFX_focus_CDA_breakaways
+		prerequisite = { focus = CDA_caucasian_plan }
+		relative_position_id = CDA_caucasian_plan
+		x = -3
+		y = 1
+		cost = 3
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_breakaways"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_strike_georgia
+		icon = GFX_focus_CDA_strike_georgia
+		prerequisite = { focus = CDA_breakaways }
+		relative_position_id = CDA_breakaways
+		x = -2
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		bypass = {
+			NOT = {
+				country_exists = GEO
+			}
+			owns_state = 231
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_strike_georgia"
+			declare_war_on = {
+				target = GEO
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_punish_georgia
+		icon = GFX_focus_CDA_punish_georgia
+		prerequisite = { focus = CDA_strike_georgia }
+		relative_position_id = CDA_strike_georgia
+		mutually_exclusive = { focus = CDA_create_gssr }
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = no
+		available = {
+			GEO = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_punish_georgia"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_create_gssr
+		icon = GFX_focus_CDA_georgian_ssr
+		prerequisite = { focus = CDA_strike_georgia }
+		relative_position_id = CDA_strike_georgia
+		mutually_exclusive = { focus = CDA_punish_georgia }
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		available = {
+			GEO = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_create_gssr"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_strike_armenia
+		icon = GFX_focus_CDA_strike_armenia
+		prerequisite = { focus = CDA_breakaways }
+		relative_position_id = CDA_breakaways
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		bypass = {
+			NOT = {
+				country_exists = ARM
+			}
+			owns_state = 230
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_strike_armenia"
+			declare_war_on = {
+				target = ARM
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_punish_armenia
+		icon = GFX_focus_CDA_punish_armenia
+		prerequisite = { focus = CDA_strike_armenia }
+		relative_position_id = CDA_strike_armenia
+		mutually_exclusive = { focus = CDA_create_arssr }
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = no
+		available = {
+			ARM = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_punish_armenia"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_create_arssr
+		icon = GFX_focus_CDA_armenian_ssr
+		prerequisite = { focus = CDA_strike_armenia }
+		relative_position_id = CDA_strike_armenia
+		mutually_exclusive = { focus = CDA_punish_armenia }
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		available = {
+			ARM = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_create_arssr"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_end_bourg_nationalism
+		icon = GFX_focus_CDA_end_bourg_nationalism
+		prerequisite = { 
+			focus = CDA_punish_georgia 
+			focus = CDA_create_gssr
+		}
+		prerequisite = { 
+			focus = CDA_punish_armenia 
+			focus = CDA_create_arssr 
+		}
+		relative_position_id = CDA_breakaways
+		x = 0
+		y = 3
+		cost = 2
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_end_bourg_nationalism"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_nazi_remainders
+		icon = GFX_focus_CDA_nazi_remnants
+		prerequisite = { focus = CDA_caucasian_plan }
+		relative_position_id = CDA_caucasian_plan
+		x = 3
+		y = 1
+		cost = 3
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_nazi_remainders"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_kill_baku
+		icon = GFX_focus_CDA_azer
+		prerequisite = { focus = CDA_nazi_remainders }
+		relative_position_id = CDA_nazi_remainders
+		x = -1
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		bypass = {
+			owns_state = 854
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_kill_baku"
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_integrate_baku_into_azssr
+		icon = GFX_focus_CDA_integrate_into_azssr
+		prerequisite = { focus = CDA_kill_baku }
+		relative_position_id = CDA_kill_baku
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = no
+		available = {
+			BKU = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_integrate_baku_into_azssr"
+			add_stability = 0.05
+			854 = { add_core_of = CDA }
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_kill_ast
+		icon = GFX_focus_CDA_fortress_on_the_volga
+		prerequisite = { focus = CDA_nazi_remainders }
+		relative_position_id = CDA_nazi_remainders
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		bypass = {
+			owns_state = 236
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_kill_ast"
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_ast_oblast
+		icon = GFX_focus_CDA_astrakhan
+		prerequisite = { focus = CDA_kill_ast }
+		relative_position_id = CDA_kill_ast
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = no
+		available = {
+			STR = {
+				exists = no
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_ast_oblast"
+			add_stability = 0.05
+			236 = { add_core_of = CDA }
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_no_more_fascism
+		icon = GFX_GENERIC_destroy_nazism
+		prerequisite = { focus = CDA_integrate_baku_into_azssr }
+		prerequisite = { focus = CDA_ast_oblast }
+		relative_position_id = CDA_integrate_baku_into_azssr
+		x = 1
+		y = 1
+		cost = 2
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_no_more_fascism"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_stalingrad_to_baku
+		icon = GFX_focus_CDA_stalingrad_to_baku
+		prerequisite = { focus = CDA_end_bourg_nationalism }
+		prerequisite = { focus = CDA_no_more_fascism }
+		relative_position_id = CDA_caucasian_plan
+		x = 0
+		y = 5
+		cost = 4
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_stalingrad_to_baku"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_fix_railways
+		icon = GFX_focus_CDA_fix_rails
+		prerequisite = { focus = CDA_stalingrad_to_baku }
+		relative_position_id = CDA_stalingrad_to_baku
+		x = -3
+		y = 2
+		cost = 5
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_fix_railways"
+			217 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			235 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			231 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			229 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			854 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_caucasian_industry
+		icon = GFX_GENERIC_Clogs_Socialist
+		prerequisite = { focus = CDA_stalingrad_to_baku }
+		relative_position_id = CDA_stalingrad_to_baku
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_caucasian_industry"
+			random_owned_controlled_state = {
+				limit = {
+						is_core_of = CDA
+						state_population > 500000
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { 
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+						is_core_of = CDA
+						state_population > 500000
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { 
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+						is_core_of = CDA
+						state_population > 500000
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { 
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_purge_warlords
+		icon = GFX_focus_CDA_purge_warlords
+		prerequisite = { focus = CDA_stalingrad_to_baku }
+		relative_position_id = CDA_stalingrad_to_baku
+		x = 3
+		y = 2
+		cost = 3
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_purge_warlords"
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = -0.15
+			}
+			add_popularity = {
+				ideology = marxist_leninist
+				popularity = 0.15
+			}
+			add_stability = -0.05
+			974 = { remove_core_of = NOG add_core_of = CDA }
+			232 = { remove_core_of = KMY add_core_of = CDA }
+			975 = { remove_core_of = LZG add_core_of = CDA }
+			967 = { remove_core_of = LZG }
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_oilfields
+		icon = GFX_focus_CDA_our_oil
+		prerequisite = { focus = CDA_caucasian_industry }
+		relative_position_id = CDA_caucasian_industry
+		x = -1
+		y = 1
+		cost = 4
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_oilfields"
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 970
+			}
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 229
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_coal_basins
+		icon = GFX_focus_CDA_our_coal
+		prerequisite = { focus = CDA_caucasian_industry }
+		relative_position_id = CDA_caucasian_industry
+		x = 1
+		y = 1
+		cost = 4
+		available_if_capitulated = no
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_coal_basins"
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = 973
+			}
+			add_resource = {
+				type = chromium
+				amount = 10
+				state = 233
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_red_caucasus
+		icon = GFX_focus_CDA_red_caucasus
+		prerequisite = { focus = CDA_fix_railways }
+		prerequisite = { focus = CDA_oilfields }
+		prerequisite = { focus = CDA_coal_basins }
+		prerequisite = { focus = CDA_purge_warlords }
+		relative_position_id = CDA_caucasian_industry
+		x = 0
+		y = 2
+		cost = 2
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_red_caucasus"
+			add_political_power = 100
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_the_union_is_here
+		icon = GFX_focus_CDA_the_union_is_here
+		x = 20
+		y = 0
+		cost = 2
+		available_if_capitulated = no
+		available = {
+			is_neighbor_of = SOV
+			has_completed_focus = CDA_red_caucasus
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_the_union_is_here"
+			country_event = {
+				id = twrcaucasus.8
+				days = 1
+				random = 6
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_not_like_us
+		icon = GFX_focus_CDA_not_like_us
+		prerequisite = { focus = CDA_the_union_is_here }
+		relative_position_id = CDA_the_union_is_here
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		available = {
+			has_country_flag = csfsr_option82_flag
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_not_like_us"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_true_heir
+		icon = GFX_GENERIC_marxist_thought
+		prerequisite = { focus = CDA_not_like_us }
+		relative_position_id = CDA_not_like_us
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_true_heir"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_we_are_the_real_union
+		icon = GFX_focus_CDA_we_are_the_real_union
+		prerequisite = { focus = CDA_true_heir }
+		relative_position_id = CDA_true_heir
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_we_are_the_real_union"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_reintegrate
+		icon = GFX_GENERIC_communist_star
+		prerequisite = { focus = CDA_the_union_is_here }
+		relative_position_id = CDA_the_union_is_here
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		available = {
+			has_country_flag = csfsr_option81_flag
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_reintegrate"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_old_adm
+		icon = GFX_GENERIC_draw_borders
+		prerequisite = { focus = CDA_reintegrate }
+		relative_position_id = CDA_reintegrate
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_old_adm"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_they_are_the_real_union
+		icon = GFX_GENERIC_ussr_map
+		prerequisite = { focus = CDA_old_adm }
+		relative_position_id = CDA_old_adm
+		x = 0
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_they_are_the_real_union"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_defend_our_land
+		icon = GFX_focus_CDA_defend_our_land
+		x = 20
+		y = 5
+		cost = 2
+		available_if_capitulated = yes 
+		available = {
+			has_completed_focus = CDA_something_at_least
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_defend_our_land"
+			add_political_power = 50
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_because_we_are_a_mountain
+		icon = GFX_GENERIC_mountain
+		prerequisite = { focus = CDA_defend_our_land }
+		relative_position_id = CDA_defend_our_land
+		x = -1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_because_we_are_a_mountain"
+			add_ideas = CDA_fortification_focus
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_fortify_stalingrad
+		icon = GFX_focus_CDA_fortify_stalingrad
+		prerequisite = { focus = CDA_because_we_are_a_mountain }
+		relative_position_id = CDA_because_we_are_a_mountain
+		x = -2
+		y = 1
+		cost = 6
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_fortify_stalingrad"
+			217 = {
+				add_building_construction = { type = bunker province = 3529 level = 5 instant_build = yes }
+				add_building_construction = { type = bunker province = 3555 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 6527 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9504 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9474 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11474 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11484 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 520 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 5303 level = 3 instant_build = yes }
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_fortify_grozny
+		icon = GFX_focus_CDA_fortify_grozny
+		prerequisite = { focus = CDA_because_we_are_a_mountain }
+		relative_position_id = CDA_because_we_are_a_mountain
+		x = 0
+		y = 1
+		cost = 4
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_fortify_grozny"
+			233 = { 
+				add_building_construction = { type = bunker province = 3672 level = 5 instant_build = yes }
+				add_building_construction = { type = bunker province = 666 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 670 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9628 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9647 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 9647 level = 3 instant_build = yes }
+				add_building_construction = { type = bunker province = 11632 level = 3 instant_build = yes }
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_castle_in_the_mountains
+		icon = GFX_focus_CDA_fortressmountain
+		prerequisite = { focus = CDA_fortify_stalingrad }
+		prerequisite = { focus = CDA_fortify_grozny }
+		relative_position_id = CDA_fortify_stalingrad
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_castle_in_the_mountains"
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_through_force
+		icon = GFX_focus_CDA_through_force
+		prerequisite = { focus = CDA_defend_our_land }
+		relative_position_id = CDA_defend_our_land
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_through_force"
+			army_experience = 10
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_reorganise_leftovers
+		icon = GFX_focus_CDA_reorganise_leftovers
+		prerequisite = { focus = CDA_through_force }
+		relative_position_id = CDA_through_force
+		x = 0
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_reorganise_leftovers"
+			country_event = {
+				id = twrcaucasus.21
+			}
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_learn_of_our_mistakes
+		icon = GFX_GENERIC_bigbrain
+		prerequisite = { focus = CDA_through_force }
+		relative_position_id = CDA_through_force
+		x = 2
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_learn_of_our_mistakes"
+			
+		}
+	}
+	focus = {
+	cancelable = no 
+		id = CDA_new_red_army
+		icon = GFX_focus_CDA_new_red_army
+		prerequisite = { focus = CDA_reorganise_leftovers }
+		prerequisite = { focus = CDA_learn_of_our_mistakes }
+		relative_position_id = CDA_reorganise_leftovers
+		x = 1
+		y = 1
+		cost = 10
+		available_if_capitulated = yes 
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus CDA_new_red_army"
+			add_ideas = CDA_new_red_army_idea
+		}
+	}
+}

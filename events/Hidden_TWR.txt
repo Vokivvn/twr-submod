@@ -1,0 +1,54 @@
+﻿###########################
+# Generic Events, ported over from vanilla
+###########################
+
+add_namespace = hiddentwrwar
+
+# Error checking to make sure subordinate countries peace out with the target
+country_event = {
+	id = hiddentwrwar.205
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_war_with = FROM
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hiddentwrwar.205"
+		white_peace = FROM
+	}
+}
+
+country_event = {
+	id = hiddentwrwar.206
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_war_with = event_target:peace_country
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hiddentwrwar.206"
+		white_peace = event_target:peace_country
+	}
+}
+
+country_event = {
+	id = hiddentwrwar.207
+
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_war_with = event_target:white_peace_receiver
+	}
+
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event hiddentwrwar.207"
+		white_peace = event_target:white_peace_receiver
+	}
+}

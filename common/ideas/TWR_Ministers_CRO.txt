@@ -1,0 +1,437 @@
+ideas = {
+#################################################
+### Head of Government
+#################################################
+	Head_of_Government = {
+		CRO_HoG_Mladen_Lorkovic = { # Mladen Lorković
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_HoG_Mladen_Lorkovic"}
+			picture = minister_lorkovic
+			allowed = { tag = CRO }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Mladen_Lorkovic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				HoG_Political_Protege
+				ideology_FA
+			}
+		}
+		CRO_HoG_Andrija_Artukovic = { # Andrija Artuković
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_HoG_Andrija_Artukovic"}
+			picture = minister_artukovic
+			allowed = { tag = CRO }
+			available = {
+				NS_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Andrija_Artukovic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				HoG_Corrupted_Tool
+				ideology_NS
+			}
+		}
+		CRO_HoG_Branimir_Jelic = { # Branimir Jelić
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_HoG_Branimir_Jelic"}
+			picture = minister_jelic
+			allowed = { tag = CRO }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Branimir_Jelic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				HoG_Naive_Optimist
+				ideology_FA
+			}
+		}
+		CRO_HoG_August_Kosutic = { # August Košutić
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_HoG_August_Kosutic"}
+			picture = minister_kosutic
+			allowed = { tag = CRO }
+			available = {
+				SC_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = August_Kosutic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				HoG_Naive_Optimist
+				ideology_SC
+			}
+		}
+	}
+	######################
+	## Foreign Minister ##
+	######################
+	Foreign_Minister = {
+		CRO_FM_Mehmed_Alajbegovic = { # Mehmed Alajbegović
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_FM_Mehmed_Alajbegovic"}
+			picture = minister_alajbegovic
+			allowed = { tag = CRO }
+			available = {
+				NS_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Mehmed_Alajbegovic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				FM_Great_Compromiser
+				ideology_NS
+			}
+		}
+		CRO_FM_Rafael_Boban = { # Rafael Boban
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_FM_Rafael_Boban"}
+			picture = minister_boban
+			allowed = { tag = CRO }
+			available = {
+				NS_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Rafael_Boban_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				FM_Ideological_Crusader
+				ideology_NS
+			}
+		}
+		CRO_FM_Vjekoslav_Vrancic = { # Vjekoslav Vrančić
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_FM_Vjekoslav_Vrancic"}
+			picture = minister_vrancic
+			allowed = { tag = CRO }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Vjekoslav_Vrancic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				FM_Unqualified_Buffoon
+				ideology_FA
+			}
+		}
+		CRO_FM_Ivanko_Farolfi = { # Ivanko Farolfi
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_FM_Ivanko_Farolfi"}
+			picture = minister_farolfi
+			allowed = { tag = CRO }
+			available = {
+				SC_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Stijepo_Peric_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				FM_Unremarkable_Bureaucrat
+				ideology_SC
+			}
+		}
+	}
+	#######################
+	## Security Minister ##
+	#######################
+	Minister_of_Security = {
+		CRO_MoS_Andrija_Artukovic = { # Andrija Artuković
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_MoS_Andrija_Artukovic"}
+			picture = minister_artukovic
+			allowed = { tag = CRO }
+			available = {
+				NS_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Andrija_Artukovic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				MoS_Crooked_Kleptocrat
+				ideology_NS
+			}
+		}
+		CRO_MoS_Jure_Francetic = { # Jure Francetić
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_MoS_Jure_Francetic"}
+			picture = minister_francetic
+			allowed = { tag = CRO }
+			available = {
+				NS_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Jure_Francetic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				MoS_Prince_Of_Terror
+				ideology_NS
+			}
+		}
+		CRO_MoS_Ante_Vokic = { # Ante Vokić
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_MoS_Ante_Vokic"}
+			picture = minister_vokic
+			allowed = { tag = CRO }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Ante_Vokic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				MoS_Back_Stabber
+				ideology_FA
+			}
+		}
+		CRO_MoS_Ivan_Babic = { # Ivan Babić
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_MoS_Ivan_Babic"}
+			picture = minister_babic
+			allowed = { tag = CRO }
+			available = {
+				SC_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Ivan_Babic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				MoS_Man_Of_The_People
+				ideology_SC
+			}
+		}
+	}
+	#######################
+	## Economic Minister ##
+	#######################
+	Minister_of_Economy = {
+		CRO_AM_Dragutin_Toth = { # Dragutin Toth
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_AM_Dragutin_Toth"}
+			picture = CRO_Dragutin_Toth
+			allowed = { tag = CRO }
+			available = {
+				NS_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Dragutin_Toth_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				AM_Construction_Magnate
+				ideology_NS
+			}
+		}
+		CRO_AM_Lovro_Susic = { # Lovro Sušić
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_AM_Lovro_Susic"}
+			picture = minister_susic
+			allowed = { tag = CRO }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Lovro_Susic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				AM_Mixed_Economy
+				ideology_FA
+			}
+		}
+		CRO_AM_Ljudevit_Tomasic = { # Ljudevit Tomašić
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Ljudevit_Tomasic"}
+			picture = minister_tomasic
+			allowed = { tag = CRO }
+			available = {
+				SC_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Ljudevit_Tomasic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				AM_Laissez-faire_Capitalist
+				ideology_SC
+			}
+		}
+	}
+#################################################
+### Chief of Staff
+#################################################
+	Chief_of_Staff = {
+		CRO_CoStaff_Rafael_Boban = {
+			picture = CRO_Rafael_Boban
+			allowed = { tag = CRO }
+			ledger = army
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Rafael_Boban_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				CoStaff_Commando_Doctrine_Staff
+				ideology_FA
+			}
+		}
+		CRO_CoStaff_Slavko_Kvaternik = {
+			picture = CRO_Slavko_Kvaternik
+			allowed = { tag = CRO }
+			ledger = army
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Slavko_Kvaternik_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				CoStaff_School_Of_Defence
+				ideology_FA
+			}
+		}
+	}
+#################################################
+### Chief of Army
+#################################################
+	Chief_of_Army = {
+		CRO_CoArmy_Ante_Vokic = {
+			picture = CRO_Ante_Vokic
+			allowed = { tag = CRO }
+			ledger = army
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Ante_Vokic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				CoArmy_Doctrine_Of_Autonomy
+				ideology_FA
+			}
+		}
+		CRO_CoArmy_Ante_Vokic_2 = {
+			picture = CRO_Ante_Vokic
+			allowed = { tag = CRO }
+			ledger = army
+			available = {
+				PA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Ante_Vokic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				CoArmy_Doctrine_Of_Autonomy
+				ideology_PA
+			}
+		}
+		CRO_CoArmy_Vjekoslav_Luburic = {
+			picture = minister_luburic
+			allowed = { tag = CRO }
+			ledger = army
+			available = {
+				NS_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Vjekoslav_Luburic_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				CoArmy_Decisive_Battle_Doctrine
+				ideology_NS
+			}
+		}
+	}
+#################################################
+### Chief of Navy
+#################################################
+	Chief_of_Navy = {
+		CRO_CoNavy_Edgar_Angeli = {
+			picture = CRO_Edgar_Angeli
+			allowed = { tag = CRO }
+			available = {
+				AP_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Edgar_Angeli_unavailable }
+				}
+			}
+			ledger = navy
+			cost = 150
+			removal_cost = 10
+			traits = {
+				CoNavy_Old_School_Admiral
+				ideology_AP
+			}
+		}
+	}
+#################################################
+### Chief of Airforce
+#################################################
+	Chief_of_Airforce = {
+		CRO_CoAir_Miroslav_Navratil = {
+			picture = CRO_Miroslav_Navratil
+			allowed = { tag = CRO }
+			ledger = air
+			available = {
+				AP_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Miroslav_Navratil_unavailable }
+				}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = {
+				CoAir_Air_Superiority_Doctrine
+				ideology_AP
+			}
+		}
+	}

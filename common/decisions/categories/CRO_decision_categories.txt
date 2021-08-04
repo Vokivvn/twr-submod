@@ -1,0 +1,214 @@
+####################
+##### Croatia ######
+####################
+
+CRO_Croatian_Expansionism_cat = {
+	icon = GFX_decision_category_saf_anti_colonialist_crusade
+	priority = {
+        base = 2
+    }
+	visible = {
+		hidden_trigger = {
+			OR = {
+				has_war_with = ITA
+				has_war_with = HUN
+			}
+		}
+	}
+
+    available = { 
+		OR = {
+			has_war_with = ITA
+			has_war_with = HUN
+		}
+		tag = CRO
+    }
+}
+
+CRO_HSS_Power_Struggle_cat = {
+	icon = GFX_decision_category_saf_anti_colonialist_crusade
+	priority = {
+        base = 0
+    }
+	visible = {
+		hidden_trigger = {
+			has_country_flag = CRO_hss_power_struggle_flag
+		}
+	}
+
+    available = { 
+		has_country_flag = CRO_hss_power_struggle_flag
+		tag = CRO
+    }
+}
+
+CRO_Integrate_Greater_Croatia_cat = {
+	icon = GFX_decision_category_saf_anti_colonialist_crusade
+	priority = {
+        base = 2
+    }
+	visible = {
+		has_country_flag = CRO_Integrate_Greater_Croatia_decisions_flag
+		hidden_trigger = {
+			OR = {
+				AND = {
+					819 = { is_owned_by = CRO }
+					NOT = {
+						819 = { is_core_of = CRO }
+					}
+				}
+				AND = {
+					45 = { is_owned_by = CRO }
+					NOT = {
+						45 = { is_core_of = CRO }
+					}
+				}
+				AND = {
+					772 = { is_owned_by = CRO }
+					NOT = {
+						772 = { is_core_of = CRO }
+					}
+				}
+				AND = {
+					163 = { is_owned_by = CRO }
+					NOT = {
+						163 = { is_core_of = CRO }
+					}
+				}
+				AND = {
+					815 = { is_owned_by = CRO }
+					NOT = {
+						815 = { is_core_of = CRO }
+					}
+				}
+				AND = {
+					813 = { is_owned_by = CRO }
+					NOT = {
+						813 = { is_core_of = CRO }
+					}
+				}
+			}
+		}
+	}
+
+    available = { 
+		has_country_flag = CRO_Integrate_Greater_Croatia_decisions_flag
+		OR = {
+			AND = {
+				819 = { is_owned_by = CRO }
+				NOT = {
+					819 = { is_core_of = CRO }
+				}
+			}
+			AND = {
+				45 = { is_owned_by = CRO }
+				NOT = {
+					45 = { is_core_of = CRO }
+				}
+			}
+			AND = {
+				772 = { is_owned_by = CRO }
+				NOT = {
+					772 = { is_core_of = CRO }
+				}
+			}
+			AND = {
+				163 = { is_owned_by = CRO }
+				NOT = {
+					163 = { is_core_of = CRO }
+				}
+			}
+			AND = {
+				815 = { is_owned_by = CRO }
+				NOT = {
+					815 = { is_core_of = CRO }
+				}
+			}
+			AND = {
+				813 = { is_owned_by = CRO }
+				NOT = {
+					813 = { is_core_of = CRO }
+				}
+			}
+		}
+		tag = CRO
+    }
+}
+
+CRO_bosnian_partisans_category = {
+    icon = GFX_decision_cat_terrorist
+	
+	priority = {
+        base = 4
+    }
+	
+	visible = {
+		SER = {
+			OR = {
+				has_completed_focus = SER_End_the_Ustase
+				has_completed_focus = SER_End_the_Croatian_Experiment
+			}
+			NOT = { 
+				has_country_flag = partisans_done
+			}
+		}
+		CRO = {
+			OR = {
+				AND = {
+					owns_state = 104
+					owns_state = 981
+					owns_state = 983
+				}
+				AND = {
+					owns_state = 104
+					owns_state = 981
+					owns_state = 983
+					owns_state = 982
+				}
+			}
+		}
+	}
+
+    available = { 
+		SER = {
+			has_completed_focus = SER_End_the_Ustase
+			NOT = { 
+				has_country_flag = partisans_done
+			}
+		}
+		tag = CRO
+    }
+}
+
+CRO_croatian_partisans_category = {
+    icon = GFX_decision_cat_terrorist
+	
+	priority = {
+        base = 5
+    }
+	
+	visible = {
+		SER = {
+			OR = {
+				has_completed_focus = SER_End_the_Ustase
+				AND = {
+					has_completed_focus = SER_End_the_Croatian_Experiment
+					has_completed_focus = SER_The_South_Slavic_Salvation_Front
+				}
+			}
+			NOT = { 
+				has_country_flag = partisans_done
+			}
+		}
+	}
+
+    available = { 
+		SER = {
+			has_completed_focus = SER_End_the_Ustase
+			NOT = { 
+				has_country_flag = partisans_done
+			}
+		}
+		tag = CRO
+    }
+}

@@ -1,0 +1,79 @@
+### Croatia
+
+defined_text = {
+	name = GetCRO_partisan_bosnia_strength
+	text = {
+		trigger = {
+			SER = {
+				check_variable = { SER_partisan_bosnia_strength > 79 }
+			}
+		}
+		localization_key = CRO_partisan_bosnia_strength_very_high
+	}
+	text = {
+		trigger = {
+			SER = {
+				check_variable = { SER_partisan_bosnia_strength > 64 }
+			}
+		}
+		localization_key = CRO_partisan_bosnia_strength_high
+	}
+	text = {
+		trigger = {
+			SER = {
+				check_variable = { SER_partisan_bosnia_strength > 49 }
+			}
+		}
+		localization_key = CRO_partisan_bosnia_strength_medium
+	}
+	text = {
+		trigger = {
+			SER = {
+				check_variable = { SER_partisan_bosnia_strength > 34 }
+			}
+		}
+		localization_key = CRO_partisan_bosnia_strength_low
+	}
+	text = {
+		localization_key = CRO_partisan_bosnia_strength_very_low
+	}
+}
+
+defined_text = {
+	name = GetCRO_partisan_croatia_strength
+	text = {
+		trigger = {
+			SER = {
+				check_variable = { SER_partisan_croatia_strength > 79 }
+			}
+		}
+		localization_key = CRO_partisan_croatia_strength_very_high
+	}
+	text = {
+		trigger = {
+			SER = {
+				check_variable = { SER_partisan_croatia_strength > 64 }
+			}
+		}
+		localization_key = CRO_partisan_croatia_strength_high
+	}
+	text = {
+		trigger = {
+			SER = {
+				check_variable = { SER_partisan_croatia_strength > 49 }
+			}
+		}
+		localization_key = CRO_partisan_croatia_strength_medium
+	}
+	text = {
+		trigger = {
+			SER = {
+				check_variable = { SER_partisan_croatia_strength > 34 }
+			}
+		}
+		localization_key = CRO_partisan_croatia_strength_low
+	}
+	text = {
+		localization_key = CRO_partisan_croatia_strength_very_low
+	}
+}

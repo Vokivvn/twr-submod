@@ -1,0 +1,204 @@
+guiTypes = {
+	containerWindowType = {
+		name = "view_GDP_container"
+		position = { x = -25 y = -310 }
+		size = { width = 10 height = 10 }
+		orientation = lower_right
+		
+		buttonType = {
+			name = "view_GDP_button"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_minimap_handle_default"
+			pdx_tooltip = "view_GDP_button_tt"
+		}
+	}
+	containerWindowType = {
+		name = "GDP_main_container"
+		position = { x = -300 y = -300 }
+		size = { width = 605 height = 550 }
+		orientation = center
+
+		background = {
+			name = "great_powers_menu_background"
+			quadTextureSprite = "GFX_tiled_bg"
+		}
+
+		buttonType = {
+			name = "close_GDP_button"
+			position = { x = 567 y = 5 }
+			quadTextureSprite = "GFX_closebutton"
+			pdx_tooltip = "CLOSE"
+			clicksound = click_close
+			shortcut = "ESCAPE"
+		}
+
+		instantTextBoxType = {
+			name ="GDP_main_title"
+			position = { x = 100 y = 40 }
+			font = "hoi_36header"
+			text = "Country GDP Rankings"
+			format = centre
+			maxWidth = 400
+			maxHeight = 24
+		}
+		buttonType = {
+			name = "GDP_list_sort_button"
+			position = { x = 450 y = 115 }
+			spriteType = "GFX_sort_button_100x29"
+			buttonFont = "hoi_16mbs"
+			buttonText = "GDP Value"
+		}
+
+		containerWindowType = {
+			name = "top_ten_GDP_grid_container"
+			position = { x = 0 y = 140 }
+			size = { width = 360 height = 410 } 
+			margin = { top = 10 bottom = 10 }
+			orientation = upper_left
+
+			background = {
+				name = "top_ten_GDP_grid_background"
+				quadTextureSprite = "GFX_tiled_bg"
+			}
+
+			instantTextBoxType = {
+				name ="top_ten_GDP_grid_title"
+				position = {x = 75 y = 205 }
+				font = "hoi_24header"
+				text = "Top 10 GDP"
+				format = centre
+				maxWidth = 200
+				maxHeight = 24
+				fixedsize = yes
+			
+			}
+			gridboxtype = {
+				name = "top_ten_GDP_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 70 height = 60 }
+				max_slots_horizontal = 5
+				max_slots_vertical = 2
+				add_horizontal = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "GDP_list_grid_container"
+			position = { x = 350 y = 140 }
+			size = { width = 250 height = 400 } 
+			margin = { top = 10 bottom = 10 }
+			orientation = upper_left
+			verticalScrollbar = "right_vertical_slider"
+
+			background = {
+				name = "GDP_list_grid_background"
+				quadTextureSprite = "GFX_tiled_window_1b_thin_border"
+			}
+
+			gridboxtype = {
+				name = "GDP_list_grid"
+				position = { x = 0 y = 0 }
+				padding = { top = 0 bottom = 10 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 150 height = 30 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+
+		containerWindowType = {
+			name = "GDP_selected_country_grid_container"
+			position = {x = 0 y = 140}
+			size = {width = 360 height = 210 } 
+			margin = { top = 10 bottom = 10 }
+			Orientation = upper_left
+
+			background = {
+				name = "GDP_selected_country_grid_background"
+				quadTextureSprite = "GFX_tiled_bg"
+			}
+			
+			gridboxtype = {
+				name = "GDP_selected_country_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				slotsize = { width = 150 height = 30 }
+				max_slots_horizontal = 1
+				add_horizontal = no
+			}
+		}
+	}
+	containerWindowType = {
+		name = "top_ten_GDP_entry"
+		position = { x = 0 y = 0 }	
+		size = { width = 80 height = 60 }
+		
+		instantTextBoxType = {
+			name ="top_ten_GDP_rank"
+			position = { x = -355 y = 295 }
+			font = "hoi_16mbs"
+			text = "#[?THIS.GDP_position|0]"
+			format = centre
+			maxWidth = 500
+			maxHeight = 24
+		}
+		iconType = {
+			name = "top_ten_GDP_country_flag_icon"
+			position = { x = -120 y = 260 }
+			quadTextureSprite = "GFX_shield_small"
+			pdx_tooltip = "top_ten_GDP_country_flag_icon_tt"
+		}
+	}
+	containerWindowType = {
+		name = "GDP_list_entry"
+		position = { x = 0 y = 0 }	
+		size = { width = 150 height = 30 }
+		
+		instantTextBoxType = {
+			name ="GDP_list_text"
+			position = { x = -100 y = 8 }
+			font = "hoi_16mbs"
+			text = "[?THIS.country_GDP]"
+			format = centre
+			maxWidth = 400
+			maxHeight = 24
+		}
+		buttonType = {
+			name = "GDP_list_flag_button"
+			position = { x = -20 y = 0 }
+			quadTextureSprite = "GFX_shield_small"
+			pdx_tooltip = "GDP_list_flag_button_tt"
+		}
+	}
+	containerWindowType = {
+		name = "GDP_selected_country_entry"
+		position = { x = 0 y = 0 }	
+		size = { width = 150 height = 30 }
+		
+		instantTextBoxType = {
+			name ="GDP_selected_country_title"
+			position = { x = -100 y = 10 }
+			font = "hoi_24header"
+			text = "[THIS.GetName]"
+			format = centre
+			maxWidth = 350
+			maxHeight = 24
+		}
+		iconType = {
+			name = "GDP_selected_country_flag_icon"
+			position = { x = 35 y = 65 }
+			spriteType = "GFX_shield_medium"
+			pdx_tooltip = "GDP_selected_country_flag_icon_tt"
+		}
+		instantTextBoxType = {
+			name ="GDP_selected_country_rank"
+			position = { x = -100 y = 130 }
+			font = "hoi_24header"
+			text = "Rank #[?THIS.GDP_position|0]"
+			format = centre
+			maxWidth = 350
+			maxHeight = 24
+		}
+	}
+}

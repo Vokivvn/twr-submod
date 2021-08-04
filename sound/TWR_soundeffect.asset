@@ -1,0 +1,207 @@
+category = {
+	name = "TWR Effects"
+	soundeffects = {
+		SB_Leadership
+		SER_Tito
+		SER_Rankovic
+		SER_Djilas
+		IF_Victory
+		Merkourist_Victory
+		SER_Tito_Unification
+		SER_Rankovic_Unification
+		SER_Djilas_Unification
+		SER_Draza_Unification
+		SER_Democrats_Unification
+		SER_janjics_demise
+		SER_draza
+		SER_ljotic
+	}
+}
+
+########### AUDIO ASSETS
+
+sound = {
+	name = "SB_Leadership"
+	file = "gre/SB_Leadership.wav"
+}
+
+sound = {
+	name = "IF_Victory"
+	file = "gre/IF_Victory.wav"
+}
+
+sound = {
+	name = "Merkourist_Victory"
+	file = "gre/Merkourist_Victory.wav"
+}
+
+sound = {
+	name = "SER_Tito"
+	file = "ser/SER_Tito.wav"
+}
+
+sound = {
+	name = "SER_Rankovic"
+	file = "ser/SER_Rankovic.wav"
+}
+
+sound = {
+	name = "SER_Djilas"
+	file = "ser/SER_Djilas.wav"
+}
+
+sound = {
+	name = "SER_Tito_Unification"
+	file = "ser/SER_Tito_Unification.wav"
+}
+
+sound = {
+	name = "SER_Rankovic_Unification"
+	file = "ser/SER_Rankovic_Unification.wav"
+}
+
+sound = {
+	name = "SER_Djilas_Unification"
+	file = "ser/SER_Djilas_Unification.wav"
+}
+
+sound = {
+	name = "SER_Draza_Unification"
+	file = "ser/SER_Draza_Unification.wav"
+}
+
+sound = {
+	name = "SER_Democrats_Unification"
+	file = "ser/SER_Democrats_Unification.wav"
+}
+
+sound = {
+	name = "SER_janjics_demise"
+	file = "ser/SER_janjics_demise.wav"
+}
+
+sound = {
+	name = "SER_draza"
+	file = "ser/SER_draza.wav"
+}
+
+sound = {
+	name = "SER_ljotic"
+	file = "ser/SER_ljotic.wav"
+}
+
+########## SOUND EFFECTS
+
+soundeffect = {
+	name = SB_Leadership
+	volume = 2.5
+	sounds = {
+		sound = SB_Leadership
+	} 
+}
+
+soundeffect = {
+	name = Merkourist_Victory
+	volume = 2.5
+	sounds = {
+		sound = Merkourist_Victory
+	} 
+}
+
+
+soundeffect = {
+	name = IF_Victory
+	volume = 2.5
+	sounds = {
+		sound = IF_Victory
+	} 
+}
+
+
+soundeffect = {
+	name = SER_Tito
+	volume = 2.5
+	sounds = {
+		sound = SER_Tito
+	} 
+}
+
+soundeffect = {
+	name = SER_Rankovic
+	volume = 2.5
+	sounds = {
+		sound = SER_Rankovic
+	} 
+}
+
+soundeffect = {
+	name = SER_Djilas
+	volume = 2.5
+	sounds = {
+		sound = SER_Djilas
+	} 
+}
+
+soundeffect = {
+	name = SER_Tito_Unification
+	volume = 2.5
+	sounds = {
+		sound = SER_Tito_Unification
+	} 
+}
+
+soundeffect = {
+	name = SER_Rankovic_Unification
+	volume = 2.5
+	sounds = {
+		sound = SER_Rankovic_Unification
+	} 
+}
+
+soundeffect = {
+	name = SER_Djilas_Unification
+	volume = 2.5
+	sounds = {
+		sound = SER_Djilas_Unification
+	} 
+}
+
+soundeffect = {
+	name = SER_Draza_Unification
+	volume = 2.5
+	sounds = {
+		sound = SER_Draza_Unification
+	} 
+}
+
+soundeffect = {
+	name = SER_Democrats_Unification
+	volume = 2.5
+	sounds = {
+		sound = SER_Democrats_Unification
+	} 
+}
+
+soundeffect = {
+	name = SER_janjics_demise
+	volume = 2.5
+	sounds = {
+		sound = SER_janjics_demise
+	} 
+}
+
+soundeffect = {
+	name = SER_draza
+	volume = 2.5
+	sounds = {
+		sound = SER_draza
+	} 
+}
+
+soundeffect = {
+	name = SER_ljotic
+	volume = 2.5
+	sounds = {
+		sound = SER_ljotic
+	} 
+}

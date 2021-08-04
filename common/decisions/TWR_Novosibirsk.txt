@@ -1,0 +1,349 @@
+#########################################################################
+#  Diplomatic Actions
+#########################################################################
+NOV_russian_reconquest = {
+	NOV_restore_order = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+			OR = {
+			tag = DON
+			tag = MTR
+			tag = WRM
+			tag = TMS 
+			tag = RMD
+			tag = RMO
+			tag = PET 
+			tag = STR 
+			tag = WSP 
+			tag = BGS
+			tag = TRV
+			tag = IDE
+			}
+			NOT = { is_subject_of = ROOT }
+			NOT = { is_in_faction_with = NOV }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+			OR = {
+				has_country_flag = NOV_RUSSIA
+				has_country_flag = RUS_REUNIFIED
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = NOV_WESTERN_RUSSIA_UNIFICATION
+				has_country_flag = RUS_REUNIFIED
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NOV_restore_order"
+		}
+		remove_effect = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = FROM
+			}
+		}
+	}
+	NOV_restore_order_extra = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+			OR = {
+			tag = RMO
+			}
+			NOT = { is_subject_of = ROOT }
+			NOT = { is_in_faction_with = NOV }
+				exists = yes
+				has_war = no
+				is_subject = yes
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+			has_war = no
+			OR = {
+				has_country_flag = NOV_RUSSIA
+				has_country_flag = RUS_REUNIFIED
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = NOV_WESTERN_RUSSIA_UNIFICATION
+				has_country_flag = RUS_REUNIFIED
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NOV_restore_order"
+		}
+		remove_effect = {
+			create_wargoal = {
+    			type = annex_everything
+    			target = FROM
+			}
+		}
+	}
+	NOV_request_integration_transvolga = {
+		icon = generic_nationalism
+
+		available = {
+			has_war = no
+			has_country_flag = NOV_RUSSIA
+		}
+		visible = {
+			has_war = no
+			has_country_flag = NOV_WESTERN_RUSSIA_UNIFICATION
+			TRV = {
+				NOT = { is_subject_of = ROOT }
+				is_in_faction_with = NOV
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = NOV
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = freedec?0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NOV_request_integration_transvolga"
+			TRV = {
+				country_event = { id = twrNovosibirsk.32 days = 0 }
+			}
+		}
+	}
+	NOV_request_integration_idel_ural = {
+		icon = generic_nationalism
+
+		available = {
+			has_war = no
+			has_country_flag = NOV_RUSSIA
+		}
+		visible = {
+			has_war = no
+			has_country_flag = NOV_WESTERN_RUSSIA_UNIFICATION
+			IDE = {
+				NOT = { is_subject_of = ROOT }
+				is_in_faction_with = NOV
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = NOV
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = freedec?0
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NOV_request_integration_idel_ural"
+			IDE = {
+				country_event = { id = twrNovosibirsk.34 days = 0 }
+			}
+		}
+	}
+	NOV_return_capital_to_moscow = {
+		icon = generic_nationalism
+		available = {
+			owns_state = 219
+		}
+		visible = {
+			owns_state = 219
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 1000
+		}
+
+		cost = 50
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision NOV_return_capital_to_moscow"
+			set_capital = 219
+			add_stability = 0.05
+		}
+	}
+#	SOV_restore_central_russian_order = {
+#		icon = generic_nationalism#
+
+#		target_trigger = {
+#			FROM = {
+#			OR = {
+#			tag = NRI 
+#			tag = BRY 
+#			tag = NOV 
+#			tag = TAN 
+#			tag = FAR 
+#			tag = KRA
+#			}
+#				NOT = {
+#				is_subject_of = ROOT
+#				TAG = ROOT
+#				}
+#				exists = yes
+#				has_war = no
+#				is_subject = no
+#				is_neighbor_of = ROOT
+#			}
+#		}
+#		available = {
+#		has_war = no
+#		}
+#		visible = {
+#		has_country_flag = CENTRAL_RUSSIA_REUNIFICATION
+#		}#
+
+#		fire_only_once = yes#
+
+#		ai_will_do = {
+#			factor = 50
+#		}#
+
+#		cost = 50
+#		days_remove = 15#
+
+#		complete_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_central_russian_order"
+#		}
+#		remove_effect = {
+#		create_wargoal = {
+#    	type = annex_everything
+#    	target = FROM
+#			}
+#		}
+#	}
+#	SOV_restore_order_com = {
+#		icon = generic_nationalism#
+
+#		target_trigger = {
+#			FROM = {
+#			OR = {
+#			tag = AZR 
+#			tag = RAC 
+#			tag = SUK 
+#			tag = SMO 
+#			tag = CDA 
+#			tag = BLR
+#			}
+#				NOT = { is_subject_of = ROOT }
+#				exists = yes
+#				has_war = no
+#				is_subject = no
+#				is_neighbor_of = ROOT
+#			}
+#		}
+#		available = {
+#		has_war = no
+#		}
+#		visible = {
+#		is_communist = no
+#		has_country_flag = WESTERN_RUSSIA_UNIFICATION
+#		}#
+
+#		fire_only_once = yes#
+
+#		ai_will_do = {
+#			factor = 50
+#		}#
+
+#		cost = 50
+#		days_remove = 15#
+
+#		complete_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_order"
+#		}
+#		remove_effect = {
+#		create_wargoal = {
+#    	type = annex_everything
+#    	target = FROM
+#			}
+#		}
+#	}
+#	SOV_com_to_com_demands = {
+#		icon = generic_nationalism#
+
+#		target_trigger = {
+#			FROM = {
+#			OR = {
+#			tag = AZR
+#			tag = RAC
+#			tag = SUK 
+#			tag = SMO
+#			tag = CDA
+#			tag = BLR
+#			}
+#				NOT = { is_subject_of = ROOT }
+#				exists = yes
+#				has_war = no
+#				is_subject = no
+#				is_neighbor_of = ROOT
+#			}
+#		}
+#		available = {
+#		has_war = no
+#		}
+#		visible = {
+#		is_communist = yes
+#		has_country_flag = WESTERN_RUSSIA_UNIFICATION
+#		}#
+
+#		fire_only_once = yes#
+
+#		ai_will_do = {
+#			factor = 50
+#		}#
+
+#		cost = 50
+#		days_remove = 15#
+
+#		complete_effect = {
+#			log = "[GetDateText]: [Root.GetName]: Decision SOV_restore_order"
+#		}
+#		remove_effect = {
+#		FROM = {
+#		country_event = { id = twrrusreconquest.1 days = 3 }
+#			}
+#		}
+#	}
+}

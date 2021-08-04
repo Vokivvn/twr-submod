@@ -1,0 +1,68 @@
+focus_tree = {
+	id = CRO_Start_Tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = CRO
+		}
+	}
+	default = no
+	shared_focus = CRO_Start_Ustashka_se_Vojska_Dizhe
+	shared_focus = CRO_Mediterranean_Navy_Expansion
+	shared_focus = CRO_The_Croatian_Army
+	shared_focus = CRO_Croatian_Air_Force
+	continuous_focus_position = { x = 50 y = -1000 }
+}
+
+focus_tree = {
+	id = CRO_Bosnian_Uprising_Tree
+	country = {
+		factor = 0
+	}
+	default = no
+	shared_focus = CRO_Chaos_in_Zagreb
+	continuous_focus_position = { x = 50 y = -1000 }
+}
+
+focus_tree = {
+	id = CRO_Artukovic_Tree
+	country = {
+		factor = 0
+	}
+	default = no
+	shared_focus = CRO_Artukovic_The_Poglavniks_Legacy
+	shared_focus = CRO_Mediterranean_Navy_Expansion
+	shared_focus = CRO_The_Croatian_Army
+	shared_focus = CRO_Croatian_Air_Force
+	shared_focus = CRO_Ending_the_Depression
+	continuous_focus_position = { x = 50 y = -1000 }
+}
+
+focus_tree = {
+	id = CRO_HSS_Tree
+	country = {
+		factor = 0
+	}
+	default = no
+	shared_focus = CRO_HSS_The_Peasants_Plot
+	shared_focus = CRO_Mediterranean_Navy_Expansion
+	shared_focus = CRO_The_Croatian_Army
+	shared_focus = CRO_Croatian_Air_Force
+	shared_focus = CRO_Ending_the_Depression
+	continuous_focus_position = { x = 50 y = -1000 }
+}
+
+focus_tree = {
+	id = CRO_Kingdom_Tree
+	country = {
+		factor = 0
+	}
+	default = no
+	shared_focus = CRO_Kingdom_As_Rome_Commands
+	shared_focus = CRO_Mediterranean_Navy_Expansion
+	shared_focus = CRO_The_Croatian_Army
+	shared_focus = CRO_Croatian_Air_Force
+	shared_focus = CRO_Ending_the_Depression
+	continuous_focus_position = { x = 50 y = -1000 }
+}

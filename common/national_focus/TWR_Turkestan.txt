@@ -1,0 +1,339 @@
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Faith_in_Theocracy
+	icon = GFX_GENERIC_Islamic_Government
+	cost = 6
+	x = 38
+	y = 0
+	ai_will_do = {
+		factor = 100
+	}
+	completion_reward = {
+		add_political_power = 150
+		}
+	}
+ 
+	shared_focus = {
+	cancelable = no
+	id = TRK_Islamic_Research
+	icon = GFX_GENERIC_socialist_science
+	cost = 6
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Faith_in_Theocracy
+	}
+	relative_position_id = TRK_Faith_in_Theocracy
+
+	completion_reward = {
+		add_research_slot = 1
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Enforcing_Stability
+	icon = GFX_GENERIC_Islamic_Burning
+	cost = 6
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Islamic_Research
+	}
+	relative_position_id = TRK_Islamic_Research
+
+	completion_reward = {
+		remove_ideas = TRK_infightings
+		add_ideas = TRK_Ethnic_Tensions
+		add_ideas = TRK_Clique_Struggles
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Turkic_Brotherhood
+	icon = GFX_GENERIC_green_diplomacy
+	cost = 6
+	x = -2
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Enforcing_Stability
+	}
+	relative_position_id = TRK_Enforcing_Stability
+
+	completion_reward = {
+		swap_ideas = {
+		remove_idea = TRK_Ethnic_Tensions
+		add_idea = TRK_Turkic_Brotherhood
+				}
+		}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Purge_the_Heretics
+	icon = GFX_GENERIC_Iconoclasts
+	cost = 6
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Turkic_Brotherhood
+	}
+	relative_position_id = TRK_Turkic_Brotherhood
+
+	completion_reward = {
+		swap_ideas = {
+		remove_idea = TRK_Turkic_Brotherhood
+		add_idea = TRK_One_Religion_One_People
+				}
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Jihadist_Army
+	icon = GFX_SAU_Islamic_Converts
+	cost = 6
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Enforcing_Stability
+	}
+	relative_position_id = TRK_Enforcing_Stability
+
+	completion_reward = {
+		add_ideas = TRK_Jihadist_Army
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Tactics_with_Islamic_Characteristics
+	icon = GFX_SAU_Islamic_Officers
+	cost = 6
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Jihadist_Army
+	}
+	relative_position_id = TRK_Jihadist_Army
+
+	completion_reward = {
+		army_experience = 25
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Appeasing_the_Cliques
+	icon = GFX_GENERIC_elite_party
+	cost = 6
+	x = 2
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Enforcing_Stability
+	}
+	relative_position_id = TRK_Enforcing_Stability
+
+	completion_reward = {
+		swap_ideas = {
+		remove_idea = TRK_Clique_Struggles
+		add_idea = TRK_Peace_among_the_Cliques
+				}
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Age_of_Reason
+	icon = GFX_goal_generic_improve_relations
+	cost = 6
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Appeasing_the_Cliques
+	}
+	relative_position_id = TRK_Appeasing_the_Cliques
+
+	completion_reward = {
+		add_stability = 0.05
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_A_Turkestan_Reborn
+	icon = GFX_GENERIC_Fist_Chain
+	cost = 6
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	available = {
+	has_country_leader = {
+		name = "Eshon Babakhan ibn Abdulmajidkhan"
+		}
+	}
+	prerequisite = {
+		focus = TRK_Purge_the_Heretics
+	}
+	prerequisite = {
+		focus = TRK_Tactics_with_Islamic_Characteristics
+	}
+	prerequisite = {
+		focus = TRK_Age_of_Reason
+	}
+
+	relative_position_id = TRK_Tactics_with_Islamic_Characteristics
+
+	completion_reward = {
+		add_ideas = TRK_Turkestan_Reborn
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_The_Turkestani_Miracle
+	icon = GFX_GENERIC_Shining_Star
+	cost = 1
+	x = 43
+	y = 0
+	ai_will_do = {
+		factor = 100
+	}
+	available = {
+		always = no
+	}
+	completion_reward = {
+		custom_effect_tooltip = trkMiracle
+		}
+	}
+ 
+	shared_focus = {
+	cancelable = no
+	id = TRK_Purchase_German_Cars
+	icon = GFX_GER_volkswagen_2
+	cost = 1
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_The_Turkestani_Miracle
+	}
+	relative_position_id = TRK_The_Turkestani_Miracle
+
+	completion_reward = {
+		swap_ideas = {
+		remove_idea = TRK_Peace_among_the_Cliques
+		add_idea = TRK_Clique_Struggles
+			}
+		add_political_power = 50	
+		}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Grants_from_Saudi_Arabia
+	icon = GFX_SAU_Islamic_Gold
+	cost = 1
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Purchase_German_Cars
+	}
+	relative_position_id = TRK_Purchase_German_Cars
+
+	completion_reward = {
+		swap_ideas = {
+		remove_idea = TRK_One_Religion_One_People
+		add_idea = TRK_Turkic_Brotherhood
+				}
+		add_offsite_building = { type = industrial_complex level = 2 }
+			}
+	}
+	
+	shared_focus = {
+	cancelable = no
+	id = TRK_Royal_Turkestani_Air_Force
+	icon = GFX_GENERIC_fighters_and_bombers
+	cost = 1
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Grants_from_Saudi_Arabia
+	}
+	relative_position_id = TRK_Grants_from_Saudi_Arabia
+
+	completion_reward = {
+		swap_ideas = {
+		remove_idea = TRK_Turkic_Brotherhood
+		add_idea = TRK_Ethnic_Tensions
+				}
+		add_equipment_to_stockpile = {
+			type = transport_plane_equipment_1
+			amount = 2
+			producer = GER
+			}
+		}
+	}
+	 
+	shared_focus = {
+	cancelable = no
+	id = TRK_Ignorance_is_Bliss
+	icon = GFX_SOV_attack_turkestan
+	cost = 1
+	x = 0
+	y = 1
+	ai_will_do = {
+		factor = 100
+	}
+	prerequisite = {
+		focus = TRK_Royal_Turkestani_Air_Force
+	}
+	relative_position_id = TRK_Royal_Turkestani_Air_Force
+
+	completion_reward = {
+	hidden_effect = {
+		remove_ideas = TRK_Ethnic_Tensions
+		remove_ideas = TRK_Clique_Struggles
+		add_ideas = TRK_infightings
+				}
+	custom_effect_tooltip = trkDisaster
+			}
+	}
+	
+	

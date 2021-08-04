@@ -1,0 +1,16 @@
+
+BRY_Conquest_of_Central_Siberia = {
+	
+	icon = eng_move_to_secure_the_dominions
+
+	visible = {
+	OR = {
+		has_completed_focus = BRY_party_guest_list
+		has_completed_focus = NRI_novorossiya_trade_consortium
+		has_completed_focus = NRI_siberian_crypto_collective
+		}
+	}
+	allowed = {
+		always = yes
+	}
+}

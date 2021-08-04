@@ -1,0 +1,628 @@
+﻿add_namespace = krasnoyarsk
+
+country_event = {# 5 year plan direction
+	id = krasnoyarsk.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.1"}
+	title = krasnoyarsk.1.t
+	desc = krasnoyarsk.1.d
+	picture = GFX_report_event_industry
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.1.a
+		add_timed_idea = {
+		    idea = KRA_5_year_plan_civilian
+		    days = 1825
+		}
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+
+	option = {
+		name = krasnoyarsk.1.b
+		add_timed_idea = {
+		    idea = KRA_5_year_plan_military
+		    days = 1825
+		}
+		add_offsite_building = { type = arms_factory level = 1 }
+	}
+}
+
+country_event = {# First Soviet Congress
+	id = krasnoyarsk.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.2"}
+	title = krasnoyarsk.2.t
+	desc = krasnoyarsk.2.d
+	picture = GFX_report_event_communist_congress_bulgaria
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.2.a
+	}
+}
+
+country_event = {# Fate of the cultists
+	id = krasnoyarsk.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.3"}
+	title = krasnoyarsk.3.t
+	desc = krasnoyarsk.3.d
+	picture = GFX_report_event_nazi_grand_council
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.3.a
+		add_political_power = 100
+	}
+
+	option = {
+		name = krasnoyarsk.3.b
+		add_stability = 0.05
+	}
+}
+
+
+country_event = {# Krasnoyarsk suggests unification
+	id = krasnoyarsk.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.4"}
+	title = krasnoyarsk.4.t
+	desc = krasnoyarsk.4.d
+	picture = GFX_report_event_communist_congress_bulgaria
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.4.a
+		KRA = { country_event = { days = 1 id = krasnoyarsk.5 } }
+	}
+
+	option = {
+		name = krasnoyarsk.4.b
+		KRA = { country_event = { days = 1 id = krasnoyarsk.6 } }
+	}
+}
+
+country_event = {# Altai Accepts
+	id = krasnoyarsk.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.5"}
+	title = krasnoyarsk.5.t
+	desc = krasnoyarsk.5.d
+	picture = GFX_report_event_communist_congress_bulgaria
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.5.a
+		annex_country = {
+		    target = TAN
+		    transfer_troops = yes
+		}
+		add_state_core = 569
+		add_state_core = 875
+		add_state_core = 654
+		add_state_core = 329
+		add_state_core = 978
+		set_cosmetic_tag = KRA_UNIFIED
+		create_country_leader = {
+			name = "Supreme Siberian Soviet"
+			desc = "none"
+			picture = "Supreme_Siberian_Soviet.tga"
+			expire = "1985.1.1"
+			ideology = zhdanovshchina
+			traits = {}
+		}
+	}
+}
+
+country_event = {# Altai Refuses
+	id = krasnoyarsk.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.6"}
+	title = krasnoyarsk.6.t
+	desc = krasnoyarsk.6.d
+	picture = GFX_report_event_communist_congress_bulgaria
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.6.a
+		create_wargoal = { type = annex_everything target = TAN }
+	}
+}
+
+country_event = {# Declare Siberian Soviet Republic
+	id = krasnoyarsk.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.7"}
+	title = krasnoyarsk.7.t
+	desc = krasnoyarsk.7.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.7.a
+		set_cosmetic_tag = KRA_UNIFIED
+	}
+}
+
+country_event = {# Compromise Made
+	id = krasnoyarsk.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.8"}
+	title = krasnoyarsk.8.t
+	desc = krasnoyarsk.8.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.8.a
+	}
+}
+
+country_event = {# Intro event
+	id = krasnoyarsk.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.9"}
+	title = krasnoyarsk.9.t
+	desc = krasnoyarsk.9.d
+	picture = GFX_report_event_gulag
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.9.a
+		hidden_effect = {
+			country_event = { days = 35 id = krasnoyarsk.10 }
+		}
+	}
+}
+
+country_event = {# Rebellion
+	id = krasnoyarsk.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.10"}
+	title = krasnoyarsk.10.t
+	desc = krasnoyarsk.10.d
+	picture = GFX_report_event_gulag
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.10.a
+		ai_chance = { 
+			factor = 6
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_KRA_ZHADNOV
+			}
+		}
+		complete_national_focus = KRA_officially_leave_church
+		set_politics = {
+			ruling_party = paternal_autocrat
+		}
+		news_event = { days = 1 id = twrnews.138 }
+		hidden_effect = {
+			remove_ideas = KRA_Orthodox_GULAGs
+			remove_ideas = KRA_A_Miniture_NKVD
+		}
+	}
+
+	option = {
+		name = krasnoyarsk.10.b
+		ai_chance = { 
+			factor = 4
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_KRA_REDARMY
+			}
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_KRA_BOG
+			}
+		}
+		complete_national_focus = KRA_land_of_christ
+	}
+}
+
+country_event = {# Intro event
+	id = krasnoyarsk.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.11"}
+	title = krasnoyarsk.11.t
+	desc = krasnoyarsk.11.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.11.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_KRA_BOG
+			}
+		}
+		complete_national_focus = KRA_the_primacy
+		add_stability = -0.1
+		add_manpower = -2500
+		set_politics = {
+			ruling_party = bolshevik_leninist
+		}
+		kill_ideology_leader = marxist_leninist
+	}
+
+	option = {
+		name = krasnoyarsk.11.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_global_flag = COUNTRY_PATH_KRA_REDARMY
+			}
+		}
+		complete_national_focus = KRA_the_otets
+	}
+}
+
+
+country_event = {# Filioque
+	id = krasnoyarsk.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.12"}
+	title = krasnoyarsk.12.t
+	desc = krasnoyarsk.12.d
+	picture = GFX_report_event_gulag
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.12.a
+		add_political_power = 100
+	}
+
+	option = {
+		name = krasnoyarsk.12.b
+		add_stability = 0.1
+	}
+}
+
+country_event = {# Krasnoyarsk asks for equipment
+	id = krasnoyarsk.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.13"}
+	title = krasnoyarsk.13.t
+	desc = krasnoyarsk.13.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.13.a
+		ai_chance = { 
+			factor = 7
+		}
+		KRA = { country_event = { days = 1 id = krasnoyarsk.14 } }
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 3000
+		    target = KRA
+		}
+	}
+
+	option = {
+		name = krasnoyarsk.13.b
+		ai_chance = { 
+			factor = 3
+		}
+		KRA = { country_event = { days = 1 id = krasnoyarsk.15 } }
+	}
+}
+
+country_event = {# Soviets Accept
+	id = krasnoyarsk.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.14"}
+	title = krasnoyarsk.14.t
+	desc = krasnoyarsk.14.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.14.a
+	}
+}
+
+country_event = {# Soviets Refuse
+	id = krasnoyarsk.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.15"}
+	title = krasnoyarsk.15.t
+	desc = krasnoyarsk.15.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.15.a
+	}
+}
+
+country_event = {# Krasnoyarsk asks for equipment
+	id = krasnoyarsk.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.16"}
+	title = krasnoyarsk.16.t
+	desc = krasnoyarsk.16.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.16.a
+		ai_chance = { 
+			factor = 1
+		}
+		KRA = { country_event = { days = 1 id = krasnoyarsk.17 } }
+	}
+
+	option = {
+		name = krasnoyarsk.16.b
+		ai_chance = { 
+			factor = 0
+		}
+		KRA = { country_event = { days = 1 id = krasnoyarsk.18 } }
+	}
+}
+
+country_event = {# Soviets Accept
+	id = krasnoyarsk.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.17"}
+	title = krasnoyarsk.17.t
+	desc = krasnoyarsk.17.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.17.a
+		declare_war_on = {
+            target = NOV
+            type = annex_everything
+        }
+        SOV = {
+        	declare_war_on = {
+	            target = NOV
+	            type = annex_everything
+	        }
+        }
+	}
+}
+
+country_event = {# Soviets Refuse
+	id = krasnoyarsk.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.18"}
+	title = krasnoyarsk.18.t
+	desc = krasnoyarsk.18.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.18.a
+	}
+	option = {
+		name = krasnoyarsk.18.b
+		declare_war_on = {
+            target = NOV
+            type = annex_everything
+        }
+	}
+}
+
+country_event = {# Krasnoyarsk Rejoins
+	id = krasnoyarsk.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.19"}
+	title = krasnoyarsk.19.t
+	desc = krasnoyarsk.19.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.19.a
+	}
+}
+
+country_event = {# Krasnoyarsk asks for alliance
+	id = krasnoyarsk.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.20"}
+	title = krasnoyarsk.20.t
+	desc = krasnoyarsk.20.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.20.a
+		ai_chance = { 
+			factor = 8
+		}
+		send_equipment = {
+    	equipment = infantry_equipment
+    	amount = 1000
+    	target = KRA
+		}
+		set_autonomy = {
+    	target = KRA
+    	autonomy_state = autonomy_puppet
+		}
+		KRA = { country_event = { days = 1 id = krasnoyarsk.21 } }
+	}
+
+	option = {
+		name = krasnoyarsk.20.b
+		ai_chance = { 
+			factor = 2
+		}
+		KRA = { country_event = { days = 1 id = krasnoyarsk.22 } }
+	}
+}
+
+country_event = {# Russia Accepts
+	id = krasnoyarsk.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.21"}
+	title = krasnoyarsk.21.t
+	desc = krasnoyarsk.21.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.21.a
+	}
+}
+
+country_event = {# Russia Refuses
+	id = krasnoyarsk.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.22"}
+	title = krasnoyarsk.22.t
+	desc = krasnoyarsk.22.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.22.a
+	}
+}
+
+country_event = {# Integrate Krasnoyarsk
+	id = krasnoyarsk.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.23"}
+	title = krasnoyarsk.23.t
+	desc = krasnoyarsk.23.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.23.a
+		ai_chance = { 
+			factor = 1
+		}
+		KRA = { country_event = { days = 1 id = krasnoyarsk.24 } }
+	}
+
+	option = {
+		name = krasnoyarsk.23.b
+		ai_chance = { 
+			factor = 0
+		}
+	}
+}
+
+country_event = {# Integrate Krasnoyarsk - do they say yes?
+	id = krasnoyarsk.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.24"}
+	title = krasnoyarsk.24.t
+	desc = krasnoyarsk.24.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.24.a
+		ai_chance = { 
+			factor = 1
+		}
+		RUS = {
+			country_event = { days = 1 id = krasnoyarsk.25 }
+			annex_country = {
+			    target = KRA
+			    transfer_troops = yes
+			}
+		}
+	}
+
+	option = {
+		name = krasnoyarsk.24.b
+		ai_chance = { 
+			factor = 0
+		}
+		RUS = { country_event = { days = 1 id = krasnoyarsk.26 } }
+	}
+}
+
+country_event = {# Krasnoyarsk Accepts
+	id = krasnoyarsk.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.25"}
+	title = krasnoyarsk.25.t
+	desc = krasnoyarsk.25.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.25.a
+	}
+}
+
+country_event = {# Krasnoyarsk Refuses
+	id = krasnoyarsk.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event krasnoyarsk.26"}
+	title = krasnoyarsk.26.t
+	desc = krasnoyarsk.26.d
+	picture = GFX_report_event_soviet_war
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = krasnoyarsk.26.a
+	}
+}

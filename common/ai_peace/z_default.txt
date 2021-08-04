@@ -1,0 +1,205 @@
+default_peace = {
+	enable = {
+		always = yes
+	}
+
+	annex_randomness = 0
+	liberate_randomness = 0
+	puppet_randomness = 0
+	take_states_randomness = 0
+	force_government_randomness = 0
+	
+	# ROOT = Taker, FROM = Giver
+	annex = {
+		factor = 10000
+	}
+
+	# ROOT = Taker, FROM = Liberated
+	liberate = {
+		factor = 0 #100
+	}
+
+	# ROOT = Taker, FROM = Giver
+	puppet = {
+		factor = 0 #200
+		}
+
+	# ROOT = Taker, FROM = State
+	take_states = {
+		factor = 500
+		
+		#Only take claimed/core land if a puppet.
+		modifier = {
+			factor = 0
+			is_puppet = yes
+			FROM = {
+				NOT = {
+					OR = { 
+						is_claimed_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+			}
+		}
+		
+		#Prioritize taking core land
+		modifier = {
+			factor = 100
+			FROM = { is_core_of = ROOT }
+		}
+		
+		#Also prioritize claimed land
+		modifier = {
+			factor = 20
+			FROM = {
+				NOT = { is_core_of = ROOT }
+				is_claimed_by = ROOT
+			}
+		}
+		
+		#TA/Revolts should not take Benelux land if LUX can take it
+		modifier = {
+			factor = 0
+			has_global_flag = german_civil_war_started
+			
+			LUX = {
+				exists = yes
+				is_in_peace_conference = yes
+			}
+			
+			ROOT = {
+				NOT = { tag = LUX }
+				OR = {
+					is_in_faction_with = USA
+					tag = SWI
+					tag = CZE
+				}
+			}
+			
+			FROM = { is_core_of = LUX }
+		}
+		
+		#TA/Revolts should not take Swiss land if SWI can take it
+		modifier = {
+			factor = 0
+			has_global_flag = german_civil_war_started
+			
+			SWI = {
+				exists = yes
+				is_in_peace_conference = yes
+			}
+			
+			ROOT = {
+				NOT = { tag = SWI }
+				OR = {
+					is_in_faction_with = USA
+					tag = CZE
+					tag = LUX
+				}
+			}
+			
+			FROM = { is_core_of = SWI }
+		}
+		
+		#TA/Revolts should not take Czech land if CZE can take it
+		modifier = {
+			factor = 0
+			has_global_flag = german_civil_war_started
+			
+			CZE = {
+				exists = yes
+				is_in_peace_conference = yes
+			}
+			
+			ROOT = {
+				NOT = { tag = CZE }
+				OR = {
+					is_in_faction_with = USA
+					tag = SWI
+					tag = LUX
+				}
+			}
+			
+			FROM = { is_core_of = CZE }
+		}
+		
+		#TA Should not steal Portugese Colonies
+		modifier = {
+			factor = 0
+			
+			POR = {
+				exists = yes
+				is_in_peace_conference = yes
+			}
+			
+			ROOT = {
+				NOT = { tag = POR }
+				is_in_faction_with = POR
+			}
+			
+			FROM = {
+				OR = {
+					state = 540
+					state = 948
+				}
+			}
+		}
+		
+		#TA Should not steal Mexican AIR states
+		modifier = {
+			factor = 0
+			
+			MEX = {
+				exists = yes
+				is_in_peace_conference = yes
+			}
+			
+			ROOT = {
+				NOT = { tag = MEX }
+				is_in_faction_with = MEX
+			}
+			
+			FROM = {
+				OR = {
+					state = 474
+					state = 475
+					state = 476
+				}
+			}
+		}
+		
+		#TA should not take Bulgarian land
+		modifier = {
+			factor = 0
+			
+			BUL = {
+				exists = yes
+				is_in_peace_conference = yes
+			}	
+			
+			ROOT = {
+				NOT = { tag = SER tag = GRE }
+				is_in_faction_with = USA
+			}
+			
+			FROM = {
+				is_owned_by = BUL
+			    OR = {
+					AND = {
+						SER = { is_in_peace_conference = yes }
+						OR = { state = 979 state = 106 }      
+					}
+					AND = {
+						GRE = { is_in_peace_conference = yes }
+						OR = { state = 1009 state = 184 }
+					}
+				}
+			}
+		}
+	}
+
+	# ROOT = Taker, FROM = Giver
+	force_government = {
+		factor = 0 #10 - neutrals should never do this
+	}
+}

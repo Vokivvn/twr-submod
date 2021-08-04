@@ -1,0 +1,400 @@
+ideas = {
+	country = {
+
+		RMO_slave_factories = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_slave_factories"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = RMO_slave_factories
+			modifier = {
+				MONTHLY_POPULATION = -0.8
+				local_resources_factor = 0.10
+				consumer_goods_factor = -0.05
+				stability_weekly = -0.01
+			}
+		targeted_modifier = { tag = GER extra_trade_to_target_factor = 1.0 }
+		
+		}
+
+		RMO_chaos_state_focus = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_chaos_state_focus"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			picture = FRA_factory_strikes
+			modifier = {
+				political_power_gain = -0.5
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+			}
+		
+		
+		}
+
+
+		RMO_chaos_state_focus2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_chaos_state_focus2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			picture = FRA_factory_strikes
+			modifier = {
+				political_power_gain = -0.4
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+			}
+		
+		
+		}
+
+		RMO_chaos_state_focus3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_chaos_state_focus3"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			picture = FRA_factory_strikes
+			modifier = {
+				political_power_gain = -0.4
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+			}
+		
+		
+		}
+
+		RMO_chaos_uprising = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_chaos_uprising"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no # Added via focus
+			}
+			picture = tfv_can_conscription_crisis
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.10
+				production_factory_max_efficiency_factor = -0.2
+			}
+		
+		
+		}
+
+		RMO_uncertainty = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = TAN_communist_refugees
+			modifier = {
+				consumer_goods_factor = 0.3
+				stability_factor = -0.3
+				political_power_gain = -0.75
+			}
+			
+		}
+		
+		RMO_Stand_and_Fight = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = WAR_russian_warlord
+			modifier = {
+				conscription_factor = 0.3
+				army_core_defence_factor = 0.3
+				no_supply_grace = 72
+			}
+			
+		}
+		
+		RMO_Final_Stand = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = WAR_russian_warlord
+			modifier = {
+				conscription_factor = 0.3
+				army_core_defence_factor = 0.6
+				no_supply_grace = 48
+			}
+			
+		}
+		
+		RMO_Terror_Tactics = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = SBA_unorganised_ss_bandits
+			modifier = {
+				resistance_activity = -0.35
+				root_out_resistance_effectiveness_factor = 0.1
+			}
+			
+		}
+		
+		c = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = WAR_russian_warlord
+			modifier = {
+				conscription_factor = 0.5
+				army_core_defence_factor = 0.5
+				no_supply_grace = 128
+			}
+			
+		}
+		
+		RMO_Reichsautonomie = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = decentralised_government
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.1
+			}
+			
+		}
+		
+		RMO_Slavic_Soldiers = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = GENERIC_death_men
+			modifier = {
+				conscription_factor = 0.5
+				army_core_defence_factor = 0.2
+				army_org_factor = -0.2
+				resistance_activity = 0.2
+				resistance_growth = 0.2
+				army_morale_factor = -0.2
+				
+			}
+			
+		}
+		
+		RMO_Victory_in_Moscowien = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = nazi_influence
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				political_power_factor = 0.2
+				
+				}
+			}
+		
+		RMO_New_Government = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = decentralised_government
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.15
+			}
+			
+		}
+		
+		RMO_Restored_Kommissariat = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = GER_heer_pride
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = 0.05
+			}
+			
+		}
+		
+		RMO_SS_Police = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = powerful_ss
+			modifier = {
+				stability_factor = -0.05
+				root_out_resistance_effectiveness_factor = -0.15
+				army_core_defence_factor = 0.1
+			}
+			
+		}
+		
+		RMO_Autonomous_German_Communities = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = ger_rebuild_the_nation
+			modifier = {
+				stability_factor = 0.1
+				conscription_factor = 0.05
+				MONTHLY_POPULATION = 0.2
+			}
+			
+		}
+		
+		RMO_Minimalist_Government = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = decentralised_government
+			modifier = {
+				political_power_gain = -0.5
+				stability_factor = 0.1
+			}
+			
+		}
+		
+		RMO_Arisches_Schicksai = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncertainty"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = GER_germanic_pride
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+			
+		}
+		RSB_Tachanka = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RSB_Tachanka"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = RSB_horse_cart
+			modifier = {
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+				army_speed_factor = 0.05
+			}
+			
+		}	
+		WRM_White_Army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea WRM_White_Army"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = WRM_New_Whites
+			modifier = {
+				army_core_attack_factor = 0.1
+				training_time_factor = 0.1
+				winter_attrition_factor = -0.5
+				conscription_factor = -0.2
+			}
+			
+		}
+		TMS_Torch_of_Hope = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TMS_Torch_of_Hope"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = CAM_democrat_dominance
+			modifier = {
+				MONTHLY_POPULATION = 0.3
+				research_speed_factor = 0.05
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+			
+		}
+		RMO_unloyal_servants = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_unloyal_servants"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = RMO_unloyal_collaborators
+			modifier = {
+				political_power_gain = -0.5
+				max_planning = -0.25
+				war_support_factor = -0.4
+			}
+			
+		}
+		RMO_uncontrolled_corruption = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RMO_uncontrolled_corruption"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = corruption_money
+			modifier = {
+					production_factory_max_efficiency_factor = -0.1
+					research_speed_factor = -0.05
+			}
+			
+		}			
+	}
+}

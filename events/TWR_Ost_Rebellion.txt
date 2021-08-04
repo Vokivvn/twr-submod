@@ -1,0 +1,3280 @@
+
+###########################STARTING FOCUS EVENTS###########################
+add_namespace = twrrkauprisings
+add_namespace = twrukraineuprisings
+add_namespace = twrmoscowuprisings
+add_namespace = twrkukraine
+add_namespace = twrslavnews
+
+country_event = {
+	id = twrrkauprisings.10109 #Demanding Land
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.10109"}
+	title = twrrkauprisings.10109.t
+	desc = twrrkauprisings.10109.d
+	picture = GFX_report_event_don_cossacks
+	is_triggered_only = yes
+
+	option = {
+		name = twrrkauprisings.10109.a #No!
+		ai_chance = { factor = 0 }
+		trigger = {
+			NOT = {
+				OR = {
+					is_in_faction_with = FROM
+					is_subject_of = FROM
+				}
+			}
+		}
+		FROM = {
+			country_event = { id = twrrkauprisings.101090 hours = 5 }
+		}
+	}
+	option = {
+		name = twrrkauprisings.10109.b #hand them back
+		ai_chance = { factor = 50 }
+		add_political_power = -50
+		FROM = {
+			country_event = { id = twrrkauprisings.101091 hours = 5 }
+		}
+	}
+}
+country_event = {
+	id = twrrkauprisings.101091 #Land handed back
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.101091"}
+	title = twrrkauprisings.101091.t
+	desc = twrrkauprisings.101091.d
+	picture = GFX_report_event_don_cossacks
+	is_triggered_only = yes
+	option = {
+		name = twrrkauprisings.101091.a #Good
+		ai_chance = { factor = 100 }
+		every_state = {
+			limit = {
+				is_owned_and_controlled_by = FROM
+				OR = {
+					is_core_of = RKA
+					state = 854
+					state = 236
+				}
+			}
+			ROOT = {
+				transfer_state = PREV
+			}
+		}
+		if = {
+			limit = {
+				AZR = {
+					is_subject_of = FROM
+				}
+			}
+			annex_country = {
+				target = AZR
+				transfer_troops = no
+			}
+		}
+	}
+}
+country_event = {
+	id = twrrkauprisings.101090 #Land refused
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.101090"}
+	title = twrrkauprisings.101090.t
+	desc = twrrkauprisings.101090.d
+	picture = GFX_report_event_don_cossacks
+	is_triggered_only = yes
+
+	option = {
+		name = twrrkauprisings.101090.a #Time to die
+		ai_chance = { factor = 100 }
+		create_wargoal = {
+    		type = annex_everything
+    		target = FROM
+		}
+	}
+}
+country_event = {
+	id = twrrkauprisings.777 #Terror on the oilfields
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.777"}
+	title = twrrkauprisings.777.t
+	desc = twrrkauprisings.777.d
+	picture = GFX_report_event_ruined_german_factories
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrrkauprisings.778
+				days = 4
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.777.a
+		random_owned_state = {
+			damage_building = {
+				type = arms_factory
+				damage = 1
+			}
+		}
+	}
+}
+country_event = {
+	id = twrrkauprisings.778 #Oil field strikes
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.778"}
+	title = twrrkauprisings.778.t
+	desc = twrrkauprisings.778.d
+	picture = GFX_report_event_oil_strike
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrrkauprisings.1
+				days = 5
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.778.a
+		add_stability = -0.1
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.1 #Don Cossacks
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.1"}
+	title = twrrkauprisings.1.t
+	desc = twrrkauprisings.1.d
+	picture = GFX_report_event_don_cossacks
+	
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrrkauprisings.2
+				days = 4
+			}
+			country_event = {
+				id = twrrkauprisings.500
+				hours = 5 
+			}
+			GER = {
+				country_event = {
+					id = twrrkauprisings.1111
+					days = 5
+				}				
+			}
+		}
+	}
+	option = {
+		name = twrrkauprisings.1.a
+		DON = {
+			transfer_state = 245
+			transfer_state = 976
+			add_state_core = 245
+			add_state_core = 976
+		}
+		hidden_effect = {
+			DON = { load_oob = "DON_1952" }
+		}
+		RKA = {
+			leave_faction = yes
+			declare_war_on = {
+				target = DON
+				type = annex_everything
+			}
+		}
+		GER = { end_puppet = RKA }
+	}
+
+	option = {
+		name = twrrkauprisings.1.b
+		DON = {
+			transfer_state = 245
+			transfer_state = 976
+			add_state_core = 245
+			add_state_core = 976
+			change_tag_from = ROOT
+		}
+		hidden_effect = {
+			DON = { load_oob = "DON_1952" }
+		}
+		RKA = {
+			leave_faction = yes
+			declare_war_on = {
+				target = DON
+				type = annex_everything
+			}
+		}
+		GER = { end_puppet = RKA }
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.1111 #RKA in chaos
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.1111"}
+	title = twrrkauprisings.1111.t
+	desc = twrrkauprisings.1111.d
+	picture = GFX_report_event_nazi_mountains
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrrkauprisings.1111.a
+		add_political_power = -90
+	}
+}
+country_event = {
+	id = twrrkauprisings.2 #Mountain Republic
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.2"}
+	title = twrrkauprisings.2.t
+	desc = twrrkauprisings.2.d
+	picture = GFX_report_event_the_mountain_republic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrrkauprisings.3
+				days = 4
+			}
+			MTR = {
+				country_event = {
+					id = twrrkauprisings.1003
+					days = 3
+				}
+			}
+		}
+	}
+	option = {
+		name = twrrkauprisings.2.a
+		MTR = {
+			transfer_state = 972
+			transfer_state = 970
+			transfer_state = 232
+			transfer_state = 233
+			transfer_state = 974
+			transfer_state = 975
+			add_state_core = 972
+			add_state_core = 970
+			add_state_core = 232
+			add_state_core = 233
+			add_state_core = 974
+			add_state_core = 975
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			MTR = { load_oob = "MTR_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = MTR
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = twrrkauprisings.2.b
+		MTR = {
+			transfer_state = 972
+			transfer_state = 970
+			transfer_state = 232
+			transfer_state = 233
+			transfer_state = 974
+			transfer_state = 975
+			add_state_core = 972
+			add_state_core = 970
+			add_state_core = 232
+			add_state_core = 233
+			add_state_core = 974
+			add_state_core = 975
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+			change_tag_from = ROOT
+		}
+		hidden_effect = {
+			MTR = { load_oob = "MTR_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = MTR
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = twrrkauprisings.3 #Azer SSR
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.3"}
+	title = twrrkauprisings.3.t
+	desc = twrrkauprisings.3.d
+	picture = GFX_report_event_azer_ssr
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrrkauprisings.4
+				days = 4
+			}
+			country_event = {
+				id = twrrkauprisings.1001
+				days = 1
+			}
+			ARM = {
+				country_event = {
+					id = twrrkauprisings.501
+					days = 4
+				}
+			}
+		}
+	}
+	option = {
+		name = twrrkauprisings.3.a
+		AZR = {
+			transfer_state = 229
+			add_state_core = 229
+			transfer_state = 967
+			add_state_core = 967
+			transfer_state = 968
+			add_state_core = 968
+			transfer_state = 969
+			add_state_core = 969
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			AZR = { load_oob = "AZR_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = AZR
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = twrrkauprisings.3.b
+		AZR = {
+			transfer_state = 229
+			add_state_core = 229
+			transfer_state = 967
+			add_state_core = 967
+			transfer_state = 968
+			add_state_core = 968
+			transfer_state = 969
+			add_state_core = 969
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+			change_tag_from = ROOT
+		}
+		hidden_effect = {
+			AZR = { load_oob = "AZR_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = AZR
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = twrrkauprisings.4 #Kalm
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.4"}
+	title = twrrkauprisings.4.t
+	desc = twrrkauprisings.4.d
+	picture = GFX_report_event_kam_monks
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrrkauprisings.5
+				days = 2
+			}
+		}
+	}
+	option = {
+		name = twrrkauprisings.4.a
+		KAM = {
+			transfer_state = 237
+			add_state_core = 237
+			transfer_state = 977
+			add_state_core = 977
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			KAM = { load_oob = "KAM_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = KAM
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = twrrkauprisings.4.b
+		KAM = {
+			transfer_state = 237
+			add_state_core = 237
+			transfer_state = 977
+			add_state_core = 977
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+			change_tag_from = ROOT
+		}
+		hidden_effect = {
+			KAM = { load_oob = "KAM_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = KAM
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.5 #Death Cossacks
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.5"}
+	title = twrrkauprisings.5.t
+	desc = twrrkauprisings.5.d
+	picture = GFX_report_event_generic_red_army_fight
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = twrrkauprisings.1002
+				days = 2
+			}
+			news_event = {
+				id = germannews.501 hours = 3
+			}
+		}
+	}
+
+	option = {
+		name = twrrkauprisings.5.a
+		CDA = {
+			transfer_state = 235
+			transfer_state = 234
+			transfer_state = 971
+			transfer_state = 973
+			add_state_core = 234
+			add_state_core = 235
+			add_state_core = 971
+			add_state_core = 973
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			CDA = { load_oob = "CDA_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+		KAM = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+		DON = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+		MTR = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+		KMY = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = twrrkauprisings.5.b
+		CDA = {
+			transfer_state = 235
+			transfer_state = 234
+			transfer_state = 971
+			transfer_state = 973
+			add_state_core = 234
+			add_state_core = 235
+			add_state_core = 971
+			add_state_core = 973
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+			change_tag_from = ROOT
+		}
+		hidden_effect = {
+			CDA = { load_oob = "CDA_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+		KAM = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+		DON = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+		MTR = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+		KMY = {
+			declare_war_on = {
+				target = CDA
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.500 #Emergency Retreat
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.500"}
+	title = twrrkauprisings.500.t
+	desc = twrrkauprisings.500.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.500.a
+		STR = {
+			transfer_state = 236
+			declare_war_on = {
+				target = DON
+				type = annex_everything
+			}
+		}
+		BKU = {
+			transfer_state = 854
+			declare_war_on = {
+				target = DON
+				type = annex_everything
+			}
+		}
+		add_stability = -0.05
+		hidden_effect = {
+			RKA = { load_oob = "GERMAN_SECURITY_RKA" }
+			BKU = { load_oob = "GERMAN_SECURITY_BKU" }
+			STR = { load_oob = "GERMAN_SECURITY_STR" }
+		}
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.501 #Armenia Panic
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.501"}
+	title = twrrkauprisings.501.t
+	desc = twrrkauprisings.501.d
+	picture = GFX_report_event_armenian_panic
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.501.a
+		declare_war_on = {
+			target = AZR
+			type = annex_everything
+		}
+		add_stability = -0.05
+		AZR = {
+			country_event = {
+				id = twrrkauprisings.502
+				days = 0
+			}
+		}
+		hidden_effect = {
+			ARM = { load_oob = "ARMENIAN_VOLUNTEER_DRIVE" }
+		}
+	}
+	option = {
+		name = twrrkauprisings.501.b
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.502 #Armenia Invades
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.502"}
+	title = twrrkauprisings.502.t
+	desc = twrrkauprisings.502.d
+	picture = GFX_report_event_azer_ssr
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.502.a
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.503 #RKA Retreat
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.503"}
+	title = twrrkauprisings.503.t
+	desc = twrrkauprisings.503.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.503.a
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.1001 #Georgia seizes borderlands
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.1001"}
+	title = twrrkauprisings.1001.t
+	desc = twrrkauprisings.1001.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.1001.a
+		GEO = {
+			transfer_state = 964
+		}
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.1002 #Volga-Manych Red Army revolts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.1002"}
+	title = twrrkauprisings.1002.t
+	desc = twrrkauprisings.1002.d
+	picture = GFX_report_event_generic_red_army_fight
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.1002.a
+		RAC = {
+			transfer_state = 238
+			add_state_core = 238
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			RAC = { load_oob = "RAC_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+		KAM = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+		DON = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+		MTR = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+		KMY = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = twrrkauprisings.1002.b
+		RAC = {
+			transfer_state = 238
+			add_state_core = 238
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+			change_tag_from = ROOT
+		}
+		hidden_effect = {
+			RAC = { load_oob = "RAC_1952" }
+		}
+		RKA = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+		KAM = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+		DON = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+		MTR = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+		KMY = {
+			declare_war_on = {
+				target = RAC
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrrkauprisings.1003 #Kumykia
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrrkauprisings.1003"}
+	title = twrrkauprisings.1003.t
+	desc = twrrkauprisings.1003.d
+	picture = GFX_report_event_rka_german_retreat #replace
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrrkauprisings.1003.a
+		KMY = {
+			transfer_state = 232
+			add_state_core = 232
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = "KMY_1952"
+			}
+		}
+		MTR = {
+			declare_war_on = {
+				target = KMY
+				type = annex_everything
+			}
+		}
+		RKA = {
+			declare_war_on = {
+				target = KMY
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = twrrkauprisings.1003.b
+		KMY = {
+			transfer_state = 232
+			add_state_core = 232
+			declare_war_on = {
+				target = BKU
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = STR
+				type = annex_everything
+			}
+			hidden_effect = {
+				load_oob = "KMY_1952"
+			}
+			change_tag_from = ROOT
+		}
+		MTR = {
+			declare_war_on = {
+				target = KMY
+				type = annex_everything
+			}
+		}
+		RKA = {
+			declare_war_on = {
+				target = KMY
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.1 #Warning of a plot
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.1"}
+	title = twrkukraine.1.t
+	desc = twrkukraine.1.d
+	picture = GFX_report_event_koch_plot
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.1.a
+		add_political_power = -50
+		hidden_effect = {
+			country_event = { id = twrkukraine.2 days = 3 }
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.2 #planning a congress
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.2"}
+	title = twrkukraine.2.t
+	desc = twrkukraine.2.d
+	picture = GFX_report_event_osttreffen
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.2.a
+		hidden_effect = {
+			country_event = { id = twrkukraine.4 days = 7 }
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.4 #kiew congress
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.4"}
+	title = twrkukraine.4.t
+	desc = twrkukraine.4.d
+	picture = GFX_report_event_start_of_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.4.a
+		add_political_power = 50
+		hidden_effect = {
+			country_event = { id = twrkukraine.5 days = 2 }
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.5 #colonial policies
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.5"}
+	title = twrkukraine.5.t
+	desc = twrkukraine.5.d
+	picture = GFX_report_event_german_settlers
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.5.a #they dont need reform
+		add_political_power = 150
+		add_stability = 0.1
+		hidden_effect = {
+			country_event = { id = twrkukraine.6 days = 2 }
+			set_country_flag = RUKHARDLINE_1
+		}
+	}
+	option = {
+		name = twrkukraine.5.b #they need reforming
+		add_political_power = -100
+		991 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+				}
+			}
+		}
+		990 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+				}
+			}
+		}
+		989 = {
+			add_building_construction = {
+				type = naval_base
+				level = 1
+				instant_build = yes
+				province = {
+					all_provinces = yes
+				}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = twrkukraine.6 days = 2 }
+			set_country_flag = RUKREFORM_1
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.6 #resource policies
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.6"}
+	title = twrkukraine.6.t
+	desc = twrkukraine.6.d
+	picture = GFX_report_event_slavic_workshop
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.6.a #status quo
+		add_political_power = 100
+		hidden_effect = {
+			country_event = { id = twrkukraine.7 days = 2 }
+			set_country_flag = RUKHARDLINE_2
+		}
+	}
+	option = {
+		name = twrkukraine.6.b #lower our reliance on slavs
+		add_political_power = -150
+		add_stability = 0.1
+		add_war_support = -0.1
+		hidden_effect = {
+			country_event = { id = twrkukraine.7 days = 2 }
+			set_country_flag = RUKREFORM_2
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.7 #slavic problem
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.7"}
+	title = twrkukraine.7.t
+	desc = twrkukraine.7.d
+	picture = GFX_report_event_slave_revolt
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.7.a #nothing to change
+		hidden_effect = {
+			country_event = { id = twrkukraine.8 days = 2 }
+			set_country_flag = RUKHARDLINE_3
+		}
+	}
+	option = {
+		name = twrkukraine.7.b #use ukrainian to divide and conquer
+		hidden_effect = {
+			country_event = { id = twrkukraine.8 days = 2 }
+			set_country_flag = RUKREFORM_3
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.8 #successor question
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.8"}
+	title = twrkukraine.8.t
+	desc = twrkukraine.8.d
+	picture = GFX_report_event_koch_plot
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.8.a #successor is not needed
+		add_political_power = -250
+		hidden_effect = {
+			country_event = { id = twrkukraine.10 days = 2 }
+		}
+	}
+	option = {
+		name = twrkukraine.8.b #yes
+		add_political_power = 50
+		hidden_effect = {
+			country_event = { id = twrkukraine.9 days = 2 }
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.9 #pick successor
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.9"}
+	title = twrkukraine.9.t
+	desc = twrkukraine.9.d
+	picture = GFX_report_event_koch_plot
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		trigger = {
+			count_triggers = {
+				amount = 2
+				has_country_flag = RUKHARDLINE_1
+				has_country_flag = RUKHARDLINE_2
+				has_country_flag = RUKHARDLINE_3
+			}
+		}
+		name = twrkukraine.9.a #pressured to pick hardliner
+		hidden_effect = {
+			country_event = { id = twrkukraine.10 days = 2 }
+			set_country_flag = RUK_Theodor_Oberlander_Picked
+		}
+	}
+	option = {
+		name = twrkukraine.9.b #pressured to pick moderate
+		trigger = {
+			count_triggers = {
+				amount = 2
+				has_country_flag = RUKREFORM_1
+				has_country_flag = RUKREFORM_2
+				has_country_flag = RUKREFORM_3
+			}
+		}
+		hidden_effect = {
+			country_event = { id = twrkukraine.10 days = 2 }
+			set_country_flag = RUK_Hans_Globke_Picked
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.10 #end of kiew congress
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.10"}
+	title = twrkukraine.10.t
+	desc = twrkukraine.10.d
+	picture = GFX_report_event_start_of_congress
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.10.a #end of the congress
+		add_political_power = 50
+		remove_ideas = RUK_timebomb
+		hidden_effect = {
+			clr_country_flag = RUKREFORM_1
+			clr_country_flag = RUKREFORM_2
+			clr_country_flag = RUKREFORM_3
+			clr_country_flag = RUKHARDLINE_1
+			clr_country_flag = RUKHARDLINE_2
+			clr_country_flag = RUKHARDLINE_3
+			country_event = { id = twrkukraine.11 days = 3 }
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.11 #erich koch offered to step down
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.11"}
+	title = twrkukraine.11.t
+	desc = twrkukraine.11.d
+	picture = GFX_report_event_koch_plot
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.11.a #hell no
+		swap_ruler_traits = { remove = paranoid_powermonger  add = extreme_paranoid }
+		add_political_power = -200
+		add_stability = -0.1
+	}
+	option = {
+		name = twrkukraine.11.b #step down - hardline
+		trigger = {
+			has_country_flag = RUK_Theodor_Oberlander_Picked
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Theodor Oberländer"
+			desc = "Theodor_Oberlander_DESC"
+			picture = "Theodor_Oberlander.dds"
+			expire = "1965.1.1"
+			ideology = national_socialism
+			traits = {
+
+			}
+		}
+	}
+	option = {
+		name = twrkukraine.11.b #step down - hardline
+		trigger = {
+			has_country_flag = RUK_Hans_Globke_Picked
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Hans Globke"
+			desc = "Hans_Globke_DESC"
+			picture = "Hans_Globke.dds"
+			expire = "1965.1.1"
+			ideology = national_socialism
+			traits = {
+
+			}
+		}
+		hidden_effect = {
+			country_event = { id = twrkukraine.12 days = 5 random = 300 }
+		}
+	}
+}
+country_event = {
+	id = twrkukraine.12 #OUN Meeting
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrkukraine.12"}
+	title = twrkukraine.12.t
+	desc = twrkukraine.12.d
+	picture = GFX_report_event_the_ss_meetings
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrkukraine.12.a #pleasure doing businiess
+		add_political_power = -200
+		swap_ideas = {
+			remove_idea = RUK_active_resistance
+			add_idea = RUK_lesser_resistance
+		}
+		hidden_effect = {
+			set_country_flag = COLLAB_WITH_UKRAINE
+		}
+	}
+}
+country_event = {
+	id = twrukraineuprisings.1 #Grain Crisis
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.1"}
+	title = twrukraineuprisings.1.t
+	desc = twrukraineuprisings.1.d
+	picture = GFX_report_event_grain_crisis
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrukraineuprisings.2
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.1.a
+		add_political_power = -150
+		add_stability = -0.1
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.2 #German Advisors enforce quotas
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.2"}
+	title = twrukraineuprisings.2.t
+	desc = twrukraineuprisings.2.d
+	picture = GFX_report_event_ukraine_grain_quota
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrukraineuprisings.3
+				days = 3
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.2.a
+		add_political_power = -300
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.3 #Farmers Strike
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.3"}
+	title = twrukraineuprisings.3.t
+	desc = twrukraineuprisings.3.d
+	picture = GFX_report_event_ruk_farmers_strike
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrukraineuprisings.4
+				days = 3
+			}
+			GER = {
+				country_event = {
+					id = twrukraineuprisings.500
+					days = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.3.a
+		add_stability = -0.1
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.4 #settlers protection front
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.4"}
+	title = twrukraineuprisings.4.t
+	desc = twrukraineuprisings.4.d
+	picture = GFX_report_event_german_refugees
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	option = {
+		name = twrukraineuprisings.4.a #carry on
+		ai_chance = {
+			factor = 80
+		}
+		BGS = {
+			add_state_core = 986
+			add_state_core = 989
+			add_state_core = 990
+			add_state_core = 991
+			add_state_core = 992
+			transfer_state = 986
+			transfer_state = 989
+			transfer_state = 990
+			transfer_state = 991
+			transfer_state = 992
+			give_military_access = RUK
+		}
+		hidden_effect = {
+			RGO = {
+				country_event = {
+					id = twrukraineuprisings.400
+					days = 2
+				}
+			}
+			BGS = {
+				load_oob = "BGS_FRONT"
+			}
+			if = {
+				limit = {
+					RUK = {
+						has_country_flag = COLLAB_WITH_UKRAINE
+					}
+				}   
+				RUK = {
+					country_event = {
+						id = twrukraineuprisings.5
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					RUK = {
+					NOT = {
+						has_country_flag = COLLAB_WITH_UKRAINE
+						}
+					}
+				} 
+				RUK = {
+					country_event = {
+						id = twrukraineuprisings.51
+						days = 3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.4.b #yee boi
+		ai_chance = {
+			factor = 0
+		}
+		BGS = {
+			add_state_core = 986
+			add_state_core = 989
+			add_state_core = 990
+			add_state_core = 991
+			add_state_core = 992
+			transfer_state = 986
+			transfer_state = 989
+			transfer_state = 990
+			transfer_state = 991
+			transfer_state = 992
+			change_tag_from = ROOT
+			give_military_access = RUK
+		}
+		hidden_effect = {
+			BGS = {
+				load_oob = "BGS_FRONT"
+			}
+			RGO = {
+				country_event = {
+					id = twrukraineuprisings.400
+					days = 2
+				}
+			}
+			if = {
+				limit = {
+					RUK = {
+						has_country_flag = COLLAB_WITH_UKRAINE
+					}
+				}   
+				RUK = {
+					country_event = {
+						id = twrukraineuprisings.5
+						days = 3
+					}
+				}
+			}
+			if = {
+				limit = {
+					RUK = {
+					NOT = {
+						has_country_flag = COLLAB_WITH_UKRAINE
+						}
+					}
+				} 
+				RUK = {
+					country_event = {
+						id = twrukraineuprisings.51
+						days = 3
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.5 #Ukraine War - with UIA
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.5"}
+	title = twrukraineuprisings.5.t
+	desc = twrukraineuprisings.5.d
+	picture = GFX_report_event_ukraine_insurgents
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				add_core_of = UIA
+			}
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				add_core_of = SUK
+			}
+			set_global_flag = RUK_WAR
+		}
+	}
+	option = {
+		name = twrukraineuprisings.5.a #stand with rk
+		leave_faction = yes
+		GER = {
+			end_puppet = RUK 
+			news_event = { id = germannews.502 days = 1 }
+		}
+		UIA = {
+			transfer_state = 225
+			transfer_state = 259
+			transfer_state = 988
+		}
+		UKR = {
+			transfer_state = 228
+			transfer_state = 221
+			transfer_state = 240
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		SUK = {
+			transfer_state = 227
+			transfer_state = 222
+			transfer_state = 260
+			transfer_state = 258
+			transfer_state = 220
+			transfer_state = 257
+			add_state_core = 227
+			add_state_core = 222
+			add_state_core = 260
+			add_state_core = 258
+			add_state_core = 220
+			add_state_core = 257
+			set_province_controller = 3335
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		UKW = {
+			transfer_state = 93
+			transfer_state = 199
+			add_state_core = 93
+			add_state_core = 199
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = twrukraineuprisings.6
+				days = 4
+			}
+			GER = {
+				country_event = {
+					id = twrukraineuprisings.501
+					days = 3
+				}
+			}
+			UIA = {
+				load_oob = "UIA_1952"
+				give_military_access = RUK
+			}
+			UKR = { load_oob = "UKR_1952_SMALL" }
+			SUK = { load_oob = "SUK_1952" }
+			UKW = { load_oob = "UKW_1952" }
+			RUK = {	
+				set_province_controller = 11543
+				load_oob = "RUK_RESERVE"
+				create_faction = KOMMISSARFRONT
+				set_country_flag = KOMMISSARFRONT_LEADER
+				add_to_faction = BGS
+			}
+		}
+	}
+
+	option = {
+		name = twrukraineuprisings.5.b #bandera time
+		leave_faction = yes
+		GER = {
+			end_puppet = RUK 
+			news_event = { id = germannews.502 days = 1 }
+		}
+		UIA = {
+			transfer_state = 225
+			transfer_state = 259
+			transfer_state = 988
+		}
+		UKR = {
+			transfer_state = 228
+			transfer_state = 221
+			transfer_state = 240
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		SUK = {
+			transfer_state = 227
+			transfer_state = 222
+			transfer_state = 260
+			transfer_state = 258
+			transfer_state = 220
+			transfer_state = 257
+			add_state_core = 227
+			add_state_core = 222
+			add_state_core = 260
+			add_state_core = 258
+			add_state_core = 220
+			add_state_core = 257
+			set_province_controller = 3335
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		UKW = {
+			transfer_state = 93
+			transfer_state = 199
+			add_state_core = 93
+			add_state_core = 199
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = twrukraineuprisings.6
+				days = 4
+			}
+			GER = {
+				country_event = {
+					id = twrukraineuprisings.501
+					days = 3
+				}
+			}
+			UIA = {
+				load_oob = "UIA_1952"
+				give_military_access = RUK
+			}
+			UKR = { 
+				load_oob = "UKR_1952_SMALL"
+				change_tag_from = ROOT
+			}
+			SUK = { load_oob = "SUK_1952" }
+			UKW = { load_oob = "UKW_1952" }
+			RUK = {
+				leave_faction = yes
+				set_province_controller = 11543
+				load_oob = "RUK_RESERVE"
+				create_faction = KOMMISSARFRONT
+				set_country_flag = KOMMISSARFRONT_LEADER
+				add_to_faction = BGS
+			}
+			GER = {
+				end_puppet = RUK 
+				news_event = { id = germannews.502 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.5.c #red army time
+		leave_faction = yes
+		GER = {
+			end_puppet = RUK 
+			news_event = { id = germannews.502 days = 1 }
+		}
+		UIA = {
+			transfer_state = 225
+			transfer_state = 259
+			transfer_state = 988
+		}
+		UKR = {
+			transfer_state = 228
+			transfer_state = 221
+			transfer_state = 240
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		SUK = {
+			transfer_state = 227
+			transfer_state = 222
+			transfer_state = 260
+			transfer_state = 258
+			transfer_state = 220
+			transfer_state = 257
+			add_state_core = 227
+			add_state_core = 222
+			add_state_core = 260
+			add_state_core = 258
+			add_state_core = 220
+			add_state_core = 257
+			set_province_controller = 3335
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		UKW = {
+			transfer_state = 93
+			transfer_state = 199
+			add_state_core = 93
+			add_state_core = 199
+			declare_war_on = {
+				target = UIA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = twrukraineuprisings.6
+				days = 4
+			}
+			GER = {
+				country_event = {
+					id = twrukraineuprisings.501
+					days = 3
+				}
+			}
+			UIA = {
+				load_oob = "UIA_1952"
+				give_military_access = RUK
+			}
+			UKR = { 
+				load_oob = "UKR_1952_SMALL"
+			}
+			SUK = { 
+				load_oob = "SUK_1952" 
+				change_tag_from = ROOT
+			}
+			UKW = { load_oob = "UKW_1952" }
+			RUK = {
+				leave_faction = yes
+				set_province_controller = 11543
+				load_oob = "RUK_RESERVE"
+				create_faction = KOMMISSARFRONT
+				set_country_flag = KOMMISSARFRONT_LEADER
+				add_to_faction = BGS
+			}
+			GER = {
+				end_puppet = RUK 
+				news_event = { id = germannews.502 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.51 #Ukraine War - without UIA
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.51"}
+	title = twrukraineuprisings.51.t
+	desc = twrukraineuprisings.51.d
+	picture = GFX_report_event_ukraine_insurgents
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = {
+		hidden_effect = { 
+			every_state = {
+				limit = {
+					is_core_of = UKR
+				}
+				add_core_of = SUK
+			}
+			set_global_flag = RUK_WAR
+		}
+	}
+	option = {
+		name = twrukraineuprisings.5.a #stand with rk
+		leave_faction = yes
+		GER = {
+			end_puppet = RUK 
+			news_event = { id = germannews.502 days = 1 }
+		}
+		UKR = {
+			transfer_state = 228
+			transfer_state = 221
+			transfer_state = 240
+			transfer_state = 225
+			transfer_state = 259
+			transfer_state = 988
+			set_province_controller = 11557
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		SUK = {
+			transfer_state = 227
+			transfer_state = 222
+			transfer_state = 260
+			transfer_state = 258
+			transfer_state = 220
+			transfer_state = 257
+			add_state_core = 227
+			add_state_core = 222
+			add_state_core = 260
+			add_state_core = 258
+			add_state_core = 220
+			add_state_core = 257
+			set_province_controller = 3335
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		UKW = {
+			transfer_state = 93
+			transfer_state = 199
+			add_state_core = 93
+			add_state_core = 199
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = twrukraineuprisings.6
+				days = 4
+			}
+			GER = {
+				country_event = {
+					id = twrukraineuprisings.501
+					days = 3
+				}
+			}
+			UKR = { load_oob = "UKR_1952_BIG" }
+			SUK = { load_oob = "SUK_1952" }
+			UKW = { load_oob = "UKW_1952" }
+			RUK = {
+				leave_faction = yes
+				set_province_controller = 11543
+				load_oob = "RUK_RESERVE"
+				create_faction = KOMMISSARFRONT
+				set_country_flag = KOMMISSARFRONT_LEADER
+				add_to_faction = BGS
+			}
+			GER = {
+				end_puppet = RUK 
+				news_event = { id = germannews.502 days = 1 }
+			}
+		}
+	}
+
+	option = {
+		name = twrukraineuprisings.5.b #bandera time
+		leave_faction = yes
+		GER = {
+			end_puppet = RUK 
+			news_event = { id = germannews.502 days = 1 }
+		}
+		UKR = {
+			transfer_state = 228
+			transfer_state = 221
+			transfer_state = 240
+			transfer_state = 225
+			transfer_state = 259
+			transfer_state = 988
+			set_province_controller = 11557
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		SUK = {
+			transfer_state = 227
+			transfer_state = 222
+			transfer_state = 260
+			transfer_state = 258
+			transfer_state = 220
+			transfer_state = 257
+			add_state_core = 227
+			add_state_core = 222
+			add_state_core = 260
+			add_state_core = 258
+			add_state_core = 220
+			add_state_core = 257
+			set_province_controller = 3335
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		UKW = {
+			transfer_state = 93
+			transfer_state = 199
+			add_state_core = 93
+			add_state_core = 199
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = twrukraineuprisings.6
+				days = 4
+			}
+			GER = {
+				country_event = {
+					id = twrukraineuprisings.501
+					days = 3
+				}
+			}
+			UKR = { 
+				load_oob = "UKR_1952_BIG"
+				change_tag_from = ROOT
+			}
+			SUK = { load_oob = "SUK_1952" }
+			UKW = { load_oob = "UKW_1952" }
+			RUK = {
+				leave_faction = yes
+				set_province_controller = 11543
+				load_oob = "RUK_RESERVE"
+				create_faction = KOMMISSARFRONT
+				set_country_flag = KOMMISSARFRONT_LEADER
+				add_to_faction = BGS
+			}
+			GER = {
+				end_puppet = RUK 
+				news_event = { id = germannews.502 days = 1 }
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.5.c #red army time
+		leave_faction = yes
+		GER = {
+			end_puppet = RUK 
+			news_event = { id = germannews.502 days = 1 }
+		}
+		UKR = {
+			transfer_state = 228
+			transfer_state = 221
+			transfer_state = 240
+			transfer_state = 225
+			transfer_state = 259
+			transfer_state = 988
+			set_province_controller = 11557
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		SUK = {
+			transfer_state = 227
+			transfer_state = 222
+			transfer_state = 260
+			transfer_state = 258
+			transfer_state = 220
+			transfer_state = 257
+			add_state_core = 227
+			add_state_core = 222
+			add_state_core = 260
+			add_state_core = 258
+			add_state_core = 220
+			add_state_core = 257
+			set_province_controller = 3335
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		UKW = {
+			transfer_state = 93
+			transfer_state = 199
+			add_state_core = 93
+			add_state_core = 199
+			declare_war_on = {
+				target = RUK
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BGS
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = twrukraineuprisings.6
+				days = 4
+			}
+			GER = {
+				country_event = {
+					id = twrukraineuprisings.501
+					days = 3
+				}
+			}
+			UKR = { 
+				load_oob = "UKR_1952_BIG"
+			}
+			SUK = { 
+				load_oob = "SUK_1952" 
+				change_tag_from = ROOT
+			}
+			UKW = { load_oob = "UKW_1952" }
+			RUK = {
+				leave_faction = yes
+				set_province_controller = 11543
+				load_oob = "RUK_RESERVE"
+				create_faction = KOMMISSARFRONT
+				set_country_flag = KOMMISSARFRONT_LEADER
+				add_to_faction = BGS
+			}
+			GER = {
+				end_puppet = RUK 
+				news_event = { id = germannews.502 days = 1 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.6 #German Backup
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.6"}
+	title = twrukraineuprisings.6.t
+	desc = twrukraineuprisings.6.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.6.a
+		custom_effect_tooltip = UKRAINEBACKUP
+		add_war_support = 0.1
+		hidden_effect = {
+			load_oob = "UKRBACKUP"
+		}
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.7 #Ukrainian Talks
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.7"}
+	title = twrukraineuprisings.7.t
+	desc = twrukraineuprisings.7.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.7.a #yes
+		ai_chance = {
+			factor = 50
+		}
+		RUK = {
+		white_peace_with_ROOT = yes
+		}
+		remove_ideas = UKR_OUN_Divide
+		hidden_effect = {
+			RUK = {
+				country_event = twrukraineuprisings.8
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.7.b #no
+		ai_chance = {
+			factor = 40
+		}
+		add_war_support = 0.1
+		hidden_effect = {
+			RUK = {
+				country_event = twrukraineuprisings.9
+			}
+		}
+	}
+}
+country_event = {
+	id = twrukraineuprisings.8 #Ukrainian Talks
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.8"}
+	title = twrukraineuprisings.8.t
+	desc = twrukraineuprisings.8.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.8.a #yes
+		remove_ideas = UKR_OUN_Divide
+	}
+}
+country_event = {
+	id = twrukraineuprisings.9 #Ukrainian Talks
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.9"}
+	title = twrukraineuprisings.9.t
+	desc = twrukraineuprisings.9.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.9.a #refused
+		add_political_power = -150
+	}
+}
+country_event = {
+	id = twrukraineuprisings.10 #Against Tyrants
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.10"}
+	title = twrukraineuprisings.10.t
+	desc = twrukraineuprisings.10.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.10.a #accept
+		add_ideas = RK_against_the_communists
+		declare_war_on = {
+			target = SUK
+			type = annex_everything
+		}
+	}
+	option = {
+		name = twrukraineuprisings.10.b #refuse and break the truce
+		RUK = {
+			country_event = twrukraineuprisings.11
+		}
+		declare_war_on = {
+			target = RUK
+			type = annex_everything
+		}
+		add_ideas = UKR_OUN_Divide		
+	}
+}
+country_event = {
+	id = twrukraineuprisings.11 #Ukrainian Talks
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.11"}
+	title = twrukraineuprisings.11.t
+	desc = twrukraineuprisings.11.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.11.a #refused
+		add_political_power = -150
+		add_ideas = UKR_OUN_Divide
+		complete_national_focus = RUK_Shattered_Peace
+	}
+}
+country_event = {
+	id = twrukraineuprisings.12 #Ukrainian Unification
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.12"}
+	title = twrukraineuprisings.12.t
+	desc = twrukraineuprisings.12.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.12.a #yes
+	}
+	option = {
+		name = twrukraineuprisings.12.b #no
+	}
+}
+country_event = {
+	id = twrukraineuprisings.13 #West Ukrainian Unification
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.13"}
+	title = twrukraineuprisings.13.t
+	desc = twrukraineuprisings.13.d
+	picture = GFX_report_event_rka_german_retreat
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.13.a #yes
+		UKR = {
+		annex_country = {
+    	target = UKW
+    	transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.13.b #no
+		add_stability = 0.1
+		declare_war_on = {
+    	target = UKR
+    	type = annex_everything
+		}
+	}
+}
+country_event = {
+	id = twrukraineuprisings.500 #Grain Issue - Germania
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.500"}
+	title = twrukraineuprisings.500.t
+	desc = twrukraineuprisings.500.d
+	picture = GFX_report_event_grain_crisis
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.500.a
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.501 #RUK Crisis - Responds
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.501"}
+	title = twrukraineuprisings.501.t
+	desc = twrukraineuprisings.501.d
+	picture = GFX_report_event_ruk_farmers_strike
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.501.a
+		add_political_power = -50
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.503 #Formation of Ukrainian Government
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.503"}
+	title = twrukraineuprisings.503.t
+	desc = twrukraineuprisings.503.d
+	picture = GFX_report_event_ukraine_government
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		ai_chance = { factor = 1 }
+		name = twrukraineuprisings.503.b #Enact Transistion
+		RUK = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Yaroslav Stetsko"
+				desc = ""
+				picture = "Yaroslav_Stetsko.dds"
+				expire = "1965.1.1"
+				ideology = national_socialism
+				traits = {}
+			}
+			set_party_name = { 
+				ideology = national_socialist
+				long_name = RUK_Ukraine_long 
+				name = RUK_Ukraine
+			}
+			set_cosmetic_tag = RUK_UKRAINE
+		}
+		every_state = {
+			limit = {
+				is_core_of = UKR
+			}
+			add_core_of = RUK
+		}
+		hidden_effect = {
+			country_event = {
+				id = twrukraineuprisings.504
+				days = 2
+			}
+			load_oob = "UKRVOLUNTEERS"
+		}
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.504 #New Cabinet
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.504"}
+	title = twrukraineuprisings.504.t
+	desc = twrukraineuprisings.504.d
+	picture = GFX_report_event_new_cabinet
+
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrukraineuprisings.505
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.504.a
+		add_political_power = 50
+		add_stability = 0.05
+		news_event = {
+			id = germannews.503
+			days = 1
+		}
+		hidden_effect = {
+			add_ideas = {
+				RUK_HoG_Yaroslav_Stetsko
+				RUK_FM_Volodymyr_Kubiyovych
+				RUK_MoS_Roman_Shusko_Kyrilovich
+				RUK_AM_Yaroslav_Stetsko
+				RUK_CoS_Pavlo_Shandruk
+				RUK_CoA_Petro_Dyachenko
+				RUK_CoA_Robert_Olejnik
+				RUK_CoNavy_Vacant
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.505 #Cabinet Spilt over Nationhood
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.505"}
+	title = twrukraineuprisings.505.t
+	desc = twrukraineuprisings.505.d
+	picture = GFX_report_event_ukr_gov_division
+
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrukraineuprisings.506
+				days = 7
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.505.a
+		add_political_power = -50
+	}
+}
+
+country_event = {
+	id = twrukraineuprisings.506 #Ukraine Civil War
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.506"}
+	title = twrukraineuprisings.506.t
+	desc = twrukraineuprisings.506.d
+	picture = GFX_report_event_ukr_civil_war
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.506.a
+		UKR = {
+			transfer_state = 203
+			transfer_state = 197
+			set_province_controller = 11437
+			set_province_controller = 9433
+			set_province_controller = 11422
+			set_province_controller = 6423
+			set_province_controller = 9419
+			set_province_controller = 11561
+		}
+		hidden_effect = {
+			news_event = {
+				id = germannews.504
+				days = 1
+			}
+			UKR = { load_oob = "UKR_1952" }
+		}
+		RUK = {
+			declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+		UIA = {
+			declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+	}
+
+	option = {
+		name = twrukraineuprisings.506.b
+		UKR = {
+			transfer_state = 203
+			transfer_state = 197
+			set_province_controller = 11437
+			set_province_controller = 9433
+			set_province_controller = 11422
+			set_province_controller = 6423
+			set_province_controller = 9419
+			set_province_controller = 11561
+			change_tag_from = ROOT
+		}
+		hidden_effect = {
+			UKR = { load_oob = "UKR_1952" }
+			news_event = {
+				id = germannews.504
+				days = 1
+			}
+		}
+		RUK = {
+			declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+		UIA = {
+			declare_war_on = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+	}
+}
+country_event = {
+	id = twrukraineuprisings.400 #Gotenland Gains
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.400"}
+	title = twrukraineuprisings.400.t
+	desc = twrukraineuprisings.400.d
+	picture = GFX_report_event_german_refugees
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.400.a
+		add_manpower = 2000
+	}
+}
+country_event = {
+	id = twrukraineuprisings.401 #SS Protection
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.401"}
+	title = twrukraineuprisings.401.t
+	desc = twrukraineuprisings.401.d
+	picture = GFX_report_event_SS_moving
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.401.a	
+		retire_country_leader = yes
+		set_cosmetic_tag = BGS_SS
+		create_country_leader = {
+			name = "Otto Ohlendorf"
+			desc = "Otto_Ohlendorf_DESC"
+			picture = "Otto_Ohlendorf.dds"
+			expire = "1965.1.1"
+			ideology = national_socialism
+			traits = {
+			}
+		}
+		hidden_effect = {
+			#load_oob
+		}
+	}
+}
+country_event = {
+	id = twrukraineuprisings.9999 #test
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrukraineuprisings.9999"}
+	title = twrukraineuprisings.9999.t
+	desc = twrukraineuprisings.9999.d
+	picture = GFX_report_event_SS_moving
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrukraineuprisings.401.a	
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Theodor Oberländer"
+			desc = "Theodor_Oberlander_DESC"
+			picture = "Theodor_Oberlander.dds"
+			expire = "1965.1.1"
+			ideology = national_socialism
+			traits = {
+
+			}
+		}
+	}
+	option = {
+		name = twrukraineuprisings.401.a
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Hans Globke"
+			desc = "Hans_Globke_DESC"
+			picture = "Hans_Globke.dds"
+			expire = "1965.1.1"
+			ideology = national_socialism
+			traits = {
+
+			}
+		}
+	}
+}
+###############MOSKAU################
+country_event = {
+	id = twrmoscowuprisings.1 #Slave unrest
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoscowuprisings.1"}
+	title = twrmoscowuprisings.1.t
+	desc = twrmoscowuprisings.1.d
+	picture = GFX_report_event_slave_unrest
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrmoscowuprisings.2
+				days = 3
+				random = 20
+			}
+			GER = {
+				country_event = {
+					id = twrmoscowuprisings.7777 days = 1
+				}
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrmoscowuprisings.1.a
+		add_stability = -0.15
+	}
+}
+country_event = {
+	id = twrmoscowuprisings.2 #Local rebellion
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoscowuprisings.2"}
+	title = twrmoscowuprisings.2.t
+	desc = twrmoscowuprisings.2.d
+	picture = GFX_report_event_slave_revolt
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrmoscowuprisings.3
+				days = 4
+				random = 20
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrmoscowuprisings.2.a
+		add_stability = -0.1
+	}
+}
+country_event = {
+	id = twrmoscowuprisings.3 #plot exposed
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoscowuprisings.3"}
+	title = twrmoscowuprisings.3.t
+	desc = twrmoscowuprisings.3.d
+	picture = GFX_report_event_gestapo
+	immediate = {
+		hidden_effect = { 
+			country_event = {
+				id = twrmoscowuprisings.400
+				days = 5
+				random = 40
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrmoscowuprisings.2.a
+		add_political_power = -100
+	}
+}
+
+country_event = {
+	id = twrmoscowuprisings.7777 #White Sea evac
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoscowuprisings.7777"}
+	title = twrmoscowuprisings.7777.t
+	desc = twrmoscowuprisings.7777.d
+	picture = GFX_report_event_white_sea_government
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = twrmoscowuprisings.7777.a
+		add_political_power = -10
+		WSP = { transfer_state = 214 }
+		hidden_effect = {
+			WSP = {
+				load_oob = "GERMAN_SECURITY_WSP"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrmoscowuprisings.400 #Moskau Civil War Starts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoscowuprisings.400"}
+	title = twrmoscowuprisings.400.t
+	desc = twrmoscowuprisings.400.d
+	picture = GFX_report_event_generic_red_army_fight
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	immediate = { 
+		hidden_effect = { 
+			every_state = {
+				limit = {
+					is_controlled_by = RMO
+				}
+				add_core_of = SMO
+				add_core_of = WRM
+				add_core_of = TMS
+				add_core_of = RMD
+			}
+			news_event = {
+				id = twrnews.13
+				hours = 8
+			}
+			GER = { end_puppet = RMO }
+			RMO = {
+				leave_faction = yes
+			}
+		}
+	}
+	option = {
+		name = twrmoscowuprisings.400.a #Stay with RK
+		SMO = {
+			transfer_state = 1002
+			transfer_state = 999
+			transfer_state = 351
+			transfer_state = 1001
+			transfer_state = 1004
+			transfer_state = 264
+			transfer_state = 244
+		}
+		WRM = {		
+			transfer_state = 242
+			transfer_state = 243
+			transfer_state = 246
+			transfer_state = 1006
+			create_faction = ANTI_GERMAN_FRONT
+			set_country_flag = ANTI_GERMAN_FRONT_LEADER
+		}
+		RSB = {		
+			transfer_state = 1005
+		}
+		TMS = {		
+			transfer_state = 1007
+			transfer_state = 1003
+		}
+		RMD = {		
+			transfer_state = 223
+			transfer_state = 254
+		}
+		hidden_effect = {
+			set_global_flag = RMO_slavic_revolt
+			SMO = { load_oob = "SMO_1952" }
+			WRM = { load_oob = "WRM_1952" }	
+			RMD = {
+				load_oob = "RMD_1952"
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			TMS = {
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+				set_province_controller = 6269
+				load_oob = "TMS_1952"
+			}
+			RSB = {
+				load_oob = "RSB_1952"
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			RMO = {
+				set_province_controller = 3176
+				set_province_controller = 3101
+				set_province_controller = 2999
+				set_province_controller = 9333
+				set_province_controller = 187
+				load_oob = "RMO_new_heer"
+			}
+			1005 = {
+				add_core_of = RSB
+			}
+			SMO = {
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			WRM = {
+				add_to_faction = TMS
+				add_to_faction = RMD
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = twrmoscowuprisings.400.b #Red Army
+		SMO = {
+			transfer_state = 1002
+			transfer_state = 999
+			transfer_state = 351
+			transfer_state = 1001
+			transfer_state = 1004
+			transfer_state = 264
+			transfer_state = 244
+			change_tag_from = ROOT
+		}
+		WRM = {		
+			transfer_state = 242
+			transfer_state = 243
+			transfer_state = 246
+			transfer_state = 1006
+			create_faction = ANTI_GERMAN_FRONT
+			set_country_flag = ANTI_GERMAN_FRONT_LEADER
+		}
+		RSB = {		
+			transfer_state = 1005
+		}
+		TMS = {		
+			transfer_state = 1007
+			transfer_state = 1003
+		}
+		RMD = {		
+			transfer_state = 223
+			transfer_state = 254
+		}
+		hidden_effect = {
+			set_global_flag = RMO_slavic_revolt
+			SMO = { load_oob = "SMO_1952" }
+			WRM = { load_oob = "WRM_1952" }	
+			RMD = {
+				load_oob = "RMD_1952"
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			TMS = {
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+				set_province_controller = 6269
+				load_oob = "TMS_1952"
+			}
+			RSB = {
+				load_oob = "RSB_1952"
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			RMO = {
+				set_province_controller = 3176
+				set_province_controller = 3101
+				set_province_controller = 2999
+				set_province_controller = 9333
+				set_province_controller = 187
+				load_oob = "RMO_new_heer"
+			}
+			1005 = {
+				add_core_of = RSB
+			}
+			SMO = {
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			WRM = {
+				add_to_faction = TMS
+				add_to_faction = RMD
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = twrmoscowuprisings.400.c #White Army
+		SMO = {
+			transfer_state = 1002
+			transfer_state = 999
+			transfer_state = 351
+			transfer_state = 1001
+			transfer_state = 1004
+			transfer_state = 264
+			transfer_state = 244
+		}
+		WRM = {		
+			transfer_state = 242
+			transfer_state = 243
+			transfer_state = 246
+			transfer_state = 1006
+			create_faction = ANTI_GERMAN_FRONT
+			set_country_flag = ANTI_GERMAN_FRONT_LEADER
+			change_tag_from = ROOT
+		}
+		RSB = {		
+			transfer_state = 1005
+		}
+		TMS = {		
+			transfer_state = 1007
+			transfer_state = 1003
+		}
+		RMD = {		
+			transfer_state = 223
+			transfer_state = 254
+		}
+		hidden_effect = {
+			set_global_flag = RMO_slavic_revolt
+			SMO = { load_oob = "SMO_1952" }
+			WRM = { load_oob = "WRM_1952" }	
+			RMD = {
+				load_oob = "RMD_1952"
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			TMS = {
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+				set_province_controller = 6269
+				load_oob = "TMS_1952"
+			}
+			RSB = {
+				load_oob = "RSB_1952"
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			RMO = {
+				set_province_controller = 3176
+				set_province_controller = 3101
+				set_province_controller = 2999
+				set_province_controller = 9333
+				set_province_controller = 187
+				load_oob = "RMO_new_heer"
+			}
+			1005 = {
+				add_core_of = RSB
+			}
+			SMO = {
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			WRM = {
+				add_to_faction = TMS
+				add_to_faction = RMD
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+		}
+	}
+	option = {
+		name = twrmoscowuprisings.400.e #anarchists
+		SMO = {
+			transfer_state = 1002
+			transfer_state = 999
+			transfer_state = 351
+			transfer_state = 1001
+			transfer_state = 1004
+			transfer_state = 264
+			transfer_state = 244
+		}
+		WRM = {		
+			transfer_state = 242
+			transfer_state = 243
+			transfer_state = 246
+			transfer_state = 1006
+			create_faction = ANTI_GERMAN_FRONT
+			set_country_flag = ANTI_GERMAN_FRONT_LEADER
+		}
+		RSB = {		
+			transfer_state = 1005
+			change_tag_from = ROOT
+		}
+		TMS = {		
+			transfer_state = 1007
+			transfer_state = 1003
+		}
+		RMD = {		
+			transfer_state = 223
+			transfer_state = 254
+		}
+		hidden_effect = {
+			set_global_flag = RMO_slavic_revolt
+			SMO = { load_oob = "SMO_1952" }
+			WRM = { load_oob = "WRM_1952" }	
+			RMD = {
+				load_oob = "RMD_1952"
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			TMS = {
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+				set_province_controller = 6269
+				load_oob = "TMS_1952"
+			}
+			RSB = {
+				load_oob = "RSB_1952"
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			RMO = {
+				set_province_controller = 3176
+				set_province_controller = 3101
+				set_province_controller = 2999
+				set_province_controller = 9333
+				set_province_controller = 187
+				load_oob = "RMO_new_heer"
+			}
+			1005 = {
+				add_core_of = RSB
+			}
+			SMO = {
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+			WRM = {
+				add_to_faction = TMS
+				add_to_faction = RMD
+				declare_war_on = {
+					target = RMO
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = WSP
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+#rknews
+country_event = { #moskow on action
+	id = twrslavnews.10 
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		news_event = twrslavnews.1
+	}
+	
+	option = {
+		name = hidnews.1.a
+	}
+}
+news_event = {
+	id = twrslavnews.1 #moskow ends
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrslavnews.1"}
+	title = twrslavnews.1.t
+	desc = twrslavnews.1.d
+	picture = GFX_news_event_rmo_gone
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = twrslavnews.1.a
+	}
+}
+country_event = { #ukraine on action
+	id = twrslavnews.21
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		news_event = twrslavnews.2
+	}
+	
+	option = {
+		name = hidnews.1.a
+	}
+}
+news_event = {
+	id = twrslavnews.2 #ukraine ends
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrslavnews.2"}
+	title = twrslavnews.2.t
+	desc = twrslavnews.2.d
+	picture = GFX_news_event_ruk_rebels
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = twrslavnews.2.a
+	}
+}
+country_event = { #rka on action
+	id = twrslavnews.31
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		news_event = twrslavnews.3
+	}
+	
+	option = {
+		name = hidnews.1.a
+	}
+}
+news_event = {
+	id = twrslavnews.3 #rka ends
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrslavnews.3"}
+	title = twrslavnews.3.t
+	desc = twrslavnews.3.d
+	picture = GFX_news_event_rka_crished
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = twrslavnews.3.a
+	}
+}
+news_event = {
+	id = twrslavnews.4 #ukrainian unification
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrslavnews.4"}
+	title = twrslavnews.4.t
+	desc = twrslavnews.4.d
+	picture = GFX_news_event_ukrainian_unification
+	fire_only_once = no
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = twrslavnews.4.a
+	}
+}

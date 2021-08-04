@@ -1,0 +1,104 @@
+﻿capital = 245
+oob = "DON_1952"
+set_research_slots = 1
+#######################
+# Language
+#######################
+set_country_flag = russian_language
+set_technology = {
+	infantry_weapons_1 = 1
+	tech_mountaineers = 1
+
+	basic_infantry_equipment = 1
+	infantry_at = 1
+
+	artillery4 = 1
+
+	base_armor = 1
+	gw_artillery = 1
+}
+
+add_political_power = 0
+
+set_politics = {	
+	ruling_party = paternal_autocrat
+	last_election = "1935.6.9"
+	election_frequency = 0
+	elections_allowed = no
+}
+
+set_popularities = {
+    national_socialist = 0
+    fascist = 0
+    paternal_autocrat = 100
+    conservative = 0
+    liberal = 0
+    social_democrat = 0
+    socialist = 0
+    bolshevik_leninist = 0
+    marxist_leninist = 0
+}
+
+	add_ideas = {
+		extensive_conscription
+		war_economy
+		authoritarian_system
+		agrarian_nation
+		DON_HoG_Andrei_Shkuro
+		DON_FM_Serge_Jaroff
+		DON_MoS_Andrei_Shkuro
+		DON_AM_Timofey_Domanov
+		DON_CoStaff_Andrei_Shkuro
+		DON_CoArmy_Vyacheslav_Naumenko
+		DON_CoNavy_Boris_Vilkitsky
+		DON_CoAir_Andrei_Shkuro
+	}
+	
+create_country_leader = {
+	name = "Andrei Shkuro" 
+	desc = "" 
+	picture = "Andrei_Shkuro.dds" 
+	expire = "1961.2.19" 
+	ideology = military_dictatorshipz
+	traits = { } 
+}			
+
+create_field_marshal = {
+	name = "Andrei Shkuro"
+	picture = "Andrei_Shkuro.dds"
+	traits = { trait_reckless }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ivan Nikitich Kononov"
+	picture = "Portrait_Kaukasus_Ivan_Kononov.dds"
+	traits = {  }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Vyacheslav Naumenko"
+	picture = "Portrait_Kaukasus_Vyacheslav_Naumenko.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_navy_leader = {
+	name = "Boris Vilkitsky"
+    picture = "Portrait_Kaukasus_Boris_Vilkitskiy.dds"
+	traits = {  }
+	skill = 1
+}

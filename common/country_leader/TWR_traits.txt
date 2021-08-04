@@ -1,0 +1,361 @@
+leader_traits = {
+########################################
+## Stuff
+########################################
+	reichsfuhrer = {
+		resistance_target = -0.1
+		stability_factor = 0.1
+		encryption_factor = 0.2
+		political_power_factor = -0.25
+
+
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	german_socialist = {
+		national_socialist_acceptance = -100
+		fascist_acceptance = -100
+		opinion_gain_monthly_same_ideology_factor = -0.9
+
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	minister_of_propaganda = {
+		random = no
+		# Boosts fascist
+		national_socialist_drift = 0.1
+		stability_factor = 0.05
+		war_support_factor = 0.1
+		ai_focus_aggressive_factor = 0.5
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	reichsmarschall = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		air_ace_generation_chance_factor = 0.20
+		air_air_superiority_agility_factor = 0.03
+		economy_cost_factor = 0.30
+	}
+
+	substance_abuser = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		encryption_factor = -0.05
+	}
+
+	paranoid_powermonger = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		encryption_factor = 0.2
+		political_power_factor = -0.15
+	}
+	extreme_paranoid = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		encryption_factor = 0.2
+		political_power_factor = -0.30
+		army_morale_factor = -0.1
+	}
+	dubious_figure = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		political_power_factor = -0.30
+		stability_factor = -0.15
+	}
+	reformist = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		production_factory_max_efficiency_factor = 0.1
+		local_resources_factor = 0.10
+		global_building_slots_factor = 0.10
+
+	}
+	reichsarchitekt = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		stability_factor = 0.10
+		consumer_goods_factor = -0.05
+		production_speed_buildings_factor = 0.1
+	}
+	god_of_death = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		war_support_factor = 0.10
+		stability_factor = -0.10
+		consumer_goods_factor = -0.05
+	}
+	volksgruppenfuhrer = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		war_support_factor = 0.05	
+	}
+	lord_of_swabia = {
+		random = no
+		ai_will_do = {
+			factor = 0
+		}
+		conscription_factor = 0.2	
+	}
+	defender_of_anarchists = {
+		random = no
+		political_power_factor = -0.5
+		stability_factor = -0.10
+		war_support_factor = 0.20
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	unpopular_foreigner = {
+		random = no
+		political_power_factor = -0.3
+		stability_factor = -0.2
+		resistance_target = 0.15
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	father_of_novosibirsk_artillery = {
+		random = no
+			army_artillery_attack_factor = 0.15
+			army_artillery_defence_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	divided_council = {
+		random = no
+		political_power_factor = -0.5
+		stability_factor = -0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	house_arrest = {
+		random = no
+		political_power_factor = -0.3
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	saviour_of_aryans = {
+		random = no
+		consumer_goods_factor = -0.05
+		ai_focus_aggressive_factor = 0.7
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	insane = {
+		random = no
+		political_power_factor = -0.15
+		stability_factor = -0.15
+		master_ideology_drift = -0.05
+		ai_focus_aggressive_factor = 0.9
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_true_prince = {
+		random = no
+		political_power_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bormann_cloak_and_dagger_schemer_1 = {
+		random = no
+		political_power_factor = 0.05
+		drift_defence_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bormann_cloak_and_dagger_schemer_2 = {
+		random = no
+		political_power_factor = 0.10
+		drift_defence_factor = 0.30
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	politically_incompetent_1 = {
+		random = no
+		political_power_factor = -0.15
+		stability_factor = -0.05
+		mobilization_laws_cost_factor = 0.25
+		trade_laws_cost_factor = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	politically_incompetent_2 = {
+		random = no
+		political_power_factor = -0.05
+		stability_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	bormanns_protege = {
+		random = no
+		political_power_factor = 0.05
+		drift_defence_factor = 0.15
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	protector_of_the_germans = {
+		random = no
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	dai_lis_puppet = {
+		random = no
+		political_power_factor = -0.10
+		stability_factor = 0.20
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	designer_of_china = {
+		random = no
+		research_speed_factor = 0.05
+		production_speed_buildings_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	eternal_president = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.10
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	marshal = {
+		random = no
+		
+		political_power_factor = 0.25
+		stability_weekly = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	Peoples_Hero = {
+		random = no
+		
+		encryption_factor = 0.1
+		army_core_defence_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Serbian_Psycho = {
+		random = no
+		
+		political_power_factor = -0.15
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.05
+		stability_weekly = -0.01
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	charming_autocrat = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		conscription_factor = 0.05
+		army_core_defence_factor = 0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	absolute_chaos = {
+		random = no
+		political_power_factor = -0.9
+		production_speed_buildings_factor = -0.9
+		production_factory_max_efficiency_factor = -0.1
+		stability_factor = -0.9
+		war_support_factor = -0.9
+		research_speed_factor = -0.9
+		trade_opinion_factor = -0.9
+		army_morale_factor = -0.3
+		army_attack_factor = -0.1
+		army_org_factor = -0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	unpopular_figurehead = {
+		random = no
+		
+		stability_factor = -0.1
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	great_warlord = {
+		national_socialist_acceptance = -100
+		fascist_acceptance = -100
+		ai_focus_aggressive_factor = 3.0
+		ai_desired_divisions_factor = 0.5
+
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

@@ -1,0 +1,118 @@
+DISSOLVE_RELATIONS_WITH_USA = {
+	clr_country_flag = CIA_active
+	if = {
+		limit = {
+			has_idea = RUS_american_general_staff
+		}
+		remove_ideas = RUS_american_general_staff
+	}
+	if = {
+		limit = {
+			has_idea = RUS_american_assistance_1
+		}
+		remove_ideas = RUS_american_assistance_1
+	}
+	if = {
+		limit = {
+			has_idea = RUS_american_assistance_2
+		}
+		remove_ideas = RUS_american_assistance_2
+	}
+	if = {
+		limit = {
+			has_idea = RUS_american_assistance_3
+		}
+		remove_ideas = RUS_american_assistance_3
+	}
+	diplomatic_relation = {
+		country = USA
+		relation = guarantee
+		active = no
+	}
+	diplomatic_relation = {
+		country = USA
+		relation = military_access
+		active = no
+	}
+	if = {
+		limit = {
+			is_in_faction_with = USA
+		}
+		leave_faction = yes
+	}
+	add_opinion_modifier = {
+		target = USA
+		modifier = relations_broken
+	}
+	reverse_add_opinion_modifier = {
+		target = USA
+		modifier = relations_broken
+	}
+	set_country_flag = relations_broken_with_usa
+	remove_opinion_modifier = {
+		target = USA
+		modifier = russian_american_relations
+	}
+	USA = {
+		remove_opinion_modifier = {
+			target = RUS
+			modifier = russian_american_relations
+		}
+	}
+	every_unit_leader = {
+		limit = {
+			has_id = 504
+		}
+		set_nationality = USA
+	}
+}
+IMPROVE_RUSSIAN_WILL = {
+	if = {
+		limit = {
+			NOT = { OR = { has_idea = RUS_russian_will_1 has_idea = RUS_russian_will_2 has_idea = RUS_russian_will_3 has_idea = RUS_russian_will_4 has_idea = RUS_russian_will_5 } }
+		}
+		add_ideas = RUS_russian_will_1 
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_russian_will_1
+		}
+		swap_ideas = {
+			add_idea = RUS_russian_will_2
+			remove_idea = RUS_russian_will_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_russian_will_2
+		}
+		swap_ideas = {
+			add_idea = RUS_russian_will_3
+			remove_idea = RUS_russian_will_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_russian_will_3
+		}
+		swap_ideas = {
+			add_idea = RUS_russian_will_4
+			remove_idea = RUS_russian_will_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_russian_will_4
+		}
+		swap_ideas = {
+			add_idea = RUS_russian_will_5
+			remove_idea = RUS_russian_will_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = RUS_russian_will_5
+		}
+		add_offsite_building = { type = arms_factory level = 1 }
+	}
+}

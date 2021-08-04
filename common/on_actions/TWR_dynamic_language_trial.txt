@@ -1,0 +1,195 @@
+on_actions = {
+	#ROOT is new controller #FROM is old controller #FROM.FROM is state ID
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit={FROM.FROM={state = 219}}
+				if={
+					limit = {
+						has_country_flag=russian_language
+						FROM.FROM={NOT={has_state_flag=russian_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = russian_language
+						set_state_name = "Moscow"
+						set_province_name = { id = 6380 name = "Moscow" }
+					}
+				}
+				if={
+					limit = {
+						has_country_flag=german_language
+						FROM.FROM={NOT={has_state_flag=german_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = german_language
+						set_state_name = "Moscow"
+						set_province_name = { id = 6380 name = "Moskau" }
+					}
+				}
+			}
+			if = {
+				limit={FROM.FROM={state = 195}}
+				if={
+					limit = {
+						has_country_flag=russian_language
+						FROM.FROM={NOT={has_state_flag=russian_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = russian_language
+						set_state_name = "Petrograd"
+						set_province_name = { id = 3151 name = "Petrograd" }
+					}
+				}
+				if={
+					limit = {
+						has_country_flag = german_language
+						FROM.FROM={NOT={has_state_flag=german_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = german_language
+						set_state_name = "St.Petersburg"
+						set_province_name = { id = 3151  name = "Adolfsburg" }
+					}
+				}
+			}
+			if = {
+				limit={FROM.FROM={state = 137}}
+				if={
+					limit = {
+						has_country_flag=russian_language
+						FROM.FROM={NOT={has_state_flag=russian_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = russian_language
+						set_state_name = "Crimea"
+						set_province_name = { id = 3686 name = "Sevastopol" }
+					}
+				}
+				if={
+					limit = {
+						has_country_flag=german_language
+						FROM.FROM={NOT={has_state_flag=german_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = german_language
+						set_state_name = "Gotenland"
+						set_province_name = { id = 3686  name = "Theodorichshafen" }
+					}
+				}
+			}
+			if = {
+				limit={FROM.FROM={state = 236}}
+				if={
+					limit = {
+						has_country_flag=russian_language
+						FROM.FROM={NOT={has_state_flag=russian_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = russian_language
+						set_state_name = "Astrakhan"
+						set_province_name = { id = 9753 name = "Astrakhan" }
+					}
+				}
+				if={
+					limit = {
+						has_country_flag=german_language
+						FROM.FROM={NOT={has_state_flag=german_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = german_language
+						set_state_name = "Astrachan"
+						set_province_name = { id = 9753  name = "Etil" }
+					}
+				}
+			}
+			if = {
+				limit={FROM.FROM={state = 854}}
+				if={
+					limit = {
+						has_country_flag=russian_language
+						FROM.FROM={NOT={has_state_flag=russian_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = russian_language
+						set_state_name = "Baku"
+						set_province_name = { id = 7661 name = "Baku" }
+					}
+				}
+				if={
+					limit = {
+						has_country_flag=german_language
+						FROM.FROM={NOT={has_state_flag=german_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = german_language
+						set_state_name = "Windestadt"
+						set_province_name = { id = 7661  name = "Windestadt" }
+					}
+				}
+			}
+			if = {
+				limit={FROM.FROM={state = 217}}
+				if={
+					limit = {
+						has_country_flag=russian_language
+						FROM.FROM={NOT={has_state_flag=russian_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = russian_language
+						set_state_name = "Volgograd"
+						set_province_name = { id = 3529 name = "Volgograd" }
+					}
+				}
+				if={
+					limit = {
+						has_country_flag=german_language
+						FROM.FROM={NOT={has_state_flag=german_language}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = german_language
+						set_state_name = "Volgaburg"
+						set_province_name = { id = 3529  name = "Volgaburg" }
+					}
+				}
+			}
+			if = {
+				limit={FROM.FROM={state = 107}}
+				if={
+					limit = {
+						has_country_flag=is_ss_puppet
+						FROM.FROM={NOT={has_state_flag=is_ss_puppet}}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_flag = is_ss_puppet
+						set_state_name = "Prinz-Eugen-Stadt"
+						set_province_name = { id = 11586 name = "Prinz-Eugen-Stadt" }
+					}
+				}
+				if={
+					limit = {
+						NOT = { has_country_flag=is_ss_puppet }
+						FROM.FROM={has_state_flag=is_ss_puppet}
+					}
+					FROM.FROM = {
+						clear_language = yes
+						set_state_name = "Belgrade"
+						set_province_name = { id = 11586  name = "Belgrade" }
+					}
+				}
+			}
+		}
+	}
+}

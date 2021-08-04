@@ -1,0 +1,115 @@
+﻿add_namespace = twrmoskowien
+
+country_event = {
+	id = twrmoskowien.0
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoskowien.0"}
+	title = twrmoskowien.0.t
+	desc = twrmoskowien.0.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrmoskowien.0.a
+	}
+	
+}
+
+country_event = {
+	id = twrmoskowien.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoskowien.1"}
+	title = twrmoskowien.1.t
+	desc = twrmoskowien.1.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrmoskowien.1.a
+	}
+	
+}
+
+country_event = {
+	id = twrmoskowien.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoskowien.2"}
+	title = twrmoskowien.2.t
+	desc = twrmoskowien.2.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrmoskowien.2.a
+		add_ideas = RMO_chaos_uprising
+	}
+	
+}
+
+country_event = {
+	id = twrmoskowien.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoskowien.3"}
+	title = twrmoskowien.3.t
+	desc = twrmoskowien.3.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrmoskowien.3.a
+	}
+	
+}
+
+country_event = {
+	id = twrmoskowien.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoskowien.4"}
+	title = twrmoskowien.4.t
+	desc = twrmoskowien.4.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrmoskowien.4.a
+		set_global_flag = RMO_took_manstein
+	}
+	
+	option = {
+		name = twrmoskowien.4.b
+		set_global_flag = RMO_took_himmler
+	}
+}
+
+country_event = {
+	id = twrmoskowien.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrmoskowien.5"}
+	title = twrmoskowien.5.t
+	desc = twrmoskowien.5.d
+	picture = GFX_report_event_japanese_government
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrmoskowien.5.a
+		set_capital = 242
+	}
+	
+	option = {
+		name = twrmoskowien.5.c
+		set_capital = 246
+	}
+	
+}

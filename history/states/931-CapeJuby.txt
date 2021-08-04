@@ -1,0 +1,22 @@
+state={
+	id=931
+	name="STATE_931"
+	manpower = 3000
+
+	state_category = wasteland
+
+	history={
+		owner = SPA
+		buildings = {
+			infrastructure = 1
+			12857 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = MOR
+	}
+
+	provinces={
+		12857 13244
+	}
+}

@@ -1,0 +1,2 @@
+﻿l_english:
+ GDP_TOPBAR_TOOLTIP:0 "We have a GDP of [?Root.gdp_calc|0Y] million dollars. Our current growth rate is [?Root.gdp_growth_calc|%1+]"

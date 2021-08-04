@@ -1,0 +1,7 @@
+entity = {
+	name = "building_volkshalle"
+	pdxmesh = "building_volkshalle"
+	
+	default_state = "idle"
+	state = { name = "idle" }
+}

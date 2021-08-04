@@ -1,0 +1,846 @@
+ideas = {
+	country = {
+
+		ENG_stain_of_dunkirk = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_stain_of_dunkirk"}
+			removal_cost = -1
+			picture = ENG_memories_dunkirk
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				army_org_Factor = -0.2
+				army_morale_factor = -0.2
+				supply_consumption_factor = -0.2
+			}
+		}
+
+		ENG_economic_downturn = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_economic_downturn"}
+			removal_cost = -1
+			picture = generic_economic_downturn
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			    stability_factor = -0.05
+				industrial_capacity_factory = -0.2
+			    production_factory_max_efficiency_factor = -0.2
+			}
+		}
+		
+		ENG_economic_recovery = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_economic_recovery"}
+			removal_cost = -1
+			picture = generic_economic_recovery
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			    stability_factor = -0.05
+				industrial_capacity_factory = -0.1
+			    production_factory_max_efficiency_factor = -0.1
+			}
+		}
+
+		ENG_state_of_emergency = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_state_of_emergency"}
+			removal_cost = -1
+			picture = COM_commonwelath_of_nations #placeholders
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    stability_factor = -0.25
+				industrial_capacity_factory = -0.1
+			    production_factory_max_efficiency_factor = -0.1
+			    war_support_factor = -0.25
+			}
+		}
+
+		ENG_state_of_emergency_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_state_of_emergency_2"}
+			removal_cost = -1
+			picture = COM_commonwelath_of_nations #placeholders
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    stability_factor = -0.15
+			    war_support_factor = -0.15
+			}
+		}
+		
+		ENG_national_works_project = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_national_works_project"}
+			removal_cost = -1
+			picture = generic_national_works
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				production_speed_buildings_factor = 0.2
+			}
+		}
+		
+		ENG_home_investment = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_home_investment"}
+			removal_cost = -1
+			picture = give_money
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_economic_recovery_investment = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_economic_recovery_investment"}
+			removal_cost = -1
+			picture = ENG_home_investment
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			    stability_factor = -0.05
+				industrial_capacity_factory = -0.05
+			    production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		
+		ENG_centralized_planning = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_centralized_planning"}
+			removal_cost = -1
+			picture = ENG_centralised_planning
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_nationalisation_programme = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_nationalisation_programme"}
+			removal_cost = -1
+			picture = ENG_nationalisation
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_military_investments = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_military_investments"}
+			removal_cost = -1
+			picture = ENG_military_investment
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		ENG_civilian_investments = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_civilian_investments"}
+			removal_cost = -1
+			picture = ENG_home_investment
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		ENG_government_owned_industry = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_government_owned_industry"}
+			removal_cost = -1
+			picture = ENG_nationalisation
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_privatisation_effort = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_privatisation_effort"}
+			removal_cost = -1
+			picture = ENG_privatisation_effort
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		ENG_privatised_steel_industry = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_privatised_steel_industry"}
+			removal_cost = -1
+			picture = ENG_privatised_steel
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.03
+				consumer_goods_factor = -0.01
+			}
+		}
+		
+		ENG_protected_workers_rights = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_protected_workers_rights"}
+			removal_cost = -1
+			picture = generic_workers_rights
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				political_power_gain = 0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+
+		ENG_imperial_instability = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_imperial_instability"}
+			removal_cost = -1
+			picture = ENG_imperial_instability
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    political_power_factor = -0.2
+			    stability_factor = -0.3
+				war_support_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				army_org_Factor = -0.1
+			}
+		}
+
+		ENG_imperial_instability_2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_imperial_instability_2"}
+			removal_cost = -1
+			picture = ENG_imperial_instability
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    political_power_factor = -0.1
+			    stability_factor = -0.2
+				war_support_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+				army_org_Factor = -0.05
+			}
+		}
+		
+		ENG_recruitment_campaign = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_recruitment_campaign"}
+			removal_cost = -1
+			picture = generic_recruitment_drive
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    conscription = 0.01
+			}
+		}
+		
+		ENG_working_with_rn = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_working_with_rn"}
+			removal_cost = -1
+			picture = ENG_royal_navy
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    navy_anti_air_attack_factor = 0.1
+			}
+		}
+		
+		ENG_working_with_ba = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_working_with_ba"}
+			removal_cost = -1
+			picture = ENG_work_with_BA
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    air_cas_present_factor = 0.1
+			}
+		}
+		
+		ENG_protecting_british_skies = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_protecting_british_skies"}
+			removal_cost = -1
+			picture = ENG_airspace
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    air_interception_attack_factor = 0.05
+				air_interception_defence_factor = 0.05
+				air_air_superiority_attack_factor = 0.05
+				air_air_superiority_defence_factor = 0.05
+				air_close_air_support_attack_factor = 0.01
+				air_close_air_support_defence_factor = 0.01
+				air_strategic_bomber_attack_factor = 0.01
+				air_strategic_bomber_defence_factor = 0.01
+				naval_strike_attack_factor = 0.02
+			}
+			
+			equipment_bonus = {
+			    anti_air_equipment = {
+				    air_attack = 0.05
+				    instant = yes
+			    }
+		    }
+		}
+		
+		ENG_home_seas_reinforced = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_home_seas_reinforced"}
+			removal_cost = -1
+			picture = ENG_home_seas
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    navy_capital_ship_defence_factor = 0.05
+				navy_screen_defence_factor = 0.05
+			}
+		}
+		
+		ENG_trade_secured = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_trade_secured"}
+			removal_cost = -1
+			picture = generic_trade_secured
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    convoy_escort_efficiency = 0.20
+			}
+			equipment_bonus = {	convoy = { build_cost_ic = -0.05 instant = yes }	}
+		}
+		
+		ENG_asw_maneuvers = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_asw_maneuvers"}
+			removal_cost = -1
+			picture = ENG_anti_submarine
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    navy_submarine_detection_factor = 0.1
+			}
+		}
+		
+		ENG_defend_merchants = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_defend_merchants"}
+			removal_cost = -1
+			picture = ENG_defend_merchants
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    convoy_escort_efficiency = 0.2
+			}
+		}
+		
+		ENG_rule_the_waves = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_rule_the_waves"}
+			removal_cost = -1
+			picture = ENG_rule_the_waves
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    navy_capital_ship_attack_factor = 0.1
+				navy_capital_ship_defence_factor = 0.1
+				navy_screen_attack_factor = 0.1
+				navy_screen_defence_factor = 0.1
+				navy_max_range_factor = 0.05
+			}
+		}
+		
+		ENG_britain_awake = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_britain_awake"}
+			removal_cost = -1
+			picture = ENG_awoken
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    conscription = 0.005
+			}
+		}
+		
+		ENG_commons_hegemony = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_commons_hegemony"}
+			removal_cost = -1
+			picture = commons_hegemony
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    stability_factor = 0.05
+			    political_power_factor = -0.10
+			}
+		}
+		
+		ENG_upper_assembly_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_upper_assembly_idea"}
+			removal_cost = -1
+			picture = ENG_upper_assembly
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    stability_factor = 0.03
+			    political_power_factor = 0.20
+			}
+		}
+		
+		ENG_party_divisions_labour = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_party_divisions_labour"}
+			removal_cost = -1
+			picture = ENG_labour_divided
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    political_power_factor = -0.10
+			}
+		}
+		
+		ENG_reinforcing_colonies = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_reinforcing_colonies"}
+			removal_cost = -1
+			picture = ENG_colonies
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    stability_factor = 0.05
+				political_power_factor = -0.10
+			}
+		}
+		
+		ENG_lmtd_self_governance = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_lmtd_self_governance"}
+			removal_cost = -1
+			picture = ENG_limited_self_governance
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    stability_factor = 0.05
+				political_power_factor = -0.10
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		ENG_imperial_ascendancy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_imperial_ascendancy"}
+			removal_cost = -1
+			picture = ENG_british_stoicism
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+			    stability_factor = 0.05
+				war_support_factor = 0.05
+				political_power_factor = 0.10
+				conscription = 0.02
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		
+		ENG_new_education = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_new_education"}
+			removal_cost = -1
+			picture = generic_education
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		    research_speed_factor = 0.05
+				
+			}
+		}
+		
+		ENG_perfect_nhs = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_perfect_nhs"}
+			removal_cost = -1
+			picture = ENG_perfect_NHS
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		    consumer_goods_factor = 0.04
+			industrial_capacity_factory = 0.05
+			production_factory_max_efficiency_factor = 0.04
+			MONTHLY_POPULATION = 0.05
+			}
+		}
+		
+		ENG_more_autonomy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_more_autonomy"}
+			removal_cost = -1
+			picture = ENG_NHS_2
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = -0.06
+				MONTHLY_POPULATION = -0.01
+				political_power_gain = 0.05
+			}
+		}
+
+		ENG_controlling_inflation = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_controlling_inflation"}
+			removal_cost = -1
+			picture = chi_hyper_inflation
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+
+		ENG_high_national_debt = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_high_national_debt"}
+			removal_cost = -1
+			picture = GENERIC_high_debt
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.06
+				industrial_capacity_factory = -0.03
+			}
+		}
+
+		ENG_medium_national_debt = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_high_national_debt"}
+			removal_cost = -1
+			picture = GENERIC_medium_debt
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.04
+				industrial_capacity_factory = -0.01
+			}
+		}
+
+		ENG_low_national_debt = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_high_national_debt"}
+			removal_cost = -1
+			picture = GENERIC_low_debt
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.01
+			}
+		}
+
+		ENG_paying_off_debt = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_paying_off_debt"}
+			removal_cost = -1
+			picture = give_money
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.05
+			}
+		}
+
+		ENG_building_houses = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_building_houses"}
+			removal_cost = -1
+			picture = ENG_building_houses
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.05
+		        production_speed_infrastructure_factor = 0.1
+		        MONTHLY_POPULATION = 0.05
+			}
+		}
+
+		ENG_rationing_over = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_rationing_over"}
+			removal_cost = -1
+			picture = ENG_end_rationing
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.03
+			}
+		}
+		
+		ENG_nationalised_industry = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_nationalised_industry"}
+			removal_cost = -1
+			picture = ENG_nationalisation
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.03
+		        industrial_capacity_factory = 0.03
+			}
+		}
+		ENG_fort_construction = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_fort_construction"}
+			removal_cost = -1
+			picture = ENG_fort_construction
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.1
+			}
+		}
+		ENG_reduced_military_spending = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_reduced_military_spending"}
+			removal_cost = -1
+			picture = ENG_decrease_military_spending
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = -0.05
+				planning_speed = -0.05
+				army_org_factor = -0.1
+			}
+		}
+		ENG_abolished_income_tax = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_abolished_income_tax"}
+			removal_cost = -1
+			picture = ENG_income_tax_abolished
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        consumer_goods_factor = 0.1
+				political_power_gain = 0.05
+			}
+		}
+		ENG_unstable_government = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_unstable_government"}
+			removal_cost = -1
+			picture = GEN_resistance
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        stability_factor = -0.25
+				political_power_gain = -0.5
+			}
+		}
+		ENG_colonial_unrest = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_colonial_unrest"}
+			removal_cost = -1
+			picture = GEN_resistance
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        stability_factor = -0.1
+				political_power_gain = -0.5
+				conscription = -0.01
+			}
+		}
+		ENG_major_colonial_rebellion = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_major_colonial_rebellion"}
+			removal_cost = -1
+			picture = GEN_resistance
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        stability_factor = -0.1
+				political_power_gain = -0.5
+				conscription = -0.01
+			}
+		}
+		ENG_limited_nuclear = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_limited_nuclear"}
+			removal_cost = -1
+			picture = ENG_limited_nuclear
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        production_speed_nuclear_reactor_factor = -0.25
+				consumer_goods_factor = -0.05
+			}
+		}
+		ENG_government_with_mandate = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_unstable_government"}
+			removal_cost = -1
+			picture = ENG_government
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        stability_factor = 0.05
+				political_power_gain = 0.5
+			}
+		}
+		ENG_new_stable_government = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_unstable_government"}
+			removal_cost = -1
+			picture = ENG_government
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        stability_factor = 0.05
+				political_power_gain = 0.5
+			}
+		}
+		ENG_one_nation_britain_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_unstable_government"}
+			removal_cost = -1
+			picture = GENERIC_freedom
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        stability_factor = 0.03
+			}
+		}
+		ENG_gradual_colonial_reforms = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_unstable_government"}
+			removal_cost = -1
+			picture = GENERIC_scales_2
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		        stability_factor = 0.03
+			}
+		}
+		ENG_traditional_britain_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_unstable_government"}
+			removal_cost = -1
+			picture = ENG_british_stoicism
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				political_power_gain = 0.3
+			}
+		}
+
+		ENG_united_party = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_united_party"}
+			removal_cost = -1
+			picture = ENG_government
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+
+		ENG_economic_prosperity = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea ENG_economic_prosperity"}
+			removal_cost = -1
+			picture = chi_hyper_inflation3
+			allowed = {
+				always = no
+			}
+			
+			modifier = {
+		    	production_speed_buildings_factor = 0.05
+			}
+		}
+		
+	}
+	
+	
+}

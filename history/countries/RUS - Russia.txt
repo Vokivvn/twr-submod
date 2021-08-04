@@ -1,0 +1,266 @@
+﻿#########################################################################
+# Russia
+#########################################################################
+capital = 408
+set_research_slots = 3
+oob = "RUS_1952"
+set_convoys = 50
+#######################
+# Research
+#######################
+add_ideas = {
+	extensive_conscription
+	RUS_american_general_staff
+	RUS_siberian_war
+	RUS_brain_drain
+	facade_democracy
+	semi_industrialised_nation 
+	RUS_HoG_Anatoly_Rogozhin
+	RUS_FM_Oleg_Pantyukhov
+	RUS_MoS_Genrikh_Lyushkov
+	RUS_AM_Andrey_Vlasov
+	RUS_CoStaff_Grigory_Mikhaylovich_Semyonov
+	RUS_CoArmy_Oleg_Pantyukhov
+	RUS_CoNavy_Nikolai_Kolomeitsev
+	RUS_CoAir_Pavel_Zhigarev
+}
+set_technology = {
+
+	infantry_weapons_1 = 1
+	tech_mountaineers = 1
+
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	infantry_at = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_signal_company = 1
+	tech_maintenance_company = 1
+
+	motorised_infantry = 1
+
+	artillery4 = 1
+
+	base_armor = 1
+
+	early_fighter = 1
+tac_bomber1 = 1
+transport_air1 = 1
+strategic_bomber1 = 1
+
+	fighter_1945 = 1
+tac_air_1945 = 1
+transport_air_1945 = 1
+heavy_air_1945 = 1
+
+
+	CAS_1945 = 1
+	interceptor_1945 = 1
+
+	gw_artillery = 1
+	antiair5 = 1
+
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+	advanced_light_tank = 1
+	APC_1950 = 1
+
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+	naval_stipulations = 1
+	ww2_destroyer = 1
+	}
+	#set_naval_oob = "USA_1952_naval_legacy"
+}
+if = {
+	limit = {
+		 has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		mtg_naval_stipulations = 1
+		early_ship_hull_very_light = 1
+		early_ship_hull_more_light = 1
+		early_ship_hull_light = 1
+	}
+	#set_naval_oob = "USA_1952_naval_MTG"
+}
+#######################
+# Politics
+#######################
+set_politics = {	
+	ruling_party = paternal_autocrat
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    national_socialist = 13
+    fascist = 10
+    paternal_autocrat = 40
+    conservative = 7
+    liberal = 13
+    social_democrat = 17
+    socialist = 0
+    bolshevik_leninist = 0
+    marxist_leninist = 0
+}
+
+give_military_access = USA
+USA = {
+	#give_guarantee = RUS
+	give_military_access = RUS
+}
+USA = {
+	diplomatic_relation = {
+    country = RUS
+    relation = docking_rights
+    active = yes
+    }
+}
+add_opinion_modifier = {
+    target = USA
+    modifier = russian_american_relations
+}
+reverse_add_opinion_modifier = {
+    target = USA
+    modifier = russian_american_relations
+}
+
+#######################
+# Leaders
+#######################
+
+# Fascism
+create_country_leader = {
+	name = "Konstantin Rodzaevsky"
+	desc = ""
+	picture = "Konstantin_Rodzhaevsky.dds"
+	expire = "1965.1.1"
+	ideology = ultranationalism
+	traits = {}
+}
+# Paternal Autocracy
+create_country_leader = {
+	name = "Anatoly Rogozhin"
+	desc = "POLITICS_ROGOZHIN_DESC"
+	picture = "Anatoly_Rogozhin.dds"
+	expire = "1968.1.1"
+	ideology = authoritarian_democracy
+	traits = {}
+}
+create_country_leader = {
+			name = "-"
+			desc = ""
+			picture = "gfx/leaders/RUS/Anastasy_Vonsiatsky.dds"
+			expire = "1970.8.8"
+			ideology = fascism
+			traits = {}
+			}
+create_country_leader = {
+	name = "Sergei Wojciechowski"
+	desc = "POLITICS_SERGEI_DESC"
+	picture = "Sergei_Wojciechowski.tga"
+	expire = "1968.1.1"
+	ideology = authoritarian_democracy
+	traits = {}
+}
+# Liberalism
+create_country_leader = {
+	name = "Alexander F. Kerensky"
+	desc = ""
+	picture = "Alexander_Kerensky.dds"
+	expire = "1965.1.1"
+	ideology = social_liberalism
+	traits = {}
+}
+create_country_leader = {
+	name = "Alexander F. Kerensky"
+	desc = ""
+	picture = "Alexander_Kerensky.dds"
+	expire = "1965.1.1"
+	ideology = social_democracy
+	traits = {}
+}
+
+create_field_marshal = {
+	name = "Andrey Vlasov"
+	portrait_path = "gfx/leaders/RUS/Andrey_Vlasov.dds"
+	traits = { infantry_officer inspirational_leader }
+	id = 502
+	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_field_marshal = {
+	name = "Sergei Wojciechowski"
+	portrait_path = "gfx/leaders/RUS/Sergei_Wojciechowski.tga"
+	traits = { harsh_leader aggressive_assaulter }
+	skill = 4
+    attack_skill = 6
+    defense_skill = 4
+    planning_skill = 2
+    logistics_skill = 2
+	id = 501
+}
+create_corps_commander = {
+	name = "Pavel Bermondt-Avalov"
+	portrait_path = "gfx/leaders/RUS/Pavel_Bermondt_Avalov.dds"
+	traits = { trait_reckless cavalry_officer }
+	id = 503
+	skill = 2
+	
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Samuel Cumming"
+	portrait_path = "gfx/leaders/RUS/Samuel_C_Cumming.dds"
+	traits = { career_officer naval_invader }
+	id = 504
+	skill = 3
+	
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Viktorin Molchanov"
+	portrait_path = "gfx/leaders/RUS/Viktorin_Molchanov.dds"
+	traits = { old_guard ranger }
+	id = 505
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Constantine Kromiadi"
+	portrait_path = "gfx/leaders/RUS/Constantine_Kromiadi.dds"
+	traits = { infantry_officer }
+	id = 506
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}

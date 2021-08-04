@@ -1,0 +1,543 @@
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Moskowien_in_Chaos
+		icon = GFX_SOV_attack_moskowien
+		cost = 7
+		x = 28
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+		add_ideas = RMO_chaos_uprising
+		hidden_effect = {
+		remove_ideas = GER_RK_repression
+		remove_ideas = RMO_slave_factories
+		}
+		}
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Relocate_the_Work_Camps
+		icon = GFX_SOV_gulag_labour
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = RMO_Moskowien_in_Chaos
+		}
+		relative_position_id = RMO_Moskowien_in_Chaos
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+		hidden_effect = {
+			248 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = -1
+					instant_build = yes
+					}
+			}
+			223 = {
+			add_building_construction = {
+					type = arms_factory
+					level = -1
+					instant_build = yes
+					}
+			}
+			219 = {
+			add_building_construction = {
+					type = arms_factory
+					level = -3
+					instant_build = yes
+					}
+			add_building_construction = {
+					type = industrial_complex
+					level = -1
+					instant_build = yes
+					}
+			}
+			
+			#New Camps#
+			
+			244 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+			}
+			243 = {
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+			}
+			246 = {
+			add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+					}
+			}
+			242 = {
+			add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+					}
+			}
+			205 = {
+			add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+					}
+			}
+		}
+		custom_effect_tooltip = RMOCamps
+		}
+		
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_The_Last_Fight
+		icon = GFX_GENERIC_Volunteer
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = RMO_Relocate_the_Work_Camps
+		}
+		relative_position_id = RMO_Relocate_the_Work_Camps
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_manpower = 10000
+			add_ideas = RMO_Stand_and_Fight
+			swap_ideas = {
+				remove_idea = RMO_chaos_uprising
+				add_idea = RMO_chaos_state_focus3
+			}
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Terror_Tactics
+		icon = GFX_GER_Fire_Police
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = RMO_The_Last_Fight
+		}
+		relative_position_id = RMO_The_Last_Fight
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_ideas = RMO_Terror_Tactics
+			
+		}
+		cost = 7
+	}
+	
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Establish_the_Reichsautonomie
+		icon = GFX_GER_government_reichshausasusuus
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RMO_Terror_Tactics
+		}
+		mutually_exclusive = {
+			focus = RMO_Evacuate_the_Germans
+		}
+		relative_position_id = RMO_Terror_Tactics
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_ideas = RMO_Reichsautonomie
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_The_Slavic_Solution
+		icon = GFX_RUS_Volunteers
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RMO_Establish_the_Reichsautonomie
+		}
+		mutually_exclusive = {
+			focus = RMO_Abandon_the_Kommissariat
+		}
+		mutually_exclusive = {
+			focus = RMO_Our_Final_Hours
+		}
+		relative_position_id = RMO_Establish_the_Reichsautonomie
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_ideas = RMO_Slavic_Soldiers
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Abandon_the_Kommissariat
+		icon = GFX_RMO_focus_abandon_rmo
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RMO_Establish_the_Reichsautonomie
+			focus = RMO_Evacuate_the_Germans
+		}
+		mutually_exclusive = {
+			focus = RMO_The_Slavic_Solution
+		}
+		mutually_exclusive = {
+			focus = RMO_Our_Final_Hours
+		}
+		relative_position_id = RMO_Establish_the_Reichsautonomie
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RMO_chaos_state_focus3
+				add_idea = RMO_chaos_state_focus
+			}
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Evacuate_the_Germans
+		icon = GFX_GER_populist_support
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RMO_Terror_Tactics
+		}
+		mutually_exclusive = {
+			focus = RMO_Establish_the_Reichsautonomie
+		}
+		relative_position_id = RMO_Terror_Tactics
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+		hidden_effect = {
+			219 = {
+			add_manpower = -200000
+			}
+			242 = {
+			add_manpower = -100000
+			}
+			246 = {
+			add_manpower = -50000
+			}
+			247 = {
+			add_manpower = -100000
+			}
+			add_stability = 0.1
+			}
+		custom_effect_tooltip = RMOEvac	
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Our_Final_Hours
+		icon = GFX_GENERIC_conflict
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RMO_Evacuate_the_Germans
+		}
+		mutually_exclusive = {
+			focus = RMO_Abandon_the_Kommissariat
+		}
+		mutually_exclusive = {
+			focus = RMO_The_Slavic_Solution
+		}
+		relative_position_id = RMO_Evacuate_the_Germans
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RMO_chaos_state_focus3
+				add_idea = RMO_chaos_state_focus2
+			}
+			swap_ideas = {
+				remove_idea = RMO_Stand_and_Fight
+				add_idea = RMO_Final_Stand
+			} 
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Return_of_Stability
+		icon = GFX_GER_Germany_Once_More
+		cost = 7
+		x = 33
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		bypass = {
+		has_country_flag = MOSKOW_RESTORED
+		}
+		completion_reward = {
+			add_ideas = RMO_Victory_in_Moscowien
+			hidden_effect = {
+			remove_ideas = RMO_chaos_state_focus
+			remove_ideas = RMO_chaos_state_focus2
+			remove_ideas = RMO_Stand_and_Fight
+			remove_ideas = RMO_Terror_Tactics
+			remove_ideas = RMO_Terror_Tactics
+			remove_ideas = RMO_Slavic_Soldiers
+			}
+		}
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Oust_the_Former_Government
+		icon = GFX_GENERIC_Burn_the_Parliament
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RMO_Return_of_Stability
+		}
+		mutually_exclusive = {
+			focus = RMO_Restore_the_Kommissariat
+		}
+		relative_position_id = RMO_Return_of_Stability
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RMO_Reichsautonomie
+				add_idea = RMO_New_Government
+			} 
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Relocate_the_Capital
+		icon = GFX_GENERIC_capital_region
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RMO_Oust_the_Former_Government
+		}
+		relative_position_id = RMO_Oust_the_Former_Government
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			 country_event = {
+                id = twrmoskowien.5 days = 0
+            }	
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Restore_the_Kommissariat
+		icon = GFX_GENERIC_left_wing_victory
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RMO_Return_of_Stability
+		}
+		mutually_exclusive = {
+			focus = RMO_Oust_the_Former_Government
+		}
+		relative_position_id = RMO_Return_of_Stability
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = RMO_Reichsautonomie
+				add_idea = RMO_Restored_Kommissariat
+				} 
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Sturmabteilung_Policing
+		icon = GFX_GER_SS_police
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RMO_Restore_the_Kommissariat
+		}
+		relative_position_id = RMO_Restore_the_Kommissariat
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_ideas = RMO_SS_Police
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Decentralize_the_Government
+		icon = GFX_GER_Seperating_The_Government
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RMO_Oust_the_Former_Government
+			focus = RMO_Restore_the_Kommissariat
+		}
+		relative_position_id = RMO_Oust_the_Former_Government
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_political_power = 300
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_The_Autonomous_German_Communities
+		icon = GFX_GENERIC_minority_aimed_projects
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = RMO_Decentralize_the_Government
+		}
+		relative_position_id = RMO_Decentralize_the_Government
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_ideas = RMO_Autonomous_German_Communities
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Arisches_Schicksai
+		icon = GFX_GENERIC_ARYAN
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = RMO_The_Autonomous_German_Communities
+		}
+		relative_position_id = RMO_The_Autonomous_German_Communities
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_ideas = RMO_Arisches_Schicksai
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Minimalistic_Administration
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RMO_The_Autonomous_German_Communities
+		}
+		relative_position_id = RMO_The_Autonomous_German_Communities
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			add_ideas = RMO_Minimalist_Government
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = RMO_Resume_Basic_Operations
+		icon = GFX_SS_Administration
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = RMO_Arisches_Schicksai
+		}
+		prerequisite = {
+			focus = RMO_Minimalistic_Administration
+		}
+		relative_position_id = RMO_Arisches_Schicksai
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+		add_ideas = GER_RK_repression
+		add_ideas = RMO_slave_factories
+			
+		}
+		cost = 7
+	}

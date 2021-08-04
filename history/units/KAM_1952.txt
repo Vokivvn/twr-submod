@@ -1,0 +1,49 @@
+﻿division_template = {
+	name = "Kalmyk Militia"				# Infantry Division	
+	# Note: Divisions were nowhere near full strength until mobilized
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 1 y = 1 }
+		militia = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kalmyk Horse Fighters"				# Cavalry Division	
+	# Note: Divisions were nowhere near full strength until mobilized
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 2 y = 1 }
+		militia = { x = 2 y = 2 }
+	}
+}
+
+units = {
+    division = {
+		name = "Riders of Khalmykia"
+		location = 3475
+		division_template = "Kalmyk Horse Fighters"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "KAM" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+
+	}
+    division = {
+		name = "Men Of The Khalmyks"
+		location = 9753
+		division_template = "Kalmyk Militia"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "KAM" } }
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.2
+
+	}
+}

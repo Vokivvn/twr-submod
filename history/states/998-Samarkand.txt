@@ -1,0 +1,28 @@
+state={
+	id=998
+	name="STATE_998"
+
+	history={
+		owner = TRK
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = SOV
+		add_core_of = UZB
+		add_core_of = TRK
+		victory_points = {
+		1919 3
+		}
+		victory_points = {
+		12722 1
+		}
+	}
+
+	provinces={
+		1919 1384 1216 10205 12722 12239 10671 7639 756  1573 9605 1632
+	}
+	manpower= 1000000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

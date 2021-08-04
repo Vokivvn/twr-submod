@@ -1,0 +1,37 @@
+﻿division_template = {
+	name = "Estonian Volunteers"
+	division_names_group = EST_INF_01
+
+	regiments = {
+		light_infantry = { x = 0 y = 0 }
+        light_infantry = { x = 0 y = 1 }
+        light_infantry = { x = 0 y = 2 }
+        light_infantry = { x = 1 y = 0 }
+		light_infantry = { x = 1 y = 1 }
+	}
+	priority = 0
+}
+
+units = {
+	division= {
+		#name = ""
+		location = 3152
+		division_template = "Estonian Volunteers"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+	division= {
+		#name = ""
+		location = 3152
+		division_template = "Estonian Volunteers"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.3
+	}
+	division= {
+		#name = ""
+		location = 3152
+		division_template = "Estonian Volunteers"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.3
+	}
+}

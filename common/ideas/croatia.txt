@@ -1,0 +1,1115 @@
+ideas = {
+	country = {
+		####################
+		## STARTING IDEAS ##
+		####################
+		CRO_german_funding_for_supression = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_german_funding_for_supression"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = nazi_support_for_surpression_CROATIA
+			removal_cost = -1
+
+			research_bonus = {
+				land_doctrine = -0.15
+			}
+			modifier = {
+				drift_defence_factor = 0.25
+				resistance_growth = -0.25
+			    stability_factor = 0.20
+			}
+		}
+		
+		CRO_dream_of_a_greater_croatia = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_dream_of_a_greater_croatia"}
+			allowed = {
+		        tag = CRO
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+			is_communist = no
+			}
+			picture = ast_abandon_the_westminster_system_fascism
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.15
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+
+		CRO_italian_influence = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_italian_influence"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_italian_influence
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.25
+				foreign_subversive_activites = 0.50
+			}
+		}
+		
+		CRO_Economic_Depression_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Economic_Depression_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_economy_on_fire
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				trade_opinion_factor = -0.25
+			}
+		}
+		
+		CRO_Economic_Depression_1_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Economic_Depression_1_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_economy_on_fire
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.04
+				production_factory_max_efficiency_factor = -0.04
+				production_speed_buildings_factor = -0.04
+				trade_opinion_factor = -0.2
+			}
+		}
+		
+		CRO_Economic_Depression_2_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Economic_Depression_2_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_economy_on_fire
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				production_factory_max_efficiency_factor = -0.03
+				production_speed_buildings_factor = -0.03
+				trade_opinion_factor = -0.15
+			}
+		}
+		
+		CRO_Economic_Depression_3_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Economic_Depression_3_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_economy_on_fire
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_factory_max_efficiency_factor = -0.02
+				production_speed_buildings_factor = -0.02
+				trade_opinion_factor = -0.1
+			}
+		}
+		
+		CRO_Economic_Depression_4_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Economic_Depression_4_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_economy_on_fire
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.01
+				production_factory_max_efficiency_factor = -0.01
+				production_speed_buildings_factor = -0.01
+				trade_opinion_factor = -0.05
+			}
+		}
+		
+		CRO_Economic_Depression_5_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Economic_Depression_4_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_economy_on_fire
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.005
+				production_factory_max_efficiency_factor = -0.005
+				production_speed_buildings_factor = -0.005
+				trade_opinion_factor = -0.03
+			}
+		}
+		
+		CRO_Divided_Home_Guard_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Divided_Home_Guard_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_Divided_Home_Guard
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_factor = -0.05
+				army_speed_factor = -0.05
+				custom_modifier_tooltip = CRO_Divided_Home_Guard_idea_tt
+			}
+		}
+		####################
+		####################
+		####################
+		CRO_Four_Year_Plan_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Four_Year_Plan_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = man_five_year_plan_industry
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.02
+			}
+		}
+		
+		CRO_Farming_Subsidies_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Farming_Subsidies_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_farming
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = 0.5
+			}
+		}
+		
+		CRO_Reduced_Reliance_on_Germany_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Reduced_Reliance_on_Germany_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_Divided_Home_Guard
+			removal_cost = -1
+
+			modifier = {
+				faction_trade_opinion_factor = -0.05
+			}
+		}
+		
+		CRO_Mass_Produced_Navy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Mass_Produced_Navy"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_coastal_navy
+			removal_cost = -1
+
+			equipment_bonus = {
+				destroyer = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		
+		CRO_Battleships_Never_Age = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Battleships_Never_Age"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_sea_focused_navy
+			removal_cost = -1
+
+			equipment_bonus = {
+				battleship = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+		}
+		
+		CRO_Italian_Competition = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Italian_Competition"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_navy_bonus
+			removal_cost = -1
+
+			modifier = {
+				convoy_escort_efficiency = 0.1
+				naval_coordination = 0.05
+				navy_submarine_detection_factor = 0.1
+				convoy_raiding_efficiency_factor = 0.05
+			}
+		}
+		
+		CRO_Shells_for_Victory = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Shells_for_Victory"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_artillery_regiments
+			removal_cost = -1
+
+			equipment_bonus = {
+				artillery = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		
+		CRO_Experienced_Soldiers = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Experienced_Soldiers"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_soldiers
+			removal_cost = -1
+
+			modifier = {
+				experience_gain_army_factor = 0.1
+				conscription_factor = -0.05
+			}
+		}
+		
+		CRO_Wheels_for_Victory = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Wheels_for_Victory"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_artillery_regiments
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		
+		CRO_Against_Italy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Against_Italy"}
+			picture = CRO_hungary_mad_idea
+			available = {
+			is_communist = no
+			}
+			targeted_modifier = {
+				tag = ITA
+				attack_bonus_against = 0.1
+			}
+		}
+		
+		CRO_Unstable_Government_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Unstable_Government_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = decentralised_government
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.15
+				war_support_factor = -0.1
+			}
+		}
+		
+		CRO_Unstable_Government_1_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Unstable_Government_1_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = decentralised_government
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		
+		CRO_No_More_German_Funding = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_No_More_German_Funding"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_GER_burn_money
+			removal_cost = -1
+
+			modifier = {
+				drift_defence_factor = -0.25
+				resistance_growth = 0.35
+				resistance_activity = 0.25
+			    stability_factor = -0.20
+			}
+		}
+		
+		CRO_One_Last_Offensive_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_One_Last_Offensive_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = china_soldier
+			removal_cost = -1
+
+			targeted_modifier = { 
+				tag = BOS
+				attack_bonus_against = 0.1 
+			}
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+		
+		CRO_The_Croatian_Terror_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_The_Croatian_Terror_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GER_Peoples_Storm
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.15
+				stability_factor = -0.15
+				political_power_gain = -0.25
+			}
+		}
+		
+		CRO_Slash_and_Burn_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Slash_and_Burn_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_Burning_House
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_org_factor = -0.05
+			}
+		}
+		
+		CRO_No_Mercy_for_Partisans_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_No_Mercy_for_Partisans_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = YUG_communist_partisans
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.15
+				stability_factor = -0.15
+				political_power_gain = -0.25
+			}
+		}
+		
+		CRO_Roaming_Pacification_Battalions_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Roaming_Pacification_Battalions_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_death_men
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_org_factor = -0.05
+			}
+		}
+		
+		CRO_The_Scapegoat_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_The_Scapegoat_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_Jew_Star_Burning
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.15
+				stability_factor = -0.15
+				political_power_gain = -0.25
+			}
+		}
+		
+		CRO_Indiscriminate_Bombing_Campaigns_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Indiscriminate_Bombing_Campaigns_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = combined_bomber_offensive
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_org_factor = -0.05
+			}
+		}
+		
+		CRO_Indiscriminate_Bombing_Campaigns_BOS_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Indiscriminate_Bombing_Campaigns_BOS_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = combined_bomber_offensive
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.15
+				army_org_factor = -0.05
+			}
+		}
+		
+		CRO_Purged_Home_Guard_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Purged_Home_Guard_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = spr_disbanded_army
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.15
+			}
+		}
+		
+		CRO_Purged_Government_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Purged_Government_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = decentralised_government
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				political_power_gain = -0.5
+			}
+		}
+		
+		CRO_Everyone_Must_Do_Their_Part_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Everyone_Must_Do_Their_Part_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GER_labor_death_camps
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		
+		CRO_German_Trade_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_German_Trade_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GER_Revitalize_the_Army
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+		
+		CRO_Wehrmacht_Advisors_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Wehrmacht_Advisors_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GER_for_the_reich
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_speed_factor = 0.05
+				army_defence_factor = -0.05
+			}
+		}
+		
+		CRO_The_Master_Race_Arrives_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_The_Master_Race_Arrives_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GER_Greater_Good
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.05
+				war_support_factor = 0.1
+			}
+		}
+		
+		CRO_The_People_are_Fed_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_The_People_are_Fed_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_consumer_goods
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				political_power_gain = 0.25
+			}
+		}
+		
+		CRO_Italian_Military_Advisors_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Italian_Military_Advisors_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_Italian_Advisor
+			removal_cost = -1
+
+			modifier = {
+				army_org_regain = 0.3
+			}
+		}
+		
+		CRO_TA_Military_Advisors_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_TA_Military_Advisors_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_TA_Advisor
+			removal_cost = -1
+
+			modifier = {
+				army_morale_factor = 0.3
+			}
+		}
+		
+		CRO_Croatian_Exceptionalism_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Croatian_Exceptionalism_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_Exceptionalism
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.15
+				conscription_factor = 0.05
+			}
+		}
+		
+		CRO_The_New_State_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_The_New_State_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_New_State
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.25
+			}
+		}
+		
+		CRO_Eased_Taxes_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Eased_Taxes_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_goods_red_bonus
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.15
+				war_support_factor = 0.05
+				stability_factor = 0.05
+				MONTHLY_POPULATION = 0.1
+			}
+		}
+		
+		CRO_Croatian_Cultural_Golden_Age_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Croatian_Cultural_Golden_Age_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_Culture
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_weekly = 0.01
+			}
+		}
+		
+		CRO_A_Drop_of_Democracy_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_A_Drop_of_Democracy_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_Drop_Of_Democrcy
+			removal_cost = -1
+
+			modifier = {
+				army_defence_factor = 0.05
+			}
+		}
+		
+		CRO_Defeat_at_Srem_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Defeat_at_Srem_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_Defeat_at_Srem
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = -0.2
+				stability_factor = -0.2
+			}
+		}
+		############################
+		## KINGDOM STARTING IDEAS ##
+		############################
+		CRO_Low_Legitimacy_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Low_Legitimacy_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_Breaking_Crown
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+				political_power_gain = -0.25
+			}
+		}
+		
+		CRO_Ustashe_Resistance_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Ustashe_Resistance_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_Ustashe_Resistance
+			removal_cost = -1
+
+			modifier = {
+				conscription = -0.05
+				stability_factor = -0.2
+			}
+		}
+		
+		CRO_End_of_Monstrosity_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_End_of_Monstrosity_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = CRO_End_These_Cunts
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				political_power_gain = 0.1
+			}
+		}
+		#####################################################################################
+		CRO_Mediterranean_Pact_Peacekeepers_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Mediterranean_Pact_Peacekeepers_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ITA_peacekeepers
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				resistance_target = -0.05
+			}
+		}
+		
+		CRO_Illyrian_Trade_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Illyrian_Trade_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_trade_secured
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+		
+		CRO_Illyrian_Trade_1_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Illyrian_Trade_1_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_trade_secured
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		CRO_Rearming_the_Kingdom_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Rearming_the_Kingdom_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_old_army
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				production_speed_arms_factory_factor = 0.05
+			}
+		}
+		
+		CRO_Italian_Settler_Programme_idea = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea CRO_Italian_Settler_Programme_idea"}
+			allowed = {
+				tag = CRO
+			}
+			available = {
+			is_communist = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = ITA_empire
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 250
+			}
+		}
+	}
+}

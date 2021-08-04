@@ -1,0 +1,776 @@
+#########################################################################
+#  Croatian Decisions
+#########################################################################
+CRO_Croatian_Expansionism_cat = {
+	CRO_HUN_PeaceTimer = {
+		allowed = {
+			tag = CRO
+		}
+		available = {
+			HUN = { has_capitulated = yes }
+			has_war_with = HUN
+		}
+		activation = {
+			has_war_with = HUN
+		}
+		cancel_trigger = {
+			HUN = {
+			exists = no
+			}
+		}
+		is_good = no
+		days_mission_timeout = 80
+		timeout_effect = {
+			if = {
+				limit = {
+					controls_state = 45
+				}
+				country_event = {
+					id = twrcroatia_borderwar.9
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						controls_state = 819
+					}
+				}
+				country_event = {
+					id = twrcroatia_borderwar.10
+				}
+			}
+			else = {
+				country_event = {
+					id = twrcroatia_borderwar.11
+				}
+			}
+		}
+		complete_effect = {
+			country_event = {
+				id = twrcroatia_borderwar.9
+			}
+		}
+	}
+	HUN_CRO_PeaceTimer = {
+		allowed = {
+			tag = HUN
+		}
+		available = {
+			CRO = { has_capitulated = yes }
+			has_war_with = CRO
+		}
+		cancel_trigger = {
+			CRO = {
+			exists = no
+			}
+		}
+		activation = {
+			has_war_with = CRO
+		}
+		is_good = no
+		days_mission_timeout = 80
+		timeout_effect = {
+			if = {
+				limit = {
+					CRO = { controls_state = 45 }
+				}
+				country_event = {
+					id = twrcroatia_borderwar.12
+				}
+			}
+			else_if = {
+				limit = {
+					controls_state = 819
+				}
+				country_event = {
+					id = twrcroatia_borderwar.13
+				}
+			}
+			else = {
+				country_event = {
+					id = twrcroatia_borderwar.14
+				}
+			}
+		}
+		complete_effect = {
+			country_event = {
+				id = twrcroatia_borderwar.15
+			}
+		}
+	}
+	CRO_ITA_PeaceTimer = {
+		allowed = {
+			tag = CRO
+		}
+		available = {
+			ITA = { has_capitulated = yes }
+			has_war_with = ITA
+		}
+		activation = {
+			has_offensive_war_with = ITA
+		}
+		is_good = no
+		days_mission_timeout = 50
+		timeout_effect = {
+			set_country_flag = CRO_ITA_can_sue_for_peace_flag
+		}
+		complete_effect = {
+			country_event = {
+				id = twrcroatia.58
+			}
+		}
+	}
+	CRO_Sue_for_Peace_ITA = {
+		allowed = {
+			tag = CRO
+		}
+		visible = {
+			has_country_flag = CRO_ITA_can_sue_for_peace_flag
+			has_full_control_of_state = 103
+			has_full_control_of_state = 104
+			has_full_control_of_state = 109
+			has_full_control_of_state = 981
+			has_full_control_of_state = 982
+			has_full_control_of_state = 983
+			has_full_control_of_state = 1016
+			tag = CRO
+		}
+		available = {
+			has_country_flag = CRO_ITA_can_sue_for_peace_flag
+			has_full_control_of_state = 103
+			has_full_control_of_state = 104
+			has_full_control_of_state = 109
+			has_full_control_of_state = 981
+			has_full_control_of_state = 982
+			has_full_control_of_state = 983
+			has_full_control_of_state = 1016
+        }
+		days_re_enable = 30
+		ai_will_do = {
+			factor = 99
+		}
+		complete_effect = {
+			ITA = {
+				country_event = {
+					id = twrcroatia.57
+				}
+			}
+		}
+	}
+}
+
+##################
+## Coring stuff ##
+##################
+CRO_Integrate_Greater_Croatia_cat = {
+	CRO_Integrate_Srem_decision = {
+		cost = 50
+		allowed = {
+			original_tag = CRO
+		}
+		visible = {
+			has_country_flag = CRO_Integrate_Greater_Croatia_decisions_flag
+			819 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				819 = {
+					is_core_of = CRO
+				}
+			}
+		}
+		available = {
+			819 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				819 = {
+					is_core_of = CRO
+				}
+			}
+        }
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 99
+		}
+		days_remove = 100
+		complete_effect = {
+			add_manpower = -1000
+			819 = {
+				add_core_of = CRO
+			}
+			hidden_effect = {
+				country_event = {
+					id = twrcroatia_integration.1
+					hours = 7
+				}
+			}
+		}
+	}
+	CRO_Integrate_Vojvodina_decision = {
+		cost = 50
+		allowed = {
+			original_tag = CRO
+		}
+		visible = {
+			has_country_flag = CRO_Integrate_Greater_Croatia_decisions_flag
+			45 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				45 = {
+					is_core_of = CRO
+				}
+			}
+		}
+		available = {
+			45 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				45 = {
+					is_core_of = CRO
+				}
+			}
+        }
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 99
+		}
+		days_remove = 100
+		complete_effect = {
+			add_manpower = -1000
+			45 = {
+				add_core_of = CRO
+			}
+			hidden_effect = {
+				country_event = {
+					id = twrcroatia_integration.2
+					hours = 7
+				}
+			}
+		}
+	}
+	CRO_Integrate_Banat_decision = {
+		cost = 50
+		allowed = {
+			original_tag = CRO
+		}
+		visible = {
+			has_country_flag = CRO_Integrate_Greater_Croatia_decisions_flag
+			772 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				772 = {
+					is_core_of = CRO
+				}
+			}
+		}
+		available = {
+			772 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				772 = {
+					is_core_of = CRO
+				}
+			}
+        }
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 99
+		}
+		days_remove = 100
+		complete_effect = {
+			82 = {
+				add_core_of = CRO
+			}
+			hidden_effect = {
+				country_event = {
+					id = twrcroatia_integration.3
+					hours = 7
+				}
+			}
+		}
+	}
+	CRO_Integrate_Zara_decision = {
+		cost = 50
+		allowed = {
+			original_tag = CRO
+		}
+		visible = {
+			has_country_flag = CRO_Integrate_Greater_Croatia_decisions_flag
+			163 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				163 = {
+					is_core_of = CRO
+				}
+			}
+		}
+		available = {
+			163 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				163 = {
+					is_core_of = CRO
+				}
+			}
+        }
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 99
+		}
+		days_remove = 100
+		complete_effect = {
+			add_manpower = -1000
+			163 = {
+				add_core_of = CRO
+			}
+			hidden_effect = {
+				country_event = {
+					id = twrcroatia_integration.6
+					hours = 7
+				}
+			}
+		}
+	}
+	CRO_Integrate_Rijeka_decision = {
+		cost = 50
+		allowed = {
+			original_tag = CRO
+		}
+		visible = {
+			has_country_flag = CRO_Integrate_Greater_Croatia_decisions_flag
+			815 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				815 = {
+					is_core_of = CRO
+				}
+			}
+		}
+		available = {
+			815 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				815 = {
+					is_core_of = CRO
+				}
+			}
+        }
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 99
+		}
+		days_remove = 100
+		complete_effect = {
+			add_manpower = -1000
+			815 = {
+				add_core_of = CRO
+			}
+			hidden_effect = {
+				country_event = {
+					id = twrcroatia_integration.7
+					hours = 7
+				}
+			}
+		}
+	}
+	CRO_Integrate_South_Istria_decision = {
+		cost = 50
+		allowed = {
+			original_tag = CRO
+		}
+		visible = {
+			has_country_flag = CRO_Integrate_Greater_Croatia_decisions_flag
+			813 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				813 = {
+					is_core_of = CRO
+				}
+			}
+		}
+		available = {
+			813 = { 
+				is_owned_by = CRO
+			}
+			NOT = {
+				813 = {
+					is_core_of = CRO
+				}
+			}
+        }
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 99
+		}
+		days_remove = 100
+		complete_effect = {
+			add_manpower = -1000
+			813 = {
+				add_core_of = CRO
+			}
+			hidden_effect = {
+				country_event = {
+					id = twrcroatia_integration.8
+					hours = 7
+				}
+			}
+		}
+	}
+}
+
+####################
+## Partisan stuff ##
+####################
+CRO_bosnian_partisans_category = {
+	cro_track_the_bosnian_resistance_network = {
+		cost = 50
+		allowed = {
+			original_tag = CRO
+		}
+		
+		visible = {
+			SER = {
+				OR = {
+					has_completed_focus = SER_End_the_Ustase
+					has_completed_focus = SER_End_the_Croatian_Experiment
+				}
+				NOT = {
+					has_country_flag = SER_bosnian_partisans_over
+				}
+			}
+		}
+		
+		available = {
+            has_manpower > 999
+			NOT = {
+				has_country_flag = taken_an_action
+			}
+        }
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		days_remove = 50
+		complete_effect = {
+			set_country_flag = taken_an_action
+			add_manpower = -500
+		}
+		remove_effect = {
+			clr_country_flag = taken_an_action
+            custom_effect_tooltip = CRO_decrease_partisan_bosnian_strength_low_tt
+			SER = {
+				subtract_from_variable = { SER_partisan_bosnia_strength = 5 }
+			}
+        }
+	}
+	
+	cro_send_addition_men_to_bosnia = {
+		cost = 40
+		allowed = {
+			original_tag = CRO
+		}
+		
+		visible = {
+			SER = {
+				OR = {
+					has_completed_focus = SER_End_the_Ustase
+					has_completed_focus = SER_End_the_Croatian_Experiment
+				}
+				NOT = {
+					has_country_flag = SER_bosnian_partisans_over
+				}
+			}
+		}
+		
+		available = {
+            has_manpower > 1499
+			command_power > 50
+			NOT = {
+				has_country_flag = taken_an_action
+			}
+        }
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		days_remove = 40
+		complete_effect = {
+			set_country_flag = taken_an_action
+			add_manpower = -100
+			add_command_power = -40
+		}
+		remove_effect = {
+			clr_country_flag = taken_an_action
+			custom_effect_tooltip = CRO_decrease_partisan_bosnian_strength_med_tt
+			SER = {
+				subtract_from_variable = { SER_partisan_bosnia_strength = 10 }
+			}
+        }
+	}
+	
+	cro_equip_the_bosnian_garrison = {
+		cost = 20
+		allowed = {
+			original_tag = CRO
+		}
+		
+		visible = {
+			SER = {
+				OR = {
+					has_completed_focus = SER_End_the_Ustase
+					has_completed_focus = SER_End_the_Croatian_Experiment
+				}
+				NOT = {
+					has_country_flag = SER_bosnian_partisans_over
+				}
+			}
+		}
+		
+		available = {
+            has_equipment = {
+				infantry_equipment > 1999
+			}
+			NOT = {
+				has_country_flag = taken_an_action
+			}
+        }
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		days_remove = 60
+		complete_effect = {
+			set_country_flag = taken_an_action
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+				producer = CRO
+			}
+		}
+		remove_effect = {
+			clr_country_flag = taken_an_action
+			custom_effect_tooltip = CRO_decrease_partisan_bosnian_strength_high_tt
+			SER = {
+				subtract_from_variable = { SER_partisan_bosnia_strength = 15 }
+			}
+        }
+	}
+}
+
+CRO_croatian_partisans_category = {
+	cro_issue_a_warning = {
+		cost = 0
+		allowed = {
+			original_tag = CRO
+		}
+		
+		visible = {
+			SER = {
+				OR = {
+					has_completed_focus = SER_End_the_Ustase
+					AND = {
+						has_completed_focus = SER_End_the_Croatian_Experiment
+						has_completed_focus = SER_The_South_Slavic_Salvation_Front
+					}
+				}
+				NOT = {
+					has_country_flag = SER_croatian_partisans_over
+				}
+			}
+			NOT = {
+				has_country_flag = issued_a_warning
+			}
+		}
+		
+		available = {
+            has_war_support > 0.45
+			NOT = {
+				has_country_flag = taken_an_action
+			}
+        }
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		complete_effect = {
+			set_country_flag = issued_a_warning
+			SER = {
+				country_event = { days = 1 id = twrserbia.112 }
+			}
+		}
+	}
+	
+	cro_track_the_croatian_resistance_network = {
+		cost = 50
+		allowed = {
+			original_tag = CRO
+		}
+		
+		visible = {
+			SER = {
+				OR = {
+					has_completed_focus = SER_End_the_Ustase
+					AND = {
+						has_completed_focus = SER_End_the_Croatian_Experiment
+						has_completed_focus = SER_The_South_Slavic_Salvation_Front
+					}
+				}
+				NOT = {
+					has_country_flag = SER_croatian_partisans_over
+				}
+			}
+		}
+		
+		available = {
+            has_manpower > 999
+			NOT = {
+				has_country_flag = taken_an_action
+			}
+        }
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		days_remove = 50
+		complete_effect = {
+			set_country_flag = taken_an_action
+			add_manpower = -500
+		}
+		remove_effect = {
+			clr_country_flag = taken_an_action
+            custom_effect_tooltip = CRO_decrease_partisan_croatian_strength_low_tt
+			SER = {
+				subtract_from_variable = { SER_partisan_croatia_strength = 5 }
+			}
+        }
+	}
+	
+	cro_send_addition_men_to_croatia = {
+		cost = 40
+		allowed = {
+			original_tag = CRO
+		}
+		
+		visible = {
+			SER = {
+				OR = {
+					has_completed_focus = SER_End_the_Ustase
+					AND = {
+						has_completed_focus = SER_End_the_Croatian_Experiment
+						has_completed_focus = SER_The_South_Slavic_Salvation_Front
+					}
+				}
+				NOT = {
+					has_country_flag = SER_croatian_partisans_over
+				}
+			}
+		}
+		
+		available = {
+            has_manpower > 1499
+			command_power > 50
+			NOT = {
+				has_country_flag = taken_an_action
+			}
+        }
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		days_remove = 40
+		complete_effect = {
+			set_country_flag = taken_an_action
+			add_manpower = -100
+			add_command_power = -40
+		}
+		remove_effect = {
+			clr_country_flag = taken_an_action
+			custom_effect_tooltip = CRO_decrease_partisan_croatian_strength_med_tt
+			SER = {
+				subtract_from_variable = { SER_partisan_croatia_strength = 10 }
+			}
+        }
+	}
+	
+	cro_equip_the_croatian_garrison = {
+		cost = 20
+		allowed = {
+			original_tag = CRO
+		}
+		
+		visible = {
+			SER = {
+				OR = {
+					has_completed_focus = SER_End_the_Ustase
+					AND = {
+						has_completed_focus = SER_End_the_Croatian_Experiment
+						has_completed_focus = SER_The_South_Slavic_Salvation_Front
+					}
+				}
+				NOT = {
+					has_country_flag = SER_croatian_partisans_over
+				}
+			}
+		}
+		
+		available = {
+            has_equipment = {
+				infantry_equipment > 1999
+			}
+			NOT = {
+				has_country_flag = taken_an_action
+			}
+        }
+		
+		fire_only_once = no
+		
+		ai_will_do = {
+			factor = 10
+		}
+		
+		days_remove = 60
+		complete_effect = {
+			set_country_flag = taken_an_action
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+				producer = CRO
+			}
+		}
+		remove_effect = {
+			clr_country_flag = taken_an_action
+			custom_effect_tooltip = CRO_decrease_partisan_croatian_strength_high_tt
+			SER = {
+				subtract_from_variable = { SER_partisan_croatia_strength = 15 }
+			}
+        }
+	}
+}

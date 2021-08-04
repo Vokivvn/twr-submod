@@ -1,0 +1,99 @@
+﻿capital = 997 #Almaty
+
+oob = "TRA_1952"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons_1 = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+
+	basic_infantry_equipment = 1
+	infantry_at = 1
+
+	artillery4 = 1
+
+	base_armor = 1
+	gw_artillery = 1
+}
+
+set_politics = {
+	ruling_party = marxist_leninist
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = no	
+}
+
+set_popularities = {
+    national_socialist = 0
+    fascist = 0
+    paternal_autocrat = 0
+    conservative = 0
+    liberal = 0
+    social_democrat = 0
+    socialist = 0
+    bolshevik_leninist = 40
+    marxist_leninist = 60
+}
+add_ideas = {
+	authoritarian_system
+	TRK_HoG_Balysh_Ovezov
+	TRK_FM_Berdy_Kerbabayev
+	TRK_MoS_Sukhan_Babayev
+	TRK_AM_Dzhuma_Durdy_Karayev
+	TRK_CoStaff_Muhammetnazar_Gapurow
+	TRK_CoArmy_Nurmyrat_Saryhanow
+	TRK_CoNavy_Vacant
+	TRK_CoAir_Vacant
+	semi_industrialised_nation
+}
+create_country_leader = {
+	name = "Muhammetnazar Gapurow"
+	desc = ""
+	picture = "muhammetnazar_gapurow_leader.dds"
+	expire = "1953.3.1"
+	ideology =  national_communism
+	traits = {
+		
+	}
+}
+
+create_corps_commander = {
+	name = "Tachmamed Niazmamedov"
+	picture = "tachmamed_niazmamedov_leader.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	id = 1510
+}
+
+create_corps_commander = {
+	name = "Nurmyrat Saryhanow"
+	picture = "nurmyrat_saryhanow_leader.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 1507
+}
+
+create_corps_commander = {
+	name = "Allaberdy Agaliyev"
+	picture = "allaberdy_agaliyev_leader.dds"
+	traits = { infantry_expert }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+	id = 1514
+}
+
+

@@ -1,0 +1,112 @@
+TRV_Unification_of_Russia = {
+	TRV_restore_order_West = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+			OR = {
+			tag = WRM 
+			tag = TMS 
+			tag = RMD 
+			tag = RMO 
+			tag = ROS 
+			tag = BLR 
+			tag = LAT 
+			tag = EST 
+			tag = LIT 
+			tag = PET 
+			tag = WSP
+			}
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+		has_war = no #Put unlock in here or in visible
+		}
+
+		visible = {
+		has_country_flag = TRV_RECLAIM_MOSKOW
+		}
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TRV_restore_order_West"
+		}
+		remove_effect = {
+		create_wargoal = {
+    	type = annex_everything
+    	target = FROM
+			}
+		}
+	}
+	TRV_restore_order_South = {
+		icon = generic_nationalism
+
+		target_trigger = {
+			FROM = {
+			OR = {
+			tag = DON 
+			tag = MTR 
+			tag = UKR 
+			tag = KAM 
+			tag = NOG 
+			tag = LZG 
+			tag = UIA 
+			tag = UKW 
+			tag = RGO 
+			tag = RUK 
+			tag = BKU
+			tag = RKA
+			tag = STR
+			tag = BGS
+			}
+				NOT = { is_subject_of = ROOT }
+				exists = yes
+				has_war = no
+				is_subject = no
+				is_neighbor_of = ROOT
+			}
+		}
+		available = {
+		has_war = no #Put unlock in here or in visible
+		}
+
+		visible = {
+		has_country_flag = TRV_RECLAIM_SOUTH
+		}
+		
+		
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 50
+		}
+
+		cost = 50
+		days_remove = 15
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision TRV_restore_order_West"
+		}
+		remove_effect = {
+		create_wargoal = {
+    	type = annex_everything
+    	target = FROM
+			}
+		}
+	}
+}

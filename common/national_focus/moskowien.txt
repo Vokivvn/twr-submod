@@ -1,0 +1,573 @@
+focus_tree = {
+	id = RMO_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 0
+			tag = RMO
+		}
+	}
+	
+	default = no
+	
+	
+
+	focus = {
+	cancelable = no
+		id = RMO_civil_war_start
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 12
+		y = 0
+		cost = 2
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_civil_war_start"
+			add_political_power = 10
+		    country_event = {
+			    days = 1 id = twrmoskowien.0
+			}
+		}
+		
+		
+	}
+	
+	####Loyalist Path####
+	
+	focus = {
+	cancelable = no
+		id = RMO_choose_fuhrer
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = RMO_civil_war_start }
+		mutually_exclusive = { focus = RMO_independence }
+		x = 6
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_choose_fuhrer"
+			add_ideas = RMO_chaos_state_focus
+			country_event = {
+				id = twrmoskowien.4
+			}
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_manstein
+		icon = GFX_GER_council_coalition
+		prerequisite = { focus = RMO_choose_fuhrer }
+		mutually_exclusive = { focus = RMO_himmler }
+		available = {
+			has_global_flag = RMO_took_manstein
+		}
+		x = 3
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_manstein"
+			add_political_power = 40
+		    
+		}
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_remove_SS
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		prerequisite = { focus = RMO_manstein }
+		x = 2
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_himmler
+		icon = GFX_GER_himmler
+		prerequisite = { focus = RMO_choose_fuhrer }
+		mutually_exclusive = { focus = RMO_manstein }
+				available = {
+			has_global_flag = RMO_took_himmler
+		}
+		x = 9
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_remove_heer
+		icon = GFX_goal_generic_secret_weapon
+		prerequisite = { focus = RMO_himmler }
+		x = 10
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_send_troops
+		icon = GFX_GER_hitler_hat
+		prerequisite = { focus = RMO_manstein }
+		x = 4
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_deploy_SS
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = RMO_himmler }
+		x = 8
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_cut_comm_lines
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = RMO_himmler focus = RMO_manstein}
+		x = 6
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_cut_comm_lines"
+				swap_ideas = {
+				remove_idea = RMO_chaos_state_focus
+				add_idea = RMO_chaos_state_focus2
+				}
+		}
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_cover_up
+		icon = GFX_GENERIC_spying_on_nazis
+		prerequisite = { focus = RMO_cut_comm_lines}
+		x = 6
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_cover_up"
+			swap_ideas = {
+				remove_idea = RMO_chaos_state_focus2
+				add_idea = RMO_chaos_state_focus3
+			}
+			country_event = {
+			id = twrmoskowien.2
+			}
+		}
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_new_heer
+		icon = GFX_GER_hitler_youth
+		prerequisite = { focus = RMO_send_troops }
+		prerequisite = { focus = RMO_remove_SS }
+		x = 3
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_new_heer"
+		add_state_core = 243
+		add_state_core = 242
+		add_state_core = 246
+		load_oob = "RMO_new_heer"
+		}
+		
+	}
+	focus = {
+	cancelable = no
+		id = RMO_moscow_rising
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = RMO_new_heer }
+		prerequisite = { focus = RMO_cover_up }
+		x = 3
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_bridges
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = RMO_moscow_rising }
+		x = 2
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_blow_ammo
+		icon = GFX_goal_generic_occupy_start_war
+		prerequisite = { focus = RMO_moscow_rising }
+		x = 4
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_Revolt
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = RMO_blow_ammo }
+		prerequisite = { focus = RMO_bridges }
+		x = 3
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_SS_brigade1
+		icon = GFX_GER_ss_reich
+		prerequisite = { focus = RMO_remove_heer }
+		prerequisite = { focus = RMO_deploy_SS }
+		x = 9
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_SS_brigade1"
+		add_state_core = 219
+		load_oob = "RMO_new_ss_1"
+		}
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_cull_moscow
+		icon = GFX_focus_ger_strike_at_the_source
+		prerequisite = { focus = RMO_SS_brigade1 }
+		prerequisite = { focus = RMO_cover_up }
+		x = 9
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_SS_brigade2
+		icon = GFX_GER_ss_reich
+		prerequisite = { focus = RMO_cull_moscow }
+		x = 8
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_SS_brigade2"
+		add_state_core = 242
+		load_oob = "RMO_new_ss_2"
+		}
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_compliance_corp
+		icon = GFX_goal_generic_attack_allies
+		prerequisite = { focus = RMO_cull_moscow }
+		x = 10
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_terror_axis
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = RMO_compliance_corp }
+		prerequisite = { focus = RMO_SS_brigade2 }
+		x = 9
+		y = 7
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_terror_axis"
+		remove_ideas = {
+		RMO_chaos_state_focus3
+		}
+		}
+		
+	}
+	
+	
+	
+	#####
+	
+		focus = {
+	cancelable = no
+		id = RMO_independence
+		icon = GFX_GER_eagle_with_ugly_compass
+		prerequisite = { focus = RMO_civil_war_start }
+		mutually_exclusive = { focus = RMO_choose_fuhrer }
+		x = 16
+		y = 1
+		cost = 2
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_natsoc_death
+		icon = GFX_GER_internal_politics
+		prerequisite = { focus = RMO_independence }
+		x = 16
+		y = 2
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_natsoc_death"
+				add_ideas = RMO_uncertainty
+			
+		
+	}
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_purge_loyalists
+		icon = GFX_focus_ger_oppose_hitler
+		prerequisite = { focus = RMO_natsoc_death }
+		x = 15
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_purge_loyalists"
+		add_state_core = 242
+		}
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_invite_bolsheviks
+		icon = GFX_SOV_expand_nkvd
+		prerequisite = { focus = RMO_natsoc_death }
+		x = 17
+		y = 3
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_invite_bolsheviks"
+		add_state_core = 351
+		}
+		
+	}
+
+	focus = {
+	cancelable = no
+		id = RMO_nazbol1
+		icon = GFX_goal_support_fourth_int
+		prerequisite = { focus = RMO_purge_loyalists focus = RMO_invite_bolsheviks }
+		x = 16
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_colonial_guarantee
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = RMO_purge_loyalists }
+		x = 14
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_slav_demands
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = RMO_invite_bolsheviks }
+		x = 18
+		y = 4
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_segregation
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = RMO_colonial_guarantee }
+		prerequisite = { focus = RMO_nazbol1 }
+		mutually_exclusive = { focus = RMO_slav_appeasement }
+		x = 15
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+		focus = {
+	cancelable = no
+		id = RMO_slav_appeasement
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = RMO_slav_demands }
+		prerequisite = { focus = RMO_nazbol1 }
+		mutually_exclusive = { focus = RMO_segregation }
+		x = 17
+		y = 5
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		
+		
+	}
+	
+	focus = {
+	cancelable = no
+		id = RMO_nazbol2
+		icon = GFX_focus_generic_join_comintern
+		prerequisite = { focus = RMO_slav_appeasement focus = RMO_segregation }
+		x = 16
+		y = 6
+		cost = 10
+		ai_will_do = {
+			factor = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus RMO_nazbol2"
+		country_event = {
+			id = twrmoskowien.1
+				}
+				add_state_core = 246
+				add_state_core = 243
+				add_state_core = 205
+				add_state_core = 223
+				add_state_core = 254
+				add_state_core = 219
+				add_state_core = 253
+				add_state_core = 248
+				add_state_core = 247
+				add_state_core = 244
+				add_state_core = 264
+				
+			set_politics = {
+			ruling_party = bolshevik_leninist
+			}
+			set_cosmetic_tag = UNBR_RMO
+			}
+		}
+	}

@@ -1,0 +1,26 @@
+﻿l_english:
+
+ ###############
+ ## MINISTERS ##
+ ###############
+ ##HoG##
+ CRO_HoG_Dzafer_Kulenovic:0 "Džafer Kulenović"
+ Dzafer_Kulenovic_unavailable:0 "Džafer Kulenović is §Runavailable§!"
+ 
+ ##FM##
+ BOS_FM_Nurija_Pozderac:0 "Nurija Pozderac"
+ Nurija_Pozderac_unavailable:0 "Nurija Pozderac is §Runavailable§!"
+ 
+ ##MoS##
+ BOS_MoS_Ferid_Dzanic:0 "Ferid Džanić"
+ Ferid_Dzanic_unavailable:0 "Ferid Džanić is §Runavailable§!"
+ 
+ ##AM##
+ BOS_AM_Hasan_Demirovic:0 "Hasan Demirović"
+ Hasan_Demirovic_unavailable:0 "Hasan Demirović is §Runavailable§!"
+ 
+ ##CoStaff##
+ BOS_CoStaff_Desiderius_Hampel:0 "Desiderius Hampel"
+ Desiderius_Hampel_unavailable:0 "Desiderius Hampel is §Runavailable§!"
+ BOS_CoArmy_Muhamed_Hadziefendic:0 "Muhamed Hadžiefendić"
+ Muhamed_Hadziefendic_unavailable:0 "Muhamed Hadžiefendić is §Runavailable§!"

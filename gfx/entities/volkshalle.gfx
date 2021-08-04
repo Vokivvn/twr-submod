@@ -1,0 +1,7 @@
+objectTypes = {
+	pdxmesh = {
+		name = "building_volkshalle"
+		file = "gfx/models/buildings/volkshalle.mesh"
+		scale = 1.0
+	}
+}

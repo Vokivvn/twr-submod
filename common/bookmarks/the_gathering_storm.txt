@@ -1,0 +1,197 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1952.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"USA"={
+			history = "USA_GATHERING_STORM_DESC"
+			ideology = conservative
+			ideas = {
+				USA_twr_world_police
+				USA_post_war_economic_miracle
+				USA_industrial_powerhouse
+			}
+			focuses = {
+				USA_The_1952_Presidential_Elections
+				USA_The_United_Sates_Armed_Forces
+				USA_a_great_crusade
+			}
+		}
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = conservative
+			ideas = {
+				ENG_stain_of_dunkirk
+				ENG_economic_downturn
+				ENG_imperial_instability
+			}
+			focuses = {
+				ENG_passing_king
+				ENG_general_election
+				ENG_recovery_begins
+			}
+		}
+		"CHI"={
+			history = "CHI_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				communist_crackdown
+				CHI_corrupted_economy
+				CHI_martial_law
+			}
+			focuses = {
+				CHI_Generalissimo_Chiang
+				CHI_The_Little_Child_Is_Naughty
+				CHI_The_Chinese_Economy
+			}
+		}
+		"ITA"={
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = fascist
+			ideas = {
+				ITA_italian_falling_economy
+				italy_lions_led_by_donkeys
+				italy_vittoria_macellata
+			}
+			focuses = {
+				ITA_Viva_Il_Duce
+				ITA_Begin_the_Recovery
+				ITA_The_Roman_Dream
+			}
+		}
+		"GER"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = national_socialist
+			ideas = {
+				GER_overgrown_officer_corps
+				GER_economic_stagnation
+				GER_nazi_recruitment_system
+			}
+			focuses = {
+				GER_Status_Of_the_Reich
+				GER_The_Unthinkable
+				GER_Fate_Of_Germany
+			}
+		}
+		"HUN"= {
+			minor = yes
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = { 
+				HUN_the_prospect_times
+				HUN_German_Influence
+				HUN_Volksbund
+			}
+			focuses = {
+				HUN_Steady_As_She_Goes
+				HUN_Soldier_of_Horthy
+				HUN_Modernize_the_Military
+			}
+		}
+		"ROM"= {
+			minor = yes
+			history = "ROM_GATHERING_STORM_DESC"
+			ideology = paternal_autocrat
+			ideas = {
+				ROM_wolf_of_balkans
+				ROM_oil_exports
+				ROM_political_uncertainties
+			}
+			focuses = {
+				ROM_St_Mausoleum
+				ROM_Fp_The_Romanian_Wolf
+				ROM_MIL_Romanian_Armed_Forces
+			}
+		}
+		"CRO"= {
+			minor = yes
+			history = "CRO_GATHERING_STORM_DESC"
+			ideology = national_socialist
+			ideas = {
+				CRO_german_funding_for_supression
+				CRO_dream_of_a_greater_croatia
+				CRO_italian_influence
+			}
+			focuses = {
+				CRO_Kingdom_As_Rome_Commands
+				CRO_HSS_Dalmatian_Democracy
+				CRO_Artukovic_The_Master_Race_Arrives
+			}
+		}
+		"SER"= {
+			minor = yes
+			history = "SER_GATHERING_STORM_DESC"
+			ideology = national_socialist
+			ideas = {
+				YUG_yugoslav_partisans
+				SER_in_ruins
+				SER_chetnik_issue
+			}
+			focuses = {
+				SER_Matters_of_the_Economy
+				SER_Matters_of_the_State
+				SER_Matters_of_Terrorism
+			}
+		}
+		"GRE"= {
+			minor = yes
+			history = "GRE_GATHERING_STORM_DESC"
+			ideology = fascist
+			ideas = {
+				GRE_Despised_Government
+				GRE_A_Ruined_Economy
+				GRE_Organisation_X
+			}
+			focuses = {
+				GRE_The_Unionist_Initiative
+				GRE_A_Nation_Run_by_Sharpened_Bayonets
+				GRE_A_Nation_Run_by_Shoe_Shiners
+			}
+		}
+		"BUL"= {
+			minor = yes
+			history = "BUL_GATHERING_STORM_DESC"
+			ideology = fascist
+			ideas = { 
+				BUL_greek_unrest
+				BUL_hated_regent
+				BUL_puppet_regent
+			}
+			focuses = {
+				BUL_Expand_Executive_Power
+				BUL_The_Monarchists_Rally
+				BUL_Formalie_the_Greyshirts
+			}
+		} 
+        "SLO"= {
+			minor = yes
+			history = "SLO_GATHERING_STORM_DESC"
+			ideology = fascist
+			ideas = { SLO_Remnants_of_Czechoslovakia SLO_Hlinka_Influence SLO_Debt_To_The_Germans }
+			focuses = { SLO_Czechoslovak_Ideals SLO_The_Second_Election SLO_Slovak_Statehood   }
+		}
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+
+	# Do not delete, it can help the game display the bookmark interface.
+	bookmark = {
+		name = ""
+		desc = ""
+		date = 1952.1.2.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		"GER"={
+			history = ""
+			ideology = national_socialist
+			ideas = {}
+			focuses = {}
+		}
+	}
+}

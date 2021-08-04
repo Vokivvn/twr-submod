@@ -1,0 +1,60 @@
+﻿l_english:
+
+ #Search
+ Focus_RKA_Civil_War:0 "Civil War"
+ Focus_RKA_Victory:0 "Victory in the Civil War"
+
+ #Ministers
+ RKA_CoS_Ewald_von_Kleist:0 "Ewald von Kleist "
+ RKA_CoArmy_Richard_Ruoff:0 "Richard Ruoff"
+ RKA_CoNavy_Karl_Fleige:0 "Karl Fleige"
+ RKA_CoAir_Karl_Heinrich_Schulz:0 "Karl-Heinrich Schulz"
+
+ ##Focus
+ RAK_Kaukasus_Civil_War:0 "Kaukasus Civil War"
+ RAK_Kaukasus_Civil_War_desc:0 "Since the beginning of our rule, the Kaukasus has been plagued with insurrection and disorder. This colony was never stable at the best of times and these are not the best of times. We've ignored these underlying problems for years but we cannot do so any longer. The wolves are at the door."
+ RAK_Chemical_Bombing:0 "Chemical Bombing"
+ RAK_Chemical_Bombing_desc:0 "Because we're on our own out here, we need to resort to drastic measures to protect our rule. We have surplus chlorine gas left over from the war. We may as well put it to good use. The mountainsides are full of native partisans. We will have to smoke them out."
+ RAK_Purchase_Gotische_Nukes:0 "Purchase Gotische Nukes"
+ RAK_Purchase_Gotische_Nukes_desc:0 "The chemical weapons aren't enough. We need to go further. Our comrades in Gotenland will stand with us in our hour of need. With what few resources are still available to us, we may be able to arrange a trade deal: our oil for a few of their nuclear armaments."
+ RAK_Burn_the_Oil_Wells:0 "Burn the Oil Wells"
+ RAK_Burn_the_Oil_Wells_desc:0 "The rebels are quickly encroaching on what little territory we still control. Our chances of pulling through are growing increasingly slim. We can't stop the enemy but we can black their eyes. The order will go out for our troops to dismantle and torch our remaining derricks. If we can't have it then the natives won't either."
+ RAK_The_Nuclear_Solution:0 "The Nuclear Solution"
+ RAK_The_Nuclear_Solution_desc:0 "They're coming for us. All bets are off now. They're relentless. There won't be any mercy for us, so we will have to be worse than them. This will only end once they've killed all of us or we've reduced all of them to ash. If it comes to it, we've got the codes at the ready."
+ RAK_Burn_the_Kaukasus:0 "Burn the Kaukasus"
+ RAK_Burn_the_Kaukasus_desc:0 "It's too late now. The time for a lenient approach is long past. We have to burn this entire God-forsaken backwater to the ground. If they want this country so badly then by God we'll give it to them. We'll see how much they like it when the reward for their efforts is a smoking, cratered wasteland."
+ RAK_Exhaust_the_Local_Resources:0 "Exhaust the Local Resources"
+ RAK_Exhaust_the_Local_Resources_desc:0 "There's nothing left for us here. We'll grab what we can and catch a flight back to metropolitan Germany. Our soldiers will get the last barrels of oil ready for transportation over to Gotenland. We may as well get as much out of this arrangement as we can before we leave."
+ 
+ RAK_Return_of_the_Kaukasus:0 "Return of the Kaukasus"
+ RAK_Return_of_the_Kaukasus_desc:0 "One way or another, the spirit of the Aryana volk prevailed. We will do everything in our power to ensure that our control will never waver."
+ RAK_Restart_Oil_Production:0 "Restart Oil Production"
+ RAK_Restart_Oil_Production_desc:0 "There's no time to dawdle. It'd be nice to wait for the wartime wounds to heal but the oil must flow. We have quotas to meet."
+ RAK_Repair_the_Oil_Wells:0 "Repair the Oil Wells"
+ RAK_Repair_the_Oil_Wells_desc:0 "Now that the Kaukasus is back in our control, we should repair the derricks we destroyed during the evacuation. It's going to be expensive but it's for the best that we tore them down. At least the rebels weren't able to make use of them."
+ RAK_Grant_Local_Authority:0 "Grant Local Authority"
+ RAK_Grant_Local_Authority_desc:0 "We're going to decentralize our administration's authority. Settler communities will have more autonomy to manage their own affairs from now on. Local and regional governors will also be given free reign to do what they need to do to keep the natives in line."
+ RAK_Production_First_Policy:0 "Production First Policy"
+ RAK_Production_First_Policy_desc:0 "From now on, the Reichsmark will always come first. Oil and mining production is set to increase tenfold. As a punishment for their insurrection, the natives will be worked harder than they were before."
+ RAK_Restart_Oil_Shipments:0 "Restart Oil Shipments"
+ RAK_Restart_Oil_Shipments_desc:0 "Oil is the life blood of the Reich. We can't just let the circulatory system grind to a halt. The oil shipments back to metropolitan Germany will restart at once."
+ RAK_Enrich_the_Rich:0 "Enrich the Rich"
+ RAK_Enrich_the_Rich_desc:0 "We sunk a lot of money into this colony. The civil war was a huge money sinkhole for us. We need to make back our losses. As such, let's lower taxes on the richer settlers."
+ RAK_Restart_Normal_Functions:0 "Restart Normal Functions"
+ RAK_Restart_Normal_Functions_desc:0 "Now that the interruptions are out of the way, let's get back to business as usual. Nothing will fundamentally change in the Kaukasus, although from now on we'll be on guard against potential uprisings."
+ 
+ #Ideas
+ RKA_Slavic_Hell:0 "Slavic Hell"
+ RKA_Chemical_Warfare:0 "Chemical Warfare"
+ RKA_No_More_Oil:0 "No More Oil"
+ RKA_Victory_in_the_Kaukasus:0 "Victory in the Kaukasus"
+ RKA_Local_Autonomy:0 "Local Authority"
+ RKA_Priority_in_Production:0 "Priority in Production"
+ RKA_Strong_Oligarchs:0 "Strong Oligarchs"
+ 
+ #Tooltips
+ RKANukes:0 "§RIn times like this, we must have the weapons to exterminate the slavic pests but all means necessary...§&"
+ RKAOil:0 "§RWe can't let our enemies exploit the oil fields we established! We have to destroy them all!§&"
+ RKASolution:0 "§RIf we are to follow through with the final solution, we must improve our weapons to make them as effective as possible!§&"
+ RKABurn:0 "§RIf we can't take back the Kaukasus, we will burn it to ashes!§&"
+ RKAExhaust:0 "§RWe must take everything we can away from the hands of the Slavs!§&"

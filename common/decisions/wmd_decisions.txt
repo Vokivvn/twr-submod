@@ -1,0 +1,268 @@
+wmd_decisions = {
+	WMD_build_chemical_facility = {
+
+		icon = generic_political_discourse
+
+		cost = 50
+		days_remove = 30
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		visible = {
+			has_tech = chemical_g_series
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = CHEMFACILITY
+			hidden_effect = {
+				set_country_flag = chemical_facility
+			}
+		}
+	}
+	WMD_chemical_research = {
+
+		icon = generic_political_discourse
+
+		cost = 50
+		days_remove = 30
+		days_re_enable = 40
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			research_speed_factor = 0.05
+		}
+
+		visible = {
+			has_country_flag = chemical_facility
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = CHEMFACILITY
+			hidden_effect = {
+				set_country_flag = chemical_facility
+			}
+		}
+	}
+	WMD_build_chemical_weapons = {
+
+		icon = generic_political_discourse
+
+		available = {
+			has_country_flag = chemical_facility
+			NOT = { has_country_flag = building_wmds }
+			NOT = { has_country_flag = chemical_weapons_ban_treaty }
+		}
+
+		cost = 50
+		days_remove = 90
+
+		days_re_enable = 90 
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		modifier = {
+			consumer_goods_factor = 0.07
+			political_power_gain = -0.10
+		}
+
+		visible = {
+			has_tech = chemical_lethal_gas
+		}
+
+		complete_effect = {
+			set_country_flag = building_wmds
+		}
+
+		remove_effect = {
+			custom_effect_tooltip = wmd_build_chemical_weapons_tt
+			hidden_effect = {
+				clr_country_flag = building_wmds
+				round_variable = chemical_weapons_count
+				add_to_variable = { chemical_weapons_count = 1 }
+				if = {
+					limit = { has_tech = chemical_aerosol }
+					multiply_variable = { chemical_weapons_count = 1.1 }
+				}
+				if = {
+					limit = { has_tech = chemical_packed_bombs }
+					multiply_variable = { chemical_weapons_count = 1.2 }
+				}
+				if = {
+					limit = { has_tech = chemical_solid_dust_spread }
+					multiply_variable = { chemical_weapons_count = 1.1 }
+				}
+			}
+		}
+	}
+	WMD_gas_warfare = {
+
+		icon = generic_political_discourse
+		available = {
+			has_country_flag = chemical_facility
+			NOT = { has_country_flag = building_wmds }
+			NOT = { has_country_flag = chemical_weapons_ban_treaty }
+		}
+
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				is_fascist = yes
+				factor = 0.6 #use as pp dump
+			}
+		}
+		visible = {
+			has_tech = chemical_lethal_gas
+			has_war = yes
+			NOT = {
+				has_country_flag = chemical_warfare
+			}
+		}
+
+		remove_effect = {
+			add_stability = -0.1
+			set_technology = {
+				gas_warfare = 1
+			}
+			hidden_effect = {
+				set_country_flag = chemical_warfare
+			}
+		}
+	}
+	WMD_stop_gas_warfare = {
+
+		icon = generic_political_discourse
+		available = {
+			has_country_flag = chemical_warfare
+			NOT = { has_country_flag = building_wmds }
+			NOT = { has_country_flag = chemical_weapons_ban_treaty }
+		}
+
+		cost = 50
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.9
+				has_war = no
+			}
+		}
+
+		visible = {
+			has_tech = chemical_lethal_gas
+			has_country_flag = chemical_warfare
+		}
+
+		remove_effect = {
+			add_stability = 0.1
+			set_technology = {
+				gas_warfare = 0
+			}
+			hidden_effect = {
+				set_country_flag = chemical_warfare
+			}
+		}
+	}
+}
+
+
+wmd_development = {
+	WMD_investing_into_chemicals = {
+
+		icon = generic_research
+		available = {
+		num_of_civilian_factories > 25
+		NOT = {
+		has_country_flag = chemical_weapons_ban_treaty
+			}
+		}
+
+		cost = 200
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+			modifier = {
+			OR = {
+				tag = CHI
+				has_war = yes
+				}
+				factor = 3.0 #use as pp dump
+			}
+		}
+		visible = {
+			NOT = {
+				has_tech = immoral_warfare
+				has_country_flag = chemical_weapons_ban_treaty
+			}
+		}
+		days_remove = 365
+		modifier = {
+		research_speed_factor = -0.2
+		}
+		remove_effect = {
+		custom_effect_tooltip = ALLOW_RESEARCH_BIO_CHEMICAL_TECH
+		hidden_effect = {
+			set_technology = {
+				immoral_warfare = 1
+				}
+			}
+		}
+	}
+	WMD_kickstart_nuclear_project = {
+
+		icon = generic_research
+		available = {
+		count_triggers = {
+		    amount = 2
+		    num_of_civilian_factories > 50
+		    is_major = yes
+		    has_country_flag = NUCLEAR_ALLOWED
+			}
+		}
+
+		cost = 200
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 10
+			modifier = {
+			OR = {
+				tag = CHI
+				has_war = yes
+				}
+				factor = 3.0 #use as pp dump
+			}
+		}
+		visible = {
+			NOT = {
+				has_tech = nuclear_capabilities
+			}
+		}
+		days_remove = 365
+		modifier = {
+		research_speed_factor = -0.4
+		}
+		remove_effect = {
+		custom_effect_tooltip = ALLOW_RESEARCH_NUCLEAR_TECH
+		hidden_effect = {
+			set_technology = {
+				nuclear_capabilities = 1
+				}
+			}
+		}
+	}
+}

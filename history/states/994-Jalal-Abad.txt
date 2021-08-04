@@ -1,0 +1,24 @@
+
+state={
+	id=994
+	name="STATE_994"
+
+	history={
+		owner = TRK
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = SOV
+		add_core_of = TRK
+		add_core_of = KYR
+
+	}
+
+	provinces={
+		1483 4467 4923 5062 12370 
+	}
+	manpower=50000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

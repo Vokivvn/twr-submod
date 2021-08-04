@@ -1,0 +1,117 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_terrain_nuked_germania"
+		textureFile = "gfx/cities/terrain_nuked4.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_tokyo"
+		textureFile = "gfx/cities/terrain_tokyo.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_yokohama"
+		textureFile = "gfx/cities/terrain_yokohama.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_germania"
+		textureFile = "gfx/cities/terrain_germania.dds"
+	}	
+	spriteType = {
+		name = "GFX_terrain_washingtondc"
+		textureFile = "gfx/cities/terrain_washingtondc.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_ottawa"
+		textureFile = "gfx/cities/terrain_ottawa.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_toronto"
+		textureFile = "gfx/cities/terrain_toronto.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_london"
+		textureFile = "gfx/cities/terrain_london.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_montreal"
+		textureFile = "gfx/cities/terrain_montreal.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_beijing"
+		textureFile = "gfx/cities/terrain_beijing.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_busan"
+		textureFile = "gfx/cities/terrain_busan.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_chongqing"
+		textureFile = "gfx/cities/terrain_chongqing.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_HK"
+		textureFile = "gfx/cities/terrain_HK.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_LA"
+		textureFile = "gfx/cities/terrain_LA.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_madrid"
+		textureFile = "gfx/cities/terrain_madrid.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_nanjing"
+		textureFile = "gfx/cities/terrain_nanjing.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_paris"
+		textureFile = "gfx/cities/terrain_paris.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_pyeongyang"
+		textureFile = "gfx/cities/terrain_pyeongyang.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_rome"
+		textureFile = "gfx/cities/terrain_rome.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_seoul"
+		textureFile = "gfx/cities/terrain_seoul.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_SF"
+		textureFile = "gfx/cities/terrain_SF.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_zagreb"
+		textureFile = "gfx/cities/terrain_zagreb.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_nuked1"
+		textureFile = "gfx/cities/terrain_nuked1.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_nuked2"
+		textureFile = "gfx/cities/terrain_nuked2.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_nuked3"
+		textureFile = "gfx/cities/terrain_nuked3.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_nuked4"
+		textureFile = "gfx/cities/terrain_nuked4.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_nuked5"
+		textureFile = "gfx/cities/terrain_nuked5.dds"
+	}
+	spriteType = {
+		name = "GFX_terrain_nuked6"
+		textureFile = "gfx/cities/terrain_nuked6.dds"
+	}
+	
+}
+		

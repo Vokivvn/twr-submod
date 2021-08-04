@@ -1,0 +1,69 @@
+﻿l_english:
+#Description
+
+
+
+
+#### TRAITS ####
+
+
+#WT
+
+
+#### Decisions ####
+
+
+#### Ministers ####
+
+
+
+#### Autonomy Strings ####
+
+
+#### Ideas ####
+
+### Army ###
+
+
+
+### Air Force ###
+
+
+
+### Navy ###
+
+
+
+#### Politics ####
+twrczechia.1.t:0 "Czech Ceasefire"
+twrczechia.1.d:0 "In a miracle, our revolution was capable of keeping the Germans at bay. We have successfully defended our homeland, and as the Germans have exhausted their resources in the area, a temporary ceasefire has been signed, allowing the Czech people a brief window of independence during this time of chaos."
+twrczechia.1.a:0 "We did it!"
+
+twrczechia.2.t:0 "Ceasefire in Bohemia"
+twrczechia.2.d:0 "Miraculously, the German forces in former Bohemia and the Czech resistance fighters have reached a ceasefire agreement, as the Germans are now preoccupied with more urgent issues elsewhere in Germany.\n\nAccording to the agreement, German forces will now temporarily withdraw from Bohemia, but this treaty does not signify acknowledgement of Czech sovereignty by the German factions. Regardless, the Czech people can now enjoy a period of peace."
+twrczechia.2.a:0 "Truth prevails!"
+twrczechia.2.b:0 "A Czech rebirth..."
+#### FORIEGN POLICY ####
+
+
+
+#### Flags ####
+
+
+
+#### Tooltips ####
+slovakMach:0 "§RAlexander Mach is put into power as the new leader of Slovakia!§!"
+slovakStefan:0 "§GStefan Tiso is put into power as the new leader of Slovakia!§!"
+slovakNoMoreGermany:0 "§RGermany is no longer around and our state remains in a uncertain position...§!"
+slovakSpring:0 "§RThe people are rising up against us! We must act now!§!"
+slovakresign:0 "§GWith the resignation of Tiso, Slovakia has returned back to its democratic roots!§!"
+slovakAverted:0 "§GStability has returned and we can continue with business as usual.§!"
+slovakCommies:0 "§YWe must decide what we will do with the offer the Communists have brought to us...§!"
+slovakWar:0 "§RWe must defend our country from the claws of the Hungarian fascists!§!"
+slovakHungary:0 "§YOur government is saved thanks to the Hungarians...but at what cost?§!"
+
+#### Opinion Modifiers ####
+
+
+#### Events ####
+CZE_SUCCESSFUL_REBELLION_INSECURITY:0 "Instability on the border!"

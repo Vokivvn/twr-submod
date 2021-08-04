@@ -1,0 +1,151 @@
+﻿#########################################################################
+# Soviet Union
+#########################################################################
+capital = 407
+set_research_slots = 2
+set_convoys = 0
+oob = "TRV_1952"
+#######################
+# Language
+#######################
+set_country_flag = russian_language
+#######################
+# Research
+#######################
+set_technology = {
+	infantry_weapons_1 = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+
+	basic_infantry_equipment = 1
+	infantry_at = 1
+
+	artillery4 = 1
+
+	base_armor = 1
+	gw_artillery = 1
+}
+#######################
+# Politics
+#######################
+set_politics = {	
+	ruling_party = paternal_autocrat
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    national_socialist = 0
+    fascist = 10
+    paternal_autocrat = 50
+    conservative = 15
+    liberal = 10
+    social_democrat = 0
+    socialist = 5
+    bolshevik_leninist = 5
+    marxist_leninist = 5
+}
+add_ideas = {
+	warlord_debuff
+	warlord_buff
+	TRV_refugee_flood
+	kleptocratic_regime
+	semi_industrialised_nation
+	}
+#######################
+# Leaders
+#######################
+
+
+# Paternal Autocracy
+create_country_leader = {
+	name = "Ivan Bagramyan"
+	desc = "bagramyan_desc"
+	picture = "Ivan_Bagramyan_PA.tga"
+	expire = "1968.1.1"
+	ideology =  warlordist_autocracy
+	traits = {}
+}
+
+
+#create_country_leader = {
+#	name = "Andrei Sakharov"
+#	desc = "bagramyan_desc"
+#	picture = ""
+#	expire = "1968.1.1"
+#	ideology = social_liberalism
+#	traits = {}
+#}
+
+#create_country_leader = {
+#	name = "Ivan Yermachenka"
+#	desc = "bagramyan_desc"
+#	picture = ""
+#	expire = "1968.1.1"
+#	ideology = traditionalist_conservatism
+#	traits = {}
+#}
+
+create_field_marshal = {
+	name = "Ivan Bagramyan"
+	picture = "Ivan_Bagramyan_PA.tga"
+	traits = { old_guard trait_cautious defensive_doctrine }
+	id = 5001
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Alexander Altunin"
+	picture = "Alexander_Altunin.dds"
+	traits = { career_officer  }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Gleb Baklanov"
+	picture = "Gleb_Baklanov.dds"
+	traits = { inflexible_strategist infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Vasily Sergeyevich Arkhipov"
+	picture = "Vasily_Sergeyevich_Arkhipov.dds"
+	traits = { armor_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Alexei Burdeinei"
+	picture = "Alexei_Burdeinei.dds"
+	traits = { armor_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Sagadat Nurmagambetov"
+	picture = "Sagadat_Nurmagambetov.dds"
+	traits = { }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}

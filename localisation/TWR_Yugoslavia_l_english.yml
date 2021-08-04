@@ -1,0 +1,76 @@
+﻿l_english:
+
+#Description
+
+
+
+#Research Groups
+
+
+
+
+#### Leader Description ####
+Acimovic_desc:0 "Born in 1898, Milan Aćimović became an accomplished lawyer in the Kingdom of Yugoslavia. Having expressed anti-communist and fascist sympathies, he and his future collaborationist compatriot Velibor Jonić fought to legalize Zbor; the primary fascist party in Yugoslavia. Having been jailed in 1940 for his axis sympathies, he was released from captivity by the Nazis and asked to form a Serbian civilian regime in the new rump state that emerged from the Axis partition of Yugoslavia. While nominally the prime minister of the "Government of National Salvation", A German detachment lead by Harald Turner and a delicate web of loyal Chetnik and Zbor politicians are the only things that prevent his nation from descending into complete anarchy. As the partisans and rebellious Chetniks continue to terrorize the countryside regardless, Milan's Serbia is hardly a functioning government."
+
+
+#WT
+
+
+#### Decisions ####
+
+
+#### Autonomy Strings ####
+
+
+#### Ideas ####
+YUG_yugoslav_partisans:0 "Yugoslav Partisans"
+YUG_yugoslav_partisans_desc:0 "The Yugoslav Communist Partisans were never fully destroyed - they are still active in the remote parts of Yugoslavia. The ineffectiveness of both the Serbian Security Forces and the Croatian Army to handle partisan activities have allowed the rebels to build a gradual resergence."
+#SER_in_ruins:0 "Serbia in Ruins"
+#SER_in_ruins_desc:0 "The destruction of the Serbian nation has resulted in the total devastation of Serbia. By the time Germany withdrew its direct military occupation and handed control over to the Government of National Salvation, massive amounts of Serbia's industrial capability and urban centers had been destroyed by warfare and looted by Axis forces."
+YUG_memory_of_tito:0 "Yugoslav Liberation Army"
+YUG_memory_of_tito_desc:0 "In memory of the our fallen partisan comrades, Yugoslavia shall be united and free from the hands of imperialists! The Yugoslav Liberation Army will march on and liberate every inch of Yugoslav soil!"
+#SER_chetnik_issue:0 "The Chetnik Issue"
+#SER_chetnik_issue_desc:0 "For years, the Chetniks have been a complicated bunch. While they are considered illegal on paper, they have come in handy to keep the Partisans at bay. They aren't content with this however, and seek a more dominant role in the government."
+#SER_german_detachment:0 "The German Detachment"
+#SER_german_detachment_desc:0 "One of the few things keeping our nation together is a small detachment of German troops, positioned in important cities to maintain order."
+### Army ###
+
+
+
+### Air Force ###
+
+
+
+### Navy ###
+
+
+
+#### Politics ####
+
+
+#### FORIEGN POLICY ####
+
+
+
+#### Flags ####
+
+
+
+#### Tooltips ####
+
+
+
+#### Opinion Modifiers ####
+
+
+#### Events ####
+#twrserbianuprising.5.t:0 "Yugoslav Liberation of Croatia"
+#twrserbianuprising.5.d:0 "With Serbia secured, Yugoslavia must be reunited. The Ustashe regime has oppressed its people for long enough, and it is now time for Yugoslavians to embark on the great crusade for national liberation.\n\nIn the name of communism and freedom, Croatia must be liberated!"
+#twrserbianuprising.5.a:0 "Onwards to Zagreb!"
+#twrserbianuprising.6.t:0 "Yugoslav-Croatian War"
+#twrserbianuprising.6.d:0 "Inspired by the national liberation fever, the Yugoslavians have declared a surprise war against the Croatian regime, promising to liberate every inch of Yugoslavian soil.\n\nThe goal of this war is to entirely destroy the Ustashe, and to unify the former Yugoslav lands under the communist banner, with Croatia being the stepping stone of this process."
+#twrserbianuprising.6.a:0 "The Yugoslavians are coming back!"
+
+#twrserbia.1.t:0 "German Detachment Withdrawn"
+#twrserbia.1.d:0 "With the death of Hitler and the ensuing sudden instability within the German Reich, the German detachment in Serbia has, without much word, begun withdrawing back to Germany."
+#twrserbia.1.a:0 "Worrying"

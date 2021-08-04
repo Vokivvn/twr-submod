@@ -1,0 +1,533 @@
+
+	shared_focus = {
+	cancelable = no
+		id = GGP_The_Civil_Administration
+		icon = GFX_GER_Restart_Generalgovernment
+		cost = 7
+		x = 28
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Franks_Dictatorship
+		icon = GFX_GENERIC_business
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = GGP_The_Civil_Administration
+		}
+		relative_position_id = GGP_The_Civil_Administration
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Invite_the_Conglomerates
+		icon = GFX_GENERIC_elite_party
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Franks_Dictatorship
+		}
+		relative_position_id = GGP_Franks_Dictatorship
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Attract_German_Settlers
+		icon = GFX_GENERIC_minority_aimed_projects
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = GGP_The_Civil_Administration
+		}
+		relative_position_id = GGP_The_Civil_Administration
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Brave_New_World
+		icon = GFX_GER_Germany_Once_More
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Attract_German_Settlers
+		}
+		relative_position_id = GGP_Attract_German_Settlers
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Reform_the_Administration
+		icon = GFX_GER_reform_bill
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = GGP_Invite_the_Conglomerates
+		}
+		prerequisite = {
+			focus = GGP_Brave_New_World
+		}
+		relative_position_id = GGP_Invite_the_Conglomerates
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Establish_German_Colonial_Districts
+		icon = GFX_GENERIC_draw_borders
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Reform_the_Administration
+		}
+		relative_position_id = GGP_Reform_the_Administration
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Expand_the_Agriculture_Sectors
+		icon = GFX_GENERIC_agricultural_subsidies
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Establish_German_Colonial_Districts
+		}
+		relative_position_id = GGP_Establish_German_Colonial_Districts
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Establish_the_Polnische_Justizpolizei
+		icon = GFX_GENERIC_mobilize_police
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = GGP_Expand_the_Agriculture_Sectors
+		}
+		relative_position_id = GGP_Expand_the_Agriculture_Sectors
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_The_Native_Tax
+		icon = GFX_GENERIC_temp_tax
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Expand_the_Agriculture_Sectors
+		}
+		relative_position_id = GGP_Expand_the_Agriculture_Sectors
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Attract_Nordic_Settlers
+		icon = GFX_GENERIC_ARYAN
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = GGP_Expand_the_Agriculture_Sectors
+		}
+		relative_position_id = GGP_Expand_the_Agriculture_Sectors
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_German_Civil_War
+		icon = GFX_GER_revolution
+		cost = 7
+		x = 35
+		y = 0
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+		}
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Conscript_the_Security_Forces
+		icon = GFX_GER_populist_support
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = GGP_German_Civil_War
+		}
+		relative_position_id = GGP_German_Civil_War
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Support_the_Righful_Government
+		icon = GFX_focus_generic_support_the_left_right
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = GGP_Conscript_the_Security_Forces
+		}
+		mutually_exclusive = {
+			focus = GGP_Protect_Our_Neutrality
+			}
+		relative_position_id = GGP_Conscript_the_Security_Forces
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Protect_Our_Neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Conscript_the_Security_Forces
+		}
+		mutually_exclusive = {
+			focus = GGP_Support_the_Righful_Government
+			}
+		relative_position_id = GGP_Conscript_the_Security_Forces
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	shared_focus = {
+	cancelable = no
+		id = GGP_Empower_the_Government
+		icon = GFX_GENERIC_government_power
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = GGP_Support_the_Righful_Government
+			focus = GGP_Protect_Our_Neutrality
+		}
+		relative_position_id = GGP_Support_the_Righful_Government
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Maintain_Basic_Functions
+		icon = GFX_GENERIC_Cogs_For_Factory
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Empower_the_Government
+		}
+		relative_position_id = GGP_Empower_the_Government
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Combat_the_Polish_Resistance
+		icon = GFX_GENERIC_government_supression
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = GGP_German_Civil_War
+		}
+		relative_position_id = GGP_German_Civil_War
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Hold_Warschau
+		icon = GFX_GENERIC_Volunteer
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Combat_the_Polish_Resistance
+		}
+		relative_position_id = GGP_Combat_the_Polish_Resistance
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Fight_Fire_with_Fire
+		icon = GFX_GENERIC_kill_with_fire
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Hold_Warschau
+		}
+		relative_position_id = GGP_Hold_Warschau
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Promise_Death_to_Rebels
+		icon = GFX_GER_Theatre_of_Death
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = GGP_Fight_Fire_with_Fire
+		}
+		mutually_exclusive = {
+			focus = GGP_Promise_Polish_Autonomy
+			}
+		relative_position_id = GGP_Fight_Fire_with_Fire
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Virus_Warfare
+		icon = GFX_GENERIC_Chemical_Gas
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Promise_Death_to_Rebels
+		}
+		relative_position_id = GGP_Promise_Death_to_Rebels
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Promise_Polish_Autonomy
+		icon = GFX_focus_generic_polish_deal
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = GGP_Fight_Fire_with_Fire
+		}
+		mutually_exclusive = {
+			focus = GGP_Promise_Death_to_Rebels
+			}
+		relative_position_id = GGP_Fight_Fire_with_Fire
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_The_Polish_Volunteers
+		icon = GFX_GENERIC_recruitment
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = GGP_Promise_Polish_Autonomy
+		}
+		relative_position_id = GGP_Promise_Polish_Autonomy
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}
+	
+	shared_focus = {
+	cancelable = no
+		id = GGP_Our_Last_Stand
+		icon = GFX_GENERIC_conflict
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = GGP_Virus_Warfare
+			focus = GGP_The_Polish_Volunteers
+		}
+		relative_position_id = GGP_Virus_Warfare
+		ai_will_do = {
+			factor = 1
+		}
+		cost = 0
+		completion_reward = {
+			
+			
+		}
+		cost = 7
+	}

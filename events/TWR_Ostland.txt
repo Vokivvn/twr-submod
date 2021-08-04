@@ -1,0 +1,654 @@
+﻿#########################################################################
+# TWR Events : Ostland
+#########################################################################
+add_namespace = twrostland
+add_namespace = twrostlandcw
+
+country_event = {
+	id = twrostland.0
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.0"}
+	title = twrostland.0.t
+	desc = twrostland.0.d
+	picture = GFX_report_event_ostland_map
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrostland.0.a
+	}
+}
+
+country_event = {
+	id = twrostland.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.1"}
+	title = twrostland.1.t
+	desc = twrostland.1.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostland.1.a
+
+		ROS = {
+			#add_timed_idea = { idea = ROS_civil_unrest days = 95 }
+		}
+	}
+}
+
+country_event = {
+	id = twrostland.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.2"}
+	title = twrostland.2.t
+	desc = twrostland.2.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostland.2.a
+
+		ROS = {
+			country_event = { days = 1 id = twrostland.3 }
+		}
+	}
+
+	option = {
+		name = twrostland.2.b
+
+		ROS = {
+			country_event = { days = 1 id = twrostland.4 }
+		}
+	}
+}
+
+country_event = {
+	id = twrostland.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.3"}
+	title = twrostland.3.t
+	desc = twrostland.3.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostland.3.a
+	}
+}
+
+country_event = {
+	id = twrostland.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.4"}
+	title = twrostland.4.t
+	desc = twrostland.4.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostland.4.a
+	}
+}
+
+country_event = {
+	id = twrostland.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.5"}
+	title = twrostland.5.t
+	desc = twrostland.5.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostland.5.a
+		if = {
+			limit = {
+				12 = { owner = { tag = ROS } }
+			}
+			12 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = twrostland.5.b
+		if = {
+			limit = {
+				12 = { owner = { tag = ROS } }
+			}
+			12 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrostland.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.6"}
+	title = twrostland.6.t
+	desc = twrostland.6.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostland.6.a
+		if = {
+			limit = {
+				13 = { owner = { tag = ROS } }
+			}
+			13 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = twrostland.6.b
+		if = {
+			limit = {
+				13 = { owner = { tag = ROS } }
+			}
+			13 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrostland.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.7"}
+	title = twrostland.7.t
+	desc = twrostland.7.d
+	picture = GFX_report_event_soviet_army_greeted
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostland.7.a
+		if = {
+			limit = {
+				206 = { owner = { tag = ROS } }
+			}
+			206 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = twrostland.7.b
+		if = {
+			limit = {
+				206 = { owner = { tag = ROS } }
+			}
+			206 = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = twrostland.8
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event twrostland.8"
+	}
+	title = twrostland.8.t
+	desc = twrostland.8.d
+	picture = GFX_report_event_german_anti_nazis
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostland.8.a
+		kill_country_leader = yes
+	}
+}
+
+country_event = {
+	id = twrostlandcw.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event twrostlandcw.1"
+	}
+	title = twrostlandcw.1.t
+	desc = twrostlandcw.1.d
+	picture = GFX_report_event_baltic_revolt
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostlandcw.1.a
+		ai_chance = { factor = 0 }
+		hidden_effect = {
+		country_event = { id = twrostlandcw.3 days = 3 random = 300 }
+			LAT = {
+				change_tag_from = ROOT
+				transfer_state = 190
+				transfer_state = 13
+				transfer_state = 11
+				transfer_state = 805
+				add_state_core = 189
+				add_state_core = 11
+				add_state_core = 805
+				add_state_core = 13
+				add_state_core = 191
+				add_state_core = 190
+				set_capital = 189
+				set_province_controller = 9483
+				set_province_controller = 310
+				set_province_controller = 9221
+				set_province_controller = 6459
+				set_province_controller = 319
+				set_cosmetic_tag = BAL_REVOLT
+				load_oob = "LAT_REBELLION"
+				declare_war_on = {
+					target = ROS
+					type = annex_everything
+				}
+			}
+			ROS = {
+				set_state_controller = 190
+				set_province_controller = 9340
+				set_province_controller = 3152
+			}
+		}
+	}
+	option = {
+		name = twrostlandcw.1.b
+		ai_chance = { factor = 1 }
+		hidden_effect = {
+		country_event = { id = twrostlandcw.3 days = 3 random = 300 }
+			LAT = {
+				transfer_state = 190
+				transfer_state = 13
+				transfer_state = 11
+				transfer_state = 805
+				add_state_core = 189
+				add_state_core = 11
+				add_state_core = 805
+				add_state_core = 13
+				add_state_core = 191
+				add_state_core = 190
+				set_capital = 189
+				set_province_controller = 9483
+				set_province_controller = 310
+				set_province_controller = 9221
+				set_province_controller = 6459
+				set_province_controller = 319
+				set_cosmetic_tag = BAL_REVOLT
+				load_oob = "LAT_REBELLION"
+				declare_war_on = {
+					target = ROS
+					type = annex_everything
+				}
+			}
+			ROS = {
+				set_state_controller = 190
+				set_province_controller = 9340
+				set_province_controller = 3152
+			}
+		}
+	}
+}
+news_event = {
+	id = twrostlandcw.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostlandcw.2"}
+	title = twrostlandcw.2.t
+	desc = twrostlandcw.2.d
+	picture = GFX_news_event_baltic_rebellion
+	
+	major = yes
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostlandcw.2.a
+	}
+}
+
+country_event = {
+	id = twrostlandcw.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event twrostlandcw.3"
+	}
+	title = twrostlandcw.3.t
+	desc = twrostlandcw.3.d
+	picture = GFX_report_event_belarusian_revolt
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostlandcw.3.a
+		hidden_effect = {
+			BLR = {
+				transfer_state = 206
+				transfer_state = 204
+				transfer_state = 207
+				transfer_state = 96
+				transfer_state = 928
+				transfer_state = 95
+				load_oob = "BLR_REBELLION"
+				declare_war_on = {
+					target = ROS
+					type = annex_everything
+				}
+				change_tag_from = ROOT
+			}
+			news_event = { id = twrostlandcw.2 hours = 6 }
+			set_global_flag = OST_CIVIL_WAR
+		}
+	}
+
+	option = {
+		name = twrostlandcw.3.b
+		hidden_effect = {
+			BLR = {
+				transfer_state = 206
+				transfer_state = 204
+				transfer_state = 207
+				transfer_state = 96
+				transfer_state = 928
+				transfer_state = 95
+				load_oob = "BLR_REBELLION"
+				declare_war_on = {
+					target = ROS
+					type = annex_everything
+				}
+			}
+			news_event = { id = twrostlandcw.2 hours = 6 }
+			set_global_flag = OST_CIVIL_WAR
+		}
+	}
+}	
+country_event = {
+	id = twrostlandcw.4 #victory in ostland
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostlandcw.4"}
+	title = twrostlandcw.4.t
+	desc = twrostlandcw.4.d
+	picture = GFX_report_event_peoples_germany_victory
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrostlandcw.4.a
+		hidden_effect = {
+			LAT = {
+				transfer_state = 189
+				transfer_state = 11
+				transfer_state = 805
+				#transfer_state = 13
+				transfer_state = 190
+				transfer_state = 12
+				#transfer_state = 191
+				remove_ideas = RK_eastern_spring
+			}
+			BLR = {
+				transfer_state = 210
+				transfer_state = 263
+				transfer_state = 209
+				transfer_state = 208
+
+				transfer_state = 206
+				transfer_state = 204
+				transfer_state = 207
+				transfer_state = 96
+				transfer_state = 928
+				transfer_state = 95		
+				remove_ideas = RK_eastern_spring
+				country_event = { id = twrostlandcw.5 days = 7 }
+			}
+			if = {
+				limit = {
+					EST = {
+						exists = no
+					}
+					NOT = {
+						FIN = {
+							owns_state = 13
+						}
+					}
+				}
+				LAT = {
+					transfer_state = 13
+					transfer_state = 191
+				}
+			}
+		}
+	}
+}
+news_event = {
+	id = twrostlandcw.410
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostlandcw.2"}
+	title = twrostlandcw.410.t
+	desc = twrostlandcw.410.d
+	picture = GFX_news_event_nazi_announcment
+	
+	major = yes
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostlandcw.410.a
+	}
+}
+
+country_event = {
+	id = twrostlandcw.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event twrostlandcw.5"
+	}
+	title = twrostlandcw.5.t
+	desc = twrostlandcw.5.d
+	picture = GFX_report_event_belarusian_revolt
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = twrostlandcw.5.a #Only control Belarus
+		ai_chance = { 
+			factor = 60
+		}
+		add_stability = 0.15
+		hidden_effect = {
+			LAT = {
+				transfer_state = 210
+				transfer_state = 263
+				transfer_state = 209
+				transfer_state = 208
+				country_event = twrostlandcw.6
+			}
+		}
+	}
+	option = {
+		name = twrostlandcw.5.b #Soviet Belarus stands
+		ai_chance = { 
+			factor = 20
+		}
+		add_stability = -0.15
+	}
+	option = {
+		name = twrostlandcw.5.c #The Union Rises
+		ai_chance = { 
+			factor = 60
+		}
+		add_stability = -0.25
+		add_political_power = -200
+		set_politics = {
+			ruling_party = bolshevik_leninist
+		}
+		add_popularity = {
+			ideology = bolshevik_leninist
+			popularity = 0.7
+		}
+		set_cosmetic_tag = UNION_STATE_BLR
+		hidden_effect = {
+			BLR = {
+				add_state_core = 210
+				add_state_core = 263
+				add_state_core = 209
+				add_state_core = 208
+			}
+		}
+	}
+}	
+country_event = {
+	id = twrostlandcw.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostlandcw.6"}
+	title = twrostlandcw.6.t
+	desc = twrostlandcw.6.d
+	picture = GFX_report_event_peoples_germany_victory
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrostlandcw.6.a
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = twrostland.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrostland.0"}
+	title = twrostland.10.t
+	desc = twrostland.10.d
+	picture = GFX_report_event_peoples_germany_victory
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrostland.10.a
+		create_country_leader = {
+			name = "Alfred Rosenberg"
+			desc = "Alfred_Rosenberg_DESC"
+			picture = "Alfred_Rosenberg.dds"
+			expire = "1965.1.1"
+			ideology = national_socialism
+			traits = {
+
+			}
+		}
+	}
+	
+	option = {
+		name = twrostland.10.b
+		add_political_power = 50
+	}
+}

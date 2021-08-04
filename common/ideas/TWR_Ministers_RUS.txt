@@ -1,0 +1,435 @@
+ideas = {
+#################################################
+### Head of Government
+#################################################
+	Head_of_Government = {
+	RUS_HoG_Alexander_Lvovich_Kazembek = {
+			picture = RUS_Alexander_Lvovich_Kazembek
+			allowed = { tag = RUS }
+			available = {
+				PA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Alexander_Lvovich_Kazembek_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_PA 
+			HoG_Political_Protege
+			}
+		}
+		
+	RUS_HoG_Anatoly_Rogozhin = {
+			picture = RUS_Anatoly_Rogozhin
+			allowed = { tag = RUS }
+			available = {
+				PA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Anatoly_Rogozhin_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_PA 
+			HoG_Old_General
+			}
+		}
+		
+	RUS_HoG_Konstantin_Rodzaevsky = {
+			picture = RUS_Konstantin_Rodzaevsky
+			allowed = { tag = RUS }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Konstantin_Rodzaevsky_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_FA 
+			HoG_Silent_Workhorse
+			}
+		}
+			
+	RUS_HoG_Pavel_Zhigarev = {
+			picture = RUS_Pavel_Zhigarev
+			allowed = { tag = RUS }
+			available = {
+				SL_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Pavel_Zhigarev_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_SL
+			HoG_Old_Airmarshal
+			}
+		}
+		
+	RUS_HoG_Alexander_Galich = {
+			picture = RUS_Aleksandr_Galich
+			allowed = { tag = RUS }
+			available = {
+				SC_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Alexander_Galich_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_SC
+			HoG_Naive_Optimist
+			}
+		}
+}
+
+#################################################
+### Foreign Minister
+#################################################
+	Foreign_Minister = {
+	RUS_FM_Anna_Wolkoff = {
+			picture = RUS_Anna_Wolkoff
+			allowed = { tag = RUS }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Anna_Wolkoff_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_FA
+			FM_Fascist_Crusader
+			}
+		}
+		
+	RUS_FM_Oleg_Pantyukhov = {
+			picture = RUS_Oleg_Pantukhov
+			allowed = { tag = RUS }
+			available = {
+				PA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Oleg_Pantyukhov_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_PA
+			FM_Iron_Fisted_Brute
+			}
+		}
+		
+	RUS_FM_George_Vernadsky = {
+			picture = RUS_George_Vernadsky
+			allowed = { tag = RUS }
+			available = {
+				SC_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = George_Vernadsky_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_SC
+			FM_Biased_Intellectual
+			}
+		}
+}
+#################################################
+### Minister of Security
+#################################################
+	Minister_of_Security = {
+		
+	RUS_MoS_Konstantin_Rodzaevsky = {
+			picture = RUS_Konstantin_Rodzaevsky
+			allowed = { tag = RUS }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Konstantin_Rodzaevsky_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_FA
+			MoS_Master_Of_Propaganda
+			}
+		}
+		
+	RUS_MoS_Lev_Okhotin = {
+			picture = RUS_Lev_Okhotin
+			allowed = { tag = RUS }
+			available = {
+				FA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Lev_Okhotin_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_FA
+			MoS_Efficient_Sociopath
+			}
+		}
+		
+	RUS_MoS_Genrikh_Lyushkov = {
+			picture = RUS_Genrikh_Lyushkov
+			allowed = { tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Genrikh_Lyushkov_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_PA
+			MoS_Prince_Of_Terror
+			}
+		}
+		
+	RUS_MoS_Alexander_Orlov = {
+			picture = RUS_Alexander_Orlov
+			allowed = { tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Alexander_Orlov_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_PA
+			MoS_Secret_Police_Chief
+			}
+		}
+		
+}
+#################################################
+### Minister of Economy
+#################################################
+	Minister_of_Economy = {
+	RUS_AM_Felix_Yusupov = {
+			picture = RUS_Felix_Yusupov
+			allowed = { tag = RUS }
+			available = {
+				PA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Felix_Yusupov_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_PA
+			AM_Oil_Baron
+			}
+		}
+	
+	RUS_AM_Andrey_Vlasov = {
+			picture = RUS_Andrey_Vlasov
+			allowed = { tag = RUS }
+			available = {
+				PA_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Andrey_Vlasov_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_PA
+			AM_Infantry_Proponent
+			}
+		}
+		
+	RUS_AM_Alexander_Galich = {
+			picture = RUS_Aleksandr_Galich
+			allowed = { tag = RUS }
+			available = {
+				SC_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Alexander_Galich_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_SC
+			AM_Orthodox_Economist
+			}
+		}
+		
+	RUS_AM_Wassily_Leontief = {
+			picture = RUS_Wassily_Leontief
+			allowed = { tag = RUS }
+			available = {
+				AP_Minister_Allowed = yes
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Wassily_Leontief_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			ideology_AP
+			AM_Keynesian_Economy
+			}
+		}
+}
+#################################################
+### Chief of Staff
+#################################################
+Chief_of_Staff = {
+	RUS_CoStaff_Anatoly_Rogozhin = {
+			picture = RUS_Anatoly_Rogozhin
+			allowed = { tag = RUS }
+			ledger = army
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Anatoly_Rogozhin_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			CoStaff_School_Of_Manoeuvre
+			
+			}
+		}
+		
+	RUS_CoStaff_Grigory_Mikhaylovich_Semyonov = {
+			picture = RUS_Grigory_Semyonov
+			allowed = { tag = RUS }
+			ledger = army
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Grigory_Mikhaylovich_Semyonov_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			CoStaff_School_Of_Mass_Combat
+			
+			}
+		}
+}
+
+#################################################
+### Chief of Army
+#################################################
+
+	Chief_of_Army = {
+	RUS_CoArmy_Oleg_Pantyukhov = {
+			picture = RUS_Oleg_Pantukhov
+			allowed = { tag = RUS }
+			ledger = army
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Oleg_Pantyukhov_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			CoArmy_Commando_Doctrine_Army
+				
+			}
+		}
+		
+	RUS_CoArmy_Andrey_Vlasov = {
+			picture = RUS_Andrey_Vlasov
+			allowed = { tag = RUS }
+			ledger = army
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Andrey_Vlasov_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			CoArmy_Guerilla_Warfare_Doctrine
+				
+			}
+		}
+}
+
+#################################################
+### Chief of Navy
+#################################################
+	Chief_of_Navy = {
+	RUS_CoNavy_Nikolai_Kolomeitsev = {
+			picture = RUS_Nikolai_Kolomeitsov
+			allowed = { tag = RUS }
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Nikolai_Kolomeitsev_unavailable }
+					}
+			}
+			ledger = navy
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			CoNavy_Old_School_Admiral
+			
+			}
+		}
+}
+#################################################
+### Chief of Airforce
+#################################################	
+
+Chief_of_Airforce = {
+	RUS_CoAir_Pavel_Zhigarev = {
+			picture = RUS_Pavel_Zhigarev
+			allowed = { tag = RUS }
+			ledger = air
+			available = {
+				custom_trigger_tooltip = {
+					tooltip = minister_able_and_can_be_selected
+					NOT = { has_country_flag = Pavel_Zhigarev_unavailable }
+					}
+			}
+			cost = 150
+			removal_cost = 10
+			traits = { 
+			CoAir_Carpet_Bombing_Doctrine
+			}
+		}
+}
+
+}

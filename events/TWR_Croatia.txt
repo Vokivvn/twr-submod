@@ -1,0 +1,2243 @@
+﻿add_namespace = twrcroatia
+add_namespace = twr_cro_downfall
+add_namespace = twr_cro_flavour
+
+country_event = { 
+	id = twrcroatia.1 #Intro
+	title = twrcroatia.1.t
+	desc = twrcroatia.1.d
+	picture = GFX_report_event_croatia_intro
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = twrcroatia.1.a
+	}
+}
+
+country_event = { # The Zagreb Uprising
+	id = twrcroatia.2
+	title = twrcroatia.2.t
+	desc = twrcroatia.2.d
+	picture = GFX_report_event_croatia_destroyed_church
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = twrcroatia.2.a
+		add_stability = -0.30
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Andrija Artuković"
+			desc = "ANDRIJA_ARTUKOVIC_DESC"
+			picture = "Andrija_Artukovic.dds"
+			expire = "1965.1.1"
+			ideology = ultranationalism
+			traits = {}
+		}
+		custom_effect_tooltip = CRO_Chaos_in_Zagreb_tree_load_tt
+		load_focus_tree = CRO_Bosnian_Uprising_Tree
+		hidden_effect = {
+			news_event = { id = twrnews.170 }
+		}
+	}
+}
+
+country_event = { # Parliamentary Action
+	id = twrcroatia.3
+	title = twrcroatia.3.t
+	desc = twrcroatia.3.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = twrcroatia.3.a
+		set_politics = {
+			ruling_party = paternal_autocrat
+			last_election = "1935.6.9"
+			election_frequency = 12
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = paternal_autocrat
+			popularity = 0.51
+		}
+		load_focus_tree = CRO_HSS_Tree
+		complete_national_focus = CRO_HSS_The_Peasants_Plot
+	}
+}
+
+country_event = { # Executions in Zagreb
+	id = twrcroatia.4
+	title = twrcroatia.4.t
+	desc = twrcroatia.4.d
+	picture = GFX_report_event_ustase_executions
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = twrcroatia.4.a
+	}
+}
+
+country_event = { # Germany - Croatia Requests Military Shipments
+	id = twrcroatia.5
+	title = twrcroatia.5.t
+	desc = twrcroatia.5.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = twrcroatia.5.a
+		ai_chance = {
+			base = 50
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 500
+			target = CRO
+		}
+		CRO = {
+			country_event = {
+				id = twrcroatia.6
+				hours = 7
+			}
+		}
+	}
+	option = { # No
+		name = twrcroatia.5.b
+		ai_chance = {
+			base = 50
+		}
+		CRO = {
+			country_event = {
+				id = twrcroatia.7
+				hours = 7
+			}
+		}
+	}
+}
+
+country_event = { # Germany Agrees to Send Aid
+	id = twrcroatia.6
+	title = twrcroatia.6.t
+	desc = twrcroatia.6.d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.6.a
+		custom_effect_tooltip = CRO_receive_guns_GER_tt
+	}
+}
+
+country_event = { # Germany Refuses to Send Aid
+	id = twrcroatia.7
+	title = twrcroatia.7.t
+	desc = twrcroatia.7.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.7.a
+	}
+}
+
+country_event = { # Village Fire
+	id = twrcroatia.8
+	title = twrcroatia.8.t
+	desc = twrcroatia.8.d
+	picture = GFX_report_event_burning
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.8.a
+	}
+}
+
+country_event = { # Exile
+	id = twrcroatia.9
+	title = twrcroatia.9.t
+	desc = twrcroatia.9.d
+	picture = GFX_report_event_exiled_serbs
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.9.a
+	}
+}
+
+country_event = { # Our Father
+	id = twrcroatia.10
+	title = twrcroatia.10.t
+	desc = twrcroatia.10.d
+	picture = GFX_report_event_conversion_of_jews
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.10.a
+	}
+}
+
+country_event = { # Moving Forwards
+	id = twrcroatia.11
+	title = twrcroatia.11.t
+	desc = twrcroatia.11.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.11.a
+		add_war_support = 0.05
+		add_stability = 0.05
+	}
+}
+
+country_event = { # The House
+	id = twrcroatia.12
+	title = twrcroatia.12.t
+	desc = twrcroatia.12.d
+	picture = GFX_report_event_killed_family
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.12.a
+	}
+}
+
+country_event = { # Trial of Lorkovic
+	id = twrcroatia.13
+	title = twrcroatia.13.t
+	desc = twrcroatia.13.d
+	picture = GFX_report_event_lorkovic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.13.a
+		random_list = {
+			10 = {
+				country_event = {
+					id = twrcroatia.14
+					hours = 7
+				}
+			}
+			90 = {
+				country_event = {
+					id = twrcroatia.15
+					hours = 7
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Trial of Lorkovic - Guilty
+	id = twrcroatia.14
+	title = twrcroatia.14.t
+	desc = twrcroatia.14.d
+	picture = GFX_report_event_lorkovic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.14.a
+		set_country_flag = CRO_Lorkovic_Dead
+	}
+}
+
+country_event = { # Trial of Lorkovic - Not Guilty
+	id = twrcroatia.15
+	title = twrcroatia.15.t
+	desc = twrcroatia.15.d
+	picture = GFX_report_event_lorkovic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.15.a
+	}
+}
+
+country_event = { # Parliament Meets
+	id = twrcroatia.16
+	title = twrcroatia.16.t
+	desc = twrcroatia.16.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.16.a
+		add_stability = -0.15
+		complete_national_focus = CRO_Summon_Parliament
+	}
+}
+
+country_event = { # Rioting in Sarajevo
+	id = twrcroatia.17
+	title = twrcroatia.17.t
+	desc = twrcroatia.17.d
+	picture = GFX_report_event_sarajevo
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.17.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = twrcroatia.18
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = { # Bosnian MPs Pick Sides
+	id = twrcroatia.18
+	title = twrcroatia.18.t
+	desc = twrcroatia.18.d
+	picture = GFX_report_event_bosnian_ss
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.18.a
+		add_stability = -0.05
+		hidden_effect = {
+			country_event = {
+				id = twrcroatia.19
+				days = 3
+			}
+		}
+	}
+}
+
+country_event = { # Bosnia Declares Independence
+	id = twrcroatia.19
+	title = twrcroatia.19.t
+	desc = twrcroatia.19.d
+	picture = GFX_report_event_bosnian_revolt
+	immediate = {
+		hidden_effect = {
+			BOS = {
+				transfer_state = 104
+				transfer_state = 981
+				transfer_state = 982
+				load_oob = "BOS_REVOLT"
+			}
+			104 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_i }
+					province = { id = 3985 }
+					province = { id = 6614 }
+					province = { id = 6799 }
+					province = { id = 6957 }
+					province = { id = 9586 }
+					province = { id = 9922 }
+					province = { id = 11872 }
+					province = { id = 11899 }
+				}
+			}
+			981 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_i }
+					province = { id = 6619 }
+					province = { id = 6983 }
+					province = { id = 9588 }
+					province = { id = 9591 }
+					province = { id = 11572 }
+					province = { id = 11574 }
+				}
+			}
+			982 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_i }
+					province = { id = 606 }
+					province = { id = 982 }
+					province = { id = 11741 }
+				}
+			}
+			if = {
+				limit = {
+					is_debug = yes
+				}
+				BOS = {
+					create_country_leader = {
+						name = "Joker Omčo"
+						desc = "Crazy_Hamburger_Desc"
+						picture = "crazy_hamburger.dds"
+						expire = "1965.1.1"
+						ideology = military_dictatorshipz
+						traits = {
+							#
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.19.a
+		declare_war_on = {
+			target = BOS
+			type = annex_everything
+		}
+		hidden_effect = {
+			complete_national_focus = CRO_The_Bosnian_Rebellion
+		}
+		set_country_flag = CRO_Bosnian_Uprising_flag
+		hidden_effect = {
+			news_event = { id = twrnews.171 }
+			if = {
+				limit = {
+					ITA = { has_government = fascist }
+				}
+				ITA = {
+					country_event = { days = 6 id = twrcroatia.60 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { # What Was Once a Village
+	id = twrcroatia.20
+	title = twrcroatia.20.t
+	desc = twrcroatia.20.d
+	picture = GFX_report_event_killed_family2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.20.a
+	}
+}
+
+country_event = { # Partisan Execution
+	id = twrcroatia.21
+	title = twrcroatia.21.t
+	desc = twrcroatia.21.d
+	picture = GFX_report_event_ustase_execution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.21.a
+	}
+}
+
+country_event = { # Mountain Execution
+	id = twrcroatia.22
+	title = twrcroatia.22.t
+	desc = twrcroatia.22.d
+	picture = GFX_report_event_ustase_execution2
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.22.a
+	}
+}
+
+country_event = { # Falling Down
+	id = twrcroatia.23
+	title = twrcroatia.23.t
+	desc = twrcroatia.23.d
+	picture = GFX_report_event_bosnian_mountain
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.23.a
+	}
+}
+
+country_event = { # The Headless Imam
+	id = twrcroatia.24
+	title = twrcroatia.24.t
+	desc = twrcroatia.24.d
+	picture = GFX_report_event_ustase_holding_a_head
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.24.a
+	}
+}
+
+country_event = { # Searching
+	id = twrcroatia.25
+	title = twrcroatia.25.t
+	desc = twrcroatia.25.d
+	picture = GFX_report_event_ustase_execution3
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.25.a
+	}
+}
+
+country_event = { # Arms From Elsewhere
+	id = twrcroatia.26
+	title = twrcroatia.26.t
+	desc = twrcroatia.26.d
+	picture = GFX_report_event_generic_weapon_cache
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.26.a
+	}
+}
+
+country_event = { # Propaganda of the Regime
+	id = twrcroatia.27
+	title = twrcroatia.27.t
+	desc = twrcroatia.27.d
+	picture = GFX_report_event_bosnian_ss_propagand
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.27.a
+	}
+}
+
+country_event = { # Bombers
+	id = twrcroatia.28
+	title = twrcroatia.28.t
+	desc = twrcroatia.28.d
+	picture = GFX_report_event_bomber
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.28.a
+	}
+}
+
+country_event = { # Defeat in Bosnia
+	id = twrcroatia.29
+	title = twrcroatia.29.t
+	desc = twrcroatia.29.d
+	picture = GFX_report_event_bosnian_revolt
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.29.a
+		hidden_effect = {
+			IF = {
+				limit = {
+					NOT = {
+						has_country_flag = CRO_Lorkovic_Dead
+					}
+				}
+				country_event = {
+					id = twrcroatia.3
+					days = 3
+				}
+			}
+			else = {
+				load_focus_tree = CRO_Artukovic_Tree
+			}
+		}
+	}
+}
+
+country_event = { # Victory in Bosnia
+	id = twrcroatia.30
+	title = twrcroatia.30.t
+	desc = twrcroatia.30.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.30.a
+		hidden_effect = {
+			104 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 3985 }
+					province = { id = 6614 }
+					province = { id = 6799 }
+					province = { id = 6957 }
+					province = { id = 9586 }
+					province = { id = 9922 }
+					province = { id = 11872 }
+					province = { id = 11899 }
+				}
+			}
+			981 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 6619 }
+					province = { id = 6983 }
+					province = { id = 9588 }
+					province = { id = 9591 }
+					province = { id = 11572 }
+					province = { id = 11574 }
+				}
+			}
+			982 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 606 }
+					province = { id = 982 }
+					province = { id = 11741 }
+				}
+			}
+			IF = {
+				limit = {
+					has_country_flag = CRO_HSS_coup_will_happen_flag
+				}
+				country_event = {
+					id = twrcroatia.3
+					days = 3
+				}
+			}
+			else = {
+				load_focus_tree = CRO_Artukovic_Tree
+				complete_national_focus = CRO_Artukovic_The_Poglavniks_Legacy
+			}
+		}
+	}
+}
+
+country_event = { # Stepniac's Blessing
+	id = twrcroatia.31
+	title = twrcroatia.31.t
+	desc = twrcroatia.31.d
+	picture = GFX_report_event_stepinac
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.31.a
+	}
+}
+
+country_event = { # The Bosnian Issue
+	id = twrcroatia.32
+	title = twrcroatia.32.t
+	desc = twrcroatia.32.d
+	picture = GFX_report_event_bosnian_mountain
+	
+	is_triggered_only = yes
+	
+	option = { # Abolish it
+		name = twrcroatia.32.a
+		hidden_effect = {
+			104 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 3985 }
+					province = { id = 6614 }
+					province = { id = 6799 }
+					province = { id = 6957 }
+					province = { id = 9586 }
+					province = { id = 9922 }
+					province = { id = 11872 }
+					province = { id = 11899 }
+				}
+			}
+			981 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 6619 }
+					province = { id = 6983 }
+					province = { id = 9588 }
+					province = { id = 9591 }
+					province = { id = 11572 }
+					province = { id = 11574 }
+				}
+			}
+			982 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 606 }
+					province = { id = 982 }
+					province = { id = 11741 }
+				}
+			}
+		}
+	}
+	option = { # Keep it around
+		name = twrcroatia.32.b
+		hidden_effect = {
+			104 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 3985 }
+					province = { id = 6614 }
+					province = { id = 6799 }
+					province = { id = 6957 }
+					province = { id = 9586 }
+					province = { id = 9922 }
+					province = { id = 11872 }
+					province = { id = 11899 }
+				}
+			}
+			981 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 6619 }
+					province = { id = 6983 }
+					province = { id = 9588 }
+					province = { id = 9591 }
+					province = { id = 11572 }
+					province = { id = 11574 }
+				}
+			}
+			982 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_ii }
+					province = { id = 606 }
+					province = { id = 982 }
+					province = { id = 11741 }
+				}
+			}
+			104 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_iii }
+					province = { id = 3985 }
+					province = { id = 6614 }
+					province = { id = 6799 }
+					province = { id = 6957 }
+					province = { id = 9586 }
+					province = { id = 9922 }
+					province = { id = 11872 }
+					province = { id = 11899 }
+				}
+			}
+			981 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_iii }
+					province = { id = 6619 }
+					province = { id = 6983 }
+					province = { id = 9588 }
+					province = { id = 9591 }
+					province = { id = 11572 }
+					province = { id = 11574 }
+				}
+			}
+			982 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_iii }
+					province = { id = 606 }
+					province = { id = 982 }
+					province = { id = 11741 }
+				}
+			}
+		}
+	}
+}
+
+country_event = { # The Power Struggle
+	id = twrcroatia.33
+	title = twrcroatia.33.t
+	desc = twrcroatia.33.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.33.a
+		set_country_flag = CRO_hss_power_struggle_flag
+	}
+}
+
+country_event = { # Choosing a Cabinet
+	id = twrcroatia.34
+	title = twrcroatia.34.t
+	desc = twrcroatia.34.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = { # Remove the worst offenders
+		name = twrcroatia.34.a
+		add_to_variable = { CRO_fash_support = 1 }
+	}
+	option = { # Bring in democratic reformers
+		name = twrcroatia.34.b
+		add_to_variable = { CRO_hss_support = 1 }
+	}
+}
+
+country_event = { # The Matters of Money
+	id = twrcroatia.35
+	title = twrcroatia.35.t
+	desc = twrcroatia.35.d
+	picture = GFX_report_event_banks_america
+	
+	is_triggered_only = yes
+	
+	option = { # Corporatism is king
+		name = twrcroatia.35.a
+		add_to_variable = { CRO_fash_support = 1 }
+	}
+	option = { # Laissez-faire capitalism time
+		name = twrcroatia.35.b
+		add_to_variable = { CRO_hss_support = 1 }
+	}
+}
+
+country_event = { # Dreams of a Free Bosnia
+	id = twrcroatia.36
+	title = twrcroatia.36.t
+	desc = twrcroatia.36.d
+	picture = GFX_report_event_bosnian_mountain
+	
+	is_triggered_only = yes
+	
+	option = { # Install a new leader
+		name = twrcroatia.36.a
+		add_to_variable = { CRO_fash_support = 1 }
+		hidden_effect = {
+			104 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_i }
+					province = { id = 3985 }
+					province = { id = 6614 }
+					province = { id = 6799 }
+					province = { id = 6957 }
+					province = { id = 9586 }
+					province = { id = 9922 }
+					province = { id = 11872 }
+					province = { id = 11899 }
+				}
+			}
+			981 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_i }
+					province = { id = 6619 }
+					province = { id = 6983 }
+					province = { id = 9588 }
+					province = { id = 9591 }
+					province = { id = 11572 }
+					province = { id = 11574 }
+				}
+			}
+			982 = {
+				remove_province_modifier = {
+					static_modifiers = { bosnia_i }
+					province = { id = 606 }
+					province = { id = 982 }
+					province = { id = 11741 }
+				}
+			}
+			104 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_iv }
+					province = { id = 3985 }
+					province = { id = 6614 }
+					province = { id = 6799 }
+					province = { id = 6957 }
+					province = { id = 9586 }
+					province = { id = 9922 }
+					province = { id = 11872 }
+					province = { id = 11899 }
+				}
+			}
+			981 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_iv }
+					province = { id = 6619 }
+					province = { id = 6983 }
+					province = { id = 9588 }
+					province = { id = 9591 }
+					province = { id = 11572 }
+					province = { id = 11574 }
+				}
+			}
+			982 = {
+				add_province_modifier = {
+					static_modifiers = { bosnia_iv }
+					province = { id = 606 }
+					province = { id = 982 }
+					province = { id = 11741 }
+				}
+			}
+		}
+	}
+	option = { # Free Bosnia
+		name = twrcroatia.36.b
+		add_to_variable = { CRO_hss_support = 1 }
+		BOS = {
+			transfer_state = 104
+			transfer_state = 981
+			transfer_state = 982
+		}
+	}
+}
+
+country_event = { # The Race Laws
+	id = twrcroatia.37
+	title = twrcroatia.37.t
+	desc = twrcroatia.37.d
+	picture = GFX_report_event_yugoslav_people
+	
+	is_triggered_only = yes
+	
+	option = { # Abolish them
+		name = twrcroatia.37.a
+		add_to_variable = { CRO_hss_support = 1 }
+	}
+	option = { # Amend them
+		name = twrcroatia.37.b
+		add_to_variable = { CRO_fash_support = 1 }
+	}
+}
+
+country_event = { # The Camps
+	id = twrcroatia.38
+	title = twrcroatia.38.t
+	desc = twrcroatia.38.d
+	picture = GFX_report_event_ustasa_camp
+	
+	is_triggered_only = yes
+	
+	option = { # Close them
+		name = twrcroatia.38.a
+		add_to_variable = { CRO_hss_support = 1 }
+	}
+	option = { # Repurpose them
+		name = twrcroatia.38.b
+		add_to_variable = { CRO_fash_support = 1 }
+	}
+}
+
+country_event = { # Zagreb Nights
+	id = twrcroatia.39
+	title = twrcroatia.39.t
+	desc = twrcroatia.39.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.39.a
+		custom_effect_tooltip = CRO_hss_coup_attempt_tt
+		hidden_effect = {
+			IF = {
+				limit = {
+					check_variable = { CRO_hss_support > CRO_fash_support }
+				}
+				country_event = {
+					id = twrcroatia.40
+					days = 1
+				}
+			}
+			else = {
+				country_event = {
+					id = twrcroatia.41
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # The Shining Sun
+	id = twrcroatia.40
+	title = twrcroatia.40.t
+	desc = twrcroatia.40.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.40.a
+		complete_national_focus = CRO_HSS_Dalmatian_Democracy
+	}
+}
+
+country_event = { # The Plot Fails!
+	id = twrcroatia.41
+	title = twrcroatia.41.t
+	desc = twrcroatia.41.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.41.a
+		complete_national_focus = CRO_HSS_Formalise_the_Duumvirate
+	}
+}
+
+country_event = { # Italy/USA - Croatia Wants to Join Faction
+	id = twrcroatia.42
+	title = twrcroatia.42.t
+	desc = twrcroatia.42.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.42.a
+		add_to_faction = CRO
+	}
+}
+
+country_event = { # Blessings From the Church
+	id = twrcroatia.43
+	title = twrcroatia.43.t
+	desc = twrcroatia.43.d
+	picture = GFX_report_event_stepinac
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.43.a
+		add_stability = 0.05
+	}
+}
+
+country_event = { # Britain - Croatia Requests Economic Assistance
+	id = twrcroatia.44
+	title = twrcroatia.44.t
+	desc = twrcroatia.44.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = { # Sure
+		name = twrcroatia.44.a
+		CRO = {
+			country_event = {
+				id = twrcroatia.45
+				hours = 7
+			}
+		}
+	}
+	option = { # No
+		name = twrcroatia.44.b
+		CRO = {
+			country_event = {
+				id = twrcroatia.46
+				hours = 7
+			}
+		}
+	}
+}
+
+country_event = { # Britain Accepts
+	id = twrcroatia.45
+	title = twrcroatia.45.t
+	desc = twrcroatia.45.d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.45.a
+	}
+}
+
+country_event = { # Britain Declines
+	id = twrcroatia.46
+	title = twrcroatia.46.t
+	desc = twrcroatia.46.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.46.a
+	}
+}
+
+country_event = { # The Crowning of Tomislav II
+	id = twrcroatia.47
+	title = twrcroatia.47.t
+	desc = twrcroatia.47.d
+	picture = GFX_report_event_tomislav
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.47.a
+		create_country_leader = {
+			name = "Tomislav II"
+			desc = "TOMISLAV_II_DESC"
+			picture = "Tomislav_II.dds"
+			expire = "1965.1.1"
+			ideology = monarchism
+		}
+	}
+}
+
+country_event = { # Il Duce in Split
+	id = twrcroatia.48
+	title = twrcroatia.48.t
+	desc = twrcroatia.48.d
+	picture = GFX_report_event_mussolini
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.48.a
+		swap_ideas = {
+			remove_idea = CRO_Illyrian_Trade_idea
+			add_idea = CRO_Illyrian_Trade_1_idea
+		}
+	}
+}
+
+country_event = { # Italy - Croatia Requests Greater Autonomy
+	id = twrcroatia.49
+	title = twrcroatia.49.t
+	desc = twrcroatia.49.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = { # okay
+		name = twrcroatia.49.a
+		IF = {
+			limit = {
+				has_dlc = "Together for Victory"
+			}
+			set_autonomy = {
+				target = CRO
+				autonomy_state = autonomy_free
+			}
+			else = {
+				end_puppet = CRO
+			}
+		}
+		CRO = {
+			country_event = {
+				id = twrcroatia.50
+				hours = 7
+			}
+		}
+	}
+	option = { # no
+		name = twrcroatia.49.b
+		CRO = {
+			country_event = {
+				id = twrcroatia.51
+				hours = 7
+			}
+		}
+	}
+}
+
+country_event = { # Italy Grants us Further Autonomy
+	id = twrcroatia.50
+	title = twrcroatia.50.t
+	desc = twrcroatia.50.d
+	picture = GFX_report_event_generic_handshake
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.50.a
+		IF = {
+			limit = {
+				NOT = { has_dlc = "Together for Victory" }
+			}
+			add_stability = 0.05
+		}
+	}
+}
+
+country_event = { # Italy Refuses Further Autonomy
+	id = twrcroatia.51
+	title = twrcroatia.51.t
+	desc = twrcroatia.51.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.51.a
+	}
+}
+
+country_event = { # Italy - Croatia Requests Return of Zara
+	id = twrcroatia.52
+	title = twrcroatia.52.t
+	desc = twrcroatia.52.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = { # ok
+		name = twrcroatia.52.a
+		CRO = {
+			country_event = {
+				days = 1 id = twrcroatia.53
+			}
+		}
+	}
+	option = { # no
+		name = twrcroatia.52.b
+		CRO = {
+			country_event = {
+				days = 1 id = twrcroatia.54
+			}
+		}
+	}
+}
+
+country_event = { # Italy Cedes Zara
+	id = twrcroatia.53
+	title = twrcroatia.53.t
+	desc = twrcroatia.53.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.53.a
+		transfer_state = 163
+		transfer_state = 813
+		transfer_state = 815
+	}
+}
+
+country_event = { # Italy Refuses to Return Zara
+	id = twrcroatia.54
+	title = twrcroatia.54.t
+	desc = twrcroatia.54.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.54.a
+	}
+}
+
+country_event = { # Establishment of the Kingdom of Croatia
+	id = twrcroatia.55
+	title = twrcroatia.55.t
+	desc = twrcroatia.55.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = twrcroatia.55.a
+		white_peace = ITA
+		add_ideas = {
+			CRO_Low_Legitimacy_idea
+			CRO_Ustashe_Resistance_idea
+			CRO_End_of_Monstrosity_idea
+		}
+		ITA = { puppet = CRO }
+		set_cosmetic_tag = CRO_kingdom
+		custom_effect_tooltip = CRO_monarchy_established_tt
+		hidden_effect = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+				last_election = "1935.6.9"
+				election_frequency = 12
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.60
+			}
+			create_country_leader = {
+				name = "Regency"
+				desc = "CROATIAN_REGENCY_DESC"
+				picture = "Vacant_Crown.dds"
+				expire = "1965.1.1"
+				ideology = monarchism
+				traits = {}
+			}
+			load_focus_tree = CRO_Kingdom_Tree
+			complete_national_focus = CRO_Kingdom_As_Rome_Commands
+			remove_ideas = {
+				CRO_german_funding_for_supression
+				CRO_dream_of_a_greater_croatia
+				CRO_italian_influence
+				CRO_Economic_Depression_idea
+				CRO_Divided_Home_Guard_idea
+				CRO_Italian_Competition
+				CRO_Against_Italy
+				CRO_Unstable_Government_idea
+				CRO_Unstable_Government_1_idea
+				CRO_No_More_German_Funding
+				CRO_One_Last_Offensive_idea
+				CRO_The_Croatian_Terror_idea
+				CRO_Slash_and_Burn_idea
+				CRO_No_Mercy_for_Partisans_idea
+				CRO_Roaming_Pacification_Battalions_idea
+				CRO_The_Scapegoat_idea
+				CRO_Indiscriminate_Bombing_Campaigns_idea
+				CRO_Indiscriminate_Bombing_Campaigns_BOS_idea
+				CRO_Purged_Home_Guard_idea
+				CRO_Purged_Government_idea
+				CRO_Everyone_Must_Do_Their_Part_idea
+				CRO_German_Trade_idea
+				CRO_Wehrmacht_Advisors_idea
+				CRO_The_Master_Race_Arrives_idea
+				CRO_The_People_are_Fed_idea
+				CRO_Defeat_at_Srem_idea
+			}
+			country_lock_all_division_template = no
+			ITA = {
+				country_event = {
+					id = twrcroatia.57
+				}
+			}
+			news_event = { id = twrnews.174 }
+		}
+	}
+}
+
+country_event = { # Italy - Victory in Croatia
+	id = twrcroatia.56
+	title = twrcroatia.56.t
+	desc = twrcroatia.56.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.56.a
+	}
+}
+
+country_event = { # Italy - Croatia Sues for Peace
+	id = twrcroatia.57
+	title = twrcroatia.57.t
+	desc = twrcroatia.57.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = { # accept
+		name = twrcroatia.57.a
+		CRO = {
+			country_event = {
+				id = twrcroatia.58
+				hours = 4
+			}
+		}
+	}
+	option = { # refuse
+		name = twrcroatia.57.b
+		CRO = {
+			country_event = {
+				id = twrcroatia.59
+				hours = 4
+			}
+		}
+	}
+}
+
+country_event = { # Italy Accepts Our Peace Terms
+	id = twrcroatia.58
+	title = twrcroatia.58.t
+	desc = twrcroatia.58.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.58.a
+		IF = {
+			limit = {
+				controls_state = 163
+			}
+			transfer_state = 163
+		}
+		IF = {
+			limit = {
+				controls_state = 813
+			}
+			transfer_state = 813
+		}
+		IF = {
+			limit = {
+				controls_state = 815
+			}
+			transfer_state = 815
+		}
+	}
+}
+
+country_event = { # Italy Refuses Our Peace Terms
+	id = twrcroatia.59
+	title = twrcroatia.59.t
+	desc = twrcroatia.59.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.59.a
+	}
+}
+
+country_event = { # Italy - Bosnian War of Independence
+	id = twrcroatia.60
+	title = twrcroatia.60.t
+	desc = twrcroatia.60.d
+	picture = GFX_report_event_bosnian_revolt
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.60.a
+		ai_chance = {
+			base = 100
+		}
+		CRO = {
+			country_event = {
+				days = 2 id = twrcroatia.61
+			}
+		}
+	}
+	
+	option = { #Don't intervene
+		name = twrcroatia.60.b
+		ai_chance = {
+			base = 0
+		}
+		add_political_power = -60
+	}
+}
+
+country_event = { # Croatia - Italian Proposal
+	id = twrcroatia.61
+	title = twrcroatia.61.t
+	desc = twrcroatia.61.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #ok
+		name = twrcroatia.61.a
+		ai_chance = {
+			base = 28
+		}
+		set_cosmetic_tag = CRO_kingdom
+		add_ideas = {
+			CRO_Low_Legitimacy_idea
+			CRO_Ustashe_Resistance_idea
+			CRO_End_of_Monstrosity_idea
+		}
+		ITA = {
+			puppet = CRO
+			declare_war_on = {
+				target = BOS
+				type = annex_everything
+			}
+		}
+		custom_effect_tooltip = CRO_monarchy_established_tt
+		hidden_effect = {
+			set_politics = {
+				ruling_party = paternal_autocrat
+				last_election = "1935.6.9"
+				election_frequency = 12
+				elections_allowed = no
+			}
+			create_country_leader = {
+				name = "Regency"
+				desc = "CROATIAN_REGENCY_DESC"
+				picture = "Vacant_Crown.dds"
+				expire = "1965.1.1"
+				ideology = monarchism
+				traits = {}
+			}
+			remove_ideas = {
+				CRO_german_funding_for_supression
+				CRO_dream_of_a_greater_croatia
+				CRO_italian_influence
+				CRO_Economic_Depression_idea
+				CRO_Divided_Home_Guard_idea
+				CRO_Italian_Competition
+				CRO_Against_Italy
+				CRO_Unstable_Government_idea
+				CRO_Unstable_Government_1_idea
+				CRO_No_More_German_Funding
+				CRO_One_Last_Offensive_idea
+				CRO_The_Croatian_Terror_idea
+				CRO_Slash_and_Burn_idea
+				CRO_No_Mercy_for_Partisans_idea
+				CRO_Roaming_Pacification_Battalions_idea
+				CRO_The_Scapegoat_idea
+				CRO_Indiscriminate_Bombing_Campaigns_idea
+				CRO_Indiscriminate_Bombing_Campaigns_BOS_idea
+				CRO_Purged_Home_Guard_idea
+				CRO_Purged_Government_idea
+				CRO_Everyone_Must_Do_Their_Part_idea
+				CRO_German_Trade_idea
+				CRO_Wehrmacht_Advisors_idea
+				CRO_The_Master_Race_Arrives_idea
+				CRO_The_People_are_Fed_idea
+				CRO_Defeat_at_Srem_idea
+			}
+			country_lock_all_division_template = no
+			ITA = {
+				country_event = {
+					id = twrcroatia.62
+				}
+				set_country_flag = CRO_ITA_COOPERATION
+			}
+			news_event = { id = twrnews.174 }
+			CRO = {
+				load_focus_tree = CRO_Kingdom_Tree
+				complete_national_focus = CRO_Kingdom_As_Rome_Commands
+			}
+		}
+	}
+	
+	option = { #No lmao
+		name = twrcroatia.61.b
+		ai_chance = {
+			base = 72
+		}
+		ITA = {
+			country_event = {
+				id = twrcroatia.63 days = 1
+			}
+		}
+	}
+}
+
+country_event = { # Italy - Croatia Accepts
+	id = twrcroatia.62
+	title = twrcroatia.62.t
+	desc = twrcroatia.62.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.62.a
+		effect_tooltip = {
+			ITA = { puppet = CRO }
+			ITA = {
+				declare_war_on = {
+					target = BOS
+					type = annex_everything
+				}
+				set_country_flag = CRO_ITA_COOPERATION
+			}
+			custom_effect_tooltip = CRO_monarchy_established_tt
+		}
+	}
+}
+
+country_event = { # Italy - Croatia says no.
+	id = twrcroatia.63
+	title = twrcroatia.63.t
+	desc = twrcroatia.63.d
+	picture = GFX_report_event_generic_conference
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia.63.a
+		ai_chance = {
+			base = 15
+		}
+		ITA = {
+			declare_war_on = {
+				target = CRO
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = BOS
+				type = annex_everything
+			}
+		}
+	}
+	
+	option = { #bruh ok
+		name = twrcroatia.63.b
+		ai_chance = {
+			base = 85
+		}
+		add_political_power = -100
+		add_stability= -0.02
+	}
+}
+
+###################################
+## Hungarian-Croatian War Events ##
+###################################
+add_namespace = twrcroatia_borderwar
+
+country_event = { # The Beginning of the Border War
+	id = twrcroatia_borderwar.1
+	title = twrcroatia_borderwar.1.t
+	desc = twrcroatia_borderwar.1.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.1.a
+		HUN = {
+			country_event = {
+				id = twrcroatia_borderwar.2
+			}
+		}
+		start_border_war = {
+			change_state_after_war = no
+			attacker = {
+				state = 819
+				num_provinces = 1
+				on_win = twrcroatia_borderwar.3
+				on_lose = twrcroatia_borderwar.4
+				on_cancel = twrcroatia_borderwar.5
+			}
+			defender = {
+				state = 45
+				num_provinces = 3
+				on_win = twrcroatia_borderwar.6
+				on_lose = twrcroatia_borderwar.7
+				on_cancel = twrcroatia_borderwar.8
+			}
+		}
+	}
+}
+
+country_event = { # Hungary - The Croatian Invasion
+	id = twrcroatia_borderwar.2
+	title = twrcroatia_borderwar.2.t
+	desc = twrcroatia_borderwar.2.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.2.a
+		custom_effect_tooltip = CRO_HUN_border_war_begin_tt
+	}
+}
+
+country_event = { # Croatian Troops Enter Novi Sad
+	id = twrcroatia_borderwar.3
+	title = twrcroatia_borderwar.3.t
+	desc = twrcroatia_borderwar.3.d
+	picture = GFX_report_event_ustase_march
+	immediate = {
+		hidden_effect = {
+			transfer_state = 45
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.3.a
+	}
+}
+
+country_event = { # Hungarian Troops Enter Srem
+	id = twrcroatia_borderwar.4
+	title = twrcroatia_borderwar.4.t
+	desc = twrcroatia_borderwar.4.d
+	picture = GFX_report_event_domobran
+	immediate = {
+		hidden_effect = {
+			transfer_state = 819
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	option = { # mobilise all troops and declare war
+		name = twrcroatia_borderwar.4.a
+		ai_chance = {
+			base = 20
+		}
+		declare_war_on = {
+			target = HUN
+			type = take_state
+		}
+	}
+	option = { # No big deal
+		name = twrcroatia_borderwar.4.b
+		ai_chance = {
+			base = 80
+		}
+		add_ideas = CRO_Defeat_at_Srem_idea
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = CRO_Lorkovic_Dead
+				}
+			}
+			set_country_flag = CRO_HSS_coup_will_happen_flag
+		}
+	}
+}
+
+country_event = { # A Pointless War
+	id = twrcroatia_borderwar.5
+	title = twrcroatia_borderwar.5.t
+	desc = twrcroatia_borderwar.5.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = { # to war!
+		name = twrcroatia_borderwar.5.a
+		ai_chance = {
+			base = 20
+		}
+		declare_war_on = {
+			target = HUN
+			type = take_state
+		}
+	}
+	option = { # no big deal
+		name = twrcroatia_borderwar.5.b
+		ai_chance = {
+			base = 80
+		}
+		add_ideas = CRO_Defeat_at_Srem_idea
+		IF = {
+			limit = {
+				NOT = {
+					has_country_flag = CRO_Lorkovic_Dead
+				}
+			}
+			set_country_flag = CRO_HSS_coup_will_happen_flag
+		}
+	}
+}
+
+country_event = { # Hungary - Hungarian Troops Enter Srem
+	id = twrcroatia_borderwar.6
+	title = twrcroatia_borderwar.6.t
+	desc = twrcroatia_borderwar.6.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.6.a
+		transfer_state = 819
+	}
+}
+
+country_event = { # Hungary - Croatian Troops Enter Novi Sad
+	id = twrcroatia_borderwar.7
+	title = twrcroatia_borderwar.7.t
+	desc = twrcroatia_borderwar.7.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = { # mobilise all troops and declare war
+		name = twrcroatia_borderwar.7.a
+		ai_chance = {
+			base = 60
+		}
+		declare_war_on = {
+			target = CRO
+			type = take_state
+		}
+	}
+	option = { # No big deal
+		ai_chance = {
+			base = 40
+		}
+		name = twrcroatia_borderwar.7.b
+	}
+}
+
+country_event = { # Hungary - A Pointless War
+	id = twrcroatia_borderwar.8
+	title = twrcroatia_borderwar.8.t
+	desc = twrcroatia_borderwar.8.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.8.a
+	}
+}
+
+country_event = { # End of the Border War (Total Victory)
+	id = twrcroatia_borderwar.9
+	title = twrcroatia_borderwar.9.t
+	desc = twrcroatia_borderwar.9.d
+	picture = GFX_report_event_ustase_march
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.9.a
+		white_peace = HUN
+		transfer_state = 45
+	}
+}
+
+country_event = { # End of the Border War (Total Defeat)
+	id = twrcroatia_borderwar.10
+	title = twrcroatia_borderwar.10.t
+	desc = twrcroatia_borderwar.10.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.10.a
+		white_peace = HUN
+		transfer_state = 819
+	}
+}
+
+country_event = { # End of the Border War (Draw)
+	id = twrcroatia_borderwar.11
+	title = twrcroatia_borderwar.11.t
+	desc = twrcroatia_borderwar.11.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.11.a
+		white_peace = HUN
+	}
+}
+
+country_event = { # Hungary - End of the Border War (Total Defeat)
+	id = twrcroatia_borderwar.12
+	title = twrcroatia_borderwar.12.t
+	desc = twrcroatia_borderwar.12.d
+	picture = GFX_report_event_ustase_march
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.12.a
+	}
+}
+
+country_event = { # Hungary - End of the Border War (Taking Srem)
+	id = twrcroatia_borderwar.13
+	title = twrcroatia_borderwar.13.t
+	desc = twrcroatia_borderwar.13.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.10.a
+	}
+}
+
+country_event = { # Hungary - End of the Border War (Draw)
+	id = twrcroatia_borderwar.14
+	title = twrcroatia_borderwar.14.t
+	desc = twrcroatia_borderwar.14.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_borderwar.14.a
+	}
+}
+
+country_event = { # Hungary - End of the Border War (Total Victory)
+	id = twrcroatia_borderwar.15
+	title = twrcroatia_borderwar.15.t
+	desc = twrcroatia_borderwar.15.d
+	picture = GFX_report_event_domobran
+	
+	is_triggered_only = yes
+	
+	option = { # split it between us and bosnia
+		name = twrcroatia_borderwar.15.a
+		if = {
+		limit = {
+		NOT = { country_exists = BOS }
+			}
+		release_puppet = BOS
+		}
+		BOS = {
+			transfer_state = 103
+			transfer_state = 983
+		}
+		add_stability = 0.1
+		add_offsite_building = { type = arms_factory level = 1 }
+	}
+}
+
+#################################
+## Croatian Integration Events ##
+#################################
+add_namespace = twrcroatia_integration
+
+country_event = { # Srem Death March
+	id = twrcroatia_integration.1
+	title = twrcroatia_integration.1.t
+	desc = twrcroatia_integration.1.d
+	picture = GFX_report_event_ustase_march
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_integration.1.a
+	}
+}
+
+country_event = { # Vojvodina Village Massacres
+	id = twrcroatia_integration.2
+	title = twrcroatia_integration.2.t
+	desc = twrcroatia_integration.2.d
+	picture = GFX_report_event_ustase_executions
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_integration.2.a
+	}
+}
+
+country_event = { # Relocation of the Banat Germans
+	id = twrcroatia_integration.3
+	title = twrcroatia_integration.3.t
+	desc = twrcroatia_integration.3.d
+	picture = GFX_report_event_exiled_serbs
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_integration.3.a
+		IF = {
+			limit = {
+				OR = {
+					has_global_flag = GCW_avoided
+					has_global_flag = german_civil_war_over
+				}
+			}
+			772 = {
+				add_manpower = -17340
+			}
+			IF = {
+				limit = {
+					GER = { exists = yes }
+				}
+				GER = {
+					country_event = {
+						id = twrcroatia_integration.4
+						days = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					GER = { exists = yes }
+				}
+				GER = {
+					country_event = {
+						id = twrcroatia_integration.4
+						days = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					HSS = { exists = yes }
+				}
+				HSS = {
+					country_event = {
+						id = twrcroatia_integration.4
+						days = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					HGR = { exists = yes }
+				}
+				HGR = {
+					country_event = {
+						id = twrcroatia_integration.4
+						days = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					DDR = { exists = yes }
+				}
+				DDR = {
+					country_event = {
+						id = twrcroatia_integration.4
+						days = 1
+					}
+				}
+			}
+			else {
+				PGR = {
+					country_event = {
+						id = twrcroatia_integration.4
+						days = 1
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				RGO = {
+					exists = yes
+				}
+			}
+			772 = {
+				add_manpower = -17340
+			}
+			RGO = {
+				country_event = {
+					id = twrcroatia_integration.4
+					days = 1
+				}
+			}
+		}
+		else = {
+			772 = {
+				add_manpower = -17340
+			}
+			SWE = {
+				country_event = {
+					id = twrcroatia_integration.5
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Banat German Immigrants from Croatia
+	id = twrcroatia_integration.4
+	title = twrcroatia_integration.4.t
+	desc = twrcroatia_integration.4.d
+	picture = GFX_report_event_exiled_serbs
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_integration.4.a
+		add_manpower = 17340
+	}
+}
+
+country_event = { # Sweden - Banat German Immigrants from Croatia
+	id = twrcroatia_integration.5
+	title = twrcroatia_integration.5.t
+	desc = twrcroatia_integration.5.d
+	picture = GFX_report_event_exiled_serbs
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_integration.5.a
+		add_manpower = 17340
+	}
+}
+
+country_event = { # Zara Riots
+	id = twrcroatia_integration.6
+	title = twrcroatia_integration.6.t
+	desc = twrcroatia_integration.6.d
+	picture = GFX_report_event_croatia_map
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_integration.6.a
+	}
+}
+
+country_event = { # Rijeka Italians Expelled!
+	id = twrcroatia_integration.7
+	title = twrcroatia_integration.7.t
+	desc = twrcroatia_integration.7.d
+	picture = GFX_report_event_exiled_serbs
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_integration.7.a
+	}
+}
+
+country_event = { # South Istrian Italians Expelled!
+	id = twrcroatia_integration.8
+	title = twrcroatia_integration.8.t
+	desc = twrcroatia_integration.8.d
+	picture = GFX_report_event_exiled_serbs
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = twrcroatia_integration.8.a
+	}
+}
+
+#######################
+## CROATIAN DOWNFALL ##
+#######################
+country_event = { # Death of Miroslav Navratil
+	id = twr_cro_downfall.1
+	title = twr_cro_downfall.1.t
+	desc = twr_cro_downfall.1.d
+	picture = GFX_report_event_miroslav_navratil
+	
+	fire_only_once = yes
+	trigger = {
+		tag = CRO
+		surrender_progress > 0.4
+	}
+	
+	option = {
+		name = twr_cro_downfall.1.a
+		remove_unit_leader = 805
+	}
+}
+
+country_event = { # Death of Petar Brzica
+	id = twr_cro_downfall.2
+	title = twr_cro_downfall.2.t
+	desc = twr_cro_downfall.2.d
+	picture = GFX_report_event_petar_brzica
+	
+	fire_only_once = yes
+	trigger = {
+		tag = CRO
+		surrender_progress > 0.5
+	}
+	
+	option = {
+		name = twr_cro_downfall.2.a
+		remove_unit_leader = 807
+	}
+}
+
+country_event = { # Death of Viktor Pavicic
+	id = twr_cro_downfall.3
+	title = twr_cro_downfall.3.t
+	desc = twr_cro_downfall.3.d
+	picture = GFX_report_event_viktor_pavicic
+	
+	fire_only_once = yes
+	trigger = {
+		tag = CRO
+		surrender_progress > 0.6
+	}
+	
+	option = {
+		name = twr_cro_downfall.3.a
+		remove_unit_leader = 803
+	}
+}
+
+country_event = { # Disappearance of Vjekoslav Luburic
+	id = twr_cro_downfall.4
+	title = twr_cro_downfall.4.t
+	desc = twr_cro_downfall.4.d
+	picture = GFX_report_event_maks_luburic
+	
+	fire_only_once = yes
+	trigger = {
+		tag = CRO
+		surrender_progress > 0.65
+	}
+	
+	option = {
+		name = twr_cro_downfall.4.a
+		remove_unit_leader = 806
+	}
+}
+
+country_event = { # Death of Ljubo Milos
+	id = twr_cro_downfall.5
+	title = twr_cro_downfall.5.t
+	desc = twr_cro_downfall.5.d
+	picture = GFX_report_event_ljubo_milos
+	
+	fire_only_once = yes
+	trigger = {
+		tag = CRO
+		surrender_progress > 0.7
+	}
+	
+	option = {
+		name = twr_cro_downfall.5.a
+		remove_unit_leader = 804
+	}
+}
+
+country_event = { # Death of Jure Francetic
+	id = twr_cro_downfall.6
+	title = twr_cro_downfall.6.t
+	desc = twr_cro_downfall.6.d
+	picture = GFX_report_event_jure_francetic
+	
+	fire_only_once = yes
+	trigger = {
+		tag = CRO
+		surrender_progress > 0.75
+	}
+	
+	option = {
+		name = twr_cro_downfall.6.a
+		remove_unit_leader = 802
+	}
+}
+
+#####################
+## CROATIA FLAVOUR ##
+#####################
+country_event = { # The Hoopoe
+	id = twr_cro_flavour.1
+	title = twr_cro_flavour.1.t
+	desc = twr_cro_flavour.1.d
+	picture = GFX_report_event_croatia_map
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = twr_cro_flavour.1.a
+	}
+}
+country_event = { # The Killers
+	id = twr_cro_flavour.2
+	title = twr_cro_flavour.2.t
+	desc = twr_cro_flavour.2.d
+	picture = GFX_report_event_ustase_execution
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = twr_cro_flavour.2.a
+	}
+}

@@ -1,0 +1,12 @@
+Version 0.2.2 (Day Three? Hotfix)
+BUGFIXES:
+- Fixed Romanian idea not fullfilling prerequisites
+- Hungarian decisions fixed
+- Hungarian focuses now properly work
+- Fixed Hungarian ideas disppearing when they shouldn't
+- Fixed Romanian divisions not spawning via foci
+- Changed the Romanian Legionary puppet names
+- Now Kingdom of Croatia is actually called a Kingdom
+- Fixed Slovakian decisions
+- Fixed manpower for garrison screen crashing the game
+- GFX fixes

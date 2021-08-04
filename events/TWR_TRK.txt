@@ -1,0 +1,535 @@
+add_namespace = twrtrk
+
+country_event = { # civil war
+	id = twrtrk.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.1"}
+	title = twrtrk.1.t
+	desc = twrtrk.1.d
+	picture = GFX_report_event_soviet_war
+	
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	
+	
+	option = { 
+		name = twrtrk.1.a
+		hidden_effect = {
+			news_event = { id = twrtrk.4 days = 1 }
+			add_ideas = TRK_civil_war
+		}
+		KAZ = {
+			transfer_state = 589
+			transfer_state = 995
+		}
+			SOV = {
+				give_military_access = KAZ
+			}		
+		hidden_effect = {
+			KAZ = {
+				load_oob = "KAZ_1952"
+				add_ideas = TRK_civil_war
+			}
+		}
+		TRK = {
+			declare_war_on = {
+				target = KAZ
+				type = annex_everything
+			}
+		}
+		
+		KYR = {
+			transfer_state = 994
+		}
+		hidden_effect = {
+			KYR = {
+				load_oob = "KYR_1952"
+				add_ideas = TRK_civil_war
+			}
+		}
+		
+		TRK = {
+			declare_war_on = {
+				target = KYR
+				type = annex_everything
+			}
+		}
+		
+		TAJ = {
+			transfer_state = 996
+		}
+		hidden_effect = {
+			TAJ = {
+				load_oob = "TAJ_1952"
+				add_ideas = TRK_civil_war
+			}
+		}
+		
+		TRK = {
+			declare_war_on = {
+				target = TAJ
+				type = annex_everything
+			}
+		}
+		
+		UZB = {
+			transfer_state = 998
+		}
+		hidden_effect = {
+			UZB = {
+				load_oob = "UZB_1952"
+				add_ideas = TRK_civil_war
+			}
+		}
+		
+		TRK = {
+			declare_war_on = {
+				target = UZB
+				type = annex_everything
+			}
+		}
+		
+		TRA = {
+			transfer_state = 997
+		}
+		
+		hidden_effect = {
+			TRA = {
+				load_oob = "TRA_1952"
+				add_ideas = TRK_civil_war
+			}
+		}
+		TRK = {
+			declare_war_on = {
+				target = TRA
+				type = annex_everything
+			}
+		}
+		
+		
+		start_civil_war = {
+			ideology = liberal
+			size = 0.5
+			capital = 405
+			states = { 
+				405 584
+			}
+			keep_unit_leaders = {
+				151113
+				1503
+				1513
+				151114
+				1517
+			}
+		}
+		hidden_effect = {
+		random_country = {
+			limit = {
+				original_tag = TRK
+				has_government = liberal
+				NOT = { tag = TRK }
+			}
+			add_ideas = TRK_civil_war
+			declare_war_on = {
+				target = TRA
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = UZB
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KAZ
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = KYR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = TAJ
+				type = annex_everything
+			}
+			TRK = {		
+				every_army_leader = {
+					limit = { has_trait = hidden_sympathies }
+					set_nationality = PREV.PREV
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = twrtrk.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.2"}
+	title = twrtrk.2.t
+	desc = twrtrk.2.d
+	picture = GFX_report_event_central_asia
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = { id = twrtrk.1 days = 7 random = 300 }
+		}
+	}
+	
+	option = { 
+		name = twrtrk.2.a
+		custom_effect_tooltip = trkFatman
+		complete_national_focus = TRK_The_Turkestani_Miracle
+		hidden_effect = {
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Zyiautdin Khan ibn Eshon Babakhan"
+			desc = ""
+			picture = "Zyiautdin_Khan_ibn_Eshon_Babakhan.dds"
+			expire = "1965.1.1"
+			ideology = theocracy
+			traits = { incompetent_dynastic_ruler }
+		}
+		}
+		
+	}
+}
+country_event = { #twrgeroccupation.7777 on action
+	id = twrtrk.3333
+
+	is_triggered_only = yes
+
+	hidden = yes
+
+	fire_only_once = yes
+
+	immediate = {
+		news_event = twrtrk.41 
+	}
+	
+	option = {
+		name = hidnews.1.a
+	}
+}
+country_event = {
+	id = twrtrk.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.3"}
+	title = twrtrk.3.t
+	desc = twrtrk.3.d
+	picture = GFX_report_event_central_asia
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = twrtrk.3.a
+	}
+}
+
+news_event = {
+	id = twrtrk.4 #turkestan civil war starts
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.4"}
+	title = twrtrk.4.t
+	desc = twrtrk.4.d
+	picture = GFX_news_event_central_asian_civil_war
+	major = yes
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	option = { 
+		name = twrtrk.4.a
+	}
+}
+news_event = {
+	id = twrtrk.41 #turkestan dissolves
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.41"}
+	title = twrtrk.41.t
+	desc = twrtrk.41.d
+	picture = GFX_news_event_turkic_dissolve
+	major = yes
+	is_triggered_only = yes
+	
+	fire_only_once = no
+	
+	option = { 
+		name = twrtrk.41.a
+	}
+}
+news_event = {
+	id = twrtrk.42 #central asian peoples republic formation
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.42"}
+	title = twrtrk.42.t
+	desc = twrtrk.42.d
+	picture = GFX_news_event_turkestan_civil_war
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = no
+	
+	option = { 
+		name = twrtrk.42.a
+	}
+}
+
+country_event = {
+	id = twrtrk.5 #joining the USSR?
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.5"}
+	title = twrtrk.5.t
+	desc = twrtrk.5.d
+	picture = GFX_report_event_central_asia_soviet
+
+	is_triggered_only = yes
+	
+	option = { 
+		name = twrtrk.5.a #yes
+		trigger = { tag = KAZ }
+		ai_chance = {
+			factor = 70
+		}
+		SOV = {
+			annex_country = {
+				target = KAZ
+				transfer_troops = yes
+			}
+			country_event = {
+				id = twrtrk.5001 days = 1
+			}			
+		}
+	}
+	option = { 
+		name = twrtrk.5.a #yes
+		trigger = { tag = TRA }
+		ai_chance = {
+			factor = 70
+		}
+		SOV = {
+			annex_country = {
+				target = TRA
+				transfer_troops = yes
+			}			
+			country_event = {
+				id = twrtrk.5002 days = 1
+			}	
+		}
+	}
+	option = { 
+		name = twrtrk.5.b #no
+		ai_chance = {
+			factor = 30
+		}
+		SOV = {
+			create_wargoal = {
+				type = annex_everything
+				target = ROOT
+			}		
+		}
+		add_war_support = 0.1
+	}
+}
+country_event = {
+	id = twrtrk.6 #fate of central asia
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.6"}
+	title = twrtrk.6.t
+	desc = twrtrk.6.d
+	picture = GFX_report_event_central_asia_soviet
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = twrtrk.6.a #intervention
+		ai_chance = {
+			factor = 70
+		}
+		KAZ = {
+			country_event = { id = twrtrk.5 days = 5 }
+		}
+		TRA = {
+			country_event = { id = twrtrk.5 days = 5 }
+		}
+		TAJ = {
+			country_event = { id = twrtrk.51 days = 7 }
+		}
+		add_manpower = -5000
+		add_stability = -0.1
+		add_war_support = -0.05
+	}
+	option = { 
+		name = twrtrk.6.b #nah
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.1
+		hidden_effect = {
+		set_country_flag = NO_COMPROMISE_IN_CA
+		}
+	}
+}
+country_event = {
+	id = twrtrk.51 #central asian ssr plan
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.1"}
+	title = twrtrk.51.t
+	desc = twrtrk.51.d
+	picture = GFX_report_event_soviet_war
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = twrtrk.51.a #accept and ready to war
+		give_military_access = SOV
+		set_cosmetic_tag = CAPR
+		add_ideas = TRK_SOV_support
+		SOV = {
+			#give_military_access = TJK
+		}
+		every_state = {
+			limit = {
+				OR = {
+					is_core_of = UZB
+					is_core_of = KYR
+				}
+			}
+			#add_core_of = TJK
+		}
+		declare_war_on = {
+			target = UZB
+			type = annex_everything
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = KYR
+		}
+
+		custom_effect_tooltip = SOV_REINFORCEMENTS
+		hidden_effect = {
+			retire_country_leader = yes
+			create_country_leader = {
+				name = "Central Asian Politburo"
+				desc = "Central_Asian_Politburo_DESC"
+				picture = "Central_Asian_Politburo.dds"
+				expire = "1965.1.1"
+				ideology = national_communism
+				traits = {
+
+				}
+			}
+			set_province_controller = 10395
+			set_province_controller = 10435
+			set_province_controller = 12454
+			set_province_controller = 10366
+			load_oob = "TAJ_SOV_REINFORCEMENTS"
+			news_event = {
+				id = twrtrk.42 hours = 1
+			}
+			add_opinion_modifier = {
+			    target = SOV
+			    modifier = medium_increase
+			}
+			reverse_add_opinion_modifier = {
+			    target = SOV
+			    modifier = medium_increase
+			}
+
+		}
+	}
+	option = { 
+		name = twrtrk.51.b #politely reject
+		ai_chance = {
+			factor = 30
+		}
+		add_political_power = 250
+		add_stability = 0.2
+		hidden_effect = {
+			SOV = {
+				country_event = { id = twrtrk.52 days = 2 }
+			}
+		}
+	}
+}
+country_event = {
+	id = twrtrk.52 #central asian peoples republic blocked
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.52"}
+	title = twrtrk.52.t
+	desc = twrtrk.52.d
+	picture = GFX_report_event_central_asia
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = twrtrk.52.a #their loss
+		add_manpower = 5000
+	}
+}
+country_event = {
+	id = twrtrk.53 #trade off
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.53"}
+	title = twrtrk.53.t
+	desc = twrtrk.53.d
+	picture = GFX_report_event_central_asia
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = twrtrk.53.a #hand them the land
+		add_stability = -0.1
+		remove_state_core = 585
+		SOV = {
+			country_event = { id = twrtrk.54 hours = 1 }
+		}
+	}
+}
+country_event = {
+	id = twrtrk.54 #trade off soviet
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.54"}
+	title = twrtrk.54.t
+	desc = twrtrk.54.d
+	picture = GFX_report_event_central_asia
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = twrtrk.54.a #a fair deal indeed
+		transfer_state = 585
+	}
+}
+country_event = {
+	id = twrtrk.5001 #kaz united
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.5001"}
+	title = twrtrk.5001.t
+	desc = twrtrk.5001.d
+	picture = GFX_report_event_central_asia
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = twrtrk.5001.a #rejoice
+	}
+}
+country_event = {
+	id = twrtrk.5002 #turkmen ssr
+	immediate = {log = "[GetDateText]: [Root.GetName]: event twrtrk.5002"}
+	title = twrtrk.5002.t
+	desc = twrtrk.5002.d
+	picture = GFX_report_event_central_asia
+
+	is_triggered_only = yes
+	
+	fire_only_once = yes
+	
+	option = { 
+		name = twrtrk.5002.a #rejoice
+	}
+}

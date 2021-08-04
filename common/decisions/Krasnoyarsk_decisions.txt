@@ -1,0 +1,156 @@
+KRA_foreign_policy = {
+     attack_norilsk = {
+          allowed = { tag = KRA }                 
+          available = {                           
+               tag = KRA
+               has_war = no
+          }
+          visible = {
+               OR = {
+                    has_cosmetic_tag = KRA_UNIFIED
+                    has_completed_focus = KRA_siberian_christendom
+               }
+               country_exists = NRI
+          }
+          cost = freedec?0
+          fire_only_once = yes
+          complete_effect = {
+               log = "[GetDateText]: [Root.GetName]: Decision attack_norilsk"
+               declare_war_on = {
+                   target = NRI
+                   type = annex_everything
+               }
+          }
+          ai_will_do = {
+               factor = 5
+          }
+     }
+     attack_buryatia = {
+          allowed = { tag = KRA }                 
+          available = {                           
+               tag = KRA
+               has_war = no
+          }
+          visible = {
+               OR = {
+                    has_cosmetic_tag = KRA_UNIFIED
+                    has_completed_focus = KRA_siberian_christendom
+               }
+               country_exists = BRY
+          }
+          cost = freedec?0
+          fire_only_once = yes
+          complete_effect = {
+               log = "[GetDateText]: [Root.GetName]: Decision attack_norilsk"
+               declare_war_on = {
+                   target = BRY
+                   type = annex_everything
+               }
+          }
+          ai_will_do = {
+               factor = 5
+          }
+     }
+     attack_novosibirsk = {
+          allowed = { tag = KRA }                 
+          available = {  
+               tag = KRA
+               has_war = no
+          }
+          visible = {
+               OR = {
+                    has_cosmetic_tag = KRA_UNIFIED
+                    has_completed_focus = KRA_siberian_christendom
+               }
+               country_exists = NOV
+          }
+          cost = freedec?0
+          fire_only_once = yes
+          complete_effect = {
+               log = "[GetDateText]: [Root.GetName]: Decision attack_norilsk"
+               declare_war_on = {
+                   target = NOV
+                   type = annex_everything
+               }
+          }
+          ai_will_do = {
+               factor = 5
+          }
+     }
+     joint_attack_novosibirsk = {
+          allowed = { tag = KRA }                 
+          available = {  
+               tag = KRA
+               has_war = no
+          }
+          visible = {
+               has_completed_focus = KRA_those_who_sin
+               country_exists = NOV
+          }
+          cost = freedec?0
+          fire_only_once = yes
+          complete_effect = {
+               log = "[GetDateText]: [Root.GetName]: Decision attack_norilsk"
+               declare_war_on = {
+                   target = NOV
+                   type = annex_everything
+               }
+          }
+          ai_will_do = {
+               factor = 5
+          }
+     }
+     ask_for_soviet_equipment = {                           
+          allowed = { tag = KRA }                 
+          available = {
+               tag = KRA 
+          }
+          visible = {
+               country_exists = SOV
+               has_completed_focus = KRA_those_who_sin
+          }
+          cost = freedec?0
+          fire_only_once = yes
+          complete_effect = {
+               log = "[GetDateText]: [Root.GetName]: Decision ask_for_soviet_equipment"
+               SOV = {
+                    country_event = {
+                         id = krasnoyarsk.13
+                    }
+               }
+          }
+          ai_will_do = {
+               factor = 10
+          }
+     }
+     join_soviet_union = {
+          allowed = { tag = KRA }                 
+          available = {
+               tag = KRA
+               any_neighbor_country = {
+                   tag = SOV
+               }
+          }
+          visible = {
+               country_exists = SOV
+               has_completed_focus = KRA_those_who_sin
+          }
+          cost = freedec?0
+          fire_only_once = yes
+          complete_effect = {
+               log = "[GetDateText]: [Root.GetName]: Decision join_soviet_union"
+               SOV = {
+                    annex_country = {
+                        target = KRA
+                        transfer_troops = yes
+                    }
+                    country_event = {
+                         id = krasnoyarsk.19
+                    }
+               }
+          }
+          ai_will_do = {
+               factor = 50
+          }
+     }
+}

@@ -1,0 +1,154 @@
+ideas = {
+
+country = {
+
+		RKA_oil_extraction = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = RKA_oil_focus
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = -0.5
+				stability_factor = -0.1
+				production_oil_factor = 0.2
+				}
+			}
+			
+		RKA_Slavic_Hell = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = chi_war_of_resistance3
+			removal_cost = -1
+
+			modifier = {
+				war_support_factor = 0.2
+				conscription_factor = 0.1
+				army_core_defence_factor = 0.1
+				}
+			}
+		
+		RKA_Chemical_Warfare = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+ 
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = strategic_bombing_focus
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				resistance_activity = -0.3
+				}
+			}
+		
+		RKA_No_More_Oil = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GENERIC_No_Oil
+			removal_cost = -1
+
+			modifier = {
+				production_oil_factor = -1
+				}
+			}
+		
+		RKA_Victory_in_the_Kaukasus = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = nazi_influence
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.2
+				political_power_factor = 0.15
+				
+				}
+			}
+		RKA_Local_Autonomy = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_neutrality_drift_bonus
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				resistance_activity = -0.2
+				compliance_growth = 0.1
+				}
+			}
+			
+		RKA_Priority_in_Production = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = generic_production_bonus
+			removal_cost = -1
+
+			modifier = {
+				production_oil_factor = 0.2
+				local_resources_factor = 0.1
+				industrial_capacity_factory = 0.1
+				}
+			}
+			
+		RKA_Strong_Oligarchs = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea RKA_oil_extraction"}
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = corruption_money
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.05
+				}
+			}
+		
+	}
+}

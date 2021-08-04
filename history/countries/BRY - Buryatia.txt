@@ -1,0 +1,180 @@
+﻿capital = 566
+set_research_slots = 2
+set_convoys = 10
+oob = "BRY_1952"
+add_manpower = 20000
+#######################
+# Research
+#######################
+set_technology = {
+
+	infantry_weapons_1 = 1
+	infantry_weapons_2 = 1
+	infantry_weapons_improvements_1 = 1
+	tech_mountaineers = 1
+	marines = 1
+
+	basic_infantry_equipment = 1
+	support_weapons = 1
+	infantry_at = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_logistics_company = 1
+	tech_military_police = 1
+	tech_signal_company = 1
+	tech_maintenance_company = 1
+
+	motorised_infantry = 1
+
+	artillery4 = 1
+
+	base_armor = 1
+
+	early_fighter = 1
+	tac_bomber1 = 1
+	transport_air1 = 1
+	strategic_bomber1 = 1
+
+	fighter_1945 = 1
+	tac_air_1945 = 1
+	transport_air_1945 = 1
+	heavy_air_1945 = 1
+
+
+	CAS_1945 = 1
+	interceptor_1945 = 1
+
+	gw_artillery = 1
+	antiair5 = 1
+
+	advanced_medium_tank = 1
+	mechanised_infantry3 = 1
+	advanced_light_tank = 1
+	APC_1950 = 1
+	IFV_1950 = 1
+}
+#######################
+# Politics
+#######################
+set_politics = {	
+	ruling_party = paternal_autocrat
+	last_election = "1933.7.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+    national_socialist = 0
+    fascist = 57
+    paternal_autocrat = 43
+    conservative = 0
+    liberal = 0
+    social_democrat = 0
+    socialist = 0
+    bolshevik_leninist = 0
+    marxist_leninist = 0
+}
+add_ideas = {
+	central_russian_famine
+	BRY_Policy_of_Non_Intervention
+	BRY_US_Forces_in_Buryatia
+	BRY_Atrocious_Morale
+	BRY_VNS_Partisan_Front
+	BRY_Ostensible_Republican_Oversight
+	volunteer_only
+	kleptocratic_regime
+	semi_industrialised_nation
+	}
+#######################
+# Leaders
+#######################
+
+
+# Paternal Autocracy
+create_country_leader = {
+	name = "Willis Cronkhite"
+	desc = "Willis_Cronkhite_desc"
+	picture = "Willis_Cronkhite.dds"
+	expire = "1968.1.1"
+	ideology = military_dictatorshipz
+	traits = { unpopular_foreigner }
+}
+
+# Paternal Autocracy
+create_country_leader = {
+	name = "Aleksandr Solzhenitsyn"
+	desc = "Aleksandr_Solzhenitsyn_desc"
+	picture = "Aleksandr_Solzhenitsyn.dds"
+	expire = "1968.1.1"
+	ideology = third_positionism
+	traits = { fascist_militia_leader }
+}
+
+# Paternal Autocracy
+create_country_leader = {
+	name = "Vyacheslav Mochalov"
+	desc = "Vyacheslav_Mochalov_desc"
+	picture = "Vyacheslav_Mochalov.dds"
+	expire = "1968.1.1"
+	ideology = laborism
+	traits = { }
+}
+
+
+create_field_marshal = {
+	name = "Willis Cronkhite"
+	picture = "Willis_Cronkhite.dds"
+	traits = { organisational_leader inflexible_strategist }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Frank N. Mitchell"
+	picture = "Frank_N_Mitchell.dds"
+	traits = { career_officer organizer }
+	skill = 3
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Ambrosio Guillen"
+	picture = "Ambrosio_Guillen.dds"
+	traits = {  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Robert D. Reem"
+	picture = "Robert_D_Reem.dds"
+	traits = { infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Samuel S. Coursen"
+	picture = "Samuel_S_Coursen.dds"
+	traits = { cavalry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}

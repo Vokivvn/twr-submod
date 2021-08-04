@@ -1,0 +1,14 @@
+TRV_Unification_of_Russia = {
+	
+	icon = generic_foreign_policy
+	priority = {
+        base = 10
+    }
+
+    available = { 
+		always = yes
+    }
+	visible = {
+		has_country_flag = TRV_RECLAIM_DECISION_UNLOCKED
+	}
+}

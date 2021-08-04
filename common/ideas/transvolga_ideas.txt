@@ -1,0 +1,695 @@
+ideas = {
+
+	country = {
+		TRV_Mutiny_to_Transvolga = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_Mutiny_to_Transvolga"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_army_problems
+			modifier = {
+				army_org_factor = -0.1
+				army_morale_factor = -0.1
+				army_core_defence_factor = -0.1
+				army_core_attack_factor = -0.1
+				conscription_factor = -0.1
+			}
+		
+		
+		}
+		
+		TRV_Partisan_Connections = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_Mutiny_to_Transvolga"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_revolutionary_army
+			modifier = {
+				army_attack_factor = 0.1
+				recon_factor = 0.1
+			}
+		}
+		
+		TRV_Eternal_Junta = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_Mutiny_to_Transvolga"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_oppression
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.1
+			}
+		}
+		
+		TRV_Our_Agriculture = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_Mutiny_to_Transvolga"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = GENERIC_farming
+			modifier = {
+				local_resources_factor = 0.1
+				MONTHLY_POPULATION = 0.1
+			}
+		}
+		
+		TRV_Our_Industry = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_Mutiny_to_Transvolga"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+			}
+		}
+		
+		TRV_Our_Finances = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_Mutiny_to_Transvolga"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = give_money
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		
+		TRV_New_Russian_Army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_Mutiny_to_Transvolga"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = give_money
+			modifier = {
+				conscription_factor = 0.1
+				army_org_factor = 0.05
+				training_time_army_factor = -0.1
+			}
+		}
+	
+		TRV_refugee_flood = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_refugee_flood"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = refugee_waves
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.1
+				MONTHLY_POPULATION = 0.9
+			}
+		
+		
+		}
+		
+		TRV_refugee_flood2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_refugee_flood2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = refugee_waves
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.05
+				MONTHLY_POPULATION = 0.9
+			}
+		
+		
+		}
+		
+		TRV_refugee_flood3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_refugee_flood3"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = refugee_waves
+			modifier = {
+				political_power_gain = -0.1
+				MONTHLY_POPULATION = 0.8
+			}
+		
+		
+		}
+		
+		TRV_refugees_handled = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_refugees_handled"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_manpower_bonus
+			modifier = {
+				political_power_gain = 0.05
+				MONTHLY_POPULATION = 0.85
+			}
+		
+		
+		}
+		
+		TRV_refugee_beneficial = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_refugee_beneficial"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = victors_of_the_great_war
+			modifier = {
+				political_power_gain = 0.10
+				production_factory_max_efficiency_factor = 0.05
+				MONTHLY_POPULATION = 0.95
+					conscription = 0.025
+			}
+		
+		
+		}
+		
+		TRV_refugee_beneficial2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_refugee_beneficial2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = victors_of_the_great_war
+			modifier = {
+				political_power_gain = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				MONTHLY_POPULATION = 1
+					conscription = 0.04
+			}
+		
+		
+		}
+		
+		TRV_roman_army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_roman_army"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_reserve_divisions
+			modifier = {
+				conscription = 0.03
+				MONTHLY_POPULATION = 0.8
+			}
+		
+		
+		}
+		
+		TRV_roman_army2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_roman_army2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_reserve_divisions
+			modifier = {
+				conscription = 0.05
+				army_leader_start_level = 2
+				MONTHLY_POPULATION = 0.8
+			}
+		
+		
+		}
+		
+		TRV_army_issues = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_army_issues"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.1
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+				army_speed_factor = -0.05
+			}
+		}
+		
+		TRV_army_issues2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_army_issues2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.05
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+				army_speed_factor = -0.05
+			}
+		}
+		
+		TRV_army_issues3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_army_issues3"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = FRA_scw_intervention_republicans_focus
+			modifier = {
+				political_power_gain = -0.05
+				army_defence_factor = -0.05
+				army_attack_factor = -0.05
+				army_speed_factor = -0.05
+			}
+		}
+		
+		TRV_conclave_army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_conclave_army"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = general_staff
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				army_leader_start_level = 1
+			}
+		}
+		
+		TRV_conclave_army2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_conclave_army2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = general_staff
+			modifier = {
+				army_defence_factor = 0.05
+				army_attack_factor = 0.05
+				planning_speed = 0.05
+				army_leader_start_level = 1
+				conscription = 0.02
+			}
+		}
+		
+		
+		
+		
+		TRV_industry_issues = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_industry_issues"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = FRA_factory_strikes
+			modifier = {
+				consumer_goods_factor = 0.15
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		
+		TRV_industry_issues2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_industry_issues2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = FRA_factory_strikes
+			modifier = {
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.05
+			}
+		}
+		
+		TRV_strong_industry = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_strong_industry"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = idea_man_five_year_plan_industry
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		TRV_strong_industry2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_strong_industry2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = idea_man_five_year_plan_industry
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_factory_max_efficiency_factor = 0.10
+			}
+		}
+		
+		TRV_strong_consul = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_strong_consul"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = jap_supremacy_of_will
+			modifier = {
+				political_power_gain = 0.2
+			}
+		
+		
+		}
+		
+		TRV_weak_labor = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_weak_labor"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				production_speed_buildings_factor = -0.1
+			}
+		
+		
+		}
+		
+		TRV_weak_labor2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_weak_labor2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				production_speed_buildings_factor = -0.05
+			}
+		}
+		
+		TRV_weak_labor3 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_weak_labor3"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_production_bonus
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		
+		
+		}
+		
+		
+		
+		TRV_rome_ascendant = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_rome_ascendant"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = triumphant_will
+			modifier = {
+				political_power_gain = 0.2
+				army_morale_factor = 0.1
+				army_org_Factor = 0.1
+			}
+		
+		
+		}
+		
+		TRV_rome_cornered = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_rome_cornered"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = triumphant_will
+			modifier = {
+				political_power_gain = 0.2
+				army_morale_factor = 0.2
+				army_org_Factor = 0.2
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				army_speed_factor = 0.1
+			}
+		
+		
+		}
+		
+		TRV_liberal_dissent = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_liberal_dissent"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = idea_prc_low_popular_support2
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.15
+				consumer_goods_factor = 0.1
+			}
+		
+		
+		}
+		
+		TRV_liberal_dissent2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_liberal_dissent2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = idea_prc_low_popular_support2
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				consumer_goods_factor = 0.5
+			}
+		
+		
+		}
+		
+		TRV_ASGT_spirit = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_ASGT_spirit"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = generic_spy_political
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+				foreign_subversive_activites = -0.50
+				conscription = 0.05
+			}
+		
+		
+		}
+		
+		TRV_culture_hybrid = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_culture_hybrid"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = idea_generic_flexible_foreign_policy2
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.05
+			}
+		
+		
+		}
+		
+		TRV_culture_hybrid2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_culture_hybrid2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = idea_generic_flexible_foreign_policy2
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				
+			}
+		
+		
+		}
+		
+		TRV_soviet_issues = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_soviet_issues"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = anti_soviet_pact
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = -0.1
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_Factor = -0.05
+				planning_speed = -0.05
+				
+			}
+		
+		
+		}
+		
+		TRV_soviet_chaos = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_soviet_chaos"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = anti_soviet_pact
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = -0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				army_org_Factor = -0.1
+				planning_speed = -0.1
+				
+			}
+		
+		
+		}
+		
+		TRV_soviet_chaos2 = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_soviet_chaos2"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = anti_soviet_pact
+			modifier = {
+				political_power_gain = -0.35
+				stability_factor = -0.2
+				production_factory_max_efficiency_factor = -0.3
+				army_attack_factor = -0.2
+				army_defence_factor = -0.2
+				army_org_Factor = -0.2
+				planning_speed = -0.2
+				
+			}
+		
+		
+		}
+		
+		TRV_fixing_communism = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_fixing_communism"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = officers_purged
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				
+			}
+		
+		
+		}
+		
+		TRV_anti_communist_army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_anti_communist_army"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = officers_purged
+				targeted_modifier = { tag = SOV attack_bonus_against = 0.1 }
+				
+			}
+		
+		
+		
+		
+		TRV_anti_nazi_army = {
+			on_add = {log = "[GetDateText]: [Root.GetName]: add idea TRV_anti_nazi_army"}
+			
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			picture = FRA_scw_intervention_nationalists_focus
+			
+				targeted_modifier = { tag = GER attack_bonus_against = 0.1 }
+				targeted_modifier = { tag = RKA attack_bonus_against = 0.1 }
+				targeted_modifier = { tag = RMO attack_bonus_against = 0.1 }
+				targeted_modifier = { tag = ROS attack_bonus_against = 0.1 }
+				targeted_modifier = { tag = RUK attack_bonus_against = 0.1 }
+				targeted_modifier = { tag = RGO attack_bonus_against = 0.1 }
+				targeted_modifier = { tag = ROM attack_bonus_against = 0.1 }
+				
+			
+		
+		
+		}
+		
+
+
+}
+}
